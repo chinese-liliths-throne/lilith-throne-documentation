@@ -120,8 +120,8 @@ def apply():
 		pt_token = input(
 			"请输入Paratranz的Acccess Token，\t或选择设置环境变量“PARATRANZ_TOKEN”/在main.py文件夹中修改--pt-token的default值："
 		)
-	# fetch_latest_dict(pt_token)
-	# unzip_latest_dict()
+	fetch_latest_dict(pt_token)
+	unzip_latest_dict()
 
 	dic = {}
 
@@ -138,6 +138,7 @@ def apply():
 		temp = []
 		new_lines = []
 		ori = False
+
 
 		for line in lines:
 			if "msgid" in line:

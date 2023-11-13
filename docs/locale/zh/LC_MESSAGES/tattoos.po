@@ -22,15 +22,15 @@ msgstr ""
 
 #: ../../tattoos.rst:5
 msgid "Tattoos"
-msgstr ""
+msgstr "纹身"
 
 #: ../../tattoos.rst
 msgid "Author"
-msgstr ""
+msgstr "作者"
 
 #: ../../tattoos.rst:7
 msgid "innoxia, bicobus"
-msgstr ""
+msgstr "innoxia, bicobus"
 
 #: ../../tattoos.rst:9
 msgid ""
@@ -94,7 +94,7 @@ msgstr ""
 
 #: ../../tattoos.rst:61
 msgid ":ref:`items-image`"
-msgstr ""
+msgstr ":ref:`items-image`"
 
 #: ../../tattoos.rst:63
 msgid "The file path for this clothing’s image."

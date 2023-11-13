@@ -22,25 +22,25 @@ msgstr ""
 
 #: ../../clothing.rst:5
 msgid "Item Clothing"
-msgstr ""
+msgstr "衣物类物品"
 
 #: ../../clothing.rst
 msgid "Author"
-msgstr ""
+msgstr "作者"
 
 #: ../../clothing.rst:7
 msgid "innoxia, bicobus"
-msgstr ""
+msgstr "innoxia, bicobus"
 
 #: ../../clothing.rst:9
 msgid "Clothing and anything that is wearable, even inside."
-msgstr ""
+msgstr "衣物和其他任何可穿戴物品，即使是内置的。"
 
 #: ../../clothing.rst:11
 msgid ""
 "You can find working examples of clothing in the "
 ":ltgithub:`res/mods/innoxia/items/clothing` folder."
-msgstr ""
+msgstr "你可以在:ltgithub:`res/mods/innoxia/items/clothing`文件夹内找到衣物范例。"
 
 #: ../../clothing.rst:15
 msgid "General Information"
@@ -62,15 +62,15 @@ msgstr ""
 
 #: ../../clothing.rst:28
 msgid "authorTag"
-msgstr ""
+msgstr "authorTag"
 
 #: ../../clothing.rst:31
 msgid "Author attribution, if you want one."
-msgstr ""
+msgstr "作者署名，如果你想要的话。"
 
 #: ../../clothing.rst:35
 msgid ":ref:`author-tags`"
-msgstr ""
+msgstr ":ref:`author-tags`"
 
 #: ../../clothing.rst:42
 msgid "value"
@@ -93,7 +93,7 @@ msgstr ""
 #: ../../clothing.rst:703 ../../clothing.rst:713 ../../clothing.rst:987
 #: ../../clothing.rst:1004 ../../clothing.rst:1026 ../../clothing.rst:1042
 msgid "Example"
-msgstr ""
+msgstr "示例"
 
 #: ../../clothing.rst:48
 msgid ""
@@ -117,7 +117,7 @@ msgstr ""
 msgid ""
 "I’ve defined this as “a pair of”, so in-game, this item will be referred "
 "to as “a pair of socks”."
-msgstr ""
+msgstr "我将其定义为“一双”，所以在游戏中，这件物品会被称作“一双袜子”。"
 
 #: ../../clothing.rst:72
 msgid "name"

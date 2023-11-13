@@ -22,15 +22,15 @@ msgstr ""
 
 #: ../../overview.rst:4
 msgid "Overview"
-msgstr ""
+msgstr "概览"
 
 #: ../../overview.rst:6
 msgid "Contents"
-msgstr ""
+msgstr "内容"
 
 #: ../../overview.rst:9
 msgid "Preface"
-msgstr ""
+msgstr "绪论"
 
 #: ../../overview.rst:11
 msgid ""
@@ -39,13 +39,13 @@ msgid ""
 "documents tries to be as accurate as possible, you’re invited, dear "
 "reader, to consult existing ``xml`` files residing in your ``res/mods/`` "
 "folder."
-msgstr ""
+msgstr "以下文档将尽其所能揭示你在游玩莉莉丝的王座时的不同体验。虽然该文档会尽量保证精确，但亲爱的读者，你也可以通过``res/mods/``文件夹下的现有``xml``文件查看。"
 
 #: ../../overview.rst:16
 msgid ""
 "If you are unsure of anything, please use the `Lilith's Throne Discord`_ "
 "to ask for help!"
-msgstr ""
+msgstr "如果你有任何疑惑，可以到`Lilith's Throne Discord`_ 寻求帮助！"
 
 #: ../../overview.rst:20
 msgid "Note on status effects and how to use them"
@@ -58,7 +58,7 @@ msgid ""
 " applied through an ``applyEffect`` block. Most wearable items has to go "
 "through a set bonus in order to have access to the status effects "
 "mechanics."
-msgstr ""
+msgstr "我们将效果定义为一组逻辑条件，条件性地应用于角色。定义该条件的来源各不相同，最终通过``applyEffect``块生效。大多数可穿戴物品必须经过一组套装加成，以便使用状态效果机制。"
 
 #: ../../overview.rst:27
 msgid ""
@@ -71,7 +71,7 @@ msgstr ""
 
 #: ../../overview.rst:47
 msgid "Some elements expect Boolean values"
-msgstr ""
+msgstr "部分元素期望布尔值"
 
 #: ../../overview.rst:49
 msgid ""
@@ -89,11 +89,11 @@ msgstr ""
 
 #: ../../overview.rst:57
 msgid "``true``"
-msgstr ""
+msgstr "``true``"
 
 #: ../../overview.rst:58
 msgid "``false``"
-msgstr ""
+msgstr "``false``"
 
 #: ../../overview.rst:61
 msgid "Shared tags and information"
@@ -283,14 +283,14 @@ msgstr ""
 
 #: ../../overview.rst:199
 msgid "colours"
-msgstr ""
+msgstr "颜色"
 
 #: ../../overview.rst:201
 msgid ""
 "Colours are available for most moddable items. The rules to follow are "
 "generally the same for all type of item, with the exception for the "
 "weapons which expand on the core mechanic."
-msgstr ""
+msgstr "颜色可用于大多数可修改的物品。通常，所有类型的物品遵循的规则都大致相同，武器是个例外，它们会在核心机制上有所扩展。"
 
 #: ../../overview.rst:205
 msgid ""

@@ -399,7 +399,7 @@ msgstr ""
 
 #: ../../outfits.rst:351
 msgid ":ref:`items-identifier`"
-msgstr ""
+msgstr ":ref:`items-identifier`"
 
 #: ../../outfits.rst:355
 msgid "Whether the clothing item should spawn dirty, and in need of cleaning."
