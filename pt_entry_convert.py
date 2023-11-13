@@ -146,7 +146,7 @@ def apply():
 				ori = False
 				if len(temp) > 0 and "\n".join(temp) == content[idx]['original'].replace('\\n','\n'):
 					if content[idx]['stage'] != 0:
-						line = line.replace("\"\"", content[idx]['translation'].replace('\\n',''))
+						line = line.replace("\"\"", '"' + content[idx]['translation'].replace('\\n','') + '"')
 					idx += 1
 				temp = []
 			if ori:
