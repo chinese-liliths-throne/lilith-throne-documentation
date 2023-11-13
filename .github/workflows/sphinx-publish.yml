@@ -40,6 +40,8 @@ jobs:
         run: |
           bash ./create_po.sh
           python ./pt_entry_convert.py
+        env:
+          PARATRANZ_TOKEN: ${{ secrets.PARATRANZ_TOKEN }} 
       - name: Build Sphinx HTML
         run: |
           cd docs/
