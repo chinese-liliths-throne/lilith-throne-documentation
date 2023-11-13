@@ -2,5 +2,5 @@
 
 cd ./docs
 rm -r ./locale
-./make.bat gettext
+sphinx-build -M gettext . _build
 sphinx-intl update -p _build/gettext -l zh 
