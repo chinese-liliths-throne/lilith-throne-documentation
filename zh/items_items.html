@@ -5,7 +5,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    <title>2.2. Miscanelaous Items &#8212; Lilith&#39;s Throne Mod Documentation  文档</title>
+    <title>2.2. 杂项物品 &#8212; Lilith&#39;s Throne Mod Documentation  文档</title>
     <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=4f649999" />
     <link rel="stylesheet" type="text/css" href="_static/alabaster.css?v=4a90727b" />
     <link rel="stylesheet" type="text/css" href="_static/graphviz.css?v=eafc0fe6" />
@@ -15,8 +15,8 @@
     <link rel="canonical" href="https://bicobus.github.io/lilith-throne-documentation/items_items.html" />
     <link rel="index" title="索引" href="genindex.html" />
     <link rel="search" title="搜索" href="search.html" />
-    <link rel="next" title="2.3. Tattoos" href="tattoos.html" />
-    <link rel="prev" title="2.1. Item Clothing" href="clothing.html" />
+    <link rel="next" title="2.3. 纹身" href="tattoos.html" />
+    <link rel="prev" title="2.1. 衣物类物品" href="clothing.html" />
    
   <link rel="stylesheet" href="_static/custom.css" type="text/css" />
   
@@ -35,10 +35,10 @@
     <ul>
         <li>
           &larr;
-          <a href="clothing.html" title="Previous document"><span class="section-number">2.1. </span>Item Clothing</a>
+          <a href="clothing.html" title="Previous document"><span class="section-number">2.1. </span>衣物类物品</a>
         </li>
         <li>
-          <a href="tattoos.html" title="Next document"><span class="section-number">2.3. </span>Tattoos</a>
+          <a href="tattoos.html" title="Next document"><span class="section-number">2.3. </span>纹身</a>
           &rarr;
         </li>
     </ul>
@@ -49,76 +49,67 @@
           <div class="body" role="main">
             
   <section id="miscanelaous-items">
-<h1><span class="section-number">2.2. </span>Miscanelaous Items<a class="headerlink" href="#miscanelaous-items" title="此标题的永久链接">¶</a></h1>
+<h1><span class="section-number">2.2. </span>杂项物品<a class="headerlink" href="#miscanelaous-items" title="此标题的永久链接">¶</a></h1>
 <blockquote>
 <div><dl class="field-list simple">
-<dt class="field-odd">Authors<span class="colon">:</span></dt>
+<dt class="field-odd">作者<span class="colon">:</span></dt>
 <dd class="field-odd"><p>innoxia, bicobus</p>
 </dd>
 </dl>
 </div></blockquote>
 <div class="admonition note">
 <p class="admonition-title">备注</p>
-<p>Item modding is not fully complete yet, as you cannot define any enchantment
-effects for items. I will expand this at some point in the future, but for
-now, this modding framework should be enough for most uses.</p>
+<p>物品模组功能尚未完全完成，因为你无法为物品自定义任何附魔效果。我将在未来的某个版本改善这一点，但现在，这个模组框架应该足以满足大多数用途。</p>
 </div>
-<p>An annotated example lives at <a class="reference external" href="https://github.com/Innoxia/liliths-throne-public/tree/dev/res/items/innoxia/pills/fertility.xml">res/items/innoxia/pills/fertility.xml</a>.</p>
+<p>模组制作的注释规范例在 <a href="#id1"><span class="problematic" id="id2">:github:`https://github.com/Innoxia/liliths-throne-public/blob/dev/res/items/innoxia/pills/fertility.xml`</span></a>.</p>
 <section id="boolean-values">
-<h2><span class="section-number">2.2.1. </span>Boolean Values<a class="headerlink" href="#boolean-values" title="此标题的永久链接">¶</a></h2>
-<p>Boolean values can be used throughought the elements of this document. Those
-values are to be understood as:</p>
+<h2><span class="section-number">2.2.1. </span>布尔型数值<a class="headerlink" href="#boolean-values" title="此标题的永久链接">¶</a></h2>
+<p>布尔值可以在文档的所有元素中使用。这些值可以理解为:</p>
 <ul class="simple">
 <li><p>true</p></li>
 <li><p>false</p></li>
 </ul>
 </section>
 <section id="coreattributes">
-<h2><span class="section-number">2.2.2. </span>coreAttributes<a class="headerlink" href="#coreattributes" title="此标题的永久链接">¶</a></h2>
+<h2><span class="section-number">2.2.2. </span>核心属性<a class="headerlink" href="#coreattributes" title="此标题的永久链接">¶</a></h2>
 <section id="authortag">
-<h3><span class="section-number">2.2.2.1. </span>authorTag<a class="headerlink" href="#authortag" title="此标题的永久链接">¶</a></h3>
-<p>How attribution to the mod author (you!) should be displayed in the item’s
-tooltip. If left blank or not included, a default attribution based on folder
-name will be used.</p>
-<p>This tag is optionnal.</p>
+<h3><span class="section-number">2.2.2.1. </span>作者标签<a class="headerlink" href="#authortag" title="此标题的永久链接">¶</a></h3>
+<p>在项目中显示模组作者（你）的名字 如果留空或没有该标签，将使用基于文件夹名称作为默认标签。</p>
+<p>这个标签是可选项。</p>
 <div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;authorTag&gt;</span><span class="cp">&lt;![CDATA[A small name stamped on one side of the pill reads &#39;Inno-Industries&#39;.]]&gt;</span><span class="nt">&lt;/authorTag&gt;</span>
 </pre></div>
 </div>
 </section>
 <section id="value">
-<h3><span class="section-number">2.2.2.2. </span>value<a class="headerlink" href="#value" title="此标题的永久链接">¶</a></h3>
-<p>How much this item is worth.</p>
+<h3><span class="section-number">2.2.2.2. </span>价值<a class="headerlink" href="#value" title="此标题的永久链接">¶</a></h3>
+<p>该物品价值多少？</p>
 <div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;value&gt;</span>20<span class="nt">&lt;/value&gt;</span>
 </pre></div>
 </div>
 </section>
 <section id="determiner">
-<h3><span class="section-number">2.2.2.3. </span>determiner<a class="headerlink" href="#determiner" title="此标题的永久链接">¶</a></h3>
-<p>What’s appended before the item’s name in an instance of “Innoxia has X Breeder
-Pill”, where X is the determiner. This will usually be either “a” or “an”, but
-for other items may be different.</p>
-<p>An example might be: “Innoxia is holding X scissors”, where X (the determiner)
-would now need to be “a pair of”.</p>
+<h3><span class="section-number">2.2.2.3. </span>量词<a class="headerlink" href="#determiner" title="此标题的永久链接">¶</a></h3>
+<p>在“Innoxia拥有X生殖剂”这个例子中，这个X就是就是量词，这通常填入“一个”或者“一支”，但是对于其他物品来说这个量词可能是不同的。</p>
+<p>像“Innoxia拿着X剪刀”这个例子中, 这里X(这个量词)就应该写作“一把”.</p>
 <div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;determiner&gt;</span><span class="cp">&lt;![CDATA[a]]&gt;</span><span class="nt">&lt;/determiner&gt;</span>
 </pre></div>
 </div>
 </section>
 <section id="name">
-<h3><span class="section-number">2.2.2.4. </span>name<a class="headerlink" href="#name" title="此标题的永久链接">¶</a></h3>
-<p>The singular name of this item.</p>
+<h3><span class="section-number">2.2.2.4. </span>物品名称<a class="headerlink" href="#name" title="此标题的永久链接">¶</a></h3>
+<p>这个物品的单数名称。</p>
 <div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;name&gt;</span><span class="cp">&lt;![CDATA[breeder pill]**&gt;</span><span class="nt">&lt;/name&gt;</span>
 </pre></div>
 </div>
 </section>
 <section id="nameplural">
-<h3><span class="section-number">2.2.2.5. </span>namePlural<a class="headerlink" href="#nameplural" title="此标题的永久链接">¶</a></h3>
-<p>The plural name of this item.</p>
+<h3><span class="section-number">2.2.2.5. </span>复数名称<a class="headerlink" href="#nameplural" title="此标题的永久链接">¶</a></h3>
+<p>这个物品的复数名称。</p>
 <dl>
-<dt><strong>Node Variables:</strong></dt><dd><dl class="std nodevar">
+<dt><strong>节点变量：</strong></dt><dd><dl class="std nodevar">
 <dt class="sig sig-object std" id="nodevar-pluralByDefault-items_items">
 <span class="sig-name descname"><span class="pre">pluralByDefault</span></span> <span class="pre">Type:</span> <span class="pre">boolean</span><a class="headerlink" href="#nodevar-pluralByDefault-items_items" title="永久链接至目标">¶</a></dt>
-<dd><p>The variable <code class="docutils literal notranslate"><span class="pre">pluralByDefault</span></code> defines whether the item will always be
-refered by it’s plural name (e.g. “a pair of pants”).</p>
+<dd><p>这个变量``pluralByDefault``定义了这个物品在调用时直接以复数名称调用(例如“a pair of pants”)，不太符合汉语习惯可无视。</p>
 </dd></dl>
 
 </dd>
@@ -128,8 +119,8 @@ refered by it’s plural name (e.g. “a pair of pants”).</p>
 </div>
 </section>
 <section id="description">
-<h3><span class="section-number">2.2.2.6. </span>description<a class="headerlink" href="#description" title="此标题的永久链接">¶</a></h3>
-<p>The description/lore of this item.</p>
+<h3><span class="section-number">2.2.2.6. </span>物品描述<a class="headerlink" href="#description" title="此标题的永久链接">¶</a></h3>
+<p>关于这个物品的描述或者传说之类的。</p>
 <div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;description&gt;</span><span class="cp">&lt;![CDATA[A small, light-purple pill, individually packaged in a foil and plastic wrapper. While the text printed on the foil identifies this pill as an &#39;Orally-Administered Reproduction Enhancer&#39;, it&#39;s colloquially known as a &#39;breeder pill&#39;, and temporarily boosts both fertility and virility when ingested.]]&gt;</span><span class="nt">&lt;/description&gt;</span>
 </pre></div>
 </div>
@@ -199,7 +190,7 @@ images for the game.</p>
 automatically re-colour your item, you can specify available colours here.</p>
 <div class="admonition seealso">
 <p class="admonition-title">参见</p>
-<p><a class="reference internal" href="overview.html#colours"><span class="std std-ref">colours</span></a></p>
+<p><a class="reference internal" href="overview.html#colours"><span class="std std-ref">颜色</span></a></p>
 </div>
 <p>Each defaults to <code class="docutils literal notranslate"><span class="pre">CLOTHING_BLACK</span></code>.</p>
 <div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;colourPrimary&gt;</span>CLOTHING_PURPLE_LIGHT<span class="nt">&lt;/colourPrimary&gt;</span>
@@ -311,10 +302,10 @@ you’ve defined.</p>
     <ul>
         <li>
           &larr;
-          <a href="clothing.html" title="Previous document"><span class="section-number">2.1. </span>Item Clothing</a>
+          <a href="clothing.html" title="Previous document"><span class="section-number">2.1. </span>衣物类物品</a>
         </li>
         <li>
-          <a href="tattoos.html" title="Next document"><span class="section-number">2.3. </span>Tattoos</a>
+          <a href="tattoos.html" title="Next document"><span class="section-number">2.3. </span>纹身</a>
           &rarr;
         </li>
     </ul>
@@ -343,23 +334,23 @@ you’ve defined.</p>
 
 <h3>导航</h3>
 <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="overview.html">1. Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="overview.html">1. 概览</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="items.html">2. Items folder</a><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="clothing.html">2.1. Item Clothing</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">2.2. Miscanelaous Items</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#boolean-values">2.2.1. Boolean Values</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#coreattributes">2.2.2. coreAttributes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="clothing.html">2.1. 衣物类物品</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">2.2. 杂项物品</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#boolean-values">2.2.1. 布尔型数值</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#coreattributes">2.2.2. 核心属性</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#usedescription">2.2.3. useDescription</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="tattoos.html">2.3. Tattoos</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tattoos.html">2.3. 纹身</a></li>
 <li class="toctree-l2"><a class="reference internal" href="weapons.html">2.4. Items Weapons</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="outfits.html">3. Outfits</a></li>
 <li class="toctree-l1"><a class="reference internal" href="setBonuses.html">4. Item Sets</a></li>
 <li class="toctree-l1"><a class="reference internal" href="statusEffects.html">5. statusEffects</a></li>
-<li class="toctree-l1"><a class="reference internal" href="authors.html">6. Authors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="authors.html">6. 作者</a></li>
 </ul>
 
 <div class="relations">
@@ -367,8 +358,8 @@ you’ve defined.</p>
 <ul>
   <li><a href="index.html">Documentation overview</a><ul>
   <li><a href="items.html"><span class="section-number">2. </span>Items folder</a><ul>
-      <li>Previous: <a href="clothing.html" title="上一章"><span class="section-number">2.1. </span>Item Clothing</a></li>
-      <li>Next: <a href="tattoos.html" title="下一章"><span class="section-number">2.3. </span>Tattoos</a></li>
+      <li>Previous: <a href="clothing.html" title="上一章"><span class="section-number">2.1. </span>衣物类物品</a></li>
+      <li>Next: <a href="tattoos.html" title="下一章"><span class="section-number">2.3. </span>纹身</a></li>
   </ul></li>
   </ul></li>
 </ul>
