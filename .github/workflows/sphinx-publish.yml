@@ -38,7 +38,7 @@ jobs:
           sudo apt-get install graphviz
       - name: Extract po file
         run: |
-          bash create_po.sh
+          bash ./create_po.sh
           python ./pt_entry_convert.py
       - name: Build Sphinx HTML
         run: |
