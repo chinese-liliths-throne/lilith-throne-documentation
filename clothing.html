@@ -1,20 +1,20 @@
 <!DOCTYPE html>
 
-<html lang="zh">
+<html lang="en">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    <title>2.1. Item Clothing &#8212; Lilith&#39;s Throne Mod Documentation  文档</title>
+    <title>2.1. Item Clothing &#8212; Lilith&#39;s Throne Mod Documentation  documentation</title>
     <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=4f649999" />
     <link rel="stylesheet" type="text/css" href="_static/alabaster.css?v=4a90727b" />
     <link rel="stylesheet" type="text/css" href="_static/graphviz.css?v=eafc0fe6" />
-    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js?v=c65c79b5"></script>
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js?v=b3ba4146"></script>
     <script src="_static/doctools.js?v=888ff710"></script>
     <script src="_static/sphinx_highlight.js?v=4825356b"></script>
     <link rel="canonical" href="https://bicobus.github.io/lilith-throne-documentation/clothing.html" />
-    <link rel="index" title="索引" href="genindex.html" />
-    <link rel="search" title="搜索" href="search.html" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="2.2. Miscanelaous Items" href="items_items.html" />
     <link rel="prev" title="2. Items folder" href="items.html" />
    
@@ -49,7 +49,7 @@
           <div class="body" role="main">
             
   <section id="item-clothing">
-<h1><span class="section-number">2.1. </span>Item Clothing<a class="headerlink" href="#item-clothing" title="此标题的永久链接">¶</a></h1>
+<h1><span class="section-number">2.1. </span>Item Clothing<a class="headerlink" href="#item-clothing" title="Permalink to this heading">¶</a></h1>
 <blockquote>
 <div><dl class="field-list simple">
 <dt class="field-odd">Author<span class="colon">:</span></dt>
@@ -61,7 +61,7 @@
 <p>You can find working examples of clothing in the
 <a class="reference external" href="https://github.com/Innoxia/liliths-throne-public/tree/dev/res/mods/innoxia/items/clothing">res/mods/innoxia/items/clothing</a> folder.</p>
 <section id="general-information">
-<h2><span class="section-number">2.1.1. </span>General Information<a class="headerlink" href="#general-information" title="此标题的永久链接">¶</a></h2>
+<h2><span class="section-number">2.1.1. </span>General Information<a class="headerlink" href="#general-information" title="Permalink to this heading">¶</a></h2>
 <p>Any clothing item whose rarity is set to LEGENDARY or above will not show up in
 the game, as no shopkeepers have been being defined as selling items of that
 quality. You can spawn it from the debug menu if you wish. The debug menu is
@@ -70,12 +70,12 @@ debug menu when not in the middle of combat, sex, or movement-locked dialogue,
 as it will break you out of it.</p>
 </section>
 <section id="coreattributes">
-<h2><span class="section-number">2.1.2. </span>coreAttributes<a class="headerlink" href="#coreattributes" title="此标题的永久链接">¶</a></h2>
+<h2><span class="section-number">2.1.2. </span>coreAttributes<a class="headerlink" href="#coreattributes" title="Permalink to this heading">¶</a></h2>
 <section id="authortag">
-<h3><span class="section-number">2.1.2.1. </span>authorTag<a class="headerlink" href="#authortag" title="此标题的永久链接">¶</a></h3>
+<h3><span class="section-number">2.1.2.1. </span>authorTag<a class="headerlink" href="#authortag" title="Permalink to this heading">¶</a></h3>
 <p id="index-0">Author attribution, if you want one.</p>
 <div class="admonition seealso">
-<p class="admonition-title">参见</p>
+<p class="admonition-title">See also</p>
 <p><a class="reference internal" href="overview.html#author-tags"><span class="std std-ref">author tags</span></a></p>
 </div>
 <div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;authorTag&gt;</span><span class="cp">&lt;![CDATA[A tag discreetly sewn into the T-shirt&#39;s inner lining informs you that it was made by &#39;Innoxia&#39;.]]&gt;</span><span class="nt">&lt;/authorTag&gt;</span>
@@ -83,7 +83,7 @@ as it will break you out of it.</p>
 </div>
 </section>
 <section id="value">
-<h3><span class="section-number">2.1.2.2. </span>value<a class="headerlink" href="#value" title="此标题的永久链接">¶</a></h3>
+<h3><span class="section-number">2.1.2.2. </span>value<a class="headerlink" href="#value" title="Permalink to this heading">¶</a></h3>
 <p id="index-1">Please refer to the general information about <a class="reference internal" href="overview.html#item-value"><span class="std std-ref">item value</span></a>.</p>
 <dl class="simple">
 <dt>Example</dt><dd><p>I’ve defined this as 60, which is about the price for a basic pair
@@ -95,7 +95,7 @@ of socks or something similar.</p>
 </div>
 </section>
 <section id="determiner">
-<h3><span class="section-number">2.1.2.3. </span>determiner<a class="headerlink" href="#determiner" title="此标题的永久链接">¶</a></h3>
+<h3><span class="section-number">2.1.2.3. </span>determiner<a class="headerlink" href="#determiner" title="Permalink to this heading">¶</a></h3>
 <p>The determiner which is displayed before this item’s name. While usually “a” or
 “an”, for things like socks or gloves, you’ll want to use “a pair of”. I use the
 <code class="docutils literal notranslate"><span class="pre">CDATA</span></code> tag for all text values, as it allows html markup to be embedded
@@ -110,11 +110,11 @@ referred to as “a pair of socks”.</p>
 </div>
 </section>
 <section id="name">
-<h3><span class="section-number">2.1.2.4. </span>name<a class="headerlink" href="#name" title="此标题的永久链接">¶</a></h3>
+<h3><span class="section-number">2.1.2.4. </span>name<a class="headerlink" href="#name" title="Permalink to this heading">¶</a></h3>
 <p>The <strong>singular</strong> name of this clothing.</p>
 <dl class="simple">
 <dt>Example</dt><dd><p>I’ve named this “template sock”, as the singular for “template
-socks” is of course “sock”...</p>
+socks” is of course “sock”…</p>
 </dd>
 </dl>
 <div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;name</span><span class="w"> </span><span class="na">appendColourName=</span><span class="s">&quot;true&quot;</span><span class="nt">&gt;</span><span class="cp">&lt;![CDATA[template sock]]&gt;</span><span class="nt">&lt;/name&gt;</span>
@@ -126,7 +126,7 @@ false, this clothing would always be called “template socks” instead of, for
 example, “white template socks”.)</p>
 </section>
 <section id="nameplural">
-<h3><span class="section-number">2.1.2.5. </span>namePlural<a class="headerlink" href="#nameplural" title="此标题的永久链接">¶</a></h3>
+<h3><span class="section-number">2.1.2.5. </span>namePlural<a class="headerlink" href="#nameplural" title="Permalink to this heading">¶</a></h3>
 <p>The plural form of the name. The attribute <code class="docutils literal notranslate"><span class="pre">pluralByDefault</span></code> determines
 whether this item is naturally referred to as a plural (use true for things like
 socks or gloves).</p>
@@ -141,7 +141,7 @@ extremely exceptional circumstances.</p>
 </div>
 </section>
 <section id="description">
-<h3><span class="section-number">2.1.2.6. </span>description<a class="headerlink" href="#description" title="此标题的永久链接">¶</a></h3>
+<h3><span class="section-number">2.1.2.6. </span>description<a class="headerlink" href="#description" title="Permalink to this heading">¶</a></h3>
 <p>This is the description which is shown in tooltips and on the item’s inspection
 page.</p>
 <dl class="simple">
@@ -155,7 +155,7 @@ matter.</p>
 </div>
 </section>
 <section id="physicalresistance">
-<h3><span class="section-number">2.1.2.7. </span>physicalResistance<a class="headerlink" href="#physicalresistance" title="此标题的永久链接">¶</a></h3>
+<h3><span class="section-number">2.1.2.7. </span>physicalResistance<a class="headerlink" href="#physicalresistance" title="Permalink to this heading">¶</a></h3>
 <p>The default physical resistance for this piece of clothing. Usually use 0, but
 if it’s armour, then values of 1 up to 5 would be fitting (any more than that
 might be very OP). Physical resistance is a very powerful stat, so please keep
@@ -171,7 +171,7 @@ armour, but are still protective), you can use 0.5 or so.</p>
 </div>
 </section>
 <section id="femininity">
-<h3><span class="section-number">2.1.2.8. </span>femininity<a class="headerlink" href="#femininity" title="此标题的永久链接">¶</a></h3>
+<h3><span class="section-number">2.1.2.8. </span>femininity<a class="headerlink" href="#femininity" title="Permalink to this heading">¶</a></h3>
 <p>Use <code class="docutils literal notranslate"><span class="pre">FEMININE</span></code> for if this clothing is intended for feminine characters,
 <code class="docutils literal notranslate"><span class="pre">MASCULINE</span></code> for masculine, and <code class="docutils literal notranslate"><span class="pre">ANDROGYNOUS</span></code> if it’s able to be worn by
 anyone without penalties.</p>
@@ -185,7 +185,7 @@ so I set this to <code class="docutils literal notranslate"><span class="pre">AN
 </div>
 </section>
 <section id="equipslots">
-<h3><span class="section-number">2.1.2.9. </span>equipSlots<a class="headerlink" href="#equipslots" title="此标题的永久链接">¶</a></h3>
+<h3><span class="section-number">2.1.2.9. </span>equipSlots<a class="headerlink" href="#equipslots" title="Permalink to this heading">¶</a></h3>
 <p>The slots that this clothing is able to be fit into. The game only supports up
 to 4 unique slots, so if you define more than 4, the rest of them won’t show up
 in-game. These definitions preserve ordering, so use the top one for the most
@@ -207,7 +207,7 @@ defined <code class="docutils literal notranslate"><span class="pre">HAND</span>
 </div>
 </section>
 <section id="rarity">
-<h3><span class="section-number">2.1.2.10. </span>rarity<a class="headerlink" href="#rarity" title="此标题的永久链接">¶</a></h3>
+<h3><span class="section-number">2.1.2.10. </span>rarity<a class="headerlink" href="#rarity" title="Permalink to this heading">¶</a></h3>
 <p>The rarity of this item. Anything less than <code class="docutils literal notranslate"><span class="pre">EPIC</span></code> may end up being modified
 in the code. Possible rarities are found here:
 <a class="reference external" href="https://github.com/Innoxia/liliths-throne-public/tree/dev/src/com/lilithsthrone/game/inventory/Rarity.java">src/com/lilithsthrone/game/inventory/Rarity.java</a></p>
@@ -221,10 +221,10 @@ in the code. Possible rarities are found here:
 </div>
 </section>
 <section id="clothingset">
-<h3><span class="section-number">2.1.2.11. </span>clothingSet<a class="headerlink" href="#clothingset" title="此标题的永久链接">¶</a></h3>
+<h3><span class="section-number">2.1.2.11. </span>clothingSet<a class="headerlink" href="#clothingset" title="Permalink to this heading">¶</a></h3>
 <p>The set that this clothing belongs to.</p>
 <div class="admonition seealso">
-<p class="admonition-title">参见</p>
+<p class="admonition-title">See also</p>
 <p><a class="reference internal" href="setBonuses.html"><span class="doc">Item Sets</span></a></p>
 </div>
 <p>Navigate to <a class="reference external" href="https://github.com/Innoxia/liliths-throne-public/tree/dev/res/setBonuses">res/setBonuses</a> to see existing sets.</p>
@@ -236,7 +236,7 @@ in the code. Possible rarities are found here:
 </div>
 </section>
 <section id="imagename">
-<h3><span class="section-number">2.1.2.12. </span>imageName<a class="headerlink" href="#imagename" title="此标题的永久链接">¶</a></h3>
+<h3><span class="section-number">2.1.2.12. </span>imageName<a class="headerlink" href="#imagename" title="Permalink to this heading">¶</a></h3>
 <p>The file paths for this clothing’s image. Please refer to the
 <a class="reference internal" href="overview.html#items-image"><span class="std std-ref">documentation about images</span></a>.</p>
 <dl class="simple">
@@ -249,7 +249,7 @@ folder location alongside this xml file.</p>
 </div>
 </section>
 <section id="imageequippedname">
-<h3><span class="section-number">2.1.2.13. </span>imageEquippedName<a class="headerlink" href="#imageequippedname" title="此标题的永久链接">¶</a></h3>
+<h3><span class="section-number">2.1.2.13. </span>imageEquippedName<a class="headerlink" href="#imageequippedname" title="Permalink to this heading">¶</a></h3>
 <p>The file paths for this clothing’s image while equipped. The “slot” attribute
 determines the InventorySlot in which the defined file will be used.</p>
 <dl class="simple">
@@ -265,11 +265,11 @@ location alongside this xml file.</p>
 </div>
 </section>
 <section id="stickers">
-<h3><span class="section-number">2.1.2.14. </span>stickers<a class="headerlink" href="#stickers" title="此标题的永久链接">¶</a></h3>
+<h3><span class="section-number">2.1.2.14. </span>stickers<a class="headerlink" href="#stickers" title="Permalink to this heading">¶</a></h3>
 <p><code class="docutils literal notranslate"><span class="pre">Stickers</span></code> are additional svgs which can be overlaid on top of (or beneath
 the) base svg image. Definitions are all within the <code class="docutils literal notranslate"><span class="pre">stickers</span></code> element.</p>
 <section id="category">
-<h4><span class="section-number">2.1.2.14.1. </span>category<a class="headerlink" href="#category" title="此标题的永久链接">¶</a></h4>
+<h4><span class="section-number">2.1.2.14.1. </span>category<a class="headerlink" href="#category" title="Permalink to this heading">¶</a></h4>
 <p>All stickers defined within this category are <strong>mutually exclusive</strong> with one
 another, but not with stickers defined in other <code class="docutils literal notranslate"><span class="pre">category</span></code> elements. The
 <code class="docutils literal notranslate"><span class="pre">id</span></code> should be unique to each category, and can be defined as whatever you
@@ -292,7 +292,7 @@ top of the category list.</p>
 </dd>
 </dl>
 <section id="categoryname">
-<h5><span class="section-number">2.1.2.14.1.1. </span>categoryName<a class="headerlink" href="#categoryname" title="此标题的永久链接">¶</a></h5>
+<h5><span class="section-number">2.1.2.14.1.1. </span>categoryName<a class="headerlink" href="#categoryname" title="Permalink to this heading">¶</a></h5>
 <p>This is used in-game as the title for this sticker category in the sticker
 application menu UI. As such, please try to make this human-readable.</p>
 <dl>
@@ -303,7 +303,7 @@ application menu UI. As such, please try to make this human-readable.</p>
 </dl>
 </section>
 <section id="sticker">
-<span id="id1"></span><h5><span class="section-number">2.1.2.14.1.2. </span>sticker<a class="headerlink" href="#sticker" title="此标题的永久链接">¶</a></h5>
+<span id="id1"></span><h5><span class="section-number">2.1.2.14.1.2. </span>sticker<a class="headerlink" href="#sticker" title="Permalink to this heading">¶</a></h5>
 <p>A sticker element. Each sticker are exclusive with other stickers present in the
 same category. Stickers of different cagetories can be combined.</p>
 <p>The <code class="docutils literal notranslate"><span class="pre">id</span></code> element should be unique to stickers within this category element.
@@ -329,7 +329,7 @@ entirely to use default button colours. The default values, if you were to
 define them using these variables, would look like: <code class="docutils literal notranslate"><span class="pre">colourDisabled=&quot;TEXT_GREY&quot;</span>
 <span class="pre">colourSelected=&quot;GENERIC_GOOD&quot;</span></code></p>
 <div class="admonition note">
-<p class="admonition-title">备注</p>
+<p class="admonition-title">Note</p>
 <p>If you do not define an <a class="reference external" href="sticker-imageName">imageName</a> sub-element, or if
 you leave it blank, the default selected colour will be <code class="docutils literal notranslate"><span class="pre">TEXT_GREY</span></code> instead
 of <code class="docutils literal notranslate"><span class="pre">GENERIC_GOOD</span></code>.</p>
@@ -360,7 +360,7 @@ you <strong>must</strong> use a standard RGB hex code as the value.</p>
 </dd>
 </dl>
 <section id="stickername">
-<h6><span class="section-number">2.1.2.14.1.2.1. </span>stickerName<a class="headerlink" href="#stickername" title="此标题的永久链接">¶</a></h6>
+<h6><span class="section-number">2.1.2.14.1.2.1. </span>stickerName<a class="headerlink" href="#stickername" title="Permalink to this heading">¶</a></h6>
 <p>This is used in-game as the title for this sticker’s button in the sticker
 application menu UI. As such, please try to make this human-readable.</p>
 <dl>
@@ -371,7 +371,7 @@ application menu UI. As such, please try to make this human-readable.</p>
 </dl>
 </section>
 <section id="nameprefix">
-<h6><span class="section-number">2.1.2.14.1.2.2. </span>namePrefix<a class="headerlink" href="#nameprefix" title="此标题的永久链接">¶</a></h6>
+<h6><span class="section-number">2.1.2.14.1.2.2. </span>namePrefix<a class="headerlink" href="#nameprefix" title="Permalink to this heading">¶</a></h6>
 <p>Define a <code class="docutils literal notranslate"><span class="pre">namePrefix</span></code> to add a prefix to the base clothing’s name when this
 sticker is applied.</p>
 <p>The <code class="docutils literal notranslate"><span class="pre">priority</span></code> variable defines the order in which multiple sticker
@@ -389,12 +389,12 @@ first</strong>. This can be left undefined.</p>
 </dl>
 </section>
 <section id="namepostfix">
-<h6><span class="section-number">2.1.2.14.1.2.3. </span>namePostfix<a class="headerlink" href="#namepostfix" title="此标题的永久链接">¶</a></h6>
+<h6><span class="section-number">2.1.2.14.1.2.3. </span>namePostfix<a class="headerlink" href="#namepostfix" title="Permalink to this heading">¶</a></h6>
 <p>Exactly the same as <a class="reference internal" href="#nameprefix">namePrefix</a>, but the text is appended after the base
 clothing name.</p>
 </section>
 <section id="descriptionmodification">
-<h6><span class="section-number">2.1.2.14.1.2.4. </span>descriptionmodification<a class="headerlink" href="#descriptionmodification" title="此标题的永久链接">¶</a></h6>
+<h6><span class="section-number">2.1.2.14.1.2.4. </span>descriptionmodification<a class="headerlink" href="#descriptionmodification" title="Permalink to this heading">¶</a></h6>
 <p>You can set whether this sticker should define a new description for the
 clothing.</p>
 <p>If <code class="docutils literal notranslate"><span class="pre">fullReplacement</span></code> is true, then the clothing’s description is completely
@@ -417,7 +417,7 @@ which sticker’s description has priority.</p>
 </dl>
 </section>
 <section id="id3">
-<h6><span class="section-number">2.1.2.14.1.2.5. </span>imageName<a class="headerlink" href="#id3" title="此标题的永久链接">¶</a></h6>
+<h6><span class="section-number">2.1.2.14.1.2.5. </span>imageName<a class="headerlink" href="#id3" title="Permalink to this heading">¶</a></h6>
 <p>The path name for this sticker, which should be in the same folder location as
 this xml file.</p>
 <p>The <code class="docutils literal notranslate"><span class="pre">slot</span></code> variable can be omitted, in which case the default slot for the
@@ -432,7 +432,7 @@ not need to define this attribute, as if it is missing, this svg will use the
 sticker’s <code class="docutils literal notranslate"><span class="pre">zLayer</span></code> attribute which you’ve already defined up above in the root
 <code class="docutils literal notranslate"><span class="pre">sticker</span></code> element. I have included it here just as an example.</p>
 <div class="admonition note">
-<p class="admonition-title">备注</p>
+<p class="admonition-title">Note</p>
 <p>You can add as many <code class="docutils literal notranslate"><span class="pre">imageName</span></code> elements as you like.</p>
 </div>
 <dl>
@@ -448,7 +448,7 @@ sticker’s <code class="docutils literal notranslate"><span class="pre">zLayer<
 </dl>
 </section>
 <section id="itemtagsadded">
-<h6><span class="section-number">2.1.2.14.1.2.6. </span>itemTagsAdded<a class="headerlink" href="#itemtagsadded" title="此标题的永久链接">¶</a></h6>
+<h6><span class="section-number">2.1.2.14.1.2.6. </span>itemTagsAdded<a class="headerlink" href="#itemtagsadded" title="Permalink to this heading">¶</a></h6>
 <p>If this sticker should add any ItemTags to the clothing, then you can define
 them in here. Use <code class="docutils literal notranslate"><span class="pre">&lt;tag&gt;</span></code> elements within the <code class="docutils literal notranslate"><span class="pre">itemTagsAdded</span></code> element (e.g.
 <code class="docutils literal notranslate"><span class="pre">&lt;tag&gt;SOLD_BY_NYAN&lt;/tag&gt;</span></code>) using <code class="docutils literal notranslate"><span class="pre">ItemTag</span></code> names as defined here:
@@ -463,20 +463,20 @@ them in here. Use <code class="docutils literal notranslate"><span class="pre">&
 </dl>
 </section>
 <section id="itemtagsremoved">
-<h6><span class="section-number">2.1.2.14.1.2.7. </span>itemTagsRemoved<a class="headerlink" href="#itemtagsremoved" title="此标题的永久链接">¶</a></h6>
+<h6><span class="section-number">2.1.2.14.1.2.7. </span>itemTagsRemoved<a class="headerlink" href="#itemtagsremoved" title="Permalink to this heading">¶</a></h6>
 <p>If this sticker should remove any <code class="docutils literal notranslate"><span class="pre">ItemTags</span></code> to the clothing, then you can
 define them in here. Use <code class="docutils literal notranslate"><span class="pre">&lt;tag&gt;</span></code> elements in the same manner as
 <a class="reference internal" href="#itemtagsadded">itemTagsAdded</a>.</p>
 <div class="admonition warning">
-<p class="admonition-title">警告</p>
+<p class="admonition-title">Warning</p>
 <p>If you define either a single sticker or multiple stickers to have
-conflicting tag behaviour -- i.e. both adding and removing identical tags --,
+conflicting tag behaviour – i.e. both adding and removing identical tags –,
 then behaviour is undefined and you will end up with the <code class="docutils literal notranslate"><span class="pre">ItemTag</span></code> applied
 or removed at random.</p>
 </div>
 </section>
 <section id="unavailabilitytext">
-<h6><span class="section-number">2.1.2.14.1.2.8. </span>unavailabilityText<a class="headerlink" href="#unavailabilitytext" title="此标题的永久链接">¶</a></h6>
+<h6><span class="section-number">2.1.2.14.1.2.8. </span>unavailabilityText<a class="headerlink" href="#unavailabilitytext" title="Permalink to this heading">¶</a></h6>
 <p>Sticker are available to be used by the player by default, but if you want there
 to be requirements for using this sticker, then define this element as a
 <code class="docutils literal notranslate"><span class="pre">CDATA</span></code> text element, with any non-whitespace text returned signalling to the
@@ -514,7 +514,7 @@ no need for an elaborate description, as the player will never see it:</p>
 </div>
 </section>
 <section id="availabilitytext">
-<h6><span class="section-number">2.1.2.14.1.2.9. </span>availabilityText<a class="headerlink" href="#availabilitytext" title="此标题的永久链接">¶</a></h6>
+<h6><span class="section-number">2.1.2.14.1.2.9. </span>availabilityText<a class="headerlink" href="#availabilitytext" title="Permalink to this heading">¶</a></h6>
 <p>The counterpart to <a class="reference internal" href="#unavailabilitytext">unavailabilityText</a>, this text is shown when
 <a class="reference internal" href="#unavailabilitytext">unavailabilityText</a> is returning an empty String, and therefore this sticker
 is available. Use a <code class="docutils literal notranslate"><span class="pre">CDATA</span></code> text element.</p>
@@ -537,7 +537,7 @@ is available. Use a <code class="docutils literal notranslate"><span class="pre"
 </section>
 </section>
 <section id="echantmentlimit">
-<h3><span class="section-number">2.1.2.15. </span>echantmentLimit<a class="headerlink" href="#echantmentlimit" title="此标题的永久链接">¶</a></h3>
+<h3><span class="section-number">2.1.2.15. </span>echantmentLimit<a class="headerlink" href="#echantmentlimit" title="Permalink to this heading">¶</a></h3>
 <p>How many enchantments can be fit into this item. It’s typically best to let the
 game handle the default number of enchantments, which typically results in 100.</p>
 <p>Example</p>
@@ -555,7 +555,7 @@ enchantments default value.</p>
 </div>
 </section>
 <section id="effects">
-<h3><span class="section-number">2.1.2.16. </span>effects<a class="headerlink" href="#effects" title="此标题的永久链接">¶</a></h3>
+<h3><span class="section-number">2.1.2.16. </span>effects<a class="headerlink" href="#effects" title="Permalink to this heading">¶</a></h3>
 <p>The default effects that this clothing spawns in with. To know what to put in
 here, it would probably be easiest to enchant clothing in your game, save the
 game, then copy over that clothing’s ’effects’ in your save file.</p>
@@ -572,7 +572,7 @@ second will give the wearer the masturbation fetish while worn.</p>
 </div>
 </section>
 <section id="blockedpartslist">
-<h3><span class="section-number">2.1.2.17. </span>blockedPartsList<a class="headerlink" href="#blockedpartslist" title="此标题的永久链接">¶</a></h3>
+<h3><span class="section-number">2.1.2.17. </span>blockedPartsList<a class="headerlink" href="#blockedpartslist" title="Permalink to this heading">¶</a></h3>
 <p>This section determines how the clothing interacts with other clothing and the
 wearer’s body.</p>
 <p>Example</p>
@@ -616,13 +616,13 @@ to the <code class="docutils literal notranslate"><span class="pre">HAND</span><
 </div>
 </div></blockquote>
 <section id="blockedparts">
-<h4><span class="section-number">2.1.2.17.1. </span>blockedParts<a class="headerlink" href="#blockedparts" title="此标题的永久链接">¶</a></h4>
+<h4><span class="section-number">2.1.2.17.1. </span>blockedParts<a class="headerlink" href="#blockedparts" title="Permalink to this heading">¶</a></h4>
 <p>You can add as many <code class="docutils literal notranslate"><span class="pre">blockedParts</span></code> elements as you like, but they should each
 have a different <a class="reference internal" href="#displacementtype">displacementType</a>, and <strong>there should be at least one, of
 type</strong> <code class="docutils literal notranslate"><span class="pre">REMOVE_OR_EQUIP</span></code>.</p>
 </section>
 <section id="displacementtype">
-<h4><span class="section-number">2.1.2.17.2. </span>displacementType<a class="headerlink" href="#displacementtype" title="此标题的永久链接">¶</a></h4>
+<h4><span class="section-number">2.1.2.17.2. </span>displacementType<a class="headerlink" href="#displacementtype" title="Permalink to this heading">¶</a></h4>
 <p>If this clothing is displaced in the following way (in this case, by being
 removed), then the <a class="reference internal" href="#blockedbodyparts">blockedBodyParts</a>, <a class="reference internal" href="#clothingaccessblocked">clothingAccessBlocked</a>, and
 <a class="reference internal" href="#concealedslots">concealedSlots</a> will all be revealed. If multiple <a class="reference internal" href="#blockedparts">blockedParts</a> block or
@@ -635,19 +635,19 @@ displacementTypes, and both of these contain the <code class="docutils literal n
 <a class="reference external" href="https://github.com/Innoxia/liliths-throne-public/tree/dev/src/com/lilithsthrone/game/inventory/clothing/DisplacementType.java">src/com/lilithsthrone/game/inventory/clothing/DisplacementType.java</a></p>
 </section>
 <section id="clothingaccessrequired">
-<h4><span class="section-number">2.1.2.17.3. </span>clothingAccessRequired<a class="headerlink" href="#clothingaccessrequired" title="此标题的永久链接">¶</a></h4>
+<h4><span class="section-number">2.1.2.17.3. </span>clothingAccessRequired<a class="headerlink" href="#clothingaccessrequired" title="Permalink to this heading">¶</a></h4>
 <p>The access required to perform this <a class="reference internal" href="#displacementtype">displacementType</a>.</p>
 <p><code class="docutils literal notranslate"><span class="pre">clothingAccess</span></code> values can be found here:
 <a class="reference external" href="https://github.com/Innoxia/liliths-throne-public/tree/dev/src/com/lilithsthrone/game/inventory/clothing/ClothingAccess.java">src/com/lilithsthrone/game/inventory/clothing/ClothingAccess.java</a></p>
 </section>
 <section id="blockedbodyparts">
-<h4><span class="section-number">2.1.2.17.4. </span>blockedBodyParts<a class="headerlink" href="#blockedbodyparts" title="此标题的永久链接">¶</a></h4>
+<h4><span class="section-number">2.1.2.17.4. </span>blockedBodyParts<a class="headerlink" href="#blockedbodyparts" title="Permalink to this heading">¶</a></h4>
 <p>The body parts that are blocked by this <a class="reference internal" href="#displacementtype">displacementType</a>.</p>
 <p><code class="docutils literal notranslate"><span class="pre">bodyPart</span></code> values can be found here:
 <a class="reference external" href="https://github.com/Innoxia/liliths-throne-public/tree/dev/src/com/lilithsthrone/game/character/body/CoverableArea.java">src/com/lilithsthrone/game/character/body/CoverableArea.java</a></p>
 </section>
 <section id="clothingaccessblocked">
-<h4><span class="section-number">2.1.2.17.5. </span>clothingAccessBlocked<a class="headerlink" href="#clothingaccessblocked" title="此标题的永久链接">¶</a></h4>
+<h4><span class="section-number">2.1.2.17.5. </span>clothingAccessBlocked<a class="headerlink" href="#clothingaccessblocked" title="Permalink to this heading">¶</a></h4>
 <p>The access that this <a class="reference internal" href="#displacementtype">displacementType</a> blocks. Again, clothingAccess values
 can be found here:
 <a class="reference external" href="https://github.com/Innoxia/liliths-throne-public/tree/dev/src/com/lilithsthrone/game/inventory/clothing/ClothingAccess.java">src/com/lilithsthrone/game/inventory/clothing/ClothingAccess.java</a></p>
@@ -661,11 +661,11 @@ here.</p>
 </dl>
 </section>
 <section id="concealedslots">
-<h4><span class="section-number">2.1.2.17.6. </span>concealedSlots<a class="headerlink" href="#concealedslots" title="此标题的永久链接">¶</a></h4>
+<h4><span class="section-number">2.1.2.17.6. </span>concealedSlots<a class="headerlink" href="#concealedslots" title="Permalink to this heading">¶</a></h4>
 <p>The slots that this <a class="reference internal" href="#displacementtype">displacementType</a> conceals. Possible slots are found
 here: <a class="reference external" href="https://github.com/Innoxia/liliths-throne-public/tree/dev/src/com/lilithsthrone/game/inventory/InventorySlot.java">src/com/lilithsthrone/game/inventory/InventorySlot.java</a></p>
 <p>You can also use a preset list by adding an attribute named “values” to this
-element (an example -- “CS Example” -- is in the <a class="reference internal" href="#blockedparts">blockedParts</a> section below
+element (an example – “CS Example” – is in the <a class="reference internal" href="#blockedparts">blockedParts</a> section below
 this one). The preset lists that you can use are found here:
 <a class="reference external" href="https://github.com/Innoxia/liliths-throne-public/tree/dev/src/com/lilithsthrone/game/inventory/clothing/PresetConcealmentLists.java">src/com/lilithsthrone/game/inventory/clothing/PresetConcealmentLists.java</a></p>
 <p>Use the tag <code class="docutils literal notranslate"><span class="pre">slot</span></code> for values inserted here.</p>
@@ -678,7 +678,7 @@ this one). The preset lists that you can use are found here:
 </section>
 </section>
 <section id="incompatibleslots">
-<h3><span class="section-number">2.1.2.18. </span>incompatibleSlots<a class="headerlink" href="#incompatibleslots" title="此标题的永久链接">¶</a></h3>
+<h3><span class="section-number">2.1.2.18. </span>incompatibleSlots<a class="headerlink" href="#incompatibleslots" title="Permalink to this heading">¶</a></h3>
 <p>Inventory slots that are incompatible with this clothing. The game’s swimsuit
 makes use of this, and, while fitting into the <code class="docutils literal notranslate"><span class="pre">CHEST</span></code> slot, also blocks
 <code class="docutils literal notranslate"><span class="pre">GROIN</span></code> and <code class="docutils literal notranslate"><span class="pre">STOMACH</span></code>. Possible slots are found here:
@@ -703,7 +703,7 @@ would block the <code class="docutils literal notranslate"><span class="pre">FIN
 </div>
 </section>
 <section id="colours">
-<h3><span class="section-number">2.1.2.19. </span>colours<a class="headerlink" href="#colours" title="此标题的永久链接">¶</a></h3>
+<h3><span class="section-number">2.1.2.19. </span>colours<a class="headerlink" href="#colours" title="Permalink to this heading">¶</a></h3>
 <p>Please consult the relevant <a class="reference internal" href="overview.html#colours"><span class="std std-ref">documentation</span></a>.</p>
 <p>Your clothing can be coloured any way you like, but if you’d like the player to
 be able to dye your clothing, you can specify available colours here.
@@ -715,7 +715,7 @@ values are as follows:</p>
 <p>Colour types can be found in the files present in the following folder:
 <a class="reference external" href="https://github.com/Innoxia/liliths-throne-public/tree/dev/src/com/lilithsthrone/utils/colours">src/com/lilithsthrone/utils/colours</a></p>
 <div class="admonition important">
-<p class="admonition-title">重要</p>
+<p class="admonition-title">Important</p>
 <p>please use the <code class="docutils literal notranslate"><span class="pre">Colour</span></code> values that start with <code class="docutils literal notranslate"><span class="pre">CLOTHING_</span></code>.</p>
 </div>
 <div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;primaryColours</span><span class="w"> </span><span class="na">recolouringAllowed=</span><span class="s">&quot;true&quot;</span><span class="w"> </span><span class="na">values=</span><span class="s">&quot;JUST_WHITE&quot;</span><span class="nt">/&gt;</span>
@@ -734,7 +734,7 @@ values are as follows:</p>
 </pre></div>
 </div>
 <section id="customcolours">
-<h4><span class="section-number">2.1.2.19.1. </span>customColours<a class="headerlink" href="#customcolours" title="此标题的永久链接">¶</a></h4>
+<h4><span class="section-number">2.1.2.19.1. </span>customColours<a class="headerlink" href="#customcolours" title="Permalink to this heading">¶</a></h4>
 <p>You can define any number of custom colours to replace the shades you’ve
 coloured your svg with.</p>
 <div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;customColours&gt;</span>
@@ -750,7 +750,7 @@ coloured your svg with.</p>
 </section>
 </section>
 <section id="patterns">
-<h3><span class="section-number">2.1.2.20. </span>patterns<a class="headerlink" href="#patterns" title="此标题的永久链接">¶</a></h3>
+<h3><span class="section-number">2.1.2.20. </span>patterns<a class="headerlink" href="#patterns" title="Permalink to this heading">¶</a></h3>
 <p>This section details how to define patterns. If your svg file does not have a
 <code class="docutils literal notranslate"><span class="pre">patternLayer</span></code> defined, you can safely delete this whole section:</p>
 <dl>
@@ -782,7 +782,7 @@ then a green+black tiger-striped item of clothing would be called
 </pre></div>
 </div>
 <section id="patternprimarycolours-patternsecondarycolours-and-patterntertiarycolours">
-<h4><span class="section-number">2.1.2.20.1. </span>patternPrimaryColours, patternSecondaryColours, and patternTertiaryColours<a class="headerlink" href="#patternprimarycolours-patternsecondarycolours-and-patterntertiarycolours" title="此标题的永久链接">¶</a></h4>
+<h4><span class="section-number">2.1.2.20.1. </span>patternPrimaryColours, patternSecondaryColours, and patternTertiaryColours<a class="headerlink" href="#patternprimarycolours-patternsecondarycolours-and-patterntertiarycolours" title="Permalink to this heading">¶</a></h4>
 <p>Colours work the same as explained in the <a class="reference internal" href="#colours">colours</a> section.</p>
 <div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;patternPrimaryColours&gt;</span>
 <span class="w">    </span><span class="nt">&lt;colour&gt;</span>CLOTHING_GREEN<span class="nt">&lt;/colour&gt;</span>
@@ -793,7 +793,7 @@ then a green+black tiger-striped item of clothing would be called
 </div>
 </section>
 <section id="custompatterncolours">
-<h4><span class="section-number">2.1.2.20.2. </span>customPatternColours<a class="headerlink" href="#custompatterncolours" title="此标题的永久链接">¶</a></h4>
+<h4><span class="section-number">2.1.2.20.2. </span>customPatternColours<a class="headerlink" href="#custompatterncolours" title="Permalink to this heading">¶</a></h4>
 <p>Custom pattern colours can be defined just like the customColours up above.</p>
 <div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;customPatternColours/&gt;</span>
 </pre></div>
@@ -801,7 +801,7 @@ then a green+black tiger-striped item of clothing would be called
 </section>
 </section>
 <section id="itemtags">
-<h3><span class="section-number">2.1.2.21. </span>itemTags<a class="headerlink" href="#itemtags" title="此标题的永久链接">¶</a></h3>
+<h3><span class="section-number">2.1.2.21. </span>itemTags<a class="headerlink" href="#itemtags" title="Permalink to this heading">¶</a></h3>
 <p>These tags determine where in the world your clothing can be found, and what
 special attributes your clothing should have. Possible tags are defined in
 <a class="reference external" href="https://github.com/Innoxia/liliths-throne-public/tree/dev/src/com/lilithsthrone/game/inventory/ItemTag.java">src/com/lilithsthrone/game/inventory/ItemTag.java</a></p>
@@ -823,7 +823,7 @@ just for demonstration purposes.</p>
 </section>
 </section>
 <section id="sexattributesself">
-<h2><span class="section-number">2.1.3. </span>sexAttributesSelf<a class="headerlink" href="#sexattributesself" title="此标题的永久链接">¶</a></h2>
+<h2><span class="section-number">2.1.3. </span>sexAttributesSelf<a class="headerlink" href="#sexattributesself" title="Permalink to this heading">¶</a></h2>
 <p>See the <a class="reference external" href="https://github.com/Innoxia/liliths-throne-public/tree/dev/res/clothing/innoxia/buttPlugs/butt_plug.xml">res/clothing/innoxia/buttPlugs/butt_plug.xml</a> file for a
 working example of this element.</p>
 <p>These are the sex attributes applicable to the wearer (i.e. when inserted in the
@@ -851,7 +851,7 @@ used for insertable dildos.)</p>
 </pre></div>
 </div>
 <section id="penetration">
-<h3><span class="section-number">2.1.3.1. </span>penetration<a class="headerlink" href="#penetration" title="此标题的永久链接">¶</a></h3>
+<h3><span class="section-number">2.1.3.1. </span>penetration<a class="headerlink" href="#penetration" title="Permalink to this heading">¶</a></h3>
 <dl class="simple">
 <dt>length</dt><dd><p>value in cm</p>
 </dd>
@@ -863,9 +863,9 @@ used for insertable dildos.)</p>
 </dl>
 </section>
 <section id="orifice">
-<h3><span class="section-number">2.1.3.2. </span>orifice<a class="headerlink" href="#orifice" title="此标题的永久链接">¶</a></h3>
+<h3><span class="section-number">2.1.3.2. </span>orifice<a class="headerlink" href="#orifice" title="Permalink to this heading">¶</a></h3>
 <div class="versionchanged">
-<p><span class="versionmodified changed">在 0.3.7 版本发生变更: </span>orifice sex toy support is not fully implemented into the game!</p>
+<p><span class="versionmodified changed">Changed in version 0.3.7: </span>orifice sex toy support is not fully implemented into the game!</p>
 </div>
 <dl class="simple">
 <dt>depth</dt><dd><p>value in cm</p>
@@ -884,12 +884,12 @@ used for insertable dildos.)</p>
 </section>
 </section>
 <section id="sexattributesother">
-<h2><span class="section-number">2.1.4. </span>sexAttributesOther<a class="headerlink" href="#sexattributesother" title="此标题的永久链接">¶</a></h2>
+<h2><span class="section-number">2.1.4. </span>sexAttributesOther<a class="headerlink" href="#sexattributesother" title="Permalink to this heading">¶</a></h2>
 <p>These are the sex attributes applicable to someone who is interacting with the
 wearer (i.e. the penetration/orifice which is available for people other than
 the wearer. Mainly used for strap-on dildos.)</p>
 <div class="admonition seealso">
-<p class="admonition-title">参见</p>
+<p class="admonition-title">See also</p>
 <p>Consult the file
 <a class="reference external" href="https://github.com/Innoxia/liliths-throne-public/tree/dev/res/clothing/norin/strapless_dildo/strapless_dildo.xml">res/clothing/norin/strapless_dildo/strapless_dildo.xml</a> for a
 working example of the following excerpt.</p>
@@ -908,13 +908,13 @@ working example of the following excerpt.</p>
 </div>
 </section>
 <section id="replacementtext">
-<h2><span class="section-number">2.1.5. </span>replacementText<a class="headerlink" href="#replacementtext" title="此标题的永久链接">¶</a></h2>
+<h2><span class="section-number">2.1.5. </span>replacementText<a class="headerlink" href="#replacementtext" title="Permalink to this heading">¶</a></h2>
 <p>The following sections are for defining the descriptions of displacing or
 replacing your clothing. The attribute <code class="docutils literal notranslate"><span class="pre">type</span></code> defines which <code class="docutils literal notranslate"><span class="pre">DisplacementType</span></code>
 your descriptions are applied to. For standard equipping and unequipping, use
 <code class="docutils literal notranslate"><span class="pre">REMOVE_OR_EQUIP</span></code>.</p>
 <div class="admonition seealso">
-<p class="admonition-title">参见</p>
+<p class="admonition-title">See also</p>
 <p>List of type contant:
 <a class="reference external" href="https://github.com/Innoxia/liliths-throne-public/tree/dev/src/com/lilithsthrone/game/inventory/clothing/DisplacementType.java">src/com/lilithsthrone/game/inventory/clothing/DisplacementType.java</a>.</p>
 </div>
@@ -952,7 +952,7 @@ your descriptions are applied to. For standard equipping and unequipping, use
 </dl>
 </section>
 <section id="displacementtext">
-<h2><span class="section-number">2.1.6. </span>displacementText<a class="headerlink" href="#displacementtext" title="此标题的永久链接">¶</a></h2>
+<h2><span class="section-number">2.1.6. </span>displacementText<a class="headerlink" href="#displacementtext" title="Permalink to this heading">¶</a></h2>
 <p>This section is used for removal and displacement.</p>
 <dl>
 <dt>Example</dt><dd><p>This is the unequip text for when socks are removed from the <code class="docutils literal notranslate"><span class="pre">SOCK</span></code> slot:</p>
@@ -1027,9 +1027,9 @@ your descriptions are applied to. For standard equipping and unequipping, use
 
 
 
-<h3>导航</h3>
+<h3>Navigation</h3>
 <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="overview.html">1. 总览</a></li>
+<li class="toctree-l1"><a class="reference internal" href="overview.html">1. Overview</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="items.html">2. Items folder</a><ul class="current">
 <li class="toctree-l2 current"><a class="current reference internal" href="#">2.1. Item Clothing</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#general-information">2.1.1. General Information</a></li>
@@ -1056,22 +1056,36 @@ your descriptions are applied to. For standard equipping and unequipping, use
 <ul>
   <li><a href="index.html">Documentation overview</a><ul>
   <li><a href="items.html"><span class="section-number">2. </span>Items folder</a><ul>
-      <li>Previous: <a href="items.html" title="上一章"><span class="section-number">2. </span>Items folder</a></li>
-      <li>Next: <a href="items_items.html" title="下一章"><span class="section-number">2.2. </span>Miscanelaous Items</a></li>
+      <li>Previous: <a href="items.html" title="previous chapter"><span class="section-number">2. </span>Items folder</a></li>
+      <li>Next: <a href="items_items.html" title="next chapter"><span class="section-number">2.2. </span>Miscanelaous Items</a></li>
   </ul></li>
   </ul></li>
 </ul>
 </div>
 <div id="searchbox" style="display: none" role="search">
-  <h3 id="searchlabel">快速搜索</h3>
+  <h3 id="searchlabel">Quick search</h3>
     <div class="searchformwrapper">
     <form class="search" action="search.html" method="get">
       <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
-      <input type="submit" value="提交" />
+      <input type="submit" value="Go" />
     </form>
     </div>
 </div>
 <script>document.getElementById('searchbox').style.display = "block"</script>
+<script>
+	document.write("<h3>Languages</h3><p>")
+	if (window.location.href.indexOf("zh/") >= 0)
+	{
+		document.write("<a href=\"../index.html\">English </a>")
+		document.write("<a>中文</a>")
+	}
+	else
+	{
+		document.write("<a>English </a>")
+		document.write("<a href=\"zh/index.html\">中文</a>")
+	}
+	document.write("</p>")
+</script>
 
 
 

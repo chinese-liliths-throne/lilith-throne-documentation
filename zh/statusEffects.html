@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+
+<html lang="zh">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+    <title>5. statusEffects &#8212; Lilith&#39;s Throne Mod Documentation  文档</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=4f649999" />
+    <link rel="stylesheet" type="text/css" href="_static/alabaster.css?v=4a90727b" />
+    <link rel="stylesheet" type="text/css" href="_static/graphviz.css?v=eafc0fe6" />
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js?v=c65c79b5"></script>
+    <script src="_static/doctools.js?v=888ff710"></script>
+    <script src="_static/sphinx_highlight.js?v=4825356b"></script>
+    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <link rel="canonical" href="https://bicobus.github.io/lilith-throne-documentation/statusEffects.html" />
+    <link rel="index" title="索引" href="genindex.html" />
+    <link rel="search" title="搜索" href="search.html" />
+    <link rel="next" title="6. Authors" href="authors.html" />
+    <link rel="prev" title="4. Item Sets" href="setBonuses.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+              <div class="related top">
+                &nbsp;
+  <nav id="rellinks">
+    <ul>
+        <li>
+          &larr;
+          <a href="setBonuses.html" title="Previous document"><span class="section-number">4. </span>Item Sets</a>
+        </li>
+        <li>
+          <a href="authors.html" title="Next document"><span class="section-number">6. </span>Authors</a>
+          &rarr;
+        </li>
+    </ul>
+  </nav>
+              </div>
+          
+
+          <div class="body" role="main">
+            
+  <section id="statuseffects">
+<h1><span class="section-number">5. </span>statusEffects<a class="headerlink" href="#statuseffects" title="此标题的永久链接">¶</a></h1>
+<blockquote>
+<div><dl class="field-list simple">
+<dt class="field-odd">Authors<span class="colon">:</span></dt>
+<dd class="field-odd"><p>innoxia, bicobus</p>
+</dd>
+</dl>
+</div></blockquote>
+<section id="general-information">
+<h2><span class="section-number">5.1. </span>GENERAL INFORMATION<a class="headerlink" href="#general-information" title="此标题的永久链接">¶</a></h2>
+<p>Status effects are bits of logic applied to a character. The effect convey
+access to a variety of content, like combat moves or spell. They can also change
+the attributes of the character.</p>
+<p>You can see an annotated example in the file
+<a class="reference external" href="https://github.com/Innoxia/liliths-throne-public/tree/dev/res/statusEffects/innoxia/set_kitty.xml">res/statusEffects/innoxia/set_kitty.xml</a>.</p>
+</section>
+<section id="renderingpriority">
+<h2><span class="section-number">5.2. </span>renderingPriority<a class="headerlink" href="#renderingpriority" title="此标题的永久链接">¶</a></h2>
+<p>An integer used for determining the order of rendering status effect icons. A
+higher value means that it’s higher up in the rendering priority (and so will be
+rendered before others). Typical values go from 0 to 100. A good default value
+is to set it as 50. As this status effect is a set bonus, it has a higher
+rendering priority than usual (of 70). For some examples of the rendering
+priority:</p>
+<ul class="simple">
+<li><p>A character’s racial perk effect has a priority of 1000, as I want it to
+always be rendered first no matter what.</p></li>
+<li><p>Weather effects have a priority of 100 (as I want them to always be displayed
+as high as possible).</p></li>
+<li><p>Sexual orientation has a priority of 90 (as I want it to be displayed near the
+start).</p></li>
+<li><p>Most other standard status effects (such as pregnancy, well-rested, alcohol
+level, etc.) have a priority of 80.</p></li>
+<li><p>Set bonuses have a priority of 70.</p></li>
+</ul>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;renderingPriority&gt;</span>70<span class="nt">&lt;/renderingPriority&gt;</span>
+</pre></div>
+</div>
+</section>
+<section id="renderineffectspanel">
+<h2><span class="section-number">5.3. </span>renderInEffectsPanel<a class="headerlink" href="#renderineffectspanel" title="此标题的永久链接">¶</a></h2>
+<p>Set to <code class="docutils literal notranslate"><span class="pre">true</span></code> if you want this status effect to be displayed in the affected
+character’s status effect panel. This should pretty much always be ’true’.</p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;renderInEffectsPanel&gt;</span>true<span class="nt">&lt;/renderInEffectsPanel&gt;</span>
+</pre></div>
+</div>
+</section>
+<section id="beneficial">
+<h2><span class="section-number">5.4. </span>beneficial<a class="headerlink" href="#beneficial" title="此标题的永久链接">¶</a></h2>
+<p>Populate with one of these tags:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">BENEFICIAL</span></code> if this is a good status effect for a character to have.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">NEUTRAL</span></code> if it’s neither.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">DETRIMENTAL</span></code> if it’s a bad one.</p></li>
+</ul>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;beneficial&gt;</span>BENEFICIAL<span class="nt">&lt;/beneficial&gt;</span>
+</pre></div>
+</div>
+</section>
+<section id="combateffect">
+<h2><span class="section-number">5.5. </span>combatEffect<a class="headerlink" href="#combateffect" title="此标题的永久链接">¶</a></h2>
+<p>Set to <code class="docutils literal notranslate"><span class="pre">true</span></code> if you want this status effect to be rendered during combat, and
+if the <a class="reference internal" href="#applyeffect">applyEffect</a> element should be applied to the affected character on
+every combat round during which it is active. This should only be set to true if
+this a status effect which is applied and used <strong>only</strong> in combat. Status
+effects which are marked as combat status effects are not ever applied outside
+of combat.</p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;combatEffect&gt;</span>false<span class="nt">&lt;/combatEffect&gt;</span>
+</pre></div>
+</div>
+</section>
+<section id="sexeffect">
+<h2><span class="section-number">5.6. </span>sexEffect<a class="headerlink" href="#sexeffect" title="此标题的永久链接">¶</a></h2>
+<p>Set to <code class="docutils literal notranslate"><span class="pre">true</span></code> if you want this status effect to be rendered during sex.</p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;sexEffect&gt;</span>false<span class="nt">&lt;/sexEffect&gt;</span>
+</pre></div>
+</div>
+</section>
+<section id="name">
+<h2><span class="section-number">5.7. </span><span class="target" id="index-0"></span>name<a class="headerlink" href="#name" title="此标题的永久链接">¶</a></h2>
+<p>The <a class="reference internal" href="overview.html#name"><span class="std std-ref">name</span></a> of this set bonus. The character under the effect is passed in
+as the <code class="docutils literal notranslate"><span class="pre">npc</span></code> parsing argument, so if you want to, you can include parsing
+elements such as <code class="docutils literal notranslate"><span class="pre">[npc.name]</span></code>.</p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;name&gt;</span><span class="cp">&lt;![CDATA[Socks of Power]]&gt;</span><span class="nt">&lt;/name&gt;</span>
+</pre></div>
+</div>
+</section>
+<section id="description">
+<h2><span class="section-number">5.8. </span>description<a class="headerlink" href="#description" title="此标题的永久链接">¶</a></h2>
+<p>The description of this status effect. The character under the effect is passed
+in as the <code class="docutils literal notranslate"><span class="pre">npc</span></code> parsing argument, so if you want to, you can include parsing
+elements such as <code class="docutils literal notranslate"><span class="pre">[npc.name]</span></code>.</p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;description&gt;</span><span class="cp">&lt;![CDATA[</span>
+<span class="cp">    By wearing the template socks, you become a sock god#IF(npc.isFeminine())dess#ENDIF!</span>
+<span class="cp">]]&gt;</span><span class="nt">&lt;/description&gt;</span>
+</pre></div>
+</div>
+</section>
+<section id="imagename">
+<h2><span class="section-number">5.9. </span>imageName<a class="headerlink" href="#imagename" title="此标题的永久链接">¶</a></h2>
+<p>The name of the icon which should be used to represent this status effect. The
+icon must be an svg file, and must be placed in the same folder as this XML
+file.</p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;imageName&gt;</span>set_template.svg<span class="nt">&lt;/imageName&gt;</span>
+</pre></div>
+</div>
+</section>
+<section id="colours">
+<h2><span class="section-number">5.10. </span>colours<a class="headerlink" href="#colours" title="此标题的永久链接">¶</a></h2>
+<p>The <a class="reference internal" href="overview.html#colours"><span class="std std-ref">colour</span></a> which should be associated with this status effect.
+Just like with clothing and weapon recolouring, this is used to recolour the
+image you used above. <code class="docutils literal notranslate"><span class="pre">PresetColour</span></code> value should be used here, drawn from
+<a class="reference external" href="https://github.com/Innoxia/liliths-throne-public/tree/dev/src/com/lilithsthrone/utils/colours/PresetColour.java">src/com/lilithsthrone/utils/colours/PresetColour.java</a></p>
+<section id="colourprimary">
+<h3><span class="section-number">5.10.1. </span>colourPrimary<a class="headerlink" href="#colourprimary" title="此标题的永久链接">¶</a></h3>
+<p>This has to have a value defined, or else this XML file will fail to load.</p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;colourPrimary&gt;</span>CLOTHING_WHITE<span class="nt">&lt;/colourPrimary&gt;</span>
+</pre></div>
+</div>
+</section>
+<section id="coloursecondary">
+<h3><span class="section-number">5.10.2. </span>colourSecondary<a class="headerlink" href="#coloursecondary" title="此标题的永久链接">¶</a></h3>
+<p>This can optionally be left blank, like the ’colourTertiary’ element below.</p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;colourSecondary/&gt;</span>
+</pre></div>
+</div>
+</section>
+<section id="colourtertiary">
+<h3><span class="section-number">5.10.3. </span>colourTertiary<a class="headerlink" href="#colourtertiary" title="此标题的永久链接">¶</a></h3>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;colourTertiary/&gt;</span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="attributemodifiers">
+<h2><span class="section-number">5.11. </span>attributeModifiers<a class="headerlink" href="#attributemodifiers" title="此标题的永久链接">¶</a></h2>
+<p>The attributes which should be affected by having this status effect. The
+<code class="docutils literal notranslate"><span class="pre">modifier</span></code> node must contain the attribute to be affected, in the example
+<code class="docutils literal notranslate"><span class="pre">DAMAGE_LUST</span></code>. You can define any number of attribute modifiers, but it’s
+usually best to keep it limited to just a few.</p>
+<div class="admonition seealso">
+<p class="admonition-title">参见</p>
+<p>List of attributes:
+<a class="reference external" href="https://github.com/Innoxia/liliths-throne-public/tree/dev//src/com/lilithsthrone/game/character/attributes/Attribute.java">/src/com/lilithsthrone/game/character/attributes/Attribute.java</a></p>
+</div>
+<p><strong>modifier Variables</strong></p>
+<dl class="std nodevar">
+<dt class="sig sig-object std" id="nodevar-value-statusEffects">
+<span class="sig-name descname"><span class="pre">value</span></span> <span class="pre">Type:</span> <span class="pre">integer</span><a class="headerlink" href="#nodevar-value-statusEffects" title="永久链接至目标">¶</a></dt>
+<dd><p>Defines how much the attribute should be numerically affected, either
+positively or negatively.</p>
+</dd></dl>
+
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;attributeModifiers&gt;</span>
+<span class="w">    </span><span class="nt">&lt;modifier</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;10&quot;</span><span class="nt">&gt;</span>DAMAGE_LUST<span class="nt">&lt;/modifier&gt;</span>
+<span class="nt">&lt;/attributeModifiers&gt;</span>
+</pre></div>
+</div>
+</section>
+<section id="combatmoves">
+<h2><span class="section-number">5.12. </span>combatMoves<a class="headerlink" href="#combatmoves" title="此标题的永久链接">¶</a></h2>
+<p>The <code class="docutils literal notranslate"><span class="pre">CombatMoves</span></code> which should be unlocked for the character affected by this
+status effect. <code class="docutils literal notranslate"><span class="pre">CombatMoves</span></code> identifiers are defined in their constructors.
+When modding support for combat moves is added, the identifier will be described
+in the modding file there.</p>
+<div class="admonition seealso">
+<p class="admonition-title">参见</p>
+<p>list of <code class="docutils literal notranslate"><span class="pre">CombatMoves</span></code>: <a class="reference external" href="https://github.com/Innoxia/liliths-throne-public/tree/dev/src/com/lilithsthrone/game/combat/moves">src/com/lilithsthrone/game/combat/moves</a></p>
+</div>
+<dl>
+<dt>Example:</dt><dd><div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;combatMoves&gt;</span>
+<span class="w">    </span><span class="nt">&lt;move&gt;</span>cat-scratch<span class="nt">&lt;/move&gt;</span>
+<span class="nt">&lt;/combatMoves&gt;</span>
+</pre></div>
+</div>
+<p>If combat moves are unecessary, insert an empty tag:</p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;combatMoves/&gt;</span>
+</pre></div>
+</div>
+</dd>
+</dl>
+</section>
+<section id="spells">
+<h2><span class="section-number">5.13. </span>spells<a class="headerlink" href="#spells" title="此标题的永久链接">¶</a></h2>
+<p>The Spells which should be unlocked for the character affected by this status
+effect.</p>
+<div class="admonition seealso">
+<p class="admonition-title">参见</p>
+<p>Current Spells can be found in the files in this folder:
+<a class="reference external" href="https://github.com/Innoxia/liliths-throne-public/tree/dev/src/com/lilithsthrone/game/combat/spells/Spell.java">src/com/lilithsthrone/game/combat/spells/Spell.java</a></p>
+</div>
+<dl>
+<dt>Acceptable format:</dt><dd><div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;spells&gt;</span>
+<span class="w">    </span><span class="nt">&lt;spell&gt;</span>ARCANE_AROUSAL<span class="nt">&lt;/spell&gt;</span>
+<span class="nt">&lt;/spells&gt;</span>
+</pre></div>
+</div>
+<p>For an empty spell list:</p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;spells/&gt;</span>
+</pre></div>
+</div>
+</dd>
+</dl>
+</section>
+<section id="extraeffects">
+<h2><span class="section-number">5.14. </span>extraEffects<a class="headerlink" href="#extraeffects" title="此标题的永久链接">¶</a></h2>
+<p>You can use this section to describe any extra effects that this status effect
+might apply. These effects are shown in the tooltip when the player hovers over
+the status effect icon. The character under the effect is passed in as the
+<code class="docutils literal notranslate"><span class="pre">npc</span></code> parsing argument, so if you want to, you can include parsing elements
+such as <code class="docutils literal notranslate"><span class="pre">[npc.name]</span></code>. For this status effect, no extra effects need to be
+described, but if you need to use this section, use the following format:</p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;extraEffects&gt;</span>
+<span class="w">    </span><span class="nt">&lt;effect&gt;</span><span class="cp">&lt;![CDATA[You&#39;re a playful kitty!]]&gt;</span><span class="nt">&lt;/effect&gt;</span>
+<span class="nt">&lt;/extraEffects&gt;</span>
+</pre></div>
+</div>
+<p>An empty <code class="docutils literal notranslate"><span class="pre">extraEffects</span></code> list:</p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;extraEffects/&gt;</span>
+</pre></div>
+</div>
+</section>
+<section id="effect-logic">
+<h2><span class="section-number">5.15. </span>Effect Logic<a class="headerlink" href="#effect-logic" title="此标题的永久链接">¶</a></h2>
+<p>The condition for a status effect to be applied is by default <code class="docutils literal notranslate"><span class="pre">false</span></code>, which
+means that it can only be applied by a direct method call elsewhere for
+<code class="docutils literal notranslate"><span class="pre">GameCharacter.addStatusEffect(AbstractStatusEffect</span> <span class="pre">statusEffect,</span> <span class="pre">int</span>
+<span class="pre">seconds)</span></code>. If you would like your status effect to similarly only be applied
+when called upon, then define this element as:</p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;applicationCondition&gt;</span><span class="cp">&lt;![CDATA[false]]&gt;</span><span class="nt">&lt;/applicationCondition&gt;</span>
+</pre></div>
+</div>
+<p>If, however, you would like this status effect to be automatically activated
+once certain conditions are met, then make sure that this element returns a
+conditional that would result in <code class="docutils literal notranslate"><span class="pre">true</span></code>, as in the example below.</p>
+<p>You must use the game’s parsing engine to get what you want. <code class="docutils literal notranslate"><span class="pre">npc</span></code> is the
+parser target for the character affected by this status effect. To parse
+something and return a String, use a <code class="docutils literal notranslate"><span class="pre">#</span></code> character at the start of a command,
+such as: <code class="docutils literal notranslate"><span class="pre">[#npc.isFeminine()]</span></code>. To parse something without returning a
+<code class="docutils literal notranslate"><span class="pre">String</span></code> (which would most likely not be used in this element), use two <code class="docutils literal notranslate"><span class="pre">#</span></code>
+characters, such as: <code class="docutils literal notranslate"><span class="pre">[##npc.isFeminine()]</span></code>. As a final note, all whitespace
+is stripped from the returned String before it is parsed into a Boolean.</p>
+<section id="applicationcondition">
+<h3><span class="section-number">5.15.1. </span>applicationCondition<a class="headerlink" href="#applicationcondition" title="此标题的永久链接">¶</a></h3>
+<p>This example is meant to show that you can use the parser to create more
+<em>complex</em> conditionals.</p>
+<dl>
+<dt><strong>Examples:</strong></dt><dd><div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;applicationCondition&gt;</span><span class="cp">&lt;![CDATA[</span>
+<span class="cp">    #IF(SET_BONUS_innoxia_template.isCharacterWearingCompleteSet(npc))</span>
+<span class="cp">        true</span>
+<span class="cp">    #ELSE</span>
+<span class="cp">        false</span>
+<span class="cp">    #ENDIF</span>
+<span class="cp">]]&gt;</span><span class="nt">&lt;/applicationCondition&gt;</span>
+</pre></div>
+</div>
+<p>An alternate, simpler example to achieve the same effect would be to just
+do:</p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;applicationCondition&gt;</span><span class="cp">&lt;![CDATA[</span>
+<span class="cp">    SET_BONUS_innoxia_kitty.isCharacterWearingCompleteSet(npc)</span>
+<span class="cp">]]&gt;</span><span class="nt">&lt;/applicationCondition&gt;</span>
+</pre></div>
+</div>
+</dd>
+</dl>
+</section>
+<section id="applyeffect">
+<h3><span class="section-number">5.15.2. </span>applyEffect<a class="headerlink" href="#applyeffect" title="此标题的永久链接">¶</a></h3>
+<p>Status effects execute an <code class="docutils literal notranslate"><span class="pre">applyEffect(GameCharacter</span> <span class="pre">target,</span> <span class="pre">int</span>
+<span class="pre">secondsPassed)</span></code> method every time the game ends a turn. The <code class="docutils literal notranslate"><span class="pre">target</span></code> argument
+is the character who is under the effect of this particular status effect, while
+the <code class="docutils literal notranslate"><span class="pre">secondsPassed</span></code> argument is how much time, in seconds, has passed on this
+turn. During combat, the <code class="docutils literal notranslate"><span class="pre">secondsPassed</span></code> argument is always 1 (to represent 1
+turn ending). If the method returns a String, then the game’s flow is
+interrupted to display the <strong>Important status effects</strong> screen to the player,
+along with whatever <code class="docutils literal notranslate"><span class="pre">String</span></code> was returned by this <code class="docutils literal notranslate"><span class="pre">applyEffect()</span></code> method.
+You can define your own effects to be parsed here, just like hard-coded status
+effects. While your options are a little limited by what the parser can access,
+you should be able to apply a good range of effects.</p>
+<p><strong>Node Variables:</strong></p>
+<dl class="std nodevar">
+<dt class="sig sig-object std" id="nodevar-interval-statusEffects">
+<span class="sig-name descname"><span class="pre">interval</span></span> <span class="pre">Type:</span> <span class="pre">integer</span><a class="headerlink" href="#nodevar-interval-statusEffects" title="永久链接至目标">¶</a></dt>
+<dd><p>The <code class="docutils literal notranslate"><span class="pre">interval</span></code> attribute is an integer representing how often this effect
+should be applied (measured in seconds). For example, an interval of 3600
+would make this effect be applied only once per hour <span class="math notranslate nohighlight">\((60 \times 60 =
+3600)\)</span>. Use an interval of 0 to make this effect be applied on every turn.</p>
+</dd></dl>
+
+<p><strong>Content tags:</strong></p>
+<dl>
+<dt><code class="docutils literal notranslate"><span class="pre">npc</span></code></dt><dd><p>is the parser target for the character affected by this status effect.</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">SECONDS_PASSED</span></code></dt><dd><p>is a special tag which is converted into an integer value of the time that
+passed during the last turn’s end (in seconds).</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">TOTAL_SECONDS_PASSED</span></code></dt><dd><p>is a special tag which is converted into a long value of the total time
+that’s passed while under the effect of this status effect (in seconds).
+This can be used with a <code class="docutils literal notranslate"><span class="pre">TOTAL_SECONDS_PASSED</span> <span class="pre">==</span> <span class="pre">0</span></code> check to, for example,
+only apply an effect when this status effect is initially added.</p>
+<div class="admonition important">
+<p class="admonition-title">重要</p>
+<p>In combat, “seconds passed” is actually represented by the number of
+combat turns passed. So, for example, <code class="docutils literal notranslate"><span class="pre">TOTAL_SECONDS_PASSED</span></code> would be
+converted into 2 if the character had been under the status effect’s
+influence for two turns in combat.</p>
+</div>
+</dd>
+</dl>
+<p>About tabs and spaces: all tabs are stripped from the returned <code class="docutils literal notranslate"><span class="pre">String</span></code> after
+it is parsed, so it’s safe to use tabs and <strong>not spaces</strong> for formatting.</p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;applyEffect</span><span class="w"> </span><span class="na">interval=</span><span class="s">&quot;3600&quot;</span><span class="nt">&gt;</span><span class="cp">&lt;![CDATA[</span>
+<span class="cp">    #IF(SECONDS_PASSED&gt;0)</span>
+<span class="cp">            An hour passed!</span>
+<span class="cp">            #IF(TOTAL_SECONDS_PASSED&gt;(60*60*24))</span>
+<span class="cp">                    [##game.getTextEndStringBuilder().append(&quot;&lt;p&gt;This effect has been in effect for more than a day!&lt;/p&gt;&quot;)]</span>
+<span class="cp">            #ENDIF</span>
+<span class="cp">    #ENDIF</span>
+<span class="cp">]]&gt;</span><span class="nt">&lt;/applyEffect&gt;</span>
+</pre></div>
+</div>
+<p>An empty effect list:</p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;applyEffect/&gt;</span>
+</pre></div>
+</div>
+</section>
+<section id="applyremovaleffect">
+<h3><span class="section-number">5.15.3. </span>applyRemovalEffect<a class="headerlink" href="#applyremovaleffect" title="此标题的永久链接">¶</a></h3>
+<p>In a similar manner to the <a class="reference internal" href="#applyeffect">applyEffect</a> element above, the game processes
+logic when a status effect is removed.</p>
+<p>This logic is performed while the character is still under the effects of this
+status effect.</p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;applyRemovalEffect/&gt;</span>
+</pre></div>
+</div>
+</section>
+<section id="applypostremovaleffect">
+<h3><span class="section-number">5.15.4. </span>applyPostRemovalEffect<a class="headerlink" href="#applypostremovaleffect" title="此标题的永久链接">¶</a></h3>
+<p>In a similar manner to the <a class="reference internal" href="#applyeffect">applyEffect</a> element above, the game processes
+logic after a status effect has been removed.</p>
+<p>This logic is performed immediately after the effect is removed, so the
+character is no longer under the effects of this status effect.</p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;applyPostRemovalEffect/&gt;</span>
+</pre></div>
+</div>
+</section>
+</section>
+</section>
+
+
+          </div>
+              <div class="related bottom">
+                &nbsp;
+  <nav id="rellinks">
+    <ul>
+        <li>
+          &larr;
+          <a href="setBonuses.html" title="Previous document"><span class="section-number">4. </span>Item Sets</a>
+        </li>
+        <li>
+          <a href="authors.html" title="Next document"><span class="section-number">6. </span>Authors</a>
+          &rarr;
+        </li>
+    </ul>
+  </nav>
+              </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="index.html">Lilith's Throne Mod Documentation</a></h1>
+
+
+
+
+
+
+<p>
+<iframe src="https://ghbtns.com/github-btn.html?user=CKRainbow&repo=lilith-throne-documentation&type=star&count=true&size=large&v=2"
+  allowtransparency="true" frameborder="0" scrolling="0" width="200px" height="35px"></iframe>
+</p>
+
+
+
+
+
+<h3>导航</h3>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="overview.html">1. 总览</a></li>
+<li class="toctree-l1"><a class="reference internal" href="items.html">2. Items folder</a></li>
+<li class="toctree-l1"><a class="reference internal" href="outfits.html">3. Outfits</a></li>
+<li class="toctree-l1"><a class="reference internal" href="setBonuses.html">4. Item Sets</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">5. statusEffects</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#general-information">5.1. GENERAL INFORMATION</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#renderingpriority">5.2. renderingPriority</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#renderineffectspanel">5.3. renderInEffectsPanel</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#beneficial">5.4. beneficial</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#combateffect">5.5. combatEffect</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#sexeffect">5.6. sexEffect</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#name">5.7. name</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#description">5.8. description</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#imagename">5.9. imageName</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#colours">5.10. colours</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#colourprimary">5.10.1. colourPrimary</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#coloursecondary">5.10.2. colourSecondary</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#colourtertiary">5.10.3. colourTertiary</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#attributemodifiers">5.11. attributeModifiers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#combatmoves">5.12. combatMoves</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#spells">5.13. spells</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#extraeffects">5.14. extraEffects</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#effect-logic">5.15. Effect Logic</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#applicationcondition">5.15.1. applicationCondition</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#applyeffect">5.15.2. applyEffect</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#applyremovaleffect">5.15.3. applyRemovalEffect</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#applypostremovaleffect">5.15.4. applyPostRemovalEffect</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="authors.html">6. Authors</a></li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+      <li>Previous: <a href="setBonuses.html" title="上一章"><span class="section-number">4. </span>Item Sets</a></li>
+      <li>Next: <a href="authors.html" title="下一章"><span class="section-number">6. </span>Authors</a></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">快速搜索</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="提交" />
+    </form>
+    </div>
+</div>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+<script>
+	document.write("<h3>Languages</h3><p>")
+	if (window.location.href.indexOf("zh/") >= 0)
+	{
+		document.write("<a href=\"../index.html\">English </a>")
+		document.write("<a>中文</a>")
+	}
+	else
+	{
+		document.write("<a>English </a>")
+		document.write("<a href=\"zh/index.html\">中文</a>")
+	}
+	document.write("</p>")
+</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2020, Innoxia and contributors.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 7.1.2</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.13</a>
+      
+      |
+      <a href="_sources/statusEffects.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+
+<html lang="zh">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+    <title>1. 总览 &#8212; Lilith&#39;s Throne Mod Documentation  文档</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=4f649999" />
+    <link rel="stylesheet" type="text/css" href="_static/alabaster.css?v=4a90727b" />
+    <link rel="stylesheet" type="text/css" href="_static/graphviz.css?v=eafc0fe6" />
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js?v=c65c79b5"></script>
+    <script src="_static/doctools.js?v=888ff710"></script>
+    <script src="_static/sphinx_highlight.js?v=4825356b"></script>
+    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <link rel="canonical" href="https://bicobus.github.io/lilith-throne-documentation/overview.html" />
+    <link rel="index" title="索引" href="genindex.html" />
+    <link rel="search" title="搜索" href="search.html" />
+    <link rel="next" title="2. Items folder" href="items.html" />
+    <link rel="prev" title="Welcome to Lilith&#39;s Throne Mod Documentation&#39;s documentation!" href="index.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+              <div class="related top">
+                &nbsp;
+  <nav id="rellinks">
+    <ul>
+        <li>
+          &larr;
+          <a href="index.html" title="Previous document">Welcome to Lilith's Throne Mod Documentation's documentation!</a>
+        </li>
+        <li>
+          <a href="items.html" title="Next document"><span class="section-number">2. </span>Items folder</a>
+          &rarr;
+        </li>
+    </ul>
+  </nav>
+              </div>
+          
+
+          <div class="body" role="main">
+            
+  <section id="overview">
+<h1><a class="toc-backref" href="#id7" role="doc-backlink"><span class="section-number">1. </span>总览</a><a class="headerlink" href="#overview" title="此标题的永久链接">¶</a></h1>
+<nav class="contents" id="contents">
+<p class="topic-title">目录</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="#overview" id="id7">总览</a></p>
+<ul>
+<li><p><a class="reference internal" href="#preface" id="id8">前言</a></p></li>
+<li><p><a class="reference internal" href="#note-on-status-effects-and-how-to-use-them" id="id9">Note on status effects and how to use them</a></p></li>
+<li><p><a class="reference internal" href="#some-elements-expect-boolean-values" id="id10">Some elements expect Boolean values</a></p></li>
+<li><p><a class="reference internal" href="#shared-tags-and-information" id="id11">Shared tags and information</a></p></li>
+<li><p><a class="reference internal" href="#items-identifier" id="id12">Item’s identifier</a></p></li>
+<li><p><a class="reference internal" href="#author-tags" id="id13">author tags</a></p></li>
+<li><p><a class="reference internal" href="#value" id="id14">value</a></p></li>
+<li><p><a class="reference internal" href="#name" id="id15">name</a></p>
+<ul>
+<li><p><a class="reference internal" href="#plural-name" id="id16">plural name</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#determiner" id="id17">determiner</a></p></li>
+<li><p><a class="reference internal" href="#description" id="id18">Description</a></p></li>
+<li><p><a class="reference internal" href="#items-image" id="id19">Item’s image</a></p></li>
+<li><p><a class="reference internal" href="#rarity" id="id20">rarity</a></p></li>
+<li><p><a class="reference internal" href="#colours" id="id21">colours</a></p>
+<ul>
+<li><p><a class="reference internal" href="#custom-colours" id="id22">Custom Colours</a></p></li>
+<li><p><a class="reference internal" href="#status-effects-special-case" id="id23">status effects special case</a></p></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</nav>
+<section id="preface">
+<h2><a class="toc-backref" href="#id8" role="doc-backlink"><span class="section-number">1.1. </span>前言</a><a class="headerlink" href="#preface" title="此标题的永久链接">¶</a></h2>
+<p>The following documents will try it’s best to expose the different ways of
+augmenting your experience while playing Lilith’s Throne. While the documents
+tries to be as accurate as possible, you’re invited, dear reader, to consult
+existing <code class="docutils literal notranslate"><span class="pre">xml</span></code> files residing in your <code class="docutils literal notranslate"><span class="pre">res/mods/</span></code> folder.</p>
+<p>If you are unsure of anything, please use the <a class="reference external" href="https://discord.gg/nDRvMXH">Lilith's Throne Discord</a> to ask
+for help!</p>
+</section>
+<section id="note-on-status-effects-and-how-to-use-them">
+<h2><a class="toc-backref" href="#id9" role="doc-backlink"><span class="section-number">1.2. </span>Note on status effects and how to use them</a><a class="headerlink" href="#note-on-status-effects-and-how-to-use-them" title="此标题的永久链接">¶</a></h2>
+<p>We understand by effects a set of of logic conditonally applied to a character.
+The source of definining that condition differs, is ultimately applied through
+an <code class="docutils literal notranslate"><span class="pre">applyEffect</span></code> block. Most wearable items has to go through a set bonus in
+order to have access to the status effects mechanics.</p>
+<p>Wearable have to define themselves as part of a set. The set then activate the
+status effect based on simple conditionnals. Sets of one item, although counter
+intuitive, are acceptable. Non-wearable items have a direct access to an
+<code class="docutils literal notranslate"><span class="pre">applyEffect</span></code> block, and as such do not require a reference to a
+<code class="docutils literal notranslate"><span class="pre">statusEffect</span></code>.</p>
+<div class="graphviz"><img src="_images/graphviz-09b4aced88027ee38052350da250944d54bec5cc.png" alt="digraph {
+   coi [label = &quot;Clothing Items&quot;]
+   wi [label = &quot;Weapon Items&quot;]
+   cui [label = &quot;Consumable Items&quot;]
+   appl [shape=box label = &quot;applyEffect&quot;]
+   { coi wi } -&gt; &quot;setBonus&quot;;
+   &quot;setBonus&quot; -&gt; &quot;statusEffect&quot;;
+   { &quot;statusEffect&quot; cui } -&gt; appl;
+}" class="graphviz" /></div>
+</section>
+<section id="some-elements-expect-boolean-values">
+<h2><a class="toc-backref" href="#id10" role="doc-backlink"><span class="section-number">1.3. </span>Some elements expect Boolean values</a><a class="headerlink" href="#some-elements-expect-boolean-values" title="此标题的永久链接">¶</a></h2>
+<p>Some elements are boolean switches which are either true, or false. The name of
+the element is usually explicit enough to inform you of it’s function, for
+example <code class="docutils literal notranslate"><span class="pre">consumedOnUsed</span></code> convey that the item should or should not be consumed
+once the player uses it.</p>
+<p>Whenever an element is stated to be boolean, one of the following value is
+expected:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">true</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">false</span></code></p></li>
+</ul>
+</section>
+<section id="shared-tags-and-information">
+<h2><a class="toc-backref" href="#id11" role="doc-backlink"><span class="section-number">1.4. </span>Shared tags and information</a><a class="headerlink" href="#shared-tags-and-information" title="此标题的永久链接">¶</a></h2>
+<p>Across the different types of items exists shared concepts. Some of those
+concept may be expanded on a per category basis, for example weapons needs more
+colours than the other kinds of items and thus expand the available list.</p>
+</section>
+<section id="items-identifier">
+<span id="id1"></span><h2><a class="toc-backref" href="#id12" role="doc-backlink"><span class="section-number">1.5. </span>Item’s identifier</a><a class="headerlink" href="#items-identifier" title="此标题的永久链接">¶</a></h2>
+<p>The item identifier is the internal name of your objects and the only way to
+refer to them from between <code class="docutils literal notranslate"><span class="pre">xml</span></code> files. It is calculated from your clothing’s
+folder and <code class="docutils literal notranslate"><span class="pre">.xml</span></code> name using the following code:</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">modAuthorDirectory</span><span class="p">.</span><span class="na">getName</span><span class="p">()</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot;_&quot;</span>
+<span class="w">    </span><span class="o">+</span><span class="w"> </span><span class="n">innerChild</span><span class="p">.</span><span class="na">getParentFile</span><span class="p">().</span><span class="na">getName</span><span class="p">()</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot;_&quot;</span>
+<span class="w">    </span><span class="o">+</span><span class="w"> </span><span class="n">innerChild</span><span class="p">.</span><span class="na">getName</span><span class="p">().</span><span class="na">split</span><span class="p">(</span><span class="s">&quot;\\.&quot;</span><span class="p">)</span><span class="o">[</span><span class="mi">0</span><span class="o">]</span>
+</pre></div>
+</div>
+<p>Which would resolve to <code class="docutils literal notranslate"><span class="pre">innoxia_template_socks</span></code> for the object located in
+<code class="docutils literal notranslate"><span class="pre">res/mods/innoxia/clothing/template/socks.xml</span></code>.</p>
+<p>The identifier is generated for every pertinent file existing in your modules
+folder structure. The identifier being generated, and not user defined, is an
+important variable to keep in mind. If you ever rename the folder or the <code class="docutils literal notranslate"><span class="pre">xml</span></code>
+file, the identifier will change which, in turn, will invalidate all existing
+reference present in the players saves files.</p>
+</section>
+<section id="author-tags">
+<span id="id2"></span><h2><a class="toc-backref" href="#id13" role="doc-backlink"><span class="section-number">1.6. </span>author tags</a><a class="headerlink" href="#author-tags" title="此标题的永久链接">¶</a></h2>
+<p>How attribution to the mod author (<em>you</em>) should be displayed in the object’s
+tooltip. If left blank or not included, a default attribution based on folder
+name will be used.</p>
+<p>The content of the element should be a short one line descriptor.</p>
+<dl class="simple">
+<dt>Example</dt><dd><p><em>A tag discreetly sewn into the T-shirt’s inner lining informs you</em>
+<em>that it was made by ’Innoxia’.</em></p>
+</dd>
+</dl>
+</section>
+<section id="value">
+<span id="item-value"></span><h2><a class="toc-backref" href="#id14" role="doc-backlink"><span class="section-number">1.7. </span>value</a><a class="headerlink" href="#value" title="此标题的永久链接">¶</a></h2>
+<p>The base value of an object. I roughly base things on 1 flame = 10p, so 10
+flames = £1.</p>
+</section>
+<section id="name">
+<span id="id3"></span><h2><a class="toc-backref" href="#id15" role="doc-backlink"><span class="section-number">1.8. </span>name</a><a class="headerlink" href="#name" title="此标题的永久链接">¶</a></h2>
+<p>The name element contain the singular form of the name of the object (One
+<em>sock</em>, two <em>socks</em>).</p>
+<p>The name element can on occasion accept variables, refer to the specific
+documentation of the object you aim to create for details.</p>
+<p>Names can be informal, for objects that are not normally shown to the player
+like outfits, and are only used for debugging purpose.</p>
+<section id="plural-name">
+<h3><a class="toc-backref" href="#id16" role="doc-backlink"><span class="section-number">1.8.1. </span>plural name</a><a class="headerlink" href="#plural-name" title="此标题的永久链接">¶</a></h3>
+<p>Each object with the possession of a name also has a plural form. If you have to
+inform name, expect to fill in it’s plural form.</p>
+</section>
+</section>
+<section id="determiner">
+<h2><a class="toc-backref" href="#id17" role="doc-backlink"><span class="section-number">1.9. </span>determiner</a><a class="headerlink" href="#determiner" title="此标题的永久链接">¶</a></h2>
+<p>The determiner which is displayed before an item’s name. While they are usually
+“a” or “an”, for things like socks or gloves, you’ll want to use “a pair of”
+where it makes sense. I use the <code class="docutils literal notranslate"><span class="pre">CDATA</span></code> tag for all text values, as it allows
+html markup to be embedded without causing issues.</p>
+<p>Should this element remain undefined, the game will automatically select either
+“a” or “an” based on the name of the item. The game will ignore values passed to
+this elements if they equate “a” or “an”.</p>
+<p>Literate Example</p>
+<blockquote>
+<div><p>Innoxia was holding <em>a pair of</em> scissors.</p>
+</div></blockquote>
+<p>Code Example</p>
+<blockquote>
+<div><div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;determiner&gt;</span><span class="cp">&lt;![CDATA[a pair of]]&gt;</span><span class="nt">&lt;/determiner&gt;</span>
+</pre></div>
+</div>
+</div></blockquote>
+</section>
+<section id="description">
+<h2><a class="toc-backref" href="#id18" role="doc-backlink"><span class="section-number">1.10. </span>Description</a><a class="headerlink" href="#description" title="此标题的永久链接">¶</a></h2>
+<p>A long form description of the item. Should be present for each object under the
+items category.</p>
+</section>
+<section id="items-image">
+<span id="id4"></span><h2><a class="toc-backref" href="#id19" role="doc-backlink"><span class="section-number">1.11. </span>Item’s image</a><a class="headerlink" href="#items-image" title="此标题的永久链接">¶</a></h2>
+<p>The element <code class="docutils literal notranslate"><span class="pre">imageName</span></code> will be found through the different objects. It
+informs of the file path for the object’s image. All images <em>must be</em> .svg
+format. Colours to be used are described below, above the <a class="reference internal" href="#colours"><span class="std std-ref">primaryColours</span></a>
+element. I use the free program <a class="reference external" href="https://inkscape.org">InkScape</a> to make my
+.svg images. .svg images scale perfectly up and down to any size, so, while it
+should be a square, it doesn’t really matter what size your canvas is (although
+I use 256 × 256 as a personal preference).</p>
+<p>If the item can be equipped, then an <code class="docutils literal notranslate"><span class="pre">imageEquippedname</span></code> must also be
+provided. Please refer to the appropriate documentation for more details.</p>
+</section>
+<section id="rarity">
+<span id="id5"></span><h2><a class="toc-backref" href="#id20" role="doc-backlink"><span class="section-number">1.12. </span>rarity</a><a class="headerlink" href="#rarity" title="此标题的永久链接">¶</a></h2>
+<p>The rarity of several object can be defined using the constants listed in the
+file <a class="reference external" href="https://github.com/Innoxia/liliths-throne-public/tree/dev/src/com/lilithsthrone/game/inventory/Rarity.java">src/com/lilithsthrone/game/inventory/Rarity.java</a>.</p>
+<p>Please note that any item set with a rarity of LEGENDARY will not appear
+naturally in the game, neither from the shop keepers nor random encounters.</p>
+</section>
+<section id="colours">
+<span id="id6"></span><h2><a class="toc-backref" href="#id21" role="doc-backlink"><span class="section-number">1.13. </span>colours</a><a class="headerlink" href="#colours" title="此标题的永久链接">¶</a></h2>
+<p>Colours are available for most moddable items. The rules to follow are generally
+the same for all type of item, with the exception for the weapons which expand
+on the core mechanic.</p>
+<p>Your items can be coloured any way you like, but if you’d like the player to be
+able to dye your clothing, you can specify available colours here.
+<code class="docutils literal notranslate"><span class="pre">primaryColours</span></code>, <code class="docutils literal notranslate"><span class="pre">secondaryColours</span></code>, and <code class="docutils literal notranslate"><span class="pre">tertiaryColours</span></code> can all spawn
+in as a default colour, while their ’Dye’ counterparts are only available if the
+player chooses to dye the clothing in that colour. The game detects specific
+colour values, and recolours them to the value chosen by the player. These
+values are as follows:</p>
+<ul class="simple">
+<li><p><em>Red</em> is used as base colour for changing the primary colour of the graphic
+in-game, and the game will only recognise and change the following colours:</p>
+<ol class="arabic simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">#ff2a2a</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">#ff5555</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">#ff8080</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">#ffaaaa</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">#ffd5d5</span></code></p></li>
+</ol>
+</li>
+<li><p><em>Orange</em> is used as base colour for changing the secondary colour of the
+graphic in-game, and the game will only recognise and change the following
+colours:</p>
+<ol class="arabic simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">#ff7f2a</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">#ff9955</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">#ffb380</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">#ffccaa</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">#ffe6d5</span></code></p></li>
+</ol>
+</li>
+<li><p><em>Yellow</em> is used as base colour for changing the tertiary colour of the
+graphic in-game, and the game will only recognise and change the following
+colours:</p>
+<ol class="arabic simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">#ffd42a</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">#ffdd55</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">#ffe680</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">#ffeeaa</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">#fff6d5</span></code></p></li>
+</ol>
+</li>
+</ul>
+<div class="admonition important">
+<p class="admonition-title">重要</p>
+<p>Any gradients that you use should be called: <code class="docutils literal notranslate"><span class="pre">innoGrad1</span></code>, <code class="docutils literal notranslate"><span class="pre">innoGrad2</span></code>,
+etc.</p>
+</div>
+<p>A visual representation of these colours is available on the <a class="reference external" href="https://www.lilithsthrone.com/wiki/doku.php?id=modding_wiki:modding:creating_clothes">wiki</a>.</p>
+<p>Colour lists to be used can be found here:
+<a class="reference external" href="https://github.com/Innoxia/liliths-throne-public/tree/dev/src/com/lilithsthrone/utils/colours">src/com/lilithsthrone/utils/colours</a>.</p>
+<p>You can leave the attribute <code class="docutils literal notranslate"><span class="pre">recolouringAllowed</span></code> out of colour definitions. If
+you want the player to be unable to change this colour, then set it as false.
+This is only used in very niche situations (such as for the filly choker).</p>
+<p>You can also make your own, custom list of colours to be used. The following
+colours in <code class="docutils literal notranslate"><span class="pre">tertiaryColoursDye</span></code> are all found within the list preset <code class="docutils literal notranslate"><span class="pre">ALL</span></code>,
+but this is for a demonstration.</p>
+<p>If you want to include custom colours, do not define a <code class="docutils literal notranslate"><span class="pre">values</span></code> attribute, and
+instead, list each Colour.</p>
+<div class="admonition important">
+<p class="admonition-title">重要</p>
+<p>please use the <code class="docutils literal notranslate"><span class="pre">Colour</span></code> values that start with <code class="docutils literal notranslate"><span class="pre">CLOTHING_</span></code>.</p>
+</div>
+<dl>
+<dt>Code Example</dt><dd><div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;primaryColours</span><span class="w"> </span><span class="na">recolouringAllowed=</span><span class="s">&quot;true&quot;</span><span class="w"> </span><span class="na">values=</span><span class="s">&quot;JUST_WHITE&quot;</span><span class="nt">/&gt;</span>
+<span class="nt">&lt;primaryColoursDye</span><span class="w"> </span><span class="na">values=</span><span class="s">&quot;ALL&quot;</span><span class="nt">/&gt;</span>
+<span class="nt">&lt;secondaryColours</span><span class="w"> </span><span class="na">values=</span><span class="s">&quot;JUST_BLACK&quot;</span><span class="nt">/&gt;</span>
+<span class="nt">&lt;secondaryColoursDye</span><span class="w"> </span><span class="na">values=</span><span class="s">&quot;ALL&quot;</span><span class="nt">/&gt;</span>
+<span class="nt">&lt;tertiaryColours</span><span class="w"> </span><span class="na">values=</span><span class="s">&quot;JUST_WHITE&quot;</span><span class="nt">/&gt;</span>
+<span class="nt">&lt;tertiaryColoursDye&gt;</span>
+<span class="w">        </span><span class="nt">&lt;colour&gt;</span>CLOTHING_WHITE<span class="nt">&lt;/colour&gt;</span>
+<span class="w">        </span><span class="nt">&lt;colour&gt;</span>CLOTHING_BLACK<span class="nt">&lt;/colour&gt;</span>
+<span class="w">        </span><span class="nt">&lt;colour&gt;</span>CLOTHING_GREY<span class="nt">&lt;/colour&gt;</span>
+<span class="w">        </span><span class="nt">&lt;colour&gt;</span>CLOTHING_RED<span class="nt">&lt;/colour&gt;</span>
+<span class="w">        </span><span class="nt">&lt;colour&gt;</span>CLOTHING_RED_BRIGHT<span class="nt">&lt;/colour&gt;</span>
+<span class="w">        </span><span class="nt">&lt;colour&gt;</span>CLOTHING_RED_DARK<span class="nt">&lt;/colour&gt;</span>
+<span class="w">        </span><span class="nt">&lt;colour&gt;</span>CLOTHING_ORANGE<span class="nt">&lt;/colour&gt;</span>
+<span class="w">        </span><span class="nt">&lt;colour&gt;</span>CLOTHING_ORANGE_BRIGHT<span class="nt">&lt;/colour&gt;</span>
+<span class="w">        </span><span class="nt">&lt;colour&gt;</span>CLOTHING_ORANGE_DARK<span class="nt">&lt;/colour&gt;</span>
+<span class="w">        </span><span class="nt">&lt;colour&gt;</span>CLOTHING_BROWN<span class="nt">&lt;/colour&gt;</span>
+<span class="w">        </span><span class="nt">&lt;colour&gt;</span>CLOTHING_TAN<span class="nt">&lt;/colour&gt;</span>
+<span class="w">        </span><span class="nt">&lt;colour&gt;</span>CLOTHING_YELLOW<span class="nt">&lt;/colour&gt;</span>
+<span class="w">        </span><span class="nt">&lt;colour&gt;</span>CLOTHING_GREEN_LIME<span class="nt">&lt;/colour&gt;</span>
+<span class="w">        </span><span class="nt">&lt;colour&gt;</span>CLOTHING_GREEN<span class="nt">&lt;/colour&gt;</span>
+<span class="w">        </span><span class="nt">&lt;colour&gt;</span>CLOTHING_GREEN_DARK<span class="nt">&lt;/colour&gt;</span>
+<span class="w">        </span><span class="nt">&lt;colour&gt;</span>CLOTHING_TURQUOISE<span class="nt">&lt;/colour&gt;</span>
+<span class="w">        </span><span class="nt">&lt;colour&gt;</span>CLOTHING_BLUE_LIGHT<span class="nt">&lt;/colour&gt;</span>
+<span class="w">        </span><span class="nt">&lt;colour&gt;</span>CLOTHING_BLUE<span class="nt">&lt;/colour&gt;</span>
+<span class="w">        </span><span class="nt">&lt;colour&gt;</span>CLOTHING_BLUE_DARK<span class="nt">&lt;/colour&gt;</span>
+<span class="w">        </span><span class="nt">&lt;colour&gt;</span>CLOTHING_PURPLE<span class="nt">&lt;/colour&gt;</span>
+<span class="w">        </span><span class="nt">&lt;colour&gt;</span>CLOTHING_PURPLE_DARK<span class="nt">&lt;/colour&gt;</span>
+<span class="w">        </span><span class="nt">&lt;colour&gt;</span>CLOTHING_PURPLE_LIGHT<span class="nt">&lt;/colour&gt;</span>
+<span class="w">        </span><span class="nt">&lt;colour&gt;</span>CLOTHING_PINK<span class="nt">&lt;/colour&gt;</span>
+<span class="w">        </span><span class="nt">&lt;colour&gt;</span>CLOTHING_PINK_LIGHT<span class="nt">&lt;/colour&gt;</span>
+<span class="nt">&lt;/tertiaryColoursDye&gt;</span>
+</pre></div>
+</div>
+</dd>
+</dl>
+<section id="custom-colours">
+<h3><a class="toc-backref" href="#id22" role="doc-backlink"><span class="section-number">1.13.1. </span>Custom Colours</a><a class="headerlink" href="#custom-colours" title="此标题的永久链接">¶</a></h3>
+<p>You can define any number of custom colours to replace the shades you’ve
+coloured your svg with.</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">copyColourIndex</span></code> attribute seen in the example below defines which colour
+index should be copied into this colour slot on weapon generation. This
+particular colour, having an index of 0, will always be coloured the same as the
+primary colour when generated. Indexes go from 0 <span class="math notranslate nohighlight">\(\to\)</span> X, where X is the
+number of defined colours. i.e. If you only define primary and secondary, the
+first custom colour will have an index of 2.</p>
+<p>Attributes from <code class="docutils literal notranslate"><span class="pre">c0</span></code> <span class="math notranslate nohighlight">\(\to\)</span> <code class="docutils literal notranslate"><span class="pre">c4</span></code> are the colours which you’ve used in
+your svg and would like replaced with the colours you define below. <code class="docutils literal notranslate"><span class="pre">c0</span></code> is
+the darkest shade. Shades can go up to any number, but setting just 5 shades
+should work best.</p>
+<p>If you have used the <code class="docutils literal notranslate"><span class="pre">primary</span></code> / <code class="docutils literal notranslate"><span class="pre">secondary</span></code> / <code class="docutils literal notranslate"><span class="pre">tertiary</span></code> elements up
+above, then do not use their associated colour hexes. (i.e. If you’ve defined a
+<code class="docutils literal notranslate"><span class="pre">primaryColours</span></code> element, do not use either of <code class="docutils literal notranslate"><span class="pre">#ff2a2a</span></code>, <code class="docutils literal notranslate"><span class="pre">#ff5555</span></code>,
+<code class="docutils literal notranslate"><span class="pre">#ff8080</span></code>, <code class="docutils literal notranslate"><span class="pre">#ffaaaa</span></code>, or <code class="docutils literal notranslate"><span class="pre">#ffd5d5</span></code> in the customColour attributes.)</p>
+<p>You should also <strong>not</strong> use any of the following, as they are reserved for
+pattern colours:</p>
+<table class="hlist"><tr><td><ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">#f4d7d7</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">#e9afaf</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">#de8787</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">#d35f5f</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">#c83737</span></code></p></li>
+</ul>
+</td><td><ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">#f4e3d7</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">#e9c6af</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">#deaa87</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">#d38d5f</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">#c87137</span></code></p></li>
+</ul>
+</td><td><ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">#f4eed7</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">#e9ddaf</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">#decd87</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">#d3bc5f</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">#c8ab37</span></code></p></li>
+</ul>
+</td></tr></table>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;customColours&gt;</span>
+<span class="w">    </span><span class="nt">&lt;customColour</span><span class="w"> </span><span class="na">copyColourIndex=</span><span class="s">&quot;0&quot;</span><span class="w"> </span><span class="na">c0=</span><span class="s">&quot;#6C5353&quot;</span><span class="w"> </span><span class="na">c1=</span><span class="s">&quot;#916F6F&quot;</span><span class="w"> </span><span class="na">c2=</span><span class="s">&quot;#AC9393&quot;</span><span class="w"> </span><span class="na">c3=</span><span class="s">&quot;#C8B7B7&quot;</span><span class="w"> </span><span class="na">c4=</span><span class="s">&quot;#E3DBDB&quot;</span><span class="nt">&gt;</span><span class="w"> </span>(ref:cci)
+<span class="w">            </span><span class="nt">&lt;defaultColours&gt;</span>
+<span class="w">                    </span><span class="nt">&lt;colour&gt;</span>CLOTHING_GREY<span class="nt">&lt;/colour&gt;</span><span class="w"> </span><span class="cm">&lt;!-- The colours which this clothing should spawn in with. --&gt;</span>
+<span class="w">            </span><span class="nt">&lt;/defaultColours&gt;</span>
+<span class="w">            </span><span class="nt">&lt;extraColours</span><span class="w"> </span><span class="na">values=</span><span class="s">&quot;ALL&quot;</span><span class="nt">/&gt;</span><span class="w"> </span><span class="cm">&lt;!-- The colours which this clothing can be dyed to. --&gt;</span>
+<span class="w">    </span><span class="nt">&lt;/customColour&gt;</span>
+<span class="nt">&lt;/customColours&gt;</span>
+</pre></div>
+</div>
+</section>
+<section id="status-effects-special-case">
+<h3><a class="toc-backref" href="#id23" role="doc-backlink"><span class="section-number">1.13.2. </span>status effects special case</a><a class="headerlink" href="#status-effects-special-case" title="此标题的永久链接">¶</a></h3>
+<p>Status effects also accept colours, but to a lesser degree. The colours for
+status effects are there to recolor the icon, as such at most three values are
+expected for <code class="docutils literal notranslate"><span class="pre">primary</span></code>, <code class="docutils literal notranslate"><span class="pre">secondary</span></code>, and <code class="docutils literal notranslate"><span class="pre">tertiary</span></code> colours.</p>
+</section>
+</section>
+</section>
+
+
+          </div>
+              <div class="related bottom">
+                &nbsp;
+  <nav id="rellinks">
+    <ul>
+        <li>
+          &larr;
+          <a href="index.html" title="Previous document">Welcome to Lilith's Throne Mod Documentation's documentation!</a>
+        </li>
+        <li>
+          <a href="items.html" title="Next document"><span class="section-number">2. </span>Items folder</a>
+          &rarr;
+        </li>
+    </ul>
+  </nav>
+              </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="index.html">Lilith's Throne Mod Documentation</a></h1>
+
+
+
+
+
+
+<p>
+<iframe src="https://ghbtns.com/github-btn.html?user=CKRainbow&repo=lilith-throne-documentation&type=star&count=true&size=large&v=2"
+  allowtransparency="true" frameborder="0" scrolling="0" width="200px" height="35px"></iframe>
+</p>
+
+
+
+
+
+<h3>导航</h3>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">1. 总览</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#preface">1.1. 前言</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#note-on-status-effects-and-how-to-use-them">1.2. Note on status effects and how to use them</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#some-elements-expect-boolean-values">1.3. Some elements expect Boolean values</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#shared-tags-and-information">1.4. Shared tags and information</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#items-identifier">1.5. Item’s identifier</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#author-tags">1.6. author tags</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#value">1.7. value</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#name">1.8. name</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#plural-name">1.8.1. plural name</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#determiner">1.9. determiner</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#description">1.10. Description</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#items-image">1.11. Item’s image</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#rarity">1.12. rarity</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#colours">1.13. colours</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#custom-colours">1.13.1. Custom Colours</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#status-effects-special-case">1.13.2. status effects special case</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="items.html">2. Items folder</a></li>
+<li class="toctree-l1"><a class="reference internal" href="outfits.html">3. Outfits</a></li>
+<li class="toctree-l1"><a class="reference internal" href="setBonuses.html">4. Item Sets</a></li>
+<li class="toctree-l1"><a class="reference internal" href="statusEffects.html">5. statusEffects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="authors.html">6. Authors</a></li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+      <li>Previous: <a href="index.html" title="上一章">Welcome to Lilith's Throne Mod Documentation's documentation!</a></li>
+      <li>Next: <a href="items.html" title="下一章"><span class="section-number">2. </span>Items folder</a></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">快速搜索</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="提交" />
+    </form>
+    </div>
+</div>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+<script>
+	document.write("<h3>Languages</h3><p>")
+	if (window.location.href.indexOf("zh/") >= 0)
+	{
+		document.write("<a href=\"../index.html\">English </a>")
+		document.write("<a>中文</a>")
+	}
+	else
+	{
+		document.write("<a>English </a>")
+		document.write("<a href=\"zh/index.html\">中文</a>")
+	}
+	document.write("</p>")
+</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2020, Innoxia and contributors.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 7.1.2</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.13</a>
+      
+      |
+      <a href="_sources/overview.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>
