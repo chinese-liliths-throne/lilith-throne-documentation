@@ -1,4 +1,5 @@
 #!/bin/bash
 
 cd ./docs
-sphinx-intl update
+./make.bat gettext
+sphinx-intl update -p _build/gettext -l zh 

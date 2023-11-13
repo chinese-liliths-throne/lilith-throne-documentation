@@ -39,13 +39,13 @@ msgid ""
 "documents tries to be as accurate as possible, you’re invited, dear "
 "reader, to consult existing ``xml`` files residing in your ``res/mods/`` "
 "folder."
-msgstr "以下文档将尽其所能揭示你在游玩莉莉丝的王座时的不同体验。虽然该文档会尽量保证精确，但亲爱的读者，你也可以通过``res/mods/``文件夹下的现有``xml``文件查看。"
+msgstr "以下文档将尽其所能揭示你在游玩莉莉丝的王座时的不同体验。虽然该文档会尽量保证精确，但亲爱的读者，你也可以通过 ``res/mods/`` 文件夹下的现有 ``xml`` 文件查看。"
 
 #: ../../overview.rst:16
 msgid ""
 "If you are unsure of anything, please use the `Lilith's Throne Discord`_ "
 "to ask for help!"
-msgstr "如果你有任何疑惑，可以到`Lilith's Throne Discord`_ 寻求帮助！"
+msgstr "如果你有任何疑惑，可以到 `Lilith's Throne Discord`_ 寻求帮助！"
 
 #: ../../overview.rst:20
 msgid "Note on status effects and how to use them"
@@ -58,7 +58,7 @@ msgid ""
 " applied through an ``applyEffect`` block. Most wearable items has to go "
 "through a set bonus in order to have access to the status effects "
 "mechanics."
-msgstr "我们将效果定义为一组逻辑条件，条件性地应用于角色。定义该条件的来源各不相同，最终通过``applyEffect``块生效。大多数可穿戴物品必须经过一组套装加成，以便使用状态效果机制。"
+msgstr "我们将效果定义为一组逻辑条件，条件性地应用于角色。定义该条件的来源各不相同，最终通过 ``applyEffect`` 块生效。大多数可穿戴物品必须经过一组套装加成，以便使用状态效果机制。"
 
 #: ../../overview.rst:27
 msgid ""
