@@ -48,7 +48,7 @@ exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store']
 # sphinx internationalization
 locale_dirs = ['locale/']   # path is example but recommended.
 language = "en"
-gettext_compact = True     # optional.
+gettext_compact = False     # optional.
 
 
 # -- Options for HTML output -------------------------------------------------
@@ -80,6 +80,7 @@ html_sidebars = {
         "navigation.html",
         "relations.html",
         "searchbox.html",
+		"multi-language.html",
         "donate.html",
     ]
 }
@@ -88,7 +89,7 @@ html_baseurl = "https://bicobus.github.io/lilith-throne-documentation/"
 # Add any paths that contain custom static files (such as style sheets) here,
 # relative to this directory. They are copied after the builtin static files,
 # so a file named "default.css" will overwrite the builtin "default.css".
-html_static_path = []
+html_static_path = ['_static']
 
 extlinks = {
     'wiki': (
