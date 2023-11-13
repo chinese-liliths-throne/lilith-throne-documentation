@@ -3,3 +3,5 @@ docs/_build/
 .python_version
 __pycache__/
 dict/
+downloads/
+*.mo

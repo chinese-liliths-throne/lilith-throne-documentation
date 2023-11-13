@@ -22,15 +22,15 @@ msgstr ""
 
 #: ../../overview.rst:4
 msgid "Overview"
-msgstr "总览"
+msgstr ""
 
 #: ../../overview.rst:6
 msgid "Contents"
-msgstr "目录"
+msgstr ""
 
 #: ../../overview.rst:9
 msgid "Preface"
-msgstr "前言"
+msgstr ""
 
 #: ../../overview.rst:11
 msgid ""

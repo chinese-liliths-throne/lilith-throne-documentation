@@ -22,23 +22,23 @@ msgstr ""
 
 #: ../../authors.rst:3
 msgid "Authors"
-msgstr ""
+msgstr 作者
 
 #: ../../authors.rst:5
 msgid ""
 "Lilith's Throne is written and maintained by `Innoxia "
 "<https://lilithsthrone.blogspot.com/>`_."
-msgstr ""
+msgstr “莉莉丝的王座”由`Innoxia <https://lilithsthrone.blogspot.com/>`_编写并维护。
 
 #: ../../authors.rst:7
 msgid "Other contributors, listed alphabetically:"
-msgstr ""
+msgstr 其他贡献者，以字母表顺序列出：
 
 #: ../../authors.rst:9
 msgid "bicobus -- dedicated documentation website."
-msgstr ""
+msgstr bicobus -- 致力于搭建文档网站。
 
 #: ../../authors.rst:10
 msgid "dsg -- enforcer's stylist extraordinaire."
-msgstr ""
+msgstr dsg -- 杰出的执法者专家。
 
