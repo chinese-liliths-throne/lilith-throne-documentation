@@ -106,10 +106,6 @@ def apply():
 	dict_path = Path(DICT_DIR)
 	target_path = Path(TARGET_DIR)
 
-	shutil.rmtree(target_path, ignore_errors=True)
-
-	subprocess.call("bash ./create_po.sh")
-
 	pt_token = (
 		""
 		if os.environ.get("PARATRANZ_TOKEN") is None
