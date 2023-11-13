@@ -9,6 +9,7 @@ if "%SPHINXBUILD%" == "" (
 )
 set SOURCEDIR=.
 set BUILDDIR=_build
+set SPHINXPROJ=sphinx-intl
 
 if "%1" == "" goto help
 

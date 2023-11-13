@@ -1,0 +1,304 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2020, Innoxia and contributors
+# This file is distributed under the same license as the Lilith's Throne Mod
+# Documentation package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Lilith's Throne Mod Documentation \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-11-13 13:10+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: zh\n"
+"Language-Team: zh <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.13.1\n"
+
+#: ../../items_items.rst:3
+msgid "Miscanelaous Items"
+msgstr ""
+
+#: ../../items_items.rst
+msgid "Authors"
+msgstr ""
+
+#: ../../items_items.rst:5
+msgid "innoxia, bicobus"
+msgstr ""
+
+#: ../../items_items.rst:9
+msgid ""
+"Item modding is not fully complete yet, as you cannot define any "
+"enchantment effects for items. I will expand this at some point in the "
+"future, but for now, this modding framework should be enough for most "
+"uses."
+msgstr ""
+
+#: ../../items_items.rst:13
+msgid ""
+"An annotated example lives at "
+":ltgithub:`res/items/innoxia/pills/fertility.xml`."
+msgstr ""
+
+#: ../../items_items.rst:16
+msgid "Boolean Values"
+msgstr ""
+
+#: ../../items_items.rst:18
+msgid ""
+"Boolean values can be used throughought the elements of this document. "
+"Those values are to be understood as:"
+msgstr ""
+
+#: ../../items_items.rst:21
+msgid "true"
+msgstr ""
+
+#: ../../items_items.rst:22
+msgid "false"
+msgstr ""
+
+#: ../../items_items.rst:25
+msgid "coreAttributes"
+msgstr ""
+
+#: ../../items_items.rst:28
+msgid "authorTag"
+msgstr ""
+
+#: ../../items_items.rst:30
+msgid ""
+"How attribution to the mod author (you!) should be displayed in the "
+"item’s tooltip. If left blank or not included, a default attribution "
+"based on folder name will be used."
+msgstr ""
+
+#: ../../items_items.rst:34
+msgid "This tag is optionnal."
+msgstr ""
+
+#: ../../items_items.rst:41
+msgid "value"
+msgstr ""
+
+#: ../../items_items.rst:43
+msgid "How much this item is worth."
+msgstr ""
+
+#: ../../items_items.rst:50
+msgid "determiner"
+msgstr ""
+
+#: ../../items_items.rst:52
+msgid ""
+"What’s appended before the item’s name in an instance of “Innoxia has X "
+"Breeder Pill”, where X is the determiner. This will usually be either “a”"
+" or “an”, but for other items may be different."
+msgstr ""
+
+#: ../../items_items.rst:56
+msgid ""
+"An example might be: “Innoxia is holding X scissors”, where X (the "
+"determiner) would now need to be “a pair of”."
+msgstr ""
+
+#: ../../items_items.rst:64
+msgid "name"
+msgstr ""
+
+#: ../../items_items.rst:66
+msgid "The singular name of this item."
+msgstr ""
+
+#: ../../items_items.rst:73
+msgid "namePlural"
+msgstr ""
+
+#: ../../items_items.rst:75
+msgid "The plural name of this item."
+msgstr ""
+
+#: ../../items_items.rst:81
+msgid "**Node Variables:**"
+msgstr ""
+
+#: ../../items_items.rst:80
+msgid ""
+"The variable ``pluralByDefault`` defines whether the item will always be "
+"refered by it’s plural name (e.g. “a pair of pants”)."
+msgstr ""
+
+#: ../../items_items.rst:88
+msgid "description"
+msgstr ""
+
+#: ../../items_items.rst:90
+msgid "The description/lore of this item."
+msgstr ""
+
+#: ../../items_items.rst:97
+msgid "useDescriptor"
+msgstr ""
+
+#: ../../items_items.rst:99
+msgid ""
+"How the item is used. This should be a single verb, and is used as the "
+"title of the action when using it."
+msgstr ""
+
+#: ../../items_items.rst:107
+msgid "sexUse"
+msgstr ""
+
+#: ../../items_items.rst:109
+msgid "Define whether the item can be used during sex, like a dildo or a pill."
+msgstr ""
+
+#: ../../items_items.rst:111 ../../items_items.rst:123
+#: ../../items_items.rst:134 ../../items_items.rst:146
+msgid "This element accepts `Boolean Values`_."
+msgstr ""
+
+#: ../../items_items.rst:118
+msgid "combatUseAllies"
+msgstr ""
+
+#: ../../items_items.rst:120
+msgid ""
+"Define whether the item can be used, either on yourself or your allies, "
+"during combat."
+msgstr ""
+
+#: ../../items_items.rst:130
+msgid "combatUseEnemies"
+msgstr ""
+
+#: ../../items_items.rst:132
+msgid "Define whether the item can be used on your opponents during combat."
+msgstr ""
+
+#: ../../items_items.rst:141
+msgid "consumedOnUse"
+msgstr ""
+
+#: ../../items_items.rst:143
+msgid ""
+"Define whether the item should be consumed on use. *(Editor Note: is it a"
+" consumable?)*"
+msgstr ""
+
+#: ../../items_items.rst:153
+msgid "rarity"
+msgstr ""
+
+#: ../../items_items.rst:155
+msgid ""
+"The rarity of this item. Values can be found here: "
+":ltgithub:`src/com/lilithsthrone/game/inventory/Rarity.java`"
+msgstr ""
+
+#: ../../items_items.rst:163
+msgid "imageName"
+msgstr ""
+
+#: ../../items_items.rst:165
+msgid ""
+"The file name of this item’s image when in the character’s inventory. The"
+" only supported file type is .svg. I use the free program “Inkscape” to "
+"make .svg images for the game."
+msgstr ""
+
+#: ../../items_items.rst:174
+msgid "colours"
+msgstr ""
+
+#: ../../items_items.rst:176
+msgid ""
+"Your item can be coloured any way you like, but if you’d like the game to"
+" automatically re-colour your item, you can specify available colours "
+"here."
+msgstr ""
+
+#: ../../items_items.rst:181
+msgid ":ref:`colours`"
+msgstr ""
+
+#: ../../items_items.rst:183
+msgid "Each defaults to ``CLOTHING_BLACK``."
+msgstr ""
+
+#: ../../items_items.rst:192
+msgid "effectTooltipLines"
+msgstr ""
+
+#: ../../items_items.rst:194
+msgid ""
+"You can use this section to describe any extra features of this item. "
+"These effects are shown in the tooltip when the player hovers over the "
+"item icon, so try and keep them short (as they should fit on one line). "
+"It should probably only be used to describe what happens in the "
+"`applyEffects`_ element. No characters are passed in as parsing "
+"arguments, so you should NOT use any character-specific parsing elements "
+"(such as ``[npc.name]``)."
+msgstr ""
+
+#: ../../items_items.rst:211
+msgid "applyEffects"
+msgstr ""
+
+#: ../../items_items.rst:213
+msgid ""
+"This is what is called and parsed every time this item is used on "
+"someone. The character being subjected to the effects is given the tag "
+"``npc``, while the character using the item on the target is ``npc2``. If"
+" self-using the item, ``npc`` and ``npc2`` will be the same character. "
+"All of the returned text is displayed to the player."
+msgstr ""
+
+#: ../../items_items.rst:251
+msgid "itemTags"
+msgstr ""
+
+#: ../../items_items.rst:253
+msgid ""
+"Special item tags that apply to this item. Values can be found here: "
+":ltgithub:`src/com/lilithsthrone/game/inventory/ItemTag.java`"
+msgstr ""
+
+#: ../../items_items.rst:267
+msgid "useDescription"
+msgstr ""
+
+#: ../../items_items.rst:269
+msgid "Descriptions that are displayed when using this item."
+msgstr ""
+
+#: ../../items_items.rst:272
+msgid "``selfUse``"
+msgstr ""
+
+#: ../../items_items.rst:272
+msgid "is used when a character uses this item on themselves"
+msgstr ""
+
+#: ../../items_items.rst:275
+msgid "``otherUse``"
+msgstr ""
+
+#: ../../items_items.rst:275
+msgid "is used when the item is applied on someone else."
+msgstr ""
+
+#: ../../items_items.rst:277
+msgid ""
+"You must define at least one of both of these elements, and if more than "
+"one of each is defined, then the use description will be chosen randomly "
+"from all those you’ve defined."
+msgstr ""
+

@@ -45,6 +45,11 @@ templates_path = ['_templates']
 # This pattern also affects html_static_path and html_extra_path.
 exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store']
 
+# sphinx internationalization
+locale_dirs = ['locale/']   # path is example but recommended.
+language = "en"
+gettext_compact = True     # optional.
+
 
 # -- Options for HTML output -------------------------------------------------
 
@@ -55,13 +60,13 @@ exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store']
 html_theme = "alabaster"
 html_context = {
     'display_github': True,
-    'github_user': 'bicobus',
+    'github_user': 'CKRainbow',
     'github_repo': 'lilith-throne-documentation',
     'github_version': 'master',
     'conf_py_path': '/docs/',
 }
 html_theme_options = {
-    'github_user': 'bicobus',
+    'github_user': 'CKRainbow',
     'github_repo': 'lilith-throne-documentation',
     'github_banner': False,
     'github_button': True,

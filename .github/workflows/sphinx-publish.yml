@@ -37,7 +37,8 @@ jobs:
       - name: Build Sphinx HTML
         run: |
           cd docs/
-          make html
+          sphinx-build.exe -M html . _build -D language=en
+          sphinx-build.exe -M html . _build -D language=zh
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3.6.4
         with:

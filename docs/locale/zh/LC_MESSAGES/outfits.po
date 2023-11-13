@@ -1,0 +1,617 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2020, Innoxia and contributors
+# This file is distributed under the same license as the Lilith's Throne Mod
+# Documentation package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Lilith's Throne Mod Documentation \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-11-13 13:10+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: zh\n"
+"Language-Team: zh <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.13.1\n"
+
+#: ../../outfits.rst:7
+msgid "Outfits"
+msgstr ""
+
+#: ../../outfits.rst
+msgid "Authors"
+msgstr ""
+
+#: ../../outfits.rst:9
+msgid "innoxia, bicobus"
+msgstr ""
+
+#: ../../outfits.rst:11
+msgid ""
+"Outfits are a way to make randomly generated NPCs’ outfit generation less"
+" chaotic."
+msgstr ""
+
+#: ../../outfits.rst:14
+msgid ""
+"As a final note, I will add support for allowing the automatic generation"
+" of piercings in the next update."
+msgstr ""
+
+#: ../../outfits.rst:17
+msgid ""
+"An annotated example lives at "
+":ltgithub:`res/mods/innoxia/outfits/casualDates/dress_toys.xml`"
+msgstr ""
+
+#: ../../outfits.rst:21
+msgid "coreAttributes"
+msgstr ""
+
+#: ../../outfits.rst:24
+msgid "name"
+msgstr ""
+
+#: ../../outfits.rst:26
+msgid ""
+"Names are only used for debugging purposes. Still, in case the name is "
+"used elsewhere later on, it’s best to give your outfit a suitable "
+"(lowercase) name."
+msgstr ""
+
+#: ../../outfits.rst:34
+msgid "description"
+msgstr ""
+
+#: ../../outfits.rst:36
+msgid ""
+"Again, descriptions are only used for debugging purposes. Still, in case "
+"the name is used elsewhere later on, it’s best to give your outfit a "
+"suitable description."
+msgstr ""
+
+#: ../../outfits.rst:45
+msgid "femininity"
+msgstr ""
+
+#: ../../outfits.rst:47
+msgid "The femininity needed for someone to generate this outfit."
+msgstr ""
+
+#: ../../outfits.rst:49
+msgid "The three acceptables values are respectively:"
+msgstr ""
+
+#: ../../outfits.rst:51
+msgid "``MASCULINE``"
+msgstr ""
+
+#: ../../outfits.rst:53
+msgid "``ANDROGYNOUS`` (anyone can use this outfit)"
+msgstr ""
+
+#: ../../outfits.rst:55
+msgid "``FEMININE``"
+msgstr ""
+
+#: ../../outfits.rst:62
+msgid "worldTypes"
+msgstr ""
+
+#: ../../outfits.rst:64
+msgid ""
+"The worlds in which this outfit may be used for randomly generated "
+"characters. You can leave this empty, or delete the element entirely, if "
+"you do not want this outfit to be restricted based on ``WorldType`` (so "
+"it can be used anywhere)."
+msgstr ""
+
+#: ../../outfits.rst:70
+msgid ":ltgithub:`src/com/lilithsthrone/world/WorldType.java`."
+msgstr ""
+
+#: ../../outfits.rst:80
+msgid "outfitTypes"
+msgstr ""
+
+#: ../../outfits.rst:82
+msgid "Outfit types that this outfit can be used in."
+msgstr ""
+
+#: ../../outfits.rst:85
+msgid ""
+"A list of "
+":ltgithub:`outfitTypes<src/com/lilithsthrone/game/inventory/clothing/OutfitType.java>`."
+msgstr ""
+
+#: ../../outfits.rst:89
+msgid ""
+"At the time of creation (*v0.3.0.6*), only the ``MUGGER`` outfitType is "
+"used in the game. All outfit types will be added eventually."
+msgstr ""
+
+#: ../../outfits.rst:99
+msgid "acceptableLegConfigurations"
+msgstr ""
+
+#: ../../outfits.rst:101
+msgid "Define which leg configurations can equip this outfit."
+msgstr ""
+
+#: ../../outfits.rst:105
+msgid ""
+"A list of "
+":ltgithub:`legConfiguration<src/com/lilithsthrone/game/character/body/valueEnums/LegConfiguration.java>`."
+msgstr ""
+
+#: ../../outfits.rst:114 ../../outfits.rst:468
+msgid "conditional"
+msgstr ""
+
+#: ../../outfits.rst:116
+msgid ""
+"The condition that needs to be satisfied for someone to generate this "
+"outfit. ``npc.hasFetish(FETISH_EXHIBITIONIST)`` should probably always be"
+" taken into account. This conditional instance does **not** support the "
+"``clothingConditionalX`` elements."
+msgstr ""
+
+#: ../../outfits.rst:123
+msgid ""
+"List of accepted :ltgithub:`method "
+"calls<src/com/lilithsthrone/game/character/GameCharacter.java>` for the "
+"“npc” (using the ``npc`` tag)."
+msgstr ""
+
+#: ../../outfits.rst:127
+msgid ""
+"List of accepted :ltgithub:`method "
+"calls<src/com/lilithsthrone/game/Game.java>` for the main game (using the"
+" ``game`` tag)."
+msgstr ""
+
+#: ../../outfits.rst:129
+msgid ""
+"Generic method calls can be found in: "
+":ltgithub:`src/com/lilithsthrone/game/dialogue/utils/UtilText.java`"
+msgstr ""
+
+#: ../../outfits.rst:132
+msgid ""
+"The method ``initScriptEngine()`` in ``UtilText.java`` shows you what you"
+" can get a handle on."
+msgstr ""
+
+#: ../../outfits.rst:140
+msgid "weight"
+msgstr ""
+
+#: ../../outfits.rst:142
+msgid ""
+"How likely this outfit is to be randomly chosen out of all available "
+"ones. Default outfits have a weight of 100. As there could be several "
+"outfits added to the weighting method, the chance of this outfit being "
+"selected is not able to be precisely determined."
+msgstr ""
+
+#: ../../outfits.rst:147
+msgid "A bigger number makes the outfits more common. There is no upper limit."
+msgstr ""
+
+#: ../../outfits.rst:154
+msgid "generationAttributes"
+msgstr ""
+
+#: ../../outfits.rst:157
+msgid "Conditional statements"
+msgstr ""
+
+#: ../../outfits.rst:163 ../../outfits.rst:185
+msgid "**Node Variables:**"
+msgstr ""
+
+#: ../../outfits.rst:162
+msgid ""
+"Conditional statements are evaluated only one time, at the start of "
+"clothing generation, unless this variable is set to ``False``."
+msgstr ""
+
+#: ../../outfits.rst:165
+msgid ""
+"You can define any number of conditional statements to use elsewhere in "
+"this file. They must be enclosed in ``CDATA`` tags, and must use a format"
+" of ``clothingConditionalX`` or ``condX``, where ``X`` is a unique "
+"``String`` (e.g. ``cond1``, ``condUnderwear``, "
+"``clothingConditionalMeleeWeapons`` are all valid tags)."
+msgstr ""
+
+#: ../../outfits.rst:175
+msgid "Example"
+msgstr ""
+
+#: ../../outfits.rst:178
+msgid "presetColourGroups"
+msgstr ""
+
+#: ../../outfits.rst:183
+msgid ""
+"The optional :nodevar:`singleColour` attribute, when set to ``True``, "
+"means that this group will always return the same, randomly chosen colour"
+" from its list."
+msgstr ""
+
+#: ../../outfits.rst:187
+msgid ""
+"Preset colour groups have one of their defined ``randomColour`` randomly "
+"chosen for further use in this XML file. You can have up to 20 "
+"``presetColourGroupX``, however the numbers must be consecutive. (i.e. "
+"You can have ``presetColourGroup1``, ``presetColourGroup2``, and "
+"``presetColourGroup3``, but **not** ``presetColourGroup1``, "
+"``presetColourGroup2``, and ``presetColourGroup4``, as that skips out a "
+"“3”.)"
+msgstr ""
+
+#: ../../outfits.rst:194
+msgid ""
+"Accepted values can be found in the files present in the "
+":ltgithub:`src/com/lilithsthrone/utils/colours` diretory."
+msgstr ""
+
+#: ../../outfits.rst:197
+msgid ""
+"Preceding ``presetColourGroups`` can be used, but not succeeding ones. "
+"(i.e. ``presetColourGroup3`` could not be used in "
+"``presetColourGroup2``.)"
+msgstr ""
+
+#: ../../outfits.rst:224
+msgid "mainWeapons and offhandWeapons"
+msgstr ""
+
+#: ../../outfits.rst:226
+msgid ""
+"Weapons can be added in a similar (although more limited) manner to "
+"clothing. This file doesn’t use any weapons. Look at "
+":ltgithub:`res/outfits/innoxia/genericMugger/dominion_masculine.xml` for "
+"a weapon example."
+msgstr ""
+
+#: ../../outfits.rst:231
+msgid ""
+"The content present in ``mainWeapons`` and ``offhandWeapons`` follow the "
+"same rules. The main weapons block defines which item should be inserted "
+"into the character’s main attack slot, where ass the off hand block "
+"defines which item to be inserted into the character’s off hand. Each "
+"block receive one or several ``weapon`` sub elements."
+msgstr ""
+
+#: ../../outfits.rst:237
+msgid "The ``weapon`` block require the following elements to be present:"
+msgstr ""
+
+#: ../../outfits.rst:240
+msgid "``conditional``"
+msgstr ""
+
+#: ../../outfits.rst:240
+msgid "references to the conditional statement present in the document."
+msgstr ""
+
+#: ../../outfits.rst:244
+msgid "``types``"
+msgstr ""
+
+#: ../../outfits.rst:243
+msgid ""
+"A list of valid item to be chosen from. It expects :ref:`items "
+"identifiers<items-identifier>`."
+msgstr ""
+
+#: ../../outfits.rst:248
+msgid "``damageTypes``"
+msgstr ""
+
+#: ../../outfits.rst:247
+msgid ""
+"Possible choices available at "
+":ltgithub:`src/com/lilithsthrone/game/combat/DamageType.java`"
+msgstr ""
+
+#: ../../outfits.rst:252 ../../outfits.rst:488
+msgid "``primaryColours``"
+msgstr ""
+
+#: ../../outfits.rst:251 ../../outfits.rst:255
+msgid ""
+"contains a list of ``colour`` elements, which makes references to the "
+"preset groups defined previously."
+msgstr ""
+
+#: ../../outfits.rst:256 ../../outfits.rst:490
+msgid "``secondaryColours``"
+msgstr ""
+
+#: ../../outfits.rst:260
+msgid "``colours``"
+msgstr ""
+
+#: ../../outfits.rst:259
+msgid ""
+"element can be used in addition to, or as a replacement of, the "
+"primary/secondary/tertiary colours elements."
+msgstr ""
+
+#: ../../outfits.rst:262
+msgid ""
+"Individual colours or ``presetColourGroups`` can be listed in each sub-"
+"element related to colours."
+msgstr ""
+
+#: ../../outfits.rst:288
+msgid "The element ``offhandWeapons`` follow a similar ruleset."
+msgstr ""
+
+#: ../../outfits.rst:295
+msgid "guaranteedClothingEquips"
+msgstr ""
+
+#: ../../outfits.rst:297
+msgid ""
+"For all of the “conditional” elements from this point onwards, you can "
+"use the tag “clothing” to access the clothing type being handled."
+msgstr ""
+
+#: ../../outfits.rst:300
+msgid ""
+"All of the pre-set clothing that *is guaranteed* to be attempted to be "
+"equipped. The only time these items won’t be equipped is when multiple "
+"items of clothing are assigned to the same inventory slot (such as a pair"
+" of panties and a thong), in which case only the first item is used."
+msgstr ""
+
+#: ../../outfits.rst:325
+msgid "clothing"
+msgstr ""
+
+#: ../../outfits.rst:365
+msgid "**Node Variables**:"
+msgstr ""
+
+#: ../../outfits.rst:340
+msgid "All colours variables must contain a valid ``CLOTHING_`` colour."
+msgstr ""
+
+#: ../../outfits.rst:344
+msgid ""
+"Determine if the effects on the item are known to the player, or if the "
+"item remains unidentified."
+msgstr ""
+
+#: ../../outfits.rst:349
+msgid "The clothing ID"
+msgstr ""
+
+#: ../../outfits.rst:351
+msgid ":ref:`items-identifier`"
+msgstr ""
+
+#: ../../outfits.rst:355
+msgid "Whether the clothing item should spawn dirty, and in need of cleaning."
+msgstr ""
+
+#: ../../outfits.rst:359
+msgid ""
+"How the item should be displayed. The following example will output to "
+"“Character’s butt-plug”: ``name=\"[npc.NamePos(true)] butt-plug\"``. If "
+"not present, the name of the clothing is used instead."
+msgstr ""
+
+#: ../../outfits.rst:365
+msgid "The pattern to apply to the item."
+msgstr ""
+
+#: ../../outfits.rst:367
+msgid "The clothing tags has the following sub elements."
+msgstr ""
+
+#: ../../outfits.rst:370
+msgid "effects"
+msgstr ""
+
+#: ../../outfits.rst:372
+msgid "List of enchantments."
+msgstr ""
+
+#: ../../outfits.rst:375
+msgid "displacedList"
+msgstr ""
+
+#: ../../outfits.rst:377
+msgid "Define in which state a piece of clothing is being equipped."
+msgstr ""
+
+#: ../../outfits.rst:389
+msgid "**displacementType Variables:**"
+msgstr ""
+
+#: ../../outfits.rst:388
+msgid ""
+"The list of constants is available at "
+":ltgithub:`src/com/lilithsthrone/game/inventory/clothing/DisplacementType.java`"
+msgstr ""
+
+#: ../../outfits.rst:392
+msgid "genericClothingType"
+msgstr ""
+
+#: ../../outfits.rst:394
+msgid ""
+"Theses elements automatically populate the possible clothing lists with "
+"all clothing in the game that satisfies the conditionals."
+msgstr ""
+
+#: ../../outfits.rst:433
+msgid "itemTag"
+msgstr ""
+
+#: ../../outfits.rst:435
+msgid ""
+"If tags are defined, then only clothing with the provided tags will be "
+"included for random selection. May be left empty."
+msgstr ""
+
+#: ../../outfits.rst:438
+msgid ""
+"Accepted values can be found in the following file: "
+"`src/com/lilithsthrone/game/inventory/ItemTag.java "
+"<https://github.com/Innoxia/liliths-throne-"
+"public/blob/dev/src/com/lilithsthrone/game/inventory/ItemTag.java>`_"
+msgstr ""
+
+#: ../../outfits.rst:442
+msgid "tag"
+msgstr ""
+
+#: ../../outfits.rst:444
+msgid ""
+"If the tag contains the constant ``DRESS``, then all items in the game "
+"marked as a ``DRESS`` will be included for random selection."
+msgstr ""
+
+#: ../../outfits.rst:448
+msgid "acceptableFemininities"
+msgstr ""
+
+#: ../../outfits.rst:450
+msgid ""
+"If `femininity`_ are defined, then only clothing suitable for this "
+"femininity will be included for random selection."
+msgstr ""
+
+#: ../../outfits.rst:454
+msgid "slot"
+msgstr ""
+
+#: ../../outfits.rst:456
+msgid ""
+"If a slot (of type InventorySlot) is defined, then only clothing that "
+"fits into this slot will be included for random selection. Use the Enum "
+"values as defined in "
+":ltgithub:`src/com/lilithsthrone/game/inventory/InventorySlot.java`."
+msgstr ""
+
+#: ../../outfits.rst:461
+msgid "rarity"
+msgstr ""
+
+#: ../../outfits.rst:463
+msgid ""
+"If a rarity is defined, then only clothing that has this rarity will be "
+"included for random selection. Accepted values can be found in the "
+"following file: "
+":ltgithub:`src/com/lilithsthrone/game/inventory/Rarity.java`."
+msgstr ""
+
+#: ../../outfits.rst:470
+msgid ""
+"If a condition is defined, then only clothing that satisfies this "
+"condition will be included for random selection. Wrap the conditional "
+"statement in ``CDATA`` tags if used."
+msgstr ""
+
+#: ../../outfits.rst:474
+#, python-format
+msgid ""
+"In the following logic, earrings have 100% chance to be equipped. All "
+"other jewellery have a 25% chance instead. These items are automatically "
+"skipped if the character doesn’t have the relevant slot accessible. In "
+"the case of jewellery, ears that are not pierced cannot received "
+"earrings."
+msgstr ""
+
+#: ../../outfits.rst:484
+msgid "primary, secondary and tertiary colours"
+msgstr ""
+
+#: ../../outfits.rst:486
+msgid "Three sub elements:"
+msgstr ""
+
+#: ../../outfits.rst:492
+msgid "``tertiaryColours``"
+msgstr ""
+
+#: ../../outfits.rst:494
+msgid "Each accepts a preset color defined earlier in the document."
+msgstr ""
+
+#: ../../outfits.rst:503
+msgid "colours"
+msgstr ""
+
+#: ../../outfits.rst:505
+msgid ""
+"``colours`` elements can be used in addition to, or as a replacement of, "
+"the primary/secondary/tertiary colours elements. Individual colours or "
+"presetColourGroups can be used."
+msgstr ""
+
+#: ../../outfits.rst:509
+msgid "It is defined as follows:"
+msgstr ""
+
+#: ../../outfits.rst:518
+msgid "clothingType"
+msgstr ""
+
+#: ../../outfits.rst:520
+msgid ""
+"Presumably this block filters items based on the list of types, then each"
+" character that satisfy the ``conditional`` sub-element is susceptible to"
+" be selected."
+msgstr ""
+
+#: ../../outfits.rst:524
+msgid ""
+"The colour references serves as a list of preset colours for this "
+"outfit’s condional."
+msgstr ""
+
+#: ../../outfits.rst:527
+msgid ""
+"The constants present in the ``type`` sub-elements are either hard coded "
+"constants or :ref:`items-identifier`."
+msgstr ""
+
+#: ../../outfits.rst:530
+msgid ""
+"Some piece of clothing haven't been (yet) converted into a XML format, "
+"those have hard coded types available at "
+":ltgithub:`src/com/lilithsthrone/game/inventory/clothing/ClothingType.java`"
+msgstr ""
+
+#: ../../outfits.rst:534
+msgid ""
+"Both ``genericClothingType`` and ``clothingType`` are shuffled together "
+"before being run through and worn. So if two items occupies the same "
+"slot, as for example several bra, then only one of them will be chosen at"
+" random."
+msgstr ""
+
+#: ../../outfits.rst:538
+msgid ""
+"``primaryColours`` sub-element has an optional attribute ``value``, which"
+" can be used as a pre-set colour list instead of defining individual "
+"colours."
+msgstr ""
+
+#: ../../outfits.rst:542
+msgid ":ltgithub:`src/com/lilithsthrone/utils/colours/ColourListPresets.java`"
+msgstr ""
+
