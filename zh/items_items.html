@@ -90,7 +90,7 @@
 <section id="determiner">
 <h3><span class="section-number">2.2.2.3. </span>determiner<a class="headerlink" href="#determiner" title="此标题的永久链接">¶</a></h3>
 <p>在“Innoxia拥有X生殖剂”这个例子中，这个X就是就是量词，这通常填入“一个”或者“一支”，但是对于其他物品来说这个量词可能是不同的。</p>
-<p>像“Innoxia拿着X剪刀”这个例子中, 这里X(这个量词)就应该写作“一把”.</p>
+<p>像“Innoxia拿着X剪刀”这个例子中, 这里X(这个量词)就应该写作“一把”。</p>
 <div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;determiner&gt;</span><span class="cp">&lt;![CDATA[a]]&gt;</span><span class="nt">&lt;/determiner&gt;</span>
 </pre></div>
 </div>
@@ -109,7 +109,7 @@
 <dt><strong>Node Variables:</strong></dt><dd><dl class="std nodevar">
 <dt class="sig sig-object std" id="nodevar-pluralByDefault-items_items">
 <span class="sig-name descname"><span class="pre">pluralByDefault</span></span> <span class="pre">Type:</span> <span class="pre">boolean</span><a class="headerlink" href="#nodevar-pluralByDefault-items_items" title="永久链接至目标">¶</a></dt>
-<dd><p>这个变量``pluralByDefault``定义了这个物品在调用时直接以复数名称调用(例如“a pair of pants”)，不太符合汉语习惯可无视。</p>
+<dd><p>变量 <code class="docutils literal notranslate"><span class="pre">pluralByDefault</span></code> 定义了该物品在调用时直接以复数名称调用(例如“a pair of pants”)，不太符合汉语习惯可无视。</p>
 </dd></dl>
 
 </dd>
@@ -166,7 +166,7 @@
 </section>
 <section id="rarity">
 <h3><span class="section-number">2.2.2.12. </span>rarity<a class="headerlink" href="#rarity" title="此标题的永久链接">¶</a></h3>
-<p>这件物品的稀有性。可以在这里找到这些值：<a class="reference external" href="https://github.com/Innoxia/liliths-throne-public/tree/dev/src/com/lilithsthrone/game/inventory/Rarity.java">src/com/lilithsthrone/game/inventory/Rarity.java</a></p>
+<p>物品的稀有度。可以在这里查看数值：<a class="reference external" href="https://github.com/Innoxia/liliths-throne-public/tree/dev/src/com/lilithsthrone/game/inventory/Rarity.java">src/com/lilithsthrone/game/inventory/Rarity.java</a></p>
 <div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;rarity&gt;</span>COMMON<span class="nt">&lt;/rarity&gt;</span>
 </pre></div>
 </div>
@@ -194,7 +194,7 @@
 </section>
 <section id="effecttooltiplines">
 <h3><span class="section-number">2.2.2.15. </span>effectTooltipLines<a class="headerlink" href="#effecttooltiplines" title="此标题的永久链接">¶</a></h3>
-<p>你可以使用本节来描述此项的任何额外特性。当玩家将鼠标悬停在道具图标上时，这些描述就会显示在工具提示中，所以尽量保持它们简短(因为它们应该可以放在一行中)。它可能只应该用于描述 ` applyEeffects ` 元素中发生的事情。这个参数中没有字符可以作为解析参数传入，所以你不应该使用任何特定于字符的解析元素(例如 <code class="docutils literal notranslate"><span class="pre">[npc.name]</span></code>)。</p>
+<p>你可以使用本节来描述此项的任何额外特性。当玩家将鼠标悬停在道具图标上时，这些描述就会显示在工具提示中，所以尽量保持它们简短(因为它们应该可以放在一行中)。它可能只应该用于描述 <a class="reference internal" href="#applyeffects">applyEffects</a>  元素中发生的事情。这个参数中没有字符可以作为解析参数传入，所以你不应该使用任何特定于字符的解析元素(例如 <code class="docutils literal notranslate"><span class="pre">[npc.name]</span></code> )。</p>
 <div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;effectTooltipLines&gt;</span>
 <span class="w">    </span><span class="nt">&lt;line&gt;</span><span class="cp">&lt;![CDATA[[#ATTRIBUTE_FERTILITY.getFormattedValue(50)] for 24 hours]]&gt;</span><span class="nt">&lt;/line&gt;</span>
 <span class="w">    </span><span class="nt">&lt;line&gt;</span><span class="cp">&lt;![CDATA[[#ATTRIBUTE_VIRILITY.getFormattedValue(50)] for 24 hours]]&gt;</span><span class="nt">&lt;/line&gt;</span>
@@ -206,7 +206,7 @@
 </section>
 <section id="applyeffects">
 <h3><span class="section-number">2.2.2.16. </span>applyEffects<a class="headerlink" href="#applyeffects" title="此标题的永久链接">¶</a></h3>
-<p>这里是每次在某人上使用此项时调用和解析的内容。受特效影响的角色标记为 `` npc `` ，而在目标上使用该物品的角色标记为 `` npc2 `` 。如果自使用的物品， <a href="#id1"><span class="problematic" id="id2">``</span></a>npc `` 和 <a href="#id3"><span class="problematic" id="id4">``</span></a>npc2 `` 将是相同的字符。所有解析后的文本都会显示给玩家。</p>
+<p>这里是每次在某人上使用此项时调用和解析的内容。受特效影响的角色标记为 <code class="docutils literal notranslate"><span class="pre">npc</span></code> ，而在目标上使用该物品的角色标记为 <code class="docutils literal notranslate"><span class="pre">npc2</span></code> 。如果自使用的物品， <code class="docutils literal notranslate"><span class="pre">npc</span></code> 和 <code class="docutils literal notranslate"><span class="pre">npc2</span></code> 将是相同的字符。所有解析后的文本都会显示给玩家。</p>
 <div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;applyEffects&gt;</span><span class="cp">&lt;![CDATA[</span>
 <span class="cp">    [##npc.removeStatusEffect(SE_PROMISCUITY_PILL)]</span>
 <span class="cp">    [##npc.addStatusEffect(SE_VIXENS_VIRILITY, 60*24*60)]</span>
@@ -261,7 +261,7 @@
 <dt><code class="docutils literal notranslate"><span class="pre">otherUse</span></code></dt><dd><p>表示这个物品对其他角色使用时可被使用。</p>
 </dd>
 </dl>
-<p>您必须定义这两个元素中的至少一个，如果定义了其中多个元素，则使用描述将从您定义的所有元素中随机选择。</p>
+<p>你必须定义这两个元素中的至少一个，如果定义了其中多个元素，则使用描述将从你定义的所有元素中随机选择。</p>
 <div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;useDescriptions&gt;</span>
 <span class="w">    </span><span class="nt">&lt;selfUse&gt;</span><span class="cp">&lt;![CDATA[</span>
 <span class="cp">    [npc.Name] [npc.verb(pop)] a breeder pill out of its little foil wrapper, before quickly placing it in [npc.her] mouth and swallowing it down.</span>
@@ -316,7 +316,7 @@
 <h3>导航</h3>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="overview.html">1. 概览</a></li>
-<li class="toctree-l1 current"><a class="reference internal" href="items.html">2. Items folder</a><ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="items.html">2. 物品文件夹：</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="clothing.html">2.1. 衣物类物品</a></li>
 <li class="toctree-l2 current"><a class="current reference internal" href="#">2.2. Miscanelaous Items</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#boolean-values">2.2.1. Boolean Values</a></li>
@@ -338,7 +338,7 @@
 <h3>Related Topics</h3>
 <ul>
   <li><a href="index.html">Documentation overview</a><ul>
-  <li><a href="items.html"><span class="section-number">2. </span>Items folder</a><ul>
+  <li><a href="items.html"><span class="section-number">2. </span>物品文件夹：</a><ul>
       <li>Previous: <a href="clothing.html" title="上一章"><span class="section-number">2.1. </span>衣物类物品</a></li>
       <li>Next: <a href="tattoos.html" title="下一章"><span class="section-number">2.3. </span>纹身</a></li>
   </ul></li>

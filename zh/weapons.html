@@ -52,7 +52,7 @@
 <h1><span class="section-number">2.4. </span>Items Weapons<a class="headerlink" href="#items-weapons" title="此标题的永久链接">¶</a></h1>
 <blockquote>
 <div><dl class="field-list simple">
-<dt class="field-odd">Author<span class="colon">:</span></dt>
+<dt class="field-odd">作者<span class="colon">:</span></dt>
 <dd class="field-odd"><p>innoxia, bicobus</p>
 </dd>
 </dl>
@@ -61,57 +61,46 @@
 <h2><span class="section-number">2.4.1. </span>coreAttributes<a class="headerlink" href="#coreattributes" title="此标题的永久链接">¶</a></h2>
 <section id="authortag">
 <h3><span class="section-number">2.4.1.1. </span>authorTag<a class="headerlink" href="#authortag" title="此标题的永久链接">¶</a></h3>
-<p>How attribution to the mod author (<em>you</em>) should be displayed in the item’s
-tooltip. If left blank or not included, a default attribution based on folder
-name will be used.</p>
-<p>This tag is optionnal.</p>
+<p>在项目中显示模组作者（你）的名字 如果留空或没有该标签，将使用基于文件夹名称作为默认标签。</p>
+<p>这个标签是可选项。</p>
 <div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;authorTag&gt;</span><span class="cp">&lt;![CDATA[A discreet inscription at the base of the dagger&#39;s blade informs you that it was made by &#39;Innoxia&#39;.]]&gt;</span><span class="nt">&lt;/authorTag&gt;</span>
 </pre></div>
 </div>
 </section>
 <section id="value">
 <h3><span class="section-number">2.4.1.2. </span>value<a class="headerlink" href="#value" title="此标题的永久链接">¶</a></h3>
-<p>How much this weapon is worth.</p>
+<p>该物品价值多少？</p>
 <div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;value&gt;</span>3000<span class="nt">&lt;/value&gt;</span>
 </pre></div>
 </div>
 </section>
 <section id="melee">
-<h3><span class="section-number">2.4.1.3. </span>melee<a class="headerlink" href="#melee" title="此标题的永久链接">¶</a></h3>
-<p>Use “true” if this is a melee weapon, and “false” if it’s ranged. (Without
-quotation marks.)</p>
+<h3><span class="section-number">2.4.1.3. </span>近战<a class="headerlink" href="#melee" title="此标题的永久链接">¶</a></h3>
+<p>如果是近战武器请使用 “true” ，如果是远程武器请使用 “false” 。(不带引号。)</p>
 <div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;melee&gt;</span>true<span class="nt">&lt;/melee&gt;</span>
 </pre></div>
 </div>
 </section>
 <section id="twohanded">
 <h3><span class="section-number">2.4.1.4. </span>twoHanded<a class="headerlink" href="#twohanded" title="此标题的永久链接">¶</a></h3>
-<p>Use “true” if this weapon is two-handed, and thus cannot be simultaneously
-wielded with an offhand weapon, and “false” if it’s one-handed. (Without
-quotation marks.)</p>
+<p>如果是双手武器请使用 “true” 这样它就无法和副手武器同时使用了，如果是单手武器请使用 “false” 。(不包括引号。)</p>
 <div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;twoHanded&gt;</span>false<span class="nt">&lt;/twoHanded&gt;</span>
 </pre></div>
 </div>
 </section>
 <section id="determiner">
 <h3><span class="section-number">2.4.1.5. </span>determiner<a class="headerlink" href="#determiner" title="此标题的永久链接">¶</a></h3>
-<p>What’s appended before the weapon’s name in an instance of “Innoxia was holding
-X Demon’s Dagger”, where X is the determiner. This will usually be either “a” or
-“an”, but for other weapons may be different.</p>
-<p>An example might be: “Innoxia was holding X scissors”, where X (the determiner)
-would now need to be “a pair of”.</p>
+<p>在 “Innoxia 手持 X 恶魔匕首” 这个例子中，这个X就是就是量词，这通常填入“一把”或者“一支”，但是对于其他武器来说这个量词可能是不同的。</p>
+<p>像“Innoxia拿着X剪刀”这个例子中, 这里X(这个量词)就应该写作“一把”。</p>
 <div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;determiner&gt;</span><span class="cp">&lt;![CDATA[a]]&gt;</span><span class="nt">&lt;/determiner&gt;</span>
 </pre></div>
 </div>
 </section>
 <section id="name">
 <h3><span class="section-number">2.4.1.6. </span>name<a class="headerlink" href="#name" title="此标题的永久链接">¶</a></h3>
-<p>The name of this weapon.</p>
+<p>武器的单数名称。</p>
 <dl class="simple">
-<dt><code class="docutils literal notranslate"><span class="pre">appendDamageName</span></code></dt><dd><p>defaults to true and can be left out. If you ever want this weapon to not be
-described by its damage type, then set it as false. That is this dagger
-would always be called “Demon’s Dagger” instead of, for example, “Forceful
-Demon’s Dagger”.</p>
+<dt><code class="docutils literal notranslate"><span class="pre">appendDamageName</span></code></dt><dd><p>默认为true，可以省略。如果你不希望用伤害类型来描述该武器，那么把它设置为false。例如，在设置为false的情况下，这把匕首将始终被称为“恶魔匕首”，而不是“强力恶魔匕首”之类的。</p>
 </dd>
 </dl>
 <div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;name</span><span class="w"> </span><span class="na">appendDamageName=</span><span class="s">&quot;true&quot;</span><span class="nt">&gt;</span><span class="cp">&lt;![CDATA[Demon&#39;s Dagger]]&gt;</span><span class="nt">&lt;/name&gt;</span>
@@ -120,10 +109,9 @@ Demon’s Dagger”.</p>
 </section>
 <section id="nameplural">
 <h3><span class="section-number">2.4.1.7. </span>namePlural<a class="headerlink" href="#nameplural" title="此标题的永久链接">¶</a></h3>
-<p>The plural name of this weapon.</p>
+<p>这个武器的复数名称。</p>
 <dl class="simple">
-<dt><code class="docutils literal notranslate"><span class="pre">pluralByDefault</span></code></dt><dd><p>If set to <code class="docutils literal notranslate"><span class="pre">true</span></code>, then the game will always use the plural name when
-referring to this weapon.</p>
+<dt><code class="docutils literal notranslate"><span class="pre">pluralByDefault</span></code></dt><dd><p>这个变量``pluralByDefault``定义了这个武器在调用时直接以复数名称调用(例如“a pair of pants”)，不太符合汉语习惯可无视。</p>
 </dd>
 </dl>
 <div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;namePlural</span><span class="w"> </span><span class="na">pluralByDefault=</span><span class="s">&quot;false&quot;</span><span class="nt">&gt;</span><span class="cp">&lt;![CDATA[Demon&#39;s Daggers]]&gt;</span><span class="nt">&lt;/namePlural&gt;</span>
@@ -132,43 +120,38 @@ referring to this weapon.</p>
 </section>
 <section id="description">
 <h3><span class="section-number">2.4.1.8. </span>description<a class="headerlink" href="#description" title="此标题的永久链接">¶</a></h3>
-<p>The description/lore of this weapon.</p>
+<p>关于这个物品的描述或者传说之类的。</p>
 <div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;description&gt;</span><span class="cp">&lt;![CDATA[A demon&#39;s dagger, with a blade made out of enchanted ethereal energy. Daggers such as this one are carried by the elite demon Enforcers, and, while intended primarily to be a symbol of power and status, they are nonetheless completely functional.]]&gt;</span><span class="nt">&lt;/description&gt;</span>
 </pre></div>
 </div>
 </section>
 <section id="attackdescriptor">
 <h3><span class="section-number">2.4.1.9. </span>attackDescriptor<a class="headerlink" href="#attackdescriptor" title="此标题的永久链接">¶</a></h3>
-<p>How the weapon is used. This should be a single verb, and is used as the title
-of attacking actions in combat.</p>
+<p>武器的使用方式。这应该是一个动词，在战斗中用作攻击动作的称谓。</p>
 <div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;attackDescriptor&gt;</span>stab<span class="nt">&lt;/attackDescriptor&gt;</span>
 </pre></div>
 </div>
 </section>
 <section id="attacktooltipdescription">
 <h3><span class="section-number">2.4.1.10. </span>attackTooltipDescription<a class="headerlink" href="#attacktooltipdescription" title="此标题的永久链接">¶</a></h3>
-<p>The description that’s displayed when hovering over the attack action in combat.
-Follow the same guidelines as equipText (a couple of entries further down this
-page).</p>
-<p>As this tooltip is only ever seen from the player’s perspective, you can always
-write in the first-person narrative. (Still use npc2 for the target, though.)</p>
+<p>战斗中悬停在攻击动作上时显示的说明。遵循与 equipText 相同的准则（本页下面的几个条目有所提及）。</p>
+<p>由于该工具提示只能从玩家的视角看到，因此你可以始终以第一人称叙述。  (使用npc2作为目标。)</p>
 <div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;attackTooltipDescription&gt;</span><span class="cp">&lt;![CDATA[Strike out with your Demon&#39;s Dagger at [npc2.name].]]&gt;</span><span class="nt">&lt;/attackTooltipDescription&gt;</span>
 </pre></div>
 </div>
 </section>
 <section id="rarity">
 <h3><span class="section-number">2.4.1.11. </span>rarity<a class="headerlink" href="#rarity" title="此标题的永久链接">¶</a></h3>
-<p>The rarity of this weapon.</p>
-<p>Values can be found here:
-<a class="reference external" href="https://github.com/Innoxia/liliths-throne-public/tree/dev/src/com/lilithsthrone/game/inventory/Rarity.java">src/com/lilithsthrone/game/inventory/Rarity.java</a></p>
+<p>这件武器的稀有性。</p>
+<p>可以在这里找到这些值： <a class="reference external" href="https://github.com/Innoxia/liliths-throne-public/tree/dev/src/com/lilithsthrone/game/inventory/Rarity.java">src/com/lilithsthrone/game/inventory/Rarity.java</a></p>
 <div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;rarity&gt;</span>EPIC<span class="nt">&lt;/rarity&gt;</span>
 </pre></div>
 </div>
 </section>
 <section id="weaponset">
 <h3><span class="section-number">2.4.1.12. </span>weaponSet<a class="headerlink" href="#weaponset" title="此标题的永久链接">¶</a></h3>
-<p>Which set this weapon is a part of.</p>
-<p>Values can be found here: <a class="reference external" href="https://github.com/Innoxia/liliths-throne-public/tree/dev//res/setBonuses/">/res/setBonuses/</a></p>
+<p>这套武器属于哪一种套装里。</p>
+<p>可以在这里找到这些值： <a class="reference external" href="https://github.com/Innoxia/liliths-throne-public/tree/dev//res/setBonuses/">/res/setBonuses/</a></p>
 <div class="admonition seealso">
 <p class="admonition-title">参见</p>
 <p><a class="reference internal" href="setBonuses.html"><span class="doc">Item Sets</span></a></p>
@@ -179,66 +162,54 @@ write in the first-person narrative. (Still use npc2 for the target, though.)</p
 </section>
 <section id="equiptext">
 <h3><span class="section-number">2.4.1.13. </span>1.13 equipText<a class="headerlink" href="#equiptext" title="此标题的永久链接">¶</a></h3>
-<p>The description that’s used when equipping this weapon. The description should
-be generic, able to be used by both the player and NPCs. Just make sure to use
-the tag <code class="docutils literal notranslate"><span class="pre">[npc.verb()]</span></code> whenever using a verb, which will then, for example,
-parse like this:</p>
+<p>装备该武器时使用的说明。描述应该是通用的，玩家和 NPC 都可以使用。只要确保在使用动词时使用标签 <code class="docutils literal notranslate"><span class="pre">[npc.verb()]</span></code> ，例如，解析如下：（不用看解析了，汉语不区分这个，也就是说默认一个动词就好）</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">[npc.verb(run)]</span></code> if npc is player = “run”</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">[npc.verb(run)]</span></code> if npc is not the player = “runs”</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">[npc.verb(run)]</span></code> 若果npc是玩家的话 = “run”（不用看解析了，汉语不区分这个，也就是说默认一个动词就好）</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">[npc.verb(run)]</span></code> 如果npc不是玩家角色 = “runs”（不用看解析了，汉语不区分这个，也就是说默认一个动词就好）</p></li>
 </ul>
-<p>Always use the first-person singular verb.</p>
-<p>The target <code class="docutils literal notranslate"><span class="pre">npc</span></code> OR <code class="docutils literal notranslate"><span class="pre">npc1</span></code> should be used for the character using the weapon.
-e.g. If the player is the one attacking (and is called Innoxia), then
-<code class="docutils literal notranslate"><span class="pre">[npc.Name]</span></code> will return “Innoxia”.</p>
-<p>The target <code class="docutils literal notranslate"><span class="pre">npc2</span></code> should be used for the character being attacked. e.g. If Brax
-is the one being attacked, then <code class="docutils literal notranslate"><span class="pre">[npc2.Name]</span></code> will return “Brax”.</p>
+<p>始终使用第一人称单数动词。（不用看解析了，汉语不区分这个，也就是说默认一个动词就好）</p>
+<p>（不用看解析了，汉语不区分这个，也就是说默认一个动词就好）</p>
+<p>（不用看解析了，汉语不区分这个，也就是说默认一个动词就好）</p>
 <div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;equipText&gt;</span><span class="cp">&lt;![CDATA[[npc.Name] [npc.verb(unsheathe)] the dagger, readying it for use in combat.]]&gt;</span><span class="nt">&lt;/equipText&gt;</span>
 </pre></div>
 </div>
 </section>
 <section id="unequiptext">
 <h3><span class="section-number">2.4.1.14. </span>1.14 unequipText<a class="headerlink" href="#unequiptext" title="此标题的永久链接">¶</a></h3>
-<p>The description that’s used when equipping this weapon. Follow the same
-guidelines as equipText.</p>
+<p>装备此武器时使用的说明。遵循与 equipText 相同的准则。</p>
 <div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;unequipText&gt;</span><span class="cp">&lt;![CDATA[[npc.Name] [npc.verb(sheathe)] the dagger, before putting it away.]]&gt;</span><span class="nt">&lt;/unequipText&gt;</span>
 </pre></div>
 </div>
 </section>
 <section id="imagename">
 <h3><span class="section-number">2.4.1.15. </span>1.15 imageName<a class="headerlink" href="#imagename" title="此标题的永久链接">¶</a></h3>
-<p>The file name of this weapon’s image when in the character’s inventory. The only
-supported file type is .svg. I use the free program “Inkscape” to make .svg
-images for the game.</p>
+<p>该武器图像在角色库存中的文件名。游戏唯一支持的文件类型是.svg。我使用免费程序“Inkscape”为游戏制作.svg图像。</p>
 <div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;imageName&gt;</span>dagger_sheathed.svg<span class="nt">&lt;/imageName&gt;</span>
 </pre></div>
 </div>
 </section>
 <section id="imageequippedname">
 <h3><span class="section-number">2.4.1.16. </span>1.16 imageEquippedname<a class="headerlink" href="#imageequippedname" title="此标题的永久链接">¶</a></h3>
-<p>The file name of this weapon’s image when equipped. Can be (and usually is) the
-same as the imageName (which in this example would be <code class="docutils literal notranslate"><span class="pre">dagger_sheathed.svg</span></code>).</p>
+<p>装备时该武器图像的文件名。可以（通常也是）与图像名称相同（在本例中为 <code class="docutils literal notranslate"><span class="pre">dagger_sheathed.svg</span></code>）。</p>
 <div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;imageEquippedName&gt;</span>dagger.svg<span class="nt">&lt;/imageEquippedName&gt;</span>
 </pre></div>
 </div>
 </section>
 <section id="physicalresistance">
 <h3><span class="section-number">2.4.1.17. </span>1.17 physicalResistance<a class="headerlink" href="#physicalresistance" title="此标题的永久链接">¶</a></h3>
-<p>How much natural physical resistance this weapon provides when equipped. Should
-only really be above 0 for shields or other such protective weapons.</p>
+<p>装备该武器后可提供的基础物理抗性。 只有盾牌或其他此类保护性武器才真正应该高于 0。</p>
 <div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;physicalResistance&gt;</span>0<span class="nt">&lt;/physicalResistance&gt;</span>
 </pre></div>
 </div>
 </section>
 <section id="damage">
 <h3><span class="section-number">2.4.1.18. </span>1.18 damage<a class="headerlink" href="#damage" title="此标题的永久链接">¶</a></h3>
-<p>The base damage that this weapon deals.</p>
+<p>此武器造成的基础伤害。</p>
 <div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;damage&gt;</span>20<span class="nt">&lt;/damage&gt;</span>
 </pre></div>
 </div>
-<p>If you want to define additional AoE damages, add <code class="docutils literal notranslate"><span class="pre">aoe</span></code> elements.</p>
-<p>A working example of AoE damages can be found in
-<code class="docutils literal notranslate"><span class="pre">res/weapons/innoxia/lightningGlobe/lightning_globe.xml</span></code>.</p>
+<p>如果你想定义额外的范围伤害，添加`` aoe <a href="#id1"><span class="problematic" id="id2">``</span></a>元素。</p>
+<p>一个AoE伤害的例子可以在 <a href="#id1"><span class="problematic" id="id2">``</span></a>res/weapons/innoxia/lightningGlobe/lightning_globe.xml``中找到。</p>
 <div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;aoe</span><span class="w"> </span><span class="na">chance=</span><span class="s">&quot;50&quot;</span><span class="nt">&gt;</span>10<span class="nt">&lt;/aoe&gt;</span><span class="w"> </span>50%<span class="w"> </span>chance<span class="w"> </span>of<span class="w"> </span>hitting<span class="w"> </span>an<span class="w"> </span>additional<span class="w"> </span>enemy<span class="w"> </span>(who<span class="w"> </span>has<span class="w"> </span>not<span class="w"> </span>been<span class="w"> </span>hit<span class="w"> </span>yet)<span class="w"> </span>for<span class="w"> </span>10<span class="w"> </span>damage
 <span class="nt">&lt;aoe</span><span class="w"> </span><span class="na">chance=</span><span class="s">&quot;25&quot;</span><span class="nt">&gt;</span>5<span class="nt">&lt;/aoe&gt;</span><span class="w"> </span>25%<span class="w"> </span>chance<span class="w"> </span>of<span class="w"> </span>hitting<span class="w"> </span>an<span class="w"> </span>additional<span class="w"> </span>enemy<span class="w"> </span>(who<span class="w"> </span>has<span class="w"> </span>not<span class="w"> </span>been<span class="w"> </span>hit<span class="w"> </span>yet)<span class="w"> </span>for<span class="w"> </span>5<span class="w"> </span>damage
 </pre></div>
@@ -246,27 +217,23 @@ only really be above 0 for shields or other such protective weapons.</p>
 </section>
 <section id="arcanecost">
 <h3><span class="section-number">2.4.1.19. </span>1.19 arcaneCost<a class="headerlink" href="#arcanecost" title="此标题的永久链接">¶</a></h3>
-<p>How many arcane essences are required, and drained, by firing this weapon.
-Ranged weapons should usually use the value 1, while melee weapons should
-usually be 0.</p>
+<p>使用此武器需要多少奥术精华?远程武器通常使用1，而近战武器通常使用0。</p>
 <div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;arcaneCost&gt;</span>0<span class="nt">&lt;/arcaneCost&gt;</span>
 </pre></div>
 </div>
 </section>
 <section id="damagevariance">
 <h3><span class="section-number">2.4.1.20. </span>1.20 damageVariance<a class="headerlink" href="#damagevariance" title="此标题的永久链接">¶</a></h3>
-<p>The variance in base damage when this weapon is actually used to attack.</p>
-<p>Values can be found here:
-<a class="reference external" href="https://github.com/Innoxia/liliths-throne-public/blob/master/src/com/lilithsthrone/game/combat/DamageVariance.java">https://github.com/Innoxia/liliths-throne-public/blob/master/src/com/lilithsthrone/game/combat/DamageVariance.java</a></p>
+<p>当此武器实际用于攻击时，基础伤害的随机偏差值。</p>
+<p>可以在这里找到这些值: <a class="reference external" href="https://github.com/Innoxia/liliths-throne-public/blob/master/src/com/lilithsthrone/game/combat/DamageVariance.java">https://github.com/Innoxia/liliths-throne-public/blob/master/src/com/lilithsthrone/game/combat/DamageVariance.java</a></p>
 <div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;damageVariance&gt;</span>MEDIUM<span class="nt">&lt;/damageVariance&gt;</span>
 </pre></div>
 </div>
 </section>
 <section id="availabledamagetypes">
 <h3><span class="section-number">2.4.1.21. </span>1.21 availableDamageTypes<a class="headerlink" href="#availabledamagetypes" title="此标题的永久链接">¶</a></h3>
-<p>The available damage types that this weapon can spawn in with.</p>
-<p>Values can be found here (MISC should not be used):
-<a class="reference external" href="https://github.com/Innoxia/liliths-throne-public/blob/dev/src/com/lilithsthrone/game/combat/DamageType.java">src/com/lilithsthrone/game/combat/DamageType.java</a></p>
+<p>这个武器的伤害类型。</p>
+<p>值可以在这里找到(不应该使用MISC):<a class="reference external" href="https://github.com/Innoxia/liliths-throne-public/blob/dev/src/com/lilithsthrone/game/combat/DamageType.java">src/com/lilithsthrone/game/combat/DamageType.java</a></p>
 <div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;availableDamageTypes&gt;</span>
 <span class="w">    </span><span class="nt">&lt;damageType&gt;</span>PHYSICAL<span class="nt">&lt;/damageType&gt;</span>
 <span class="w">    </span><span class="nt">&lt;damageType&gt;</span>ICE<span class="nt">&lt;/damageType&gt;</span>
@@ -278,8 +245,7 @@ usually be 0.</p>
 </section>
 <section id="spells">
 <span id="id1"></span><h3><span class="section-number">2.4.1.22. </span>1.22 spells<a class="headerlink" href="#spells" title="此标题的永久链接">¶</a></h3>
-<p>The spells that are unlocked when equipping this weapon. IF you want to add any,
-use the format:</p>
+<p>装备此武器时解锁的咒语。如果你想添加，使用如下格式：</p>
 <div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;spells</span><span class="w"> </span><span class="na">changeOnReforge=</span><span class="s">&quot;true&quot;</span><span class="nt">&gt;</span><span class="w"> </span><span class="cm">&lt;!-- ref:cor --&gt;</span>
 <span class="w">    </span><span class="nt">&lt;spell</span><span class="w"> </span><span class="na">damageType=</span><span class="s">&quot;FIRE&quot;</span><span class="nt">&gt;</span>FIREBALL<span class="nt">&lt;/spell&gt;</span><span class="w"> </span><span class="cm">&lt;!-- ref:dmt --&gt;</span>
 <span class="w">    </span><span class="nt">&lt;spell</span><span class="w"> </span><span class="na">damageType=</span><span class="s">&quot;ICE&quot;</span><span class="nt">&gt;</span>ICE_SHARD<span class="nt">&lt;/spell&gt;</span>
@@ -289,10 +255,7 @@ use the format:</p>
 <span class="nt">&lt;/spells&gt;</span>
 </pre></div>
 </div>
-<p>The changeOnReforge variable determines whether this weapon should regenerate
-spells whenever the player changes the damage type. (i.e. If they reforge a
-<code class="docutils literal notranslate"><span class="pre">FIRE</span></code> dagger to an <code class="docutils literal notranslate"><span class="pre">ICE</span></code> dagger, if changeOnReforge is true, then the granted
-spell <code class="docutils literal notranslate"><span class="pre">FIREBALL</span></code> will automatically switch to <code class="docutils literal notranslate"><span class="pre">ICE_SHARD</span></code>).</p>
+<p>changeOnReforge变量决定当玩家改变伤害类型时，该武器是否应该变换法术。(例如，如果他们将``FIRE``匕首锻造为``ICE``匕首，如果changeOnReforge为true，那么授予的法术``FIREBALL``将自动切换为``ICE_SHARD``)。</p>
 <p>The damageType variable corresponds to the damageType which causes the spell to
 be unlocked when this weapon is spawned in. You can have multiple entries of the
 same damageType, like so:</p>
@@ -425,16 +388,9 @@ format as <a class="reference internal" href="#on-hit-effect">on-hit-effect</a>.
 <section id="colours">
 <h3><span class="section-number">2.4.1.29. </span>1.29 colours<a class="headerlink" href="#colours" title="此标题的永久链接">¶</a></h3>
 <p>Please consult the relevant <a class="reference external" href="index.rst">documentation</a> about colours.</p>
-<p>Your clothing can be coloured any way you like, but if you’d like the player to
-be able to dye your clothing, you can specify available colours here.
-<code class="docutils literal notranslate"><span class="pre">primaryColours</span></code> and <code class="docutils literal notranslate"><span class="pre">secondaryColours</span></code> all spawn in as a default colour, while
-their <code class="docutils literal notranslate"><span class="pre">Dye</span></code> counterparts are only available if the player chooses to dye the
-clothing in that colour. The game detects specific colour values, and recolours
-them to the value chosen by the player. These values are as follows:</p>
+<p>衣服可以按喜欢的方式着色，但如果你希望玩家可以给衣服染色，你可以在这里指定可用的颜色。 <code class="docutils literal notranslate"><span class="pre">primaryColours</span></code> 和  <code class="docutils literal notranslate"><span class="pre">secondaryColours</span></code> 都是以默认颜色生成的，而它们的 <code class="docutils literal notranslate"><span class="pre">Dye</span></code> 只有在玩家选择将衣服染成该颜色时才可用。 游戏会检测特定的颜色值，并根据玩家选择的值重新染色。值如下：</p>
 <ul class="simple">
-<li><p>Red is used as base colour for changing the <code class="docutils literal notranslate"><span class="pre">DAMAGE</span> <span class="pre">TYPE</span></code>’s colour of the
-graphic in-game, and the game will only recognise and change the following
-colours:</p>
+<li><p>红色是游戏中 <code class="docutils literal notranslate"><span class="pre">DAMAGE</span> <span class="pre">TYPE</span></code> 图形颜色时使用的基本颜色，游戏中武器只能识别和更改以下颜色：</p>
 <ul>
 <li><p>#ff2a2a</p></li>
 <li><p>#ff5555</p></li>
@@ -443,8 +399,7 @@ colours:</p>
 <li><p>#ffd5d5</p></li>
 </ul>
 </li>
-<li><p>Orange is used as base colour for changing the <code class="docutils literal notranslate"><span class="pre">PRIMARY</span></code> colour of the graphic
-in-game, and the game will only recognise and change the following colours:</p>
+<li><p>橘色是游戏中更改图形颜色``PRIMARY``的基本颜色，游戏只能识别和更改以下颜色：</p>
 <ul>
 <li><p>#ff7f2a</p></li>
 <li><p>#ff9955</p></li>
@@ -453,8 +408,7 @@ in-game, and the game will only recognise and change the following colours:</p>
 <li><p>#ffe6d5</p></li>
 </ul>
 </li>
-<li><p>Yellow is used as base colour for changing the <code class="docutils literal notranslate"><span class="pre">SECONDARY</span></code> colour of the graphic
-in-game, and the game will only recognise and change the following colours:</p>
+<li><p>黄色是游戏中更改图形颜色 <code class="docutils literal notranslate"><span class="pre">SECONDARY</span></code> 的基本颜色，游戏只能识别和更改以下颜色：</p>
 <ul>
 <li><p>#ffd42a</p></li>
 <li><p>#ffdd55</p></li>
@@ -463,8 +417,7 @@ in-game, and the game will only recognise and change the following colours:</p>
 <li><p>#fff6d5</p></li>
 </ul>
 </li>
-<li><p>Green is used as base colour for changing the <code class="docutils literal notranslate"><span class="pre">TERTIARY</span></code> colour of the graphic
-in-game, and the game will only recognise and change the following colours:</p>
+<li><p>绿色是游戏中更改图形颜色 <code class="docutils literal notranslate"><span class="pre">TERTIARY</span></code> 的基本颜色，游戏只能识别和更改以下颜色：</p>
 <ul>
 <li><p>#abc837</p></li>
 <li><p>#bcd35f</p></li>
@@ -474,15 +427,10 @@ in-game, and the game will only recognise and change the following colours:</p>
 </ul>
 </li>
 </ul>
-<p>As you can see above, weapons differ from clothing in that their <code class="docutils literal notranslate"><span class="pre">Red</span></code> colour is
-recoloured based on the weapon’s damage type! The <code class="docutils literal notranslate"><span class="pre">primaryColours</span></code>,
-<code class="docutils literal notranslate"><span class="pre">secondaryColours</span></code>, and <code class="docutils literal notranslate"><span class="pre">tertiaryColours</span></code> defined below are for recolouring the
-<code class="docutils literal notranslate"><span class="pre">Orange</span></code>, <code class="docutils literal notranslate"><span class="pre">Yellow</span></code>, and <code class="docutils literal notranslate"><span class="pre">Green</span></code> values, respectively.</p>
-<p><strong>Any gradients that you use should be called:</strong> <code class="docutils literal notranslate"><span class="pre">innoGrad1</span></code>, <code class="docutils literal notranslate"><span class="pre">innoGrad2</span></code>, etc.</p>
-<p>You can see a visual representation of these colours (as used in clothing) here:
-<a class="reference external" href="https://www.lilithsthrone.com/wiki/doku.php?id=modding_wiki:modding:creating_clothes">https://www.lilithsthrone.com/wiki/doku.php?id=modding_wiki:modding:creating_clothes</a></p>
-<p>Colour lists to be used can be found here:
-<a class="reference external" href="https://github.com/Innoxia/liliths-throne-public/blob/master/src/com/lilithsthrone/utils/ColourListPresets.java">https://github.com/Innoxia/liliths-throne-public/blob/master/src/com/lilithsthrone/utils/ColourListPresets.java</a></p>
+<p>正如你上面所看到的，武器与服装不同之处在于它们的 <code class="docutils literal notranslate"><span class="pre">Red</span></code> 会根据武器伤害类型重新着色！下面定义的 <code class="docutils literal notranslate"><span class="pre">primaryColours</span></code> 、 <code class="docutils literal notranslate"><span class="pre">secondaryColours</span></code> 和 <cite>tertiaryColours`</cite> 可以分别给对应的 <code class="docutils literal notranslate"><span class="pre">Orange</span></code> ， <code class="docutils literal notranslate"><span class="pre">Yellow</span></code> 和 <code class="docutils literal notranslate"><span class="pre">Green</span></code> 重新着色。</p>
+<p><strong>所有的渐变色都应被叫做：</strong> <code class="docutils literal notranslate"><span class="pre">innoGrad1</span></code>，<code class="docutils literal notranslate"><span class="pre">innoGrad2</span></code>，等等。</p>
+<p>你可以在这里看到这些颜色(用于服装)的视觉表示: <a class="reference external" href="https://www.lilithsthrone.com/wiki/doku.php?id=modding_wiki:modding:creating_clothes">https://www.lilithsthrone.com/wiki/doku.php?id=modding_wiki:modding:creating_clothes</a></p>
+<p>你能在这里找到颜色清单： <a class="reference external" href="https://github.com/Innoxia/liliths-throne-public/blob/master/src/com/lilithsthrone/utils/ColourListPresets.java">https://github.com/Innoxia/liliths-throne-public/blob/master/src/com/lilithsthrone/utils/ColourListPresets.java</a></p>
 <div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;primaryColours</span><span class="w"> </span><span class="na">recolouringAllowed=</span><span class="s">&quot;true&quot;</span><span class="w"> </span><span class="na">values=</span><span class="s">&quot;JUST_STEEL&quot;</span><span class="nt">/&gt;</span><span class="w"> </span><span class="cm">&lt;!-- You can leave the attribute &#39;recolouringAllowed&#39; out of colour definitions. If you want the player to be unable to change this colour, then set it as false. This is only used in very niche situations (such as for the filly choker).--&gt;</span>
 
 <span class="nt">&lt;primaryColoursDye</span><span class="w"> </span><span class="na">values=</span><span class="s">&quot;ALL_METAL&quot;</span><span class="nt">/&gt;</span>
@@ -493,13 +441,8 @@ recoloured based on the weapon’s damage type! The <code class="docutils litera
 </section>
 <section id="customcolours">
 <h3><span class="section-number">2.4.1.30. </span>1.30 customColours<a class="headerlink" href="#customcolours" title="此标题的永久链接">¶</a></h3>
-<p>You can define any number of custom colours to replace the shades you’ve
-coloured your svg with. If you have used the primary/secondary/tertiary elements
-up above, then do not use their associated colour hexes. (i.e. If you’ve defined
-a primaryColours element, do not use #ff7f2a, #ff9955, #ffb380, #ffccaa, or
-#ffe6d5 in the customColour attributes.)</p>
-<p>You should NEVER use the primary recolouring shades, as they are always reserved
-for the damage type’s colour: #ff2a2a, #ff5555, #ff8080, #ffaaaa, or #ffd5d5</p>
+<p>你可以定义任意数量的自定义颜色，以替换你为 svg 上色时使用的色调。 如果你使用了上面的 primary/secondary/tertiary 元素，则不要使用它们的相关颜色十六进制代码。  (例如，如果你定义了一个 primaryColours 元素，就不要在 customColour 属性中使用 #ff7f2a、#ff9955、#ffb380、#ffccaa 或 #ffe6d5。)</p>
+<p>千万不要使用这几种色调，因为它们是留给伤害类型的颜色： #ff2a2a, #ff5555, #ff8080, #ffaaaa, or #ffd5d5</p>
 <div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;customColours&gt;</span>
 <span class="w">    </span><span class="cm">&lt;!-- The &#39;copyColourIndex&#39; attribute defines which colour index should be copied into this colour slot on weapon generation. This particular colour, having an index of 0, will always be coloured the same as the primary colour when generated. Indexes go from 0-&gt;X, where X is the number of defined colours. i.e. If you only define primary and secondary, the first custom colour (i.e. this one) will have an index of 2. --&gt;</span>
 <span class="w">    </span><span class="nt">&lt;customColour</span><span class="w"> </span><span class="na">copyColourIndex=</span><span class="s">&quot;0&quot;</span><span class="w"> </span><span class="na">c0=</span><span class="s">&quot;#6C5D53&quot;</span><span class="w"> </span><span class="na">c1=</span><span class="s">&quot;#917C6F&quot;</span><span class="w"> </span><span class="na">c2=</span><span class="s">&quot;#AC9D93&quot;</span><span class="w"> </span><span class="na">c3=</span><span class="s">&quot;#C8BEB7&quot;</span><span class="w"> </span><span class="na">c4=</span><span class="s">&quot;#E3DEDB&quot;</span><span class="nt">&gt;</span>
@@ -521,7 +464,7 @@ for the damage type’s colour: #ff2a2a, #ff5555, #ff8080, #ffaaaa, or #ffd5d5</
 </section>
 <section id="itemtags">
 <h3><span class="section-number">2.4.1.31. </span>1.31 itemTags<a class="headerlink" href="#itemtags" title="此标题的永久链接">¶</a></h3>
-<p>Special item tags that apply to this weapon. Values can be found here: <a class="reference external" href="https://github.com/Innoxia/liliths-throne-public/blob/master/src/com/lilithsthrone/game/inventory/ItemTag.java">https://github.com/Innoxia/liliths-throne-public/blob/master/src/com/lilithsthrone/game/inventory/ItemTag.java</a></p>
+<p>适用于武器的特殊物品标签。可以在这里找到: <a class="reference external" href="https://github.com/Innoxia/liliths-throne-public/blob/master/src/com/lilithsthrone/game/inventory/ItemTag.java">https://github.com/Innoxia/liliths-throne-public/blob/master/src/com/lilithsthrone/game/inventory/ItemTag.java</a></p>
 <div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;itemTags&gt;</span>
 <span class="w">    </span><span class="nt">&lt;tag&gt;</span>SOLD_BY_VICKY<span class="nt">&lt;/tag&gt;</span>
 <span class="w">    </span><span class="nt">&lt;tag&gt;</span>WEAPON_BLADE<span class="nt">&lt;/tag&gt;</span>
@@ -532,13 +475,8 @@ for the damage type’s colour: #ff2a2a, #ff5555, #ff8080, #ffaaaa, or #ffd5d5</
 </section>
 <section id="hitdescription">
 <h2><span class="section-number">2.4.2. </span>2 hitDescription<a class="headerlink" href="#hitdescription" title="此标题的永久链接">¶</a></h2>
-<p>Descriptions that are used when hitting an enemy. One of the <code class="docutils literal notranslate"><span class="pre">hitText</span></code> values
-will be randomly selected each time the attacker hits their target. Follow the
-same guidelines as <code class="docutils literal notranslate"><span class="pre">equipText</span></code>.</p>
-<p>You can add hit descriptions which will only be shown on a critical hit by using
-the <code class="docutils literal notranslate"><span class="pre">criticalHitText</span></code> element. This is optional, and you don’t need to define
-any critical hit descriptions. If none are define and a critical hit occurs, a
-regular <code class="docutils literal notranslate"><span class="pre">hitText</span></code> will be used instead.</p>
+<p>击中敌人时使用的描述。攻击者每次攻击目标时都会随机选择一个``hitText``值。遵循与`` equitext <a href="#id1"><span class="problematic" id="id2">``</span></a>相同的原则。</p>
+<p>你可以使用 <code class="docutils literal notranslate"><span class="pre">criticalHitText</span></code> 元素添加命中描述，这些描述只会在暴击命中时显示。  这是可选的属性，你可以不需要定义任何暴击命中描述。  如果没有定义，并且发生了暴击，则将使用常规的 <a href="#id1"><span class="problematic" id="id2">``</span></a>hitText``代替。</p>
 <div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;hitDescriptions&gt;</span>
 <span class="w">    </span><span class="nt">&lt;hitText&gt;</span><span class="cp">&lt;![CDATA[</span>
 <span class="cp">    Thrusting out with [npc.her] Demon&#39;s Dagger, [npc.name] [npc.verb(manage)] to stab [npc2.name] in the chest; the ethereal arcane blade passing through [npc2.her] torso to drain [npc2.her] energy!</span>
@@ -558,7 +496,7 @@ regular <code class="docutils literal notranslate"><span class="pre">hitText</sp
 </section>
 <section id="missdescription">
 <h2><span class="section-number">2.4.3. </span>3 missDescription<a class="headerlink" href="#missdescription" title="此标题的永久链接">¶</a></h2>
-<p>Descriptions that are used when missing an enemy. One of the missText values will be randomly selected each time the attacker misses their target. Follow the same guidelines as equipText.</p>
+<p>未命中敌人时的描述。每次攻击者错过目标时，都会随机选择一个 missText ，遵循与equipText 一样的原则。</p>
 <div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;missDescriptions&gt;</span>
 <span class="w">    </span><span class="nt">&lt;missText&gt;</span><span class="cp">&lt;![CDATA[</span>
 <span class="cp">    Thrusting out with [npc.her] Demon&#39;s Dagger, [npc.name] [npc.verb(attempt)] to stab [npc2.name] in the chest, but [npc.verb(end)] up missing [npc2.herHim]!</span>
@@ -616,7 +554,7 @@ regular <code class="docutils literal notranslate"><span class="pre">hitText</sp
 <h3>导航</h3>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="overview.html">1. 概览</a></li>
-<li class="toctree-l1 current"><a class="reference internal" href="items.html">2. Items folder</a><ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="items.html">2. 物品文件夹：</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="clothing.html">2.1. 衣物类物品</a></li>
 <li class="toctree-l2"><a class="reference internal" href="items_items.html">2.2. Miscanelaous Items</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tattoos.html">2.3. 纹身</a></li>
@@ -638,7 +576,7 @@ regular <code class="docutils literal notranslate"><span class="pre">hitText</sp
 <h3>Related Topics</h3>
 <ul>
   <li><a href="index.html">Documentation overview</a><ul>
-  <li><a href="items.html"><span class="section-number">2. </span>Items folder</a><ul>
+  <li><a href="items.html"><span class="section-number">2. </span>物品文件夹：</a><ul>
       <li>Previous: <a href="tattoos.html" title="上一章"><span class="section-number">2.3. </span>纹身</a></li>
       <li>Next: <a href="outfits.html" title="下一章"><span class="section-number">3. </span>Outfits</a></li>
   </ul></li>

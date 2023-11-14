@@ -16,7 +16,7 @@
     <link rel="index" title="索引" href="genindex.html" />
     <link rel="search" title="搜索" href="search.html" />
     <link rel="next" title="2.2. Miscanelaous Items" href="items_items.html" />
-    <link rel="prev" title="2. Items folder" href="items.html" />
+    <link rel="prev" title="2. 物品文件夹：" href="items.html" />
    
   <link rel="stylesheet" href="_static/custom.css" type="text/css" />
   
@@ -35,7 +35,7 @@
     <ul>
         <li>
           &larr;
-          <a href="items.html" title="Previous document"><span class="section-number">2. </span>Items folder</a>
+          <a href="items.html" title="Previous document"><span class="section-number">2. </span>物品文件夹：</a>
         </li>
         <li>
           <a href="items_items.html" title="Next document"><span class="section-number">2.2. </span>Miscanelaous Items</a>
@@ -60,13 +60,8 @@
 <p>衣物和其他任何可穿戴物品，即使是内置的。</p>
 <p>你可以在:ltgithub:<a href="#id1"><span class="problematic" id="id2">`</span></a>res/mods/innoxia/items/clothing`文件夹内找到衣物范例。</p>
 <section id="general-information">
-<h2><span class="section-number">2.1.1. </span>General Information<a class="headerlink" href="#general-information" title="此标题的永久链接">¶</a></h2>
-<p>Any clothing item whose rarity is set to LEGENDARY or above will not show up in
-the game, as no shopkeepers have been being defined as selling items of that
-quality. You can spawn it from the debug menu if you wish. The debug menu is
-accessed by typing <code class="docutils literal notranslate"><span class="pre">buggy</span></code> at any point in the game. It is best to enter the
-debug menu when not in the middle of combat, sex, or movement-locked dialogue,
-as it will break you out of it.</p>
+<h2><span class="section-number">2.1.1. </span>通用信息<a class="headerlink" href="#general-information" title="此标题的永久链接">¶</a></h2>
+<p>任何稀有度被设置为“LEGENDARY”及以上的衣物类物品在游戏中都不会出现，因为定义中没有商人会售卖这种品质的物品。如果想要的话，你可以通过debug菜单生成。debug菜单可以通过在游戏任何状态下输入 <code class="docutils literal notranslate"><span class="pre">buggy</span></code> （不使用中文输入法）进入。最好不要在战斗、性爱或无法移动的对话中进入debug菜单，因为会导致你结束当前的状态。</p>
 </section>
 <section id="coreattributes">
 <h2><span class="section-number">2.1.2. </span>coreAttributes<a class="headerlink" href="#coreattributes" title="此标题的永久链接">¶</a></h2>
@@ -75,7 +70,7 @@ as it will break you out of it.</p>
 <p id="index-0">作者署名，如果你想要的话。</p>
 <div class="admonition seealso">
 <p class="admonition-title">参见</p>
-<p><a class="reference internal" href="overview.html#author-tags"><span class="std std-ref">author tags</span></a></p>
+<p><a class="reference internal" href="overview.html#author-tags"><span class="std std-ref">作者标签</span></a></p>
 </div>
 <div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;authorTag&gt;</span><span class="cp">&lt;![CDATA[A tag discreetly sewn into the T-shirt&#39;s inner lining informs you that it was made by &#39;Innoxia&#39;.]]&gt;</span><span class="nt">&lt;/authorTag&gt;</span>
 </pre></div>
@@ -83,10 +78,9 @@ as it will break you out of it.</p>
 </section>
 <section id="value">
 <h3><span class="section-number">2.1.2.2. </span>value<a class="headerlink" href="#value" title="此标题的永久链接">¶</a></h3>
-<p id="index-1">Please refer to the general information about <a class="reference internal" href="overview.html#item-value"><span class="std std-ref">item value</span></a>.</p>
+<p id="index-1">请参见通用信息中的 <a class="reference internal" href="overview.html#item-value"><span class="std std-ref">item value</span></a>。</p>
 <dl class="simple">
-<dt>示例</dt><dd><p>I’ve defined this as 60, which is about the price for a basic pair
-of socks or something similar.</p>
+<dt>示例</dt><dd><p>将其设置为60，与一双普通的袜子的价格相似。</p>
 </dd>
 </dl>
 <div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;value&gt;</span>60<span class="nt">&lt;/value&gt;</span>
@@ -95,10 +89,7 @@ of socks or something similar.</p>
 </section>
 <section id="determiner">
 <h3><span class="section-number">2.1.2.3. </span>determiner<a class="headerlink" href="#determiner" title="此标题的永久链接">¶</a></h3>
-<p>The determiner which is displayed before this item’s name. While usually “a” or
-“an”, for things like socks or gloves, you’ll want to use “a pair of”. I use the
-<code class="docutils literal notranslate"><span class="pre">CDATA</span></code> tag for all text values, as it allows html markup to be embedded
-without causing issues.</p>
+<p>冠词将会在物品名前出现。通常为“a”或者“an”（中文一般根据物品不同修改量词），而对于袜子或者手套之类，或许应该使用“一双”。所有文本值都应使用 <code class="docutils literal notranslate"><span class="pre">CDATA</span></code> 标签包裹，保证html标记确保无误地嵌入到游戏中。</p>
 <dl class="simple">
 <dt>示例</dt><dd><p>我将其定义为“一双”，所以在游戏中，这件物品会被称作“一双袜子”。</p>
 </dd>
@@ -184,17 +175,10 @@ so I set this to <code class="docutils literal notranslate"><span class="pre">AN
 </section>
 <section id="equipslots">
 <h3><span class="section-number">2.1.2.9. </span>equipSlots<a class="headerlink" href="#equipslots" title="此标题的永久链接">¶</a></h3>
-<p>The slots that this clothing is able to be fit into. The game only supports up
-to 4 unique slots, so if you define more than 4, the rest of them won’t show up
-in-game. These definitions preserve ordering, so use the top one for the most
-common slot to be fitted into. This is especially important for NPCs, as they
-will use the top slot for determining which slot this clothing should fit into.</p>
-<p>Possible slots are found here:
-<a class="reference external" href="https://github.com/Innoxia/liliths-throne-public/tree/dev/src/com/lilithsthrone/game/inventory/InventorySlot.java">src/com/lilithsthrone/game/inventory/InventorySlot.java</a></p>
+<p>这款服装能够装入的栏位。游戏只最多支持 4 个独特的栏位，所以如果您定义的插槽超过 4 个，其余的 将不会显示在游戏中。这些定义保留了顺序，因此最上面的一个是最常用的栏位。这一点对 NPC 尤为重要，因为他们会使用最上面的栏位来 决定这件衣服应该放入哪个栏位。</p>
+<p>可用栏位在此： <a class="reference external" href="https://github.com/Innoxia/liliths-throne-public/tree/dev/src/com/lilithsthrone/game/inventory/InventorySlot.java">src/com/lilithsthrone/game/inventory/InventorySlot.java</a></p>
 <dl class="simple">
-<dt>示例</dt><dd><p>I defined <code class="docutils literal notranslate"><span class="pre">SOCK</span></code> as the top slot, as this is the intended slot for
-socks. As I also want the player to be able to equip socks onto their hands, I
-defined <code class="docutils literal notranslate"><span class="pre">HAND</span></code> as a secondary slot.</p>
+<dt>示例</dt><dd><p>我将 <code class="docutils literal notranslate"><span class="pre">SOCK</span></code> 定义为最上面的栏位，因为这是为袜子设计的栏位。由于我还希望玩家能把袜子穿在手上，所以我把 <code class="docutils literal notranslate"><span class="pre">HAND</span></code> 定义为第二栏位。</p>
 </dd>
 </dl>
 <div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;equipSlots&gt;</span>
@@ -688,7 +672,7 @@ clothing can be equipped into, so here, I’ve defined an empty one for
 <code class="docutils literal notranslate"><span class="pre">SOCK</span></code>, and another empty one for <code class="docutils literal notranslate"><span class="pre">HAND</span></code>.</p>
 </div></blockquote>
 <dl class="simple">
-<dt>Example 2</dt><dd><p>If you want to add slots, then use the element like so (which
+<dt>示例2</dt><dd><p>If you want to add slots, then use the element like so (which
 would block the <code class="docutils literal notranslate"><span class="pre">FINGER</span></code> slot when equipped into the <code class="docutils literal notranslate"><span class="pre">WRIST</span></code> slot):</p>
 </dd>
 </dl>
@@ -995,7 +979,7 @@ your descriptions are applied to. For standard equipping and unequipping, use
     <ul>
         <li>
           &larr;
-          <a href="items.html" title="Previous document"><span class="section-number">2. </span>Items folder</a>
+          <a href="items.html" title="Previous document"><span class="section-number">2. </span>物品文件夹：</a>
         </li>
         <li>
           <a href="items_items.html" title="Next document"><span class="section-number">2.2. </span>Miscanelaous Items</a>
@@ -1028,9 +1012,9 @@ your descriptions are applied to. For standard equipping and unequipping, use
 <h3>导航</h3>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="overview.html">1. 概览</a></li>
-<li class="toctree-l1 current"><a class="reference internal" href="items.html">2. Items folder</a><ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="items.html">2. 物品文件夹：</a><ul class="current">
 <li class="toctree-l2 current"><a class="current reference internal" href="#">2.1. 衣物类物品</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#general-information">2.1.1. General Information</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#general-information">2.1.1. 通用信息</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#coreattributes">2.1.2. coreAttributes</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#sexattributesself">2.1.3. sexAttributesSelf</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#sexattributesother">2.1.4. sexAttributesOther</a></li>
@@ -1053,8 +1037,8 @@ your descriptions are applied to. For standard equipping and unequipping, use
 <h3>Related Topics</h3>
 <ul>
   <li><a href="index.html">Documentation overview</a><ul>
-  <li><a href="items.html"><span class="section-number">2. </span>Items folder</a><ul>
-      <li>Previous: <a href="items.html" title="上一章"><span class="section-number">2. </span>Items folder</a></li>
+  <li><a href="items.html"><span class="section-number">2. </span>物品文件夹：</a><ul>
+      <li>Previous: <a href="items.html" title="上一章"><span class="section-number">2. </span>物品文件夹：</a></li>
       <li>Next: <a href="items_items.html" title="下一章"><span class="section-number">2.2. </span>Miscanelaous Items</a></li>
   </ul></li>
   </ul></li>

@@ -16,8 +16,8 @@
     <link rel="canonical" href="https://bicobus.github.io/lilith-throne-documentation/overview.html" />
     <link rel="index" title="索引" href="genindex.html" />
     <link rel="search" title="搜索" href="search.html" />
-    <link rel="next" title="2. Items folder" href="items.html" />
-    <link rel="prev" title="Welcome to Lilith&#39;s Throne Mod Documentation&#39;s documentation!" href="index.html" />
+    <link rel="next" title="2. 物品文件夹：" href="items.html" />
+    <link rel="prev" title="欢迎使用莉莉丝的王座模组工作指导指南！" href="index.html" />
    
   <link rel="stylesheet" href="_static/custom.css" type="text/css" />
   
@@ -36,10 +36,10 @@
     <ul>
         <li>
           &larr;
-          <a href="index.html" title="Previous document">Welcome to Lilith's Throne Mod Documentation's documentation!</a>
+          <a href="index.html" title="Previous document">欢迎使用莉莉丝的王座模组工作指导指南！</a>
         </li>
         <li>
-          <a href="items.html" title="Next document"><span class="section-number">2. </span>Items folder</a>
+          <a href="items.html" title="Next document"><span class="section-number">2. </span>物品文件夹：</a>
           &rarr;
         </li>
     </ul>
@@ -59,9 +59,9 @@
 <li><p><a class="reference internal" href="#preface" id="id8">绪论</a></p></li>
 <li><p><a class="reference internal" href="#note-on-status-effects-and-how-to-use-them" id="id9">状态效果及其使用注意事项</a></p></li>
 <li><p><a class="reference internal" href="#some-elements-expect-boolean-values" id="id10">部分元素期望布尔值</a></p></li>
-<li><p><a class="reference internal" href="#shared-tags-and-information" id="id11">Shared tags and information</a></p></li>
-<li><p><a class="reference internal" href="#items-identifier" id="id12">Item’s identifier</a></p></li>
-<li><p><a class="reference internal" href="#author-tags" id="id13">author tags</a></p></li>
+<li><p><a class="reference internal" href="#shared-tags-and-information" id="id11">共享标签及信息</a></p></li>
+<li><p><a class="reference internal" href="#items-identifier" id="id12">物品标识符</a></p></li>
+<li><p><a class="reference internal" href="#author-tags" id="id13">作者标签</a></p></li>
 <li><p><a class="reference internal" href="#value" id="id14">value</a></p></li>
 <li><p><a class="reference internal" href="#name" id="id15">name</a></p>
 <ul>
@@ -111,21 +111,18 @@
 </ul>
 </section>
 <section id="shared-tags-and-information">
-<h2><a class="toc-backref" href="#id11" role="doc-backlink"><span class="section-number">1.4. </span>Shared tags and information</a><a class="headerlink" href="#shared-tags-and-information" title="此标题的永久链接">¶</a></h2>
+<h2><a class="toc-backref" href="#id11" role="doc-backlink"><span class="section-number">1.4. </span>共享标签及信息</a><a class="headerlink" href="#shared-tags-and-information" title="此标题的永久链接">¶</a></h2>
 <p>不同类型的物品存在共享概念。其中一些概念可能会根据每个类别进行扩展。例如武器需要比其他类型的物品更多的颜色，因此会扩展可用列表。</p>
 </section>
 <section id="items-identifier">
-<span id="id1"></span><h2><a class="toc-backref" href="#id12" role="doc-backlink"><span class="section-number">1.5. </span>Item’s identifier</a><a class="headerlink" href="#items-identifier" title="此标题的永久链接">¶</a></h2>
-<p>The item identifier is the internal name of your objects and the only way to
-refer to them from between <code class="docutils literal notranslate"><span class="pre">xml</span></code> files. It is calculated from your clothing’s
-folder and <code class="docutils literal notranslate"><span class="pre">.xml</span></code> name using the following code:</p>
+<span id="id1"></span><h2><a class="toc-backref" href="#id12" role="doc-backlink"><span class="section-number">1.5. </span>物品标识符</a><a class="headerlink" href="#items-identifier" title="此标题的永久链接">¶</a></h2>
+<p>物品标识符是你对象的内部名称，也是在 <code class="docutils literal notranslate"><span class="pre">xml</span></code> 文件内引用它们的唯一方式。它是通过以下代码从你的衣物文件夹和 <code class="docutils literal notranslate"><span class="pre">.xml</span></code> 名称计算得出的：</p>
 <div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">modAuthorDirectory</span><span class="p">.</span><span class="na">getName</span><span class="p">()</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot;_&quot;</span>
 <span class="w">    </span><span class="o">+</span><span class="w"> </span><span class="n">innerChild</span><span class="p">.</span><span class="na">getParentFile</span><span class="p">().</span><span class="na">getName</span><span class="p">()</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot;_&quot;</span>
 <span class="w">    </span><span class="o">+</span><span class="w"> </span><span class="n">innerChild</span><span class="p">.</span><span class="na">getName</span><span class="p">().</span><span class="na">split</span><span class="p">(</span><span class="s">&quot;\\.&quot;</span><span class="p">)</span><span class="o">[</span><span class="mi">0</span><span class="o">]</span>
 </pre></div>
 </div>
-<p>Which would resolve to <code class="docutils literal notranslate"><span class="pre">innoxia_template_socks</span></code> for the object located in
-<code class="docutils literal notranslate"><span class="pre">res/mods/innoxia/clothing/template/socks.xml</span></code>.</p>
+<p>这将解析为 <code class="docutils literal notranslate"><span class="pre">innoxia_template_socks</span></code> 对应位于 <code class="docutils literal notranslate"><span class="pre">res/mods/innoxia/clothing/template/socks.xml</span></code> 中的对象。</p>
 <p>The identifier is generated for every pertinent file existing in your modules
 folder structure. The identifier being generated, and not user defined, is an
 important variable to keep in mind. If you ever rename the folder or the <code class="docutils literal notranslate"><span class="pre">xml</span></code>
@@ -133,13 +130,13 @@ file, the identifier will change which, in turn, will invalidate all existing
 reference present in the players saves files.</p>
 </section>
 <section id="author-tags">
-<span id="id2"></span><h2><a class="toc-backref" href="#id13" role="doc-backlink"><span class="section-number">1.6. </span>author tags</a><a class="headerlink" href="#author-tags" title="此标题的永久链接">¶</a></h2>
+<span id="id2"></span><h2><a class="toc-backref" href="#id13" role="doc-backlink"><span class="section-number">1.6. </span>作者标签</a><a class="headerlink" href="#author-tags" title="此标题的永久链接">¶</a></h2>
 <p>How attribution to the mod author (<em>you</em>) should be displayed in the object’s
 tooltip. If left blank or not included, a default attribution based on folder
 name will be used.</p>
 <p>The content of the element should be a short one line descriptor.</p>
 <dl class="simple">
-<dt>Example</dt><dd><p><em>A tag discreetly sewn into the T-shirt’s inner lining informs you</em>
+<dt>示例</dt><dd><p><em>A tag discreetly sewn into the T-shirt’s inner lining informs you</em>
 <em>that it was made by ’Innoxia’.</em></p>
 </dd>
 </dl>
@@ -176,7 +173,7 @@ this elements if they equate “a” or “an”.</p>
 <blockquote>
 <div><p>Innoxia was holding <em>a pair of</em> scissors.</p>
 </div></blockquote>
-<p>Code Example</p>
+<p>代码示例</p>
 <blockquote>
 <div><div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;determiner&gt;</span><span class="cp">&lt;![CDATA[a pair of]]&gt;</span><span class="nt">&lt;/determiner&gt;</span>
 </pre></div>
@@ -210,16 +207,9 @@ naturally in the game, neither from the shop keepers nor random encounters.</p>
 <section id="colours">
 <span id="id6"></span><h2><a class="toc-backref" href="#id21" role="doc-backlink"><span class="section-number">1.13. </span>颜色</a><a class="headerlink" href="#colours" title="此标题的永久链接">¶</a></h2>
 <p>颜色可用于大多数可修改的物品。通常，所有类型的物品遵循的规则都大致相同，武器是个例外，它们会在核心机制上有所扩展。</p>
-<p>Your items can be coloured any way you like, but if you’d like the player to be
-able to dye your clothing, you can specify available colours here.
-<code class="docutils literal notranslate"><span class="pre">primaryColours</span></code>, <code class="docutils literal notranslate"><span class="pre">secondaryColours</span></code>, and <code class="docutils literal notranslate"><span class="pre">tertiaryColours</span></code> can all spawn
-in as a default colour, while their ’Dye’ counterparts are only available if the
-player chooses to dye the clothing in that colour. The game detects specific
-colour values, and recolours them to the value chosen by the player. These
-values are as follows:</p>
+<p>你的物品可以被染成任意你喜欢的颜色，不过如果你想让玩家也能给你的衣物染色，你可以在这里设置可选择的颜色。 <code class="docutils literal notranslate"><span class="pre">primaryColours</span></code> ， <code class="docutils literal notranslate"><span class="pre">secondaryColours</span></code> 和 <code class="docutils literal notranslate"><span class="pre">tertiaryColours</span></code> 都可以作为默认生成颜色，但“染色”项只有在玩家选择把衣物染成该颜色时才会生效。游戏会检测特定的颜色值，并将他们重置为玩家选择的值，数值如下：</p>
 <ul class="simple">
-<li><p><em>Red</em> is used as base colour for changing the primary colour of the graphic
-in-game, and the game will only recognise and change the following colours:</p>
+<li><p><em>Red</em> 是改变游戏内图形主要颜色的基础颜色，游戏只会识别并更改以下颜色：</p>
 <ol class="arabic simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">#ff2a2a</span></code></p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">#ff5555</span></code></p></li>
@@ -272,7 +262,7 @@ instead, list each Colour.</p>
 <p>please use the <code class="docutils literal notranslate"><span class="pre">Colour</span></code> values that start with <code class="docutils literal notranslate"><span class="pre">CLOTHING_</span></code>.</p>
 </div>
 <dl>
-<dt>Code Example</dt><dd><div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;primaryColours</span><span class="w"> </span><span class="na">recolouringAllowed=</span><span class="s">&quot;true&quot;</span><span class="w"> </span><span class="na">values=</span><span class="s">&quot;JUST_WHITE&quot;</span><span class="nt">/&gt;</span>
+<dt>代码示例</dt><dd><div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;primaryColours</span><span class="w"> </span><span class="na">recolouringAllowed=</span><span class="s">&quot;true&quot;</span><span class="w"> </span><span class="na">values=</span><span class="s">&quot;JUST_WHITE&quot;</span><span class="nt">/&gt;</span>
 <span class="nt">&lt;primaryColoursDye</span><span class="w"> </span><span class="na">values=</span><span class="s">&quot;ALL&quot;</span><span class="nt">/&gt;</span>
 <span class="nt">&lt;secondaryColours</span><span class="w"> </span><span class="na">values=</span><span class="s">&quot;JUST_BLACK&quot;</span><span class="nt">/&gt;</span>
 <span class="nt">&lt;secondaryColoursDye</span><span class="w"> </span><span class="na">values=</span><span class="s">&quot;ALL&quot;</span><span class="nt">/&gt;</span>
@@ -377,10 +367,10 @@ expected for <code class="docutils literal notranslate"><span class="pre">primar
     <ul>
         <li>
           &larr;
-          <a href="index.html" title="Previous document">Welcome to Lilith's Throne Mod Documentation's documentation!</a>
+          <a href="index.html" title="Previous document">欢迎使用莉莉丝的王座模组工作指导指南！</a>
         </li>
         <li>
-          <a href="items.html" title="Next document"><span class="section-number">2. </span>Items folder</a>
+          <a href="items.html" title="Next document"><span class="section-number">2. </span>物品文件夹：</a>
           &rarr;
         </li>
     </ul>
@@ -413,9 +403,9 @@ expected for <code class="docutils literal notranslate"><span class="pre">primar
 <li class="toctree-l2"><a class="reference internal" href="#preface">1.1. 绪论</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#note-on-status-effects-and-how-to-use-them">1.2. 状态效果及其使用注意事项</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#some-elements-expect-boolean-values">1.3. 部分元素期望布尔值</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#shared-tags-and-information">1.4. Shared tags and information</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#items-identifier">1.5. Item’s identifier</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#author-tags">1.6. author tags</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#shared-tags-and-information">1.4. 共享标签及信息</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#items-identifier">1.5. 物品标识符</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#author-tags">1.6. 作者标签</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#value">1.7. value</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#name">1.8. name</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#plural-name">1.8.1. plural name</a></li>
@@ -432,7 +422,7 @@ expected for <code class="docutils literal notranslate"><span class="pre">primar
 </li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="items.html">2. Items folder</a></li>
+<li class="toctree-l1"><a class="reference internal" href="items.html">2. 物品文件夹：</a></li>
 <li class="toctree-l1"><a class="reference internal" href="outfits.html">3. Outfits</a></li>
 <li class="toctree-l1"><a class="reference internal" href="setBonuses.html">4. Item Sets</a></li>
 <li class="toctree-l1"><a class="reference internal" href="statusEffects.html">5. statusEffects</a></li>
@@ -443,8 +433,8 @@ expected for <code class="docutils literal notranslate"><span class="pre">primar
 <h3>Related Topics</h3>
 <ul>
   <li><a href="index.html">Documentation overview</a><ul>
-      <li>Previous: <a href="index.html" title="上一章">Welcome to Lilith's Throne Mod Documentation's documentation!</a></li>
-      <li>Next: <a href="items.html" title="下一章"><span class="section-number">2. </span>Items folder</a></li>
+      <li>Previous: <a href="index.html" title="上一章">欢迎使用莉莉丝的王座模组工作指导指南！</a></li>
+      <li>Next: <a href="items.html" title="下一章"><span class="section-number">2. </span>物品文件夹：</a></li>
   </ul></li>
 </ul>
 </div>
