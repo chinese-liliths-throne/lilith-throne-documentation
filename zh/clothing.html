@@ -16,7 +16,7 @@
     <link rel="index" title="索引" href="genindex.html" />
     <link rel="search" title="搜索" href="search.html" />
     <link rel="next" title="2.2. Miscanelaous Items" href="items_items.html" />
-    <link rel="prev" title="2. 物品文件夹：" href="items.html" />
+    <link rel="prev" title="2. “Items”文件夹" href="items.html" />
    
   <link rel="stylesheet" href="_static/custom.css" type="text/css" />
   
@@ -35,7 +35,7 @@
     <ul>
         <li>
           &larr;
-          <a href="items.html" title="Previous document"><span class="section-number">2. </span>物品文件夹：</a>
+          <a href="items.html" title="Previous document"><span class="section-number">2. </span>“Items”文件夹</a>
         </li>
         <li>
           <a href="items_items.html" title="Next document"><span class="section-number">2.2. </span>Miscanelaous Items</a>
@@ -57,8 +57,8 @@
 </dd>
 </dl>
 </div></blockquote>
-<p>衣物和其他任何可穿戴物品，即使是内置的。</p>
-<p>你可以在:ltgithub:<a href="#id1"><span class="problematic" id="id2">`</span></a>res/mods/innoxia/items/clothing`文件夹内找到衣物范例。</p>
+<p>衣物和其他任何可穿戴物品，即使可以位于体内。</p>
+<p>你可以在 <a class="reference external" href="https://github.com/Innoxia/liliths-throne-public/tree/dev/res/mods/innoxia/items/clothing">res/mods/innoxia/items/clothing</a> 文件夹内找到衣物范例。</p>
 <section id="general-information">
 <h2><span class="section-number">2.1.1. </span>通用信息<a class="headerlink" href="#general-information" title="此标题的永久链接">¶</a></h2>
 <p>任何稀有度被设置为“LEGENDARY”及以上的衣物类物品在游戏中都不会出现，因为定义中没有商人会售卖这种品质的物品。如果想要的话，你可以通过debug菜单生成。debug菜单可以通过在游戏任何状态下输入 <code class="docutils literal notranslate"><span class="pre">buggy</span></code> （不使用中文输入法）进入。最好不要在战斗、性爱或无法移动的对话中进入debug菜单，因为会导致你结束当前的状态。</p>
@@ -102,27 +102,19 @@
 <h3><span class="section-number">2.1.2.4. </span>name<a class="headerlink" href="#name" title="此标题的永久链接">¶</a></h3>
 <p>The <strong>singular</strong> name of this clothing.</p>
 <dl class="simple">
-<dt>示例</dt><dd><p>I’ve named this “template sock”, as the singular for “template
-socks” is of course “sock”...</p>
+<dt>示例</dt><dd><p>我把它命名为 &quot;模板袜子&quot;，因为 &quot;模板袜子（有s）&quot;的单数当然是 &quot;袜子&quot;...</p>
 </dd>
 </dl>
 <div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;name</span><span class="w"> </span><span class="na">appendColourName=</span><span class="s">&quot;true&quot;</span><span class="nt">&gt;</span><span class="cp">&lt;![CDATA[template sock]]&gt;</span><span class="nt">&lt;/name&gt;</span>
 </pre></div>
 </div>
-<p>You can leave out the <code class="docutils literal notranslate"><span class="pre">appendColourName</span></code> attribute, but if you never want this
-clothing to be described by its colour, then set it as false. (i.e. If set to
-false, this clothing would always be called “template socks” instead of, for
-example, “white template socks”.)</p>
+<p>你可以不使用 <code class="docutils literal notranslate"><span class="pre">appendColourName</span></code> 属性，但如果你不想用颜色来描述这件衣服，则可将其设置为 false。(例如，如果设置为 false，这件衣服将始终被称为 &quot;模板袜子&quot;，而不是 &quot;白色模板袜子&quot;）。</p>
 </section>
 <section id="nameplural">
 <h3><span class="section-number">2.1.2.5. </span>namePlural<a class="headerlink" href="#nameplural" title="此标题的永久链接">¶</a></h3>
-<p>The plural form of the name. The attribute <code class="docutils literal notranslate"><span class="pre">pluralByDefault</span></code> determines
-whether this item is naturally referred to as a plural (use true for things like
-socks or gloves).</p>
+<p>名称的复数形式。属性 <code class="docutils literal notranslate"><span class="pre">pluralByDefault</span></code> 决定了该项目是否被称为复数（如袜子或手套)。</p>
 <dl class="simple">
-<dt>示例</dt><dd><p>I’ve named the plural as “template socks”, and defined <code class="docutils literal notranslate"><span class="pre">pluralByDefault</span></code> as
-true, so that this item will be referred to by this plural name in all but
-extremely exceptional circumstances.</p>
+<dt>示例</dt><dd><p>我将复数命名为 &quot;模板袜子（有s）&quot;，并将 <code class="docutils literal notranslate"><span class="pre">pluralByDefault</span></code> 定义为 true，这样，除非在极其特殊的情况下，该物品都将以这个复数名称被引用。</p>
 </dd>
 </dl>
 <div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;namePlural</span><span class="w"> </span><span class="na">pluralByDefault=</span><span class="s">&quot;true&quot;</span><span class="nt">&gt;</span><span class="cp">&lt;![CDATA[template socks]]&gt;</span><span class="nt">&lt;/namePlural&gt;</span>
@@ -131,12 +123,9 @@ extremely exceptional circumstances.</p>
 </section>
 <section id="description">
 <h3><span class="section-number">2.1.2.6. </span>description<a class="headerlink" href="#description" title="此标题的永久链接">¶</a></h3>
-<p>This is the description which is shown in tooltips and on the item’s inspection
-page.</p>
+<p>这是显示在工具提示和物品检查页面上的描述。在检查页面上显示。</p>
 <dl class="simple">
-<dt>示例</dt><dd><p>The description for ordinary, “boring” items of clothing might be a
-little dry, but as they won’t be read by the player much, it doesn’t really
-matter.</p>
+<dt>示例</dt><dd><p>对于普通、&quot;无聊 &quot;的衣物，描述可能会有些枯燥，但由于玩家不会经常阅读，所以这并不重要。</p>
 </dd>
 </dl>
 <div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;description&gt;</span><span class="cp">&lt;![CDATA[An ordinary pair of socks, intended to be worn on the feet in order to absorb perspiration and provide both insulation and comfort. A silly person may choose to wear them on their hands...]]&gt;</span><span class="nt">&lt;/description&gt;</span>
@@ -145,14 +134,9 @@ matter.</p>
 </section>
 <section id="physicalresistance">
 <h3><span class="section-number">2.1.2.7. </span>physicalResistance<a class="headerlink" href="#physicalresistance" title="此标题的永久链接">¶</a></h3>
-<p>The default physical resistance for this piece of clothing. Usually use 0, but
-if it’s armour, then values of 1 up to 5 would be fitting (any more than that
-might be very OP). Physical resistance is a very powerful stat, so please keep
-within the range of 0-5. For all normal clothing, the value should be 0. This
-accepts decimal values, so for things like leather jackets (which aren’t really
-armour, but are still protective), you can use 0.5 or so.</p>
+<p>这件衣服的默认物理抗性。通常使用 0，但如果是护甲，那么 1 到 5 的数值会比较合适（超过这个数值可能会太过强力）。物理抗性是一个非常强大的属性，因此请保持在 0-5 的范围内。对于所有普通衣物，数值应为 0。该值接受十进制，因此对于皮夹克之类的衣物（虽然不是真正的护甲，但仍具有保护作用），可以使用 0.5 左右。</p>
 <dl class="simple">
-<dt>示例</dt><dd><p>Left as 0, as it’s nomral, unarmoured clothing.</p>
+<dt>示例</dt><dd><p>留为 0，意为这是普通的非装甲保护的衣物。</p>
 </dd>
 </dl>
 <div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;physicalResistance&gt;</span>0<span class="nt">&lt;/physicalResistance&gt;</span>
@@ -161,12 +145,9 @@ armour, but are still protective), you can use 0.5 or so.</p>
 </section>
 <section id="femininity">
 <h3><span class="section-number">2.1.2.8. </span>femininity<a class="headerlink" href="#femininity" title="此标题的永久链接">¶</a></h3>
-<p>Use <code class="docutils literal notranslate"><span class="pre">FEMININE</span></code> for if this clothing is intended for feminine characters,
-<code class="docutils literal notranslate"><span class="pre">MASCULINE</span></code> for masculine, and <code class="docutils literal notranslate"><span class="pre">ANDROGYNOUS</span></code> if it’s able to be worn by
-anyone without penalties.</p>
+<p>如果衣服是为女性角色设计的，请使用 <code class="docutils literal notranslate"><span class="pre">FEMININE</span></code> 表示。男性角色，则使用 <code class="docutils literal notranslate"><span class="pre">MASCULINE</span></code>；如果任何人都可以穿着而不受惩罚，则使用 <a href="#id1"><span class="problematic" id="id2">``</span></a>ANDROGYNOUS`。</p>
 <dl class="simple">
-<dt>示例</dt><dd><p>Normal socks could be worn by both males and females without issue,
-so I set this to <code class="docutils literal notranslate"><span class="pre">ANDROGYNOUS</span></code>.</p>
+<dt>示例</dt><dd><p>男性和女性都可以穿普通袜子，不会有问题，所以我设置为 <a href="#id1"><span class="problematic" id="id2">``</span></a>ANDROGYNOUS` 。</p>
 </dd>
 </dl>
 <div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;femininity&gt;</span>ANDROGYNOUS<span class="nt">&lt;/femininity&gt;</span>
@@ -190,12 +171,9 @@ so I set this to <code class="docutils literal notranslate"><span class="pre">AN
 </section>
 <section id="rarity">
 <h3><span class="section-number">2.1.2.10. </span>rarity<a class="headerlink" href="#rarity" title="此标题的永久链接">¶</a></h3>
-<p>The rarity of this item. Anything less than <code class="docutils literal notranslate"><span class="pre">EPIC</span></code> may end up being modified
-in the code. Possible rarities are found here:
-<a class="reference external" href="https://github.com/Innoxia/liliths-throne-public/tree/dev/src/com/lilithsthrone/game/inventory/Rarity.java">src/com/lilithsthrone/game/inventory/Rarity.java</a></p>
+<p>此物品的稀有性。任何少于 <code class="docutils literal notranslate"><span class="pre">EPIC</span></code> 的内容都可能在代码中被修改。在此可找到稀有度： <a class="reference external" href="https://github.com/Innoxia/liliths-throne-public/tree/dev/src/com/lilithsthrone/game/inventory/Rarity.java">src/com/lilithsthrone/game/inventory/Rarity.java</a></p>
 <dl class="simple">
-<dt>示例</dt><dd><p>Socks are most definitely <code class="docutils literal notranslate"><span class="pre">COMMON</span></code>, but I’ve defined these as
-<code class="docutils literal notranslate"><span class="pre">LEGENDARY</span></code> so as to prevent them from naturally spawning in the game.</p>
+<dt>示例</dt><dd><p>袜子绝对是 <code class="docutils literal notranslate"><span class="pre">COMMON``的，但我已将其定义为</span> <span class="pre">``LEGENDARY</span></code> ，以防它们在游戏中自然生成。</p>
 </dd>
 </dl>
 <div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;rarity&gt;</span>LEGENDARY<span class="nt">&lt;/rarity&gt;</span>
@@ -204,12 +182,12 @@ in the code. Possible rarities are found here:
 </section>
 <section id="clothingset">
 <h3><span class="section-number">2.1.2.11. </span>clothingSet<a class="headerlink" href="#clothingset" title="此标题的永久链接">¶</a></h3>
-<p>The set that this clothing belongs to.</p>
+<p>这件衣服所属的套装。</p>
 <div class="admonition seealso">
 <p class="admonition-title">参见</p>
-<p><a class="reference internal" href="setBonuses.html"><span class="doc">Item Sets</span></a></p>
+<p><a class="reference internal" href="setBonuses.html"><span class="doc">物品套装</span></a></p>
 </div>
-<p>Navigate to <a class="reference external" href="https://github.com/Innoxia/liliths-throne-public/tree/dev/res/setBonuses">res/setBonuses</a> to see existing sets.</p>
+<p>导航到：ltgithub:<cite>res/setBonuses</cite> 查看现有套装。</p>
 <ul class="simple">
 <li><p>Example: Just use the name of the set.</p></li>
 </ul>
@@ -222,8 +200,7 @@ in the code. Possible rarities are found here:
 <p>The file paths for this clothing’s image. Please refer to the
 <a class="reference internal" href="overview.html#items-image"><span class="std std-ref">documentation about images</span></a>.</p>
 <dl class="simple">
-<dt>示例</dt><dd><p>I’ve defined this as “sock.svg”, which should be placed in the same
-folder location alongside this xml file.</p>
+<dt>示例</dt><dd><p>我将其定义为“sock.svg”，它应该与xml文件放在同一个文件夹中。</p>
 </dd>
 </dl>
 <div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;imageName&gt;</span>socks.svg<span class="nt">&lt;/imageName&gt;</span>
@@ -717,8 +694,7 @@ values are as follows:</p>
 </div>
 <section id="customcolours">
 <h4><span class="section-number">2.1.2.19.1. </span>customColours<a class="headerlink" href="#customcolours" title="此标题的永久链接">¶</a></h4>
-<p>You can define any number of custom colours to replace the shades you’ve
-coloured your svg with.</p>
+<p>你可以定义任意数量的自定义颜色，以替换为 svg 上色的可使用颜色。</p>
 <div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;customColours&gt;</span>
 <span class="w">    </span><span class="nt">&lt;customColour</span><span class="w"> </span><span class="na">copyColourIndex=</span><span class="s">&quot;0&quot;</span><span class="w"> </span><span class="na">c0=</span><span class="s">&quot;#6C5353&quot;</span><span class="w"> </span><span class="na">c1=</span><span class="s">&quot;#916F6F&quot;</span><span class="w"> </span><span class="na">c2=</span><span class="s">&quot;#AC9393&quot;</span><span class="w"> </span><span class="na">c3=</span><span class="s">&quot;#C8B7B7&quot;</span><span class="w"> </span><span class="na">c4=</span><span class="s">&quot;#E3DBDB&quot;</span><span class="nt">&gt;</span>
 <span class="w">            </span><span class="nt">&lt;defaultColours&gt;</span>
@@ -979,7 +955,7 @@ your descriptions are applied to. For standard equipping and unequipping, use
     <ul>
         <li>
           &larr;
-          <a href="items.html" title="Previous document"><span class="section-number">2. </span>物品文件夹：</a>
+          <a href="items.html" title="Previous document"><span class="section-number">2. </span>“Items”文件夹</a>
         </li>
         <li>
           <a href="items_items.html" title="Next document"><span class="section-number">2.2. </span>Miscanelaous Items</a>
@@ -1012,7 +988,7 @@ your descriptions are applied to. For standard equipping and unequipping, use
 <h3>导航</h3>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="overview.html">1. 概览</a></li>
-<li class="toctree-l1 current"><a class="reference internal" href="items.html">2. 物品文件夹：</a><ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="items.html">2. “Items”文件夹</a><ul class="current">
 <li class="toctree-l2 current"><a class="current reference internal" href="#">2.1. 衣物类物品</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#general-information">2.1.1. 通用信息</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#coreattributes">2.1.2. coreAttributes</a></li>
@@ -1028,7 +1004,7 @@ your descriptions are applied to. For standard equipping and unequipping, use
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="outfits.html">3. Outfits</a></li>
-<li class="toctree-l1"><a class="reference internal" href="setBonuses.html">4. Item Sets</a></li>
+<li class="toctree-l1"><a class="reference internal" href="setBonuses.html">4. 物品套装</a></li>
 <li class="toctree-l1"><a class="reference internal" href="statusEffects.html">5. statusEffects</a></li>
 <li class="toctree-l1"><a class="reference internal" href="authors.html">6. 作者</a></li>
 </ul>
@@ -1037,8 +1013,8 @@ your descriptions are applied to. For standard equipping and unequipping, use
 <h3>Related Topics</h3>
 <ul>
   <li><a href="index.html">Documentation overview</a><ul>
-  <li><a href="items.html"><span class="section-number">2. </span>物品文件夹：</a><ul>
-      <li>Previous: <a href="items.html" title="上一章"><span class="section-number">2. </span>物品文件夹：</a></li>
+  <li><a href="items.html"><span class="section-number">2. </span>“Items”文件夹</a><ul>
+      <li>Previous: <a href="items.html" title="上一章"><span class="section-number">2. </span>“Items”文件夹</a></li>
       <li>Next: <a href="items_items.html" title="下一章"><span class="section-number">2.2. </span>Miscanelaous Items</a></li>
   </ul></li>
   </ul></li>

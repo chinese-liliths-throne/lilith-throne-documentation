@@ -16,7 +16,7 @@
     <link rel="canonical" href="https://bicobus.github.io/lilith-throne-documentation/overview.html" />
     <link rel="index" title="索引" href="genindex.html" />
     <link rel="search" title="搜索" href="search.html" />
-    <link rel="next" title="2. 物品文件夹：" href="items.html" />
+    <link rel="next" title="2. “Items”文件夹" href="items.html" />
     <link rel="prev" title="欢迎使用莉莉丝的王座模组工作指导指南！" href="index.html" />
    
   <link rel="stylesheet" href="_static/custom.css" type="text/css" />
@@ -39,7 +39,7 @@
           <a href="index.html" title="Previous document">欢迎使用莉莉丝的王座模组工作指导指南！</a>
         </li>
         <li>
-          <a href="items.html" title="Next document"><span class="section-number">2. </span>物品文件夹：</a>
+          <a href="items.html" title="Next document"><span class="section-number">2. </span>“Items”文件夹</a>
           &rarr;
         </li>
     </ul>
@@ -52,26 +52,26 @@
   <section id="overview">
 <h1><a class="toc-backref" href="#id7" role="doc-backlink"><span class="section-number">1. </span>概览</a><a class="headerlink" href="#overview" title="此标题的永久链接">¶</a></h1>
 <nav class="contents" id="contents">
-<p class="topic-title">内容</p>
+<p class="topic-title">目录</p>
 <ul class="simple">
 <li><p><a class="reference internal" href="#overview" id="id7">概览</a></p>
 <ul>
 <li><p><a class="reference internal" href="#preface" id="id8">绪论</a></p></li>
 <li><p><a class="reference internal" href="#note-on-status-effects-and-how-to-use-them" id="id9">状态效果及其使用注意事项</a></p></li>
-<li><p><a class="reference internal" href="#some-elements-expect-boolean-values" id="id10">部分元素期望布尔值</a></p></li>
+<li><p><a class="reference internal" href="#some-elements-expect-boolean-values" id="id10">部分元素要求填入布尔值</a></p></li>
 <li><p><a class="reference internal" href="#shared-tags-and-information" id="id11">共享标签及信息</a></p></li>
 <li><p><a class="reference internal" href="#items-identifier" id="id12">物品标识符</a></p></li>
 <li><p><a class="reference internal" href="#author-tags" id="id13">作者标签</a></p></li>
-<li><p><a class="reference internal" href="#value" id="id14">value</a></p></li>
-<li><p><a class="reference internal" href="#name" id="id15">name</a></p>
+<li><p><a class="reference internal" href="#value" id="id14">价值(value)</a></p></li>
+<li><p><a class="reference internal" href="#name" id="id15">名称(name)</a></p>
 <ul>
-<li><p><a class="reference internal" href="#plural-name" id="id16">plural name</a></p></li>
+<li><p><a class="reference internal" href="#plural-name" id="id16">复数名称(plural name)</a></p></li>
 </ul>
 </li>
-<li><p><a class="reference internal" href="#determiner" id="id17">determiner</a></p></li>
-<li><p><a class="reference internal" href="#description" id="id18">Description</a></p></li>
-<li><p><a class="reference internal" href="#items-image" id="id19">Item’s image</a></p></li>
-<li><p><a class="reference internal" href="#rarity" id="id20">rarity</a></p></li>
+<li><p><a class="reference internal" href="#determiner" id="id17">冠词(determiner)</a></p></li>
+<li><p><a class="reference internal" href="#description" id="id18">描述(Description)</a></p></li>
+<li><p><a class="reference internal" href="#items-image" id="id19">物品的图像</a></p></li>
+<li><p><a class="reference internal" href="#rarity" id="id20">稀有度(rarity)</a></p></li>
 <li><p><a class="reference internal" href="#colours" id="id21">颜色</a></p>
 <ul>
 <li><p><a class="reference internal" href="#custom-colours" id="id22">Custom Colours</a></p></li>
@@ -102,7 +102,7 @@
 }" class="graphviz" /></div>
 </section>
 <section id="some-elements-expect-boolean-values">
-<h2><a class="toc-backref" href="#id10" role="doc-backlink"><span class="section-number">1.3. </span>部分元素期望布尔值</a><a class="headerlink" href="#some-elements-expect-boolean-values" title="此标题的永久链接">¶</a></h2>
+<h2><a class="toc-backref" href="#id10" role="doc-backlink"><span class="section-number">1.3. </span>部分元素要求填入布尔值</a><a class="headerlink" href="#some-elements-expect-boolean-values" title="此标题的永久链接">¶</a></h2>
 <p>部分元素是布尔开关，其值要么为true，要么为false。元素的名称通常应明确表示它的用途。例如 <code class="docutils literal notranslate"><span class="pre">consumedOnUsed</span></code> 表示玩家使用某物品后，该物品是否会被消耗。</p>
 <p>当元素被确定为布尔类型，它的值应取以下之一：</p>
 <ul class="simple">
@@ -123,55 +123,38 @@
 </pre></div>
 </div>
 <p>这将解析为 <code class="docutils literal notranslate"><span class="pre">innoxia_template_socks</span></code> 对应位于 <code class="docutils literal notranslate"><span class="pre">res/mods/innoxia/clothing/template/socks.xml</span></code> 中的对象。</p>
-<p>The identifier is generated for every pertinent file existing in your modules
-folder structure. The identifier being generated, and not user defined, is an
-important variable to keep in mind. If you ever rename the folder or the <code class="docutils literal notranslate"><span class="pre">xml</span></code>
-file, the identifier will change which, in turn, will invalidate all existing
-reference present in the players saves files.</p>
+<p>你的模组文件夹结构中的每个相关文件都会自动生成一个标识符。需要牢记在心标识符是由系统生成的，而非用户定义的。如果重命名了任何文件夹或 <code class="docutils literal notranslate"><span class="pre">xml</span></code> 文件，标识符将发生变化，从而使存在于玩家存档文件中的所有引用失效。</p>
 </section>
 <section id="author-tags">
 <span id="id2"></span><h2><a class="toc-backref" href="#id13" role="doc-backlink"><span class="section-number">1.6. </span>作者标签</a><a class="headerlink" href="#author-tags" title="此标题的永久链接">¶</a></h2>
-<p>How attribution to the mod author (<em>you</em>) should be displayed in the object’s
-tooltip. If left blank or not included, a default attribution based on folder
-name will be used.</p>
-<p>The content of the element should be a short one line descriptor.</p>
+<p>决定了模组作者(<em>也就是你</em>)在对象的提示栏中展示的内容。若留空或未设置，则会基于文件夹名展示默认内容。</p>
+<p>该元素的内容需要是一行的短描述。</p>
 <dl class="simple">
-<dt>示例</dt><dd><p><em>A tag discreetly sewn into the T-shirt’s inner lining informs you</em>
-<em>that it was made by ’Innoxia’.</em></p>
+<dt>示例</dt><dd><p><em>缝在T恤内衬里的标签告诉你</em> <em>这是由“Innoxia”制作的。</em></p>
 </dd>
 </dl>
 </section>
 <section id="value">
-<span id="item-value"></span><h2><a class="toc-backref" href="#id14" role="doc-backlink"><span class="section-number">1.7. </span>value</a><a class="headerlink" href="#value" title="此标题的永久链接">¶</a></h2>
-<p>The base value of an object. I roughly base things on 1 flame = 10p, so 10
-flames = £1.</p>
+<span id="item-value"></span><h2><a class="toc-backref" href="#id14" role="doc-backlink"><span class="section-number">1.7. </span>价值(value)</a><a class="headerlink" href="#value" title="此标题的永久链接">¶</a></h2>
+<p>对象的基础价值。个人粗略认为1火币=10便士，所以10火币=1英镑。(1火币=1人民币)</p>
 </section>
 <section id="name">
-<span id="id3"></span><h2><a class="toc-backref" href="#id15" role="doc-backlink"><span class="section-number">1.8. </span>name</a><a class="headerlink" href="#name" title="此标题的永久链接">¶</a></h2>
-<p>The name element contain the singular form of the name of the object (One
-<em>sock</em>, two <em>socks</em>).</p>
-<p>The name element can on occasion accept variables, refer to the specific
-documentation of the object you aim to create for details.</p>
-<p>Names can be informal, for objects that are not normally shown to the player
-like outfits, and are only used for debugging purpose.</p>
+<span id="id3"></span><h2><a class="toc-backref" href="#id15" role="doc-backlink"><span class="section-number">1.8. </span>名称(name)</a><a class="headerlink" href="#name" title="此标题的永久链接">¶</a></h2>
+<p>名称元素包含了对象名称的单数形态(一只*袜子*，中文一般不考虑单复数)。</p>
+<p>名称元素又是也可以接受变量，请参照想要创建的特定对象的文档获取更多信息。</p>
+<p>对于部分对象，名称可能并不会显示给玩家，只用作debug，如套装(outfits)，所以也可以比较随意。</p>
 <section id="plural-name">
-<h3><a class="toc-backref" href="#id16" role="doc-backlink"><span class="section-number">1.8.1. </span>plural name</a><a class="headerlink" href="#plural-name" title="此标题的永久链接">¶</a></h3>
-<p>Each object with the possession of a name also has a plural form. If you have to
-inform name, expect to fill in it’s plural form.</p>
+<h3><a class="toc-backref" href="#id16" role="doc-backlink"><span class="section-number">1.8.1. </span>复数名称(plural name)</a><a class="headerlink" href="#plural-name" title="此标题的永久链接">¶</a></h3>
+<p>每一个拥有名称的对象同时也有其复数形式。如果想使用非通用的复数形式，请将其填入。</p>
 </section>
 </section>
 <section id="determiner">
-<h2><a class="toc-backref" href="#id17" role="doc-backlink"><span class="section-number">1.9. </span>determiner</a><a class="headerlink" href="#determiner" title="此标题的永久链接">¶</a></h2>
-<p>The determiner which is displayed before an item’s name. While they are usually
-“a” or “an”, for things like socks or gloves, you’ll want to use “a pair of”
-where it makes sense. I use the <code class="docutils literal notranslate"><span class="pre">CDATA</span></code> tag for all text values, as it allows
-html markup to be embedded without causing issues.</p>
-<p>Should this element remain undefined, the game will automatically select either
-“a” or “an” based on the name of the item. The game will ignore values passed to
-this elements if they equate “a” or “an”.</p>
-<p>Literate Example</p>
+<h2><a class="toc-backref" href="#id17" role="doc-backlink"><span class="section-number">1.9. </span>冠词(determiner)</a><a class="headerlink" href="#determiner" title="此标题的永久链接">¶</a></h2>
+<p>冠词将会在物品名前出现。通常为“a”或者“an”（中文一般根据物品不同修改量词），而对于袜子或者手套之类，或许应该使用“一双”。所有文本值都应使用 <code class="docutils literal notranslate"><span class="pre">CDATA</span></code> 标签包裹，保证html标记确保无误地嵌入到游戏中。</p>
+<p>该元素未定义时，游戏将基于物品名称，自动选择“a”或“an”。如果该元素传入的值就是“a”或“an”，游戏也会将其无视。</p>
+<p>文本示例</p>
 <blockquote>
-<div><p>Innoxia was holding <em>a pair of</em> scissors.</p>
+<div><p>Innoxia正拿着*一把*剪刀。</p>
 </div></blockquote>
 <p>代码示例</p>
 <blockquote>
@@ -181,24 +164,16 @@ this elements if they equate “a” or “an”.</p>
 </div></blockquote>
 </section>
 <section id="description">
-<h2><a class="toc-backref" href="#id18" role="doc-backlink"><span class="section-number">1.10. </span>Description</a><a class="headerlink" href="#description" title="此标题的永久链接">¶</a></h2>
-<p>A long form description of the item. Should be present for each object under the
-items category.</p>
+<h2><a class="toc-backref" href="#id18" role="doc-backlink"><span class="section-number">1.10. </span>描述(Description)</a><a class="headerlink" href="#description" title="此标题的永久链接">¶</a></h2>
+<p>对于物品较长的描述。对于物品分类下的所有对象都应该设置。</p>
 </section>
 <section id="items-image">
-<span id="id4"></span><h2><a class="toc-backref" href="#id19" role="doc-backlink"><span class="section-number">1.11. </span>Item’s image</a><a class="headerlink" href="#items-image" title="此标题的永久链接">¶</a></h2>
-<p>The element <code class="docutils literal notranslate"><span class="pre">imageName</span></code> will be found through the different objects. It
-informs of the file path for the object’s image. All images <em>must be</em> .svg
-format. Colours to be used are described below, above the <a class="reference internal" href="#colours"><span class="std std-ref">primaryColours</span></a>
-element. I use the free program <a class="reference external" href="https://inkscape.org">InkScape</a> to make my
-.svg images. .svg images scale perfectly up and down to any size, so, while it
-should be a square, it doesn’t really matter what size your canvas is (although
-I use 256 × 256 as a personal preference).</p>
-<p>If the item can be equipped, then an <code class="docutils literal notranslate"><span class="pre">imageEquippedname</span></code> must also be
-provided. Please refer to the appropriate documentation for more details.</p>
+<span id="id4"></span><h2><a class="toc-backref" href="#id19" role="doc-backlink"><span class="section-number">1.11. </span>物品的图像</a><a class="headerlink" href="#items-image" title="此标题的永久链接">¶</a></h2>
+<p><code class="docutils literal notranslate"><span class="pre">imageName</span></code> 元素会存在于多种对象中。该元素的内容表明了对象图像的文件路径。所有图像*必须*为.svg格式。所使用的颜色将在其下描述， <a class="reference internal" href="#colours"><span class="std std-ref">primaryColours</span></a> 元素中。通常使用免费程序 <a class="reference external" href="https://inkscape.org">InkScape</a> 来制作svg图像。svg图像可以随意缩放大小，当形状为方形时，画布的大小并不重要(个人倾向于使用256 x 256的画布)。</p>
+<p>如果该物品可以被装备，那也应该提供 <code class="docutils literal notranslate"><span class="pre">imageEquippedname</span></code> 。请参见对应文档获取更多信息。</p>
 </section>
 <section id="rarity">
-<span id="id5"></span><h2><a class="toc-backref" href="#id20" role="doc-backlink"><span class="section-number">1.12. </span>rarity</a><a class="headerlink" href="#rarity" title="此标题的永久链接">¶</a></h2>
+<span id="id5"></span><h2><a class="toc-backref" href="#id20" role="doc-backlink"><span class="section-number">1.12. </span>稀有度(rarity)</a><a class="headerlink" href="#rarity" title="此标题的永久链接">¶</a></h2>
 <p>The rarity of several object can be defined using the constants listed in the
 file <a class="reference external" href="https://github.com/Innoxia/liliths-throne-public/tree/dev/src/com/lilithsthrone/game/inventory/Rarity.java">src/com/lilithsthrone/game/inventory/Rarity.java</a>.</p>
 <p>Please note that any item set with a rarity of LEGENDARY will not appear
@@ -299,18 +274,9 @@ instead, list each Colour.</p>
 </dl>
 <section id="custom-colours">
 <h3><a class="toc-backref" href="#id22" role="doc-backlink"><span class="section-number">1.13.1. </span>Custom Colours</a><a class="headerlink" href="#custom-colours" title="此标题的永久链接">¶</a></h3>
-<p>You can define any number of custom colours to replace the shades you’ve
-coloured your svg with.</p>
-<p>The <code class="docutils literal notranslate"><span class="pre">copyColourIndex</span></code> attribute seen in the example below defines which colour
-index should be copied into this colour slot on weapon generation. This
-particular colour, having an index of 0, will always be coloured the same as the
-primary colour when generated. Indexes go from 0 <span class="math notranslate nohighlight">\(\to\)</span> X, where X is the
-number of defined colours. i.e. If you only define primary and secondary, the
-first custom colour will have an index of 2.</p>
-<p>Attributes from <code class="docutils literal notranslate"><span class="pre">c0</span></code> <span class="math notranslate nohighlight">\(\to\)</span> <code class="docutils literal notranslate"><span class="pre">c4</span></code> are the colours which you’ve used in
-your svg and would like replaced with the colours you define below. <code class="docutils literal notranslate"><span class="pre">c0</span></code> is
-the darkest shade. Shades can go up to any number, but setting just 5 shades
-should work best.</p>
+<p>你可以定义任意数量的自定义颜色，以替换为 svg 上色的可使用颜色。</p>
+<p>以下示例展示了 <code class="docutils literal notranslate"><span class="pre">copyColourIndex</span></code> 属性的用途，即定义生成武器时将哪种颜色索引复制到颜色栏位中。对于某个颜色，若其索引为0，那么生成时，该颜色会被作为主要颜色。颜色索引从0开始， <span class="math notranslate nohighlight">\(\to\)</span> X 其中X为已定义颜色的数量。例如，如果你只定义了主要颜色和次要颜色那么第一个自定义颜色的索引即为2。（译者注：在例子中，主要颜色索引为0，次要颜色索引为1，第一个自定义颜色（即第三个被定义的颜色）索引为2。其中 <span class="math notranslate nohighlight">\(\to\)</span> X 为左闭右开区间。例子中，X=3。）</p>
+<p>属性 <code class="docutils literal notranslate"><span class="pre">c0</span></code> <span class="math notranslate nohighlight">\(\to\)</span> <code class="docutils literal notranslate"><span class="pre">c4</span></code> 是你正在svg图像中使用的颜色，你可以用下面定义的颜色来替换它们。其中 <code class="docutils literal notranslate"><span class="pre">c0</span></code> 是最深的阴影色。阴影可以被设置为任何数，但只设置5种阴影效果最好。</p>
 <p>If you have used the <code class="docutils literal notranslate"><span class="pre">primary</span></code> / <code class="docutils literal notranslate"><span class="pre">secondary</span></code> / <code class="docutils literal notranslate"><span class="pre">tertiary</span></code> elements up
 above, then do not use their associated colour hexes. (i.e. If you’ve defined a
 <code class="docutils literal notranslate"><span class="pre">primaryColours</span></code> element, do not use either of <code class="docutils literal notranslate"><span class="pre">#ff2a2a</span></code>, <code class="docutils literal notranslate"><span class="pre">#ff5555</span></code>,
@@ -370,7 +336,7 @@ expected for <code class="docutils literal notranslate"><span class="pre">primar
           <a href="index.html" title="Previous document">欢迎使用莉莉丝的王座模组工作指导指南！</a>
         </li>
         <li>
-          <a href="items.html" title="Next document"><span class="section-number">2. </span>物品文件夹：</a>
+          <a href="items.html" title="Next document"><span class="section-number">2. </span>“Items”文件夹</a>
           &rarr;
         </li>
     </ul>
@@ -402,19 +368,19 @@ expected for <code class="docutils literal notranslate"><span class="pre">primar
 <li class="toctree-l1 current"><a class="current reference internal" href="#">1. 概览</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#preface">1.1. 绪论</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#note-on-status-effects-and-how-to-use-them">1.2. 状态效果及其使用注意事项</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#some-elements-expect-boolean-values">1.3. 部分元素期望布尔值</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#some-elements-expect-boolean-values">1.3. 部分元素要求填入布尔值</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#shared-tags-and-information">1.4. 共享标签及信息</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#items-identifier">1.5. 物品标识符</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#author-tags">1.6. 作者标签</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#value">1.7. value</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#name">1.8. name</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#plural-name">1.8.1. plural name</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#value">1.7. 价值(value)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#name">1.8. 名称(name)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#plural-name">1.8.1. 复数名称(plural name)</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="#determiner">1.9. determiner</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#description">1.10. Description</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#items-image">1.11. Item’s image</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#rarity">1.12. rarity</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#determiner">1.9. 冠词(determiner)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#description">1.10. 描述(Description)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#items-image">1.11. 物品的图像</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#rarity">1.12. 稀有度(rarity)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#colours">1.13. 颜色</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#custom-colours">1.13.1. Custom Colours</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#status-effects-special-case">1.13.2. status effects special case</a></li>
@@ -422,9 +388,9 @@ expected for <code class="docutils literal notranslate"><span class="pre">primar
 </li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="items.html">2. 物品文件夹：</a></li>
+<li class="toctree-l1"><a class="reference internal" href="items.html">2. “Items”文件夹</a></li>
 <li class="toctree-l1"><a class="reference internal" href="outfits.html">3. Outfits</a></li>
-<li class="toctree-l1"><a class="reference internal" href="setBonuses.html">4. Item Sets</a></li>
+<li class="toctree-l1"><a class="reference internal" href="setBonuses.html">4. 物品套装</a></li>
 <li class="toctree-l1"><a class="reference internal" href="statusEffects.html">5. statusEffects</a></li>
 <li class="toctree-l1"><a class="reference internal" href="authors.html">6. 作者</a></li>
 </ul>
@@ -434,7 +400,7 @@ expected for <code class="docutils literal notranslate"><span class="pre">primar
 <ul>
   <li><a href="index.html">Documentation overview</a><ul>
       <li>Previous: <a href="index.html" title="上一章">欢迎使用莉莉丝的王座模组工作指导指南！</a></li>
-      <li>Next: <a href="items.html" title="下一章"><span class="section-number">2. </span>物品文件夹：</a></li>
+      <li>Next: <a href="items.html" title="下一章"><span class="section-number">2. </span>“Items”文件夹</a></li>
   </ul></li>
 </ul>
 </div>

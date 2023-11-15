@@ -17,7 +17,7 @@
     <link rel="index" title="索引" href="genindex.html" />
     <link rel="search" title="搜索" href="search.html" />
     <link rel="next" title="6. 作者" href="authors.html" />
-    <link rel="prev" title="4. Item Sets" href="setBonuses.html" />
+    <link rel="prev" title="4. 物品套装" href="setBonuses.html" />
    
   <link rel="stylesheet" href="_static/custom.css" type="text/css" />
   
@@ -36,7 +36,7 @@
     <ul>
         <li>
           &larr;
-          <a href="setBonuses.html" title="Previous document"><span class="section-number">4. </span>Item Sets</a>
+          <a href="setBonuses.html" title="Previous document"><span class="section-number">4. </span>物品套装</a>
         </li>
         <li>
           <a href="authors.html" title="Next document"><span class="section-number">6. </span>作者</a>
@@ -59,31 +59,19 @@
 </dl>
 </div></blockquote>
 <section id="general-information">
-<h2><span class="section-number">5.1. </span>GENERAL INFORMATION<a class="headerlink" href="#general-information" title="此标题的永久链接">¶</a></h2>
-<p>Status effects are bits of logic applied to a character. The effect convey
-access to a variety of content, like combat moves or spell. They can also change
-the attributes of the character.</p>
-<p>You can see an annotated example in the file
-<a class="reference external" href="https://github.com/Innoxia/liliths-throne-public/tree/dev/res/statusEffects/innoxia/set_kitty.xml">res/statusEffects/innoxia/set_kitty.xml</a>.</p>
+<h2><span class="section-number">5.1. </span>通用信息<a class="headerlink" href="#general-information" title="此标题的永久链接">¶</a></h2>
+<p>状态效果是一套应用在角色上的逻辑。效果可能由各种内容触发，包括战斗动作或法术。能够改变角色的属性。</p>
+<p>你可以在 <a class="reference external" href="https://github.com/Innoxia/liliths-throne-public/tree/dev/res/statusEffects/innoxia/set_kitty.xml">res/statusEffects/innoxia/set_kitty.xml</a> 文件中找到有标注的例子。</p>
 </section>
 <section id="renderingpriority">
 <h2><span class="section-number">5.2. </span>renderingPriority<a class="headerlink" href="#renderingpriority" title="此标题的永久链接">¶</a></h2>
-<p>An integer used for determining the order of rendering status effect icons. A
-higher value means that it’s higher up in the rendering priority (and so will be
-rendered before others). Typical values go from 0 to 100. A good default value
-is to set it as 50. As this status effect is a set bonus, it has a higher
-rendering priority than usual (of 70). For some examples of the rendering
-priority:</p>
+<p>用来决定渲染状态效果图标顺序的整数。数值越高意味着渲染优先度越高(也就是越先渲染)。数值通常从0到100。默认设置为50。因为该状态效果是套装加成，所以比通常的渲染优先度较高。下面是一些渲染优先度的例子：</p>
 <ul class="simple">
-<li><p>A character’s racial perk effect has a priority of 1000, as I want it to
-always be rendered first no matter what.</p></li>
-<li><p>Weather effects have a priority of 100 (as I want them to always be displayed
-as high as possible).</p></li>
-<li><p>Sexual orientation has a priority of 90 (as I want it to be displayed near the
-start).</p></li>
-<li><p>Most other standard status effects (such as pregnancy, well-rested, alcohol
-level, etc.) have a priority of 80.</p></li>
-<li><p>Set bonuses have a priority of 70.</p></li>
+<li><p>角色的种族天赋效果拥有1000的优先度，因为我总是想要这种状态效果最先渲染。</p></li>
+<li><p>天气效果拥有100的有限度(因为我想要这种状态效果尽量优先渲染)。</p></li>
+<li><p>性取向拥有90的优先度(因为我想要这种效果差不多一开始就渲染)。</p></li>
+<li><p>绝大多数常规的状态效果(如怀孕、充分休息、醉酒程度等)都拥有90的优先度。</p></li>
+<li><p>套装加成拥有70的优先度。</p></li>
 </ul>
 <div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;renderingPriority&gt;</span>70<span class="nt">&lt;/renderingPriority&gt;</span>
 </pre></div>
@@ -91,19 +79,18 @@ level, etc.) have a priority of 80.</p></li>
 </section>
 <section id="renderineffectspanel">
 <h2><span class="section-number">5.3. </span>renderInEffectsPanel<a class="headerlink" href="#renderineffectspanel" title="此标题的永久链接">¶</a></h2>
-<p>Set to <code class="docutils literal notranslate"><span class="pre">true</span></code> if you want this status effect to be displayed in the affected
-character’s status effect panel. This should pretty much always be ’true’.</p>
+<p>如果你想要该状态效果显示在受影响角色的状态效果栏中，就应该设置为 <code class="docutils literal notranslate"><span class="pre">true</span></code> 。该选项通常都会设置为“true”。</p>
 <div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;renderInEffectsPanel&gt;</span>true<span class="nt">&lt;/renderInEffectsPanel&gt;</span>
 </pre></div>
 </div>
 </section>
 <section id="beneficial">
 <h2><span class="section-number">5.4. </span>beneficial<a class="headerlink" href="#beneficial" title="此标题的永久链接">¶</a></h2>
-<p>Populate with one of these tags:</p>
+<p>填入以下标签其一：</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">BENEFICIAL</span></code> if this is a good status effect for a character to have.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">NEUTRAL</span></code> if it’s neither.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">DETRIMENTAL</span></code> if it’s a bad one.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">BENEFICIAL</span></code> 如果该状态效果对于拥有角色有益。</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">NEUTRAL</span></code> 两者都不是。</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">DETRIMENTAL</span></code> 如果有害。</p></li>
 </ul>
 <div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;beneficial&gt;</span>BENEFICIAL<span class="nt">&lt;/beneficial&gt;</span>
 </pre></div>
@@ -111,37 +98,28 @@ character’s status effect panel. This should pretty much always be ’true’.
 </section>
 <section id="combateffect">
 <h2><span class="section-number">5.5. </span>combatEffect<a class="headerlink" href="#combateffect" title="此标题的永久链接">¶</a></h2>
-<p>Set to <code class="docutils literal notranslate"><span class="pre">true</span></code> if you want this status effect to be rendered during combat, and
-if the <a class="reference internal" href="#applyeffect">applyEffect</a> element should be applied to the affected character on
-every combat round during which it is active. This should only be set to true if
-this a status effect which is applied and used <strong>only</strong> in combat. Status
-effects which are marked as combat status effects are not ever applied outside
-of combat.</p>
+<p>如果你想要该状态效果仅在战斗中渲染，并且在战斗中每一回合都将 <a class="reference internal" href="#applyeffect">applyEffect</a> 元素的内容施加给受影响角色，请设置为 <code class="docutils literal notranslate"><span class="pre">true</span></code>。只有该状态效果**仅**在战斗中施加并使用时，才需要设置为“true”。被标记为战斗状态效果的，战斗外则不会施加效果。</p>
 <div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;combatEffect&gt;</span>false<span class="nt">&lt;/combatEffect&gt;</span>
 </pre></div>
 </div>
 </section>
 <section id="sexeffect">
 <h2><span class="section-number">5.6. </span>sexEffect<a class="headerlink" href="#sexeffect" title="此标题的永久链接">¶</a></h2>
-<p>Set to <code class="docutils literal notranslate"><span class="pre">true</span></code> if you want this status effect to be rendered during sex.</p>
+<p>如果你想要该状态效果在性交中渲染，请设置为 <code class="docutils literal notranslate"><span class="pre">true</span></code>。</p>
 <div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;sexEffect&gt;</span>false<span class="nt">&lt;/sexEffect&gt;</span>
 </pre></div>
 </div>
 </section>
 <section id="name">
 <h2><span class="section-number">5.7. </span><span class="target" id="index-0"></span>name<a class="headerlink" href="#name" title="此标题的永久链接">¶</a></h2>
-<p>The <a class="reference internal" href="overview.html#name"><span class="std std-ref">name</span></a> of this set bonus. The character under the effect is passed in
-as the <code class="docutils literal notranslate"><span class="pre">npc</span></code> parsing argument, so if you want to, you can include parsing
-elements such as <code class="docutils literal notranslate"><span class="pre">[npc.name]</span></code>.</p>
+<p>该套装加成的 <a class="reference internal" href="overview.html#name"><span class="std std-ref">名称(name)</span></a> 。处于该效果下的角色会以 <code class="docutils literal notranslate"><span class="pre">npc</span></code> 作为解析变量传入。所以如果你想要引用，可以使用 <code class="docutils literal notranslate"><span class="pre">[npc.name]</span></code> 等类似形式。</p>
 <div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;name&gt;</span><span class="cp">&lt;![CDATA[Socks of Power]]&gt;</span><span class="nt">&lt;/name&gt;</span>
 </pre></div>
 </div>
 </section>
 <section id="description">
 <h2><span class="section-number">5.8. </span>description<a class="headerlink" href="#description" title="此标题的永久链接">¶</a></h2>
-<p>The description of this status effect. The character under the effect is passed
-in as the <code class="docutils literal notranslate"><span class="pre">npc</span></code> parsing argument, so if you want to, you can include parsing
-elements such as <code class="docutils literal notranslate"><span class="pre">[npc.name]</span></code>.</p>
+<p>该状态效果的描述。处于该效果下的角色会以 <code class="docutils literal notranslate"><span class="pre">npc</span></code> 作为解析变量传入。所以如果你想要引用，可以使用 <code class="docutils literal notranslate"><span class="pre">[npc.name]</span></code> 等类似形式。</p>
 <div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;description&gt;</span><span class="cp">&lt;![CDATA[</span>
 <span class="cp">    By wearing the template socks, you become a sock god#IF(npc.isFeminine())dess#ENDIF!</span>
 <span class="cp">]]&gt;</span><span class="nt">&lt;/description&gt;</span>
@@ -150,29 +128,24 @@ elements such as <code class="docutils literal notranslate"><span class="pre">[n
 </section>
 <section id="imagename">
 <h2><span class="section-number">5.9. </span>imageName<a class="headerlink" href="#imagename" title="此标题的永久链接">¶</a></h2>
-<p>The name of the icon which should be used to represent this status effect. The
-icon must be an svg file, and must be placed in the same folder as this XML
-file.</p>
+<p>用来展示该状态效果的图标的名称。图标必须是svg文件，并且与XML文件放置在同一文件夹下。</p>
 <div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;imageName&gt;</span>set_template.svg<span class="nt">&lt;/imageName&gt;</span>
 </pre></div>
 </div>
 </section>
 <section id="colours">
 <h2><span class="section-number">5.10. </span>colours<a class="headerlink" href="#colours" title="此标题的永久链接">¶</a></h2>
-<p>The <a class="reference internal" href="overview.html#colours"><span class="std std-ref">colour</span></a> which should be associated with this status effect.
-Just like with clothing and weapon recolouring, this is used to recolour the
-image you used above. <code class="docutils literal notranslate"><span class="pre">PresetColour</span></code> value should be used here, drawn from
-<a class="reference external" href="https://github.com/Innoxia/liliths-throne-public/tree/dev/src/com/lilithsthrone/utils/colours/PresetColour.java">src/com/lilithsthrone/utils/colours/PresetColour.java</a></p>
+<p>与该状态效果相关的 <a class="reference internal" href="overview.html#colours"><span class="std std-ref">colour</span></a> 。与衣物和武器的换色类似，此处的颜色也会被用作修改上述图片的颜色。此处应该使用 <code class="docutils literal notranslate"><span class="pre">PresetColour</span></code> 的值，可以从 <a class="reference external" href="https://github.com/Innoxia/liliths-throne-public/tree/dev/src/com/lilithsthrone/utils/colours/PresetColour.java">src/com/lilithsthrone/utils/colours/PresetColour.java</a> 处获取</p>
 <section id="colourprimary">
 <h3><span class="section-number">5.10.1. </span>colourPrimary<a class="headerlink" href="#colourprimary" title="此标题的永久链接">¶</a></h3>
-<p>This has to have a value defined, or else this XML file will fail to load.</p>
+<p>必须定义一个数值，否则该XML会读取失败。</p>
 <div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;colourPrimary&gt;</span>CLOTHING_WHITE<span class="nt">&lt;/colourPrimary&gt;</span>
 </pre></div>
 </div>
 </section>
 <section id="coloursecondary">
 <h3><span class="section-number">5.10.2. </span>colourSecondary<a class="headerlink" href="#coloursecondary" title="此标题的永久链接">¶</a></h3>
-<p>This can optionally be left blank, like the ’colourTertiary’ element below.</p>
+<p>可以留空，与其下的“colourTertiary”元素类似。</p>
 <div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;colourSecondary/&gt;</span>
 </pre></div>
 </div>
@@ -407,7 +380,7 @@ character is no longer under the effects of this status effect.</p>
     <ul>
         <li>
           &larr;
-          <a href="setBonuses.html" title="Previous document"><span class="section-number">4. </span>Item Sets</a>
+          <a href="setBonuses.html" title="Previous document"><span class="section-number">4. </span>物品套装</a>
         </li>
         <li>
           <a href="authors.html" title="Next document"><span class="section-number">6. </span>作者</a>
@@ -440,11 +413,11 @@ character is no longer under the effects of this status effect.</p>
 <h3>导航</h3>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="overview.html">1. 概览</a></li>
-<li class="toctree-l1"><a class="reference internal" href="items.html">2. 物品文件夹：</a></li>
+<li class="toctree-l1"><a class="reference internal" href="items.html">2. “Items”文件夹</a></li>
 <li class="toctree-l1"><a class="reference internal" href="outfits.html">3. Outfits</a></li>
-<li class="toctree-l1"><a class="reference internal" href="setBonuses.html">4. Item Sets</a></li>
+<li class="toctree-l1"><a class="reference internal" href="setBonuses.html">4. 物品套装</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">5. statusEffects</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#general-information">5.1. GENERAL INFORMATION</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#general-information">5.1. 通用信息</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#renderingpriority">5.2. renderingPriority</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#renderineffectspanel">5.3. renderInEffectsPanel</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#beneficial">5.4. beneficial</a></li>
@@ -479,7 +452,7 @@ character is no longer under the effects of this status effect.</p>
 <h3>Related Topics</h3>
 <ul>
   <li><a href="index.html">Documentation overview</a><ul>
-      <li>Previous: <a href="setBonuses.html" title="上一章"><span class="section-number">4. </span>Item Sets</a></li>
+      <li>Previous: <a href="setBonuses.html" title="上一章"><span class="section-number">4. </span>物品套装</a></li>
       <li>Next: <a href="authors.html" title="下一章"><span class="section-number">6. </span>作者</a></li>
   </ul></li>
 </ul>
