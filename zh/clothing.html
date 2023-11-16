@@ -70,7 +70,7 @@
 <p id="index-0">作者署名，如果你想要的话。</p>
 <div class="admonition seealso">
 <p class="admonition-title">参见</p>
-<p><a class="reference internal" href="overview.html#author-tags"><span class="std std-ref">作者标签</span></a></p>
+<p><a class="reference internal" href="overview.html#author-tags"><span class="std std-ref">作者标签(author tags)</span></a></p>
 </div>
 <div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;authorTag&gt;</span><span class="cp">&lt;![CDATA[A tag discreetly sewn into the T-shirt&#39;s inner lining informs you that it was made by &#39;Innoxia&#39;.]]&gt;</span><span class="nt">&lt;/authorTag&gt;</span>
 </pre></div>
@@ -238,7 +238,7 @@ determines the position of this category in UI rendering order (in the
 inventory’s clothing dye screen), with lower values being rendered nearer to the
 top of the category list.</p>
 <dl>
-<dt>Variables</dt><dd><ul class="simple">
+<dt>多样性(Variables)</dt><dd><ul class="simple">
 <li><p>id (string)</p></li>
 <li><p>priority (integer)</p></li>
 </ul>
@@ -299,7 +299,7 @@ of <code class="docutils literal notranslate"><span class="pre">GENERIC_GOOD</sp
 you <strong>must</strong> use a standard RGB hex code as the value.</p>
 <p>e.g. <code class="docutils literal notranslate"><span class="pre">colourDisabled=&quot;777777&quot;</span> <span class="pre">colourSelected=&quot;57DB7E&quot;</span></code></p>
 <dl>
-<dt>Variables</dt><dd><ul class="simple">
+<dt>多样性(Variables)</dt><dd><ul class="simple">
 <li><p>id (string)</p></li>
 <li><p>priority (integer)</p></li>
 <li><p>defaultSticker (boolean)</p></li>
@@ -337,7 +337,7 @@ sticker is applied.</p>
 <code class="docutils literal notranslate"><span class="pre">namePrefix</span></code> are displayed. A <strong>lower value</strong> means they will be <strong>displayed
 first</strong>. This can be left undefined.</p>
 <dl>
-<dt>Variables</dt><dd><ul class="simple">
+<dt>多样性(Variables)</dt><dd><ul class="simple">
 <li><p>priority (integer)</p></li>
 </ul>
 </dd>
@@ -364,7 +364,7 @@ description (so long as another sticker has not applied a <code class="docutils 
 performed, or, if <code class="docutils literal notranslate"><span class="pre">fullReplacement</span></code> is true for multiple active stickers,
 which sticker’s description has priority.</p>
 <dl>
-<dt>Variables</dt><dd><ul class="simple">
+<dt>多样性(Variables)</dt><dd><ul class="simple">
 <li><p>fullReplacement (boolean)</p></li>
 <li><p>priority (integer)</p></li>
 </ul>
@@ -395,9 +395,9 @@ sticker’s <code class="docutils literal notranslate"><span class="pre">zLayer<
 <p>You can add as many <code class="docutils literal notranslate"><span class="pre">imageName</span></code> elements as you like.</p>
 </div>
 <dl>
-<dt>Variables</dt><dd><ul class="simple">
+<dt>多样性(Variables)</dt><dd><ul class="simple">
 <li><p>zLayer (interger)</p></li>
-<li><p>slot (constant)</p></li>
+<li><p>栏位(永久)</p></li>
 </ul>
 </dd>
 <dt>示例</dt><dd><div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;imageName</span><span class="w"> </span><span class="na">zLayer=</span><span class="s">&quot;1&quot;</span><span class="w"> </span><span class="na">slot=</span><span class="s">&quot;TORSO_UNDER&quot;</span><span class="nt">&gt;</span>text_rental.svg<span class="nt">&lt;/imageName&gt;</span>
@@ -448,7 +448,7 @@ to the player when disabled.</p>
 <p>Please note that no <code class="docutils literal notranslate"><span class="pre">npc</span></code> tag can be used, as this clothing might not belong
 to anyone.</p>
 <dl class="simple">
-<dt>Variables</dt><dd><ul class="simple">
+<dt>多样性(Variables)</dt><dd><ul class="simple">
 <li><p>showDisabledButton (boolean)</p></li>
 </ul>
 </dd>
@@ -504,7 +504,7 @@ game handle the default number of enchantments, which typically results in 100.<
 <div><p>I have not defined this, as I’ll let the game keep the 100
 enchantments default value.</p>
 </div></blockquote>
-<p>Using default value</p>
+<p>使用默认值</p>
 <div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;enchantmentLimit/&gt;</span>
 </pre></div>
 </div>
@@ -514,7 +514,7 @@ enchantments default value.</p>
 </div>
 </section>
 <section id="effects">
-<h3><span class="section-number">2.1.2.16. </span>effects<a class="headerlink" href="#effects" title="此标题的永久链接">¶</a></h3>
+<h3><span class="section-number">2.1.2.16. </span>效果<a class="headerlink" href="#effects" title="此标题的永久链接">¶</a></h3>
 <p>The default effects that this clothing spawns in with. To know what to put in
 here, it would probably be easiest to enchant clothing in your game, save the
 game, then copy over that clothing’s ’effects’ in your save file.</p>
@@ -662,7 +662,7 @@ would block the <code class="docutils literal notranslate"><span class="pre">FIN
 </div>
 </section>
 <section id="colours">
-<h3><span class="section-number">2.1.2.19. </span>colours<a class="headerlink" href="#colours" title="此标题的永久链接">¶</a></h3>
+<h3><span class="section-number">2.1.2.19. </span>颜色<a class="headerlink" href="#colours" title="此标题的永久链接">¶</a></h3>
 <p>Please consult the relevant <a class="reference internal" href="overview.html#colours"><span class="std std-ref">documentation</span></a>.</p>
 <p>Your clothing can be coloured any way you like, but if you’d like the player to
 be able to dye your clothing, you can specify available colours here.
@@ -708,7 +708,7 @@ values are as follows:</p>
 </section>
 </section>
 <section id="patterns">
-<h3><span class="section-number">2.1.2.20. </span>patterns<a class="headerlink" href="#patterns" title="此标题的永久链接">¶</a></h3>
+<h3><span class="section-number">2.1.2.20. </span>样式(patterns)<a class="headerlink" href="#patterns" title="此标题的永久链接">¶</a></h3>
 <p>This section details how to define patterns. If your svg file does not have a
 <code class="docutils literal notranslate"><span class="pre">patternLayer</span></code> defined, you can safely delete this whole section:</p>
 <dl>
@@ -826,7 +826,7 @@ used for insertable dildos.)</p>
 <p><span class="versionmodified changed">在 0.3.7 版本发生变更: </span>orifice sex toy support is not fully implemented into the game!</p>
 </div>
 <dl class="simple">
-<dt>depth</dt><dd><p>value in cm</p>
+<dt>深度</dt><dd><p>value in cm</p>
 </dd>
 <dt>capacity</dt><dd><p>value in cm, corresponding to the diameter of the orifice</p>
 </dd>

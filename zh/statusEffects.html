@@ -159,21 +159,16 @@
 </section>
 <section id="attributemodifiers">
 <h2><span class="section-number">5.11. </span>attributeModifiers<a class="headerlink" href="#attributemodifiers" title="此标题的永久链接">¶</a></h2>
-<p>The attributes which should be affected by having this status effect. The
-<code class="docutils literal notranslate"><span class="pre">modifier</span></code> node must contain the attribute to be affected, in the example
-<code class="docutils literal notranslate"><span class="pre">DAMAGE_LUST</span></code>. You can define any number of attribute modifiers, but it’s
-usually best to keep it limited to just a few.</p>
+<p>拥有该状态效果会影响的属性。  <code class="docutils literal notranslate"><span class="pre">modifier</span></code> 节点必须包含会被影响的属性，例如 <code class="docutils literal notranslate"><span class="pre">DAMAGE_LUST</span></code> 。你可以定义任意数量的属性修改项，但最好不要太多。</p>
 <div class="admonition seealso">
 <p class="admonition-title">参见</p>
-<p>List of attributes:
-<a class="reference external" href="https://github.com/Innoxia/liliths-throne-public/tree/dev//src/com/lilithsthrone/game/character/attributes/Attribute.java">/src/com/lilithsthrone/game/character/attributes/Attribute.java</a></p>
+<p>属性列表： <a class="reference external" href="https://github.com/Innoxia/liliths-throne-public/tree/dev//src/com/lilithsthrone/game/character/attributes/Attribute.java">/src/com/lilithsthrone/game/character/attributes/Attribute.java</a></p>
 </div>
-<p><strong>modifier Variables</strong></p>
+<p><strong>修改项变量</strong></p>
 <dl class="std nodevar">
 <dt class="sig sig-object std" id="nodevar-value-statusEffects">
 <span class="sig-name descname"><span class="pre">value</span></span> <span class="pre">Type:</span> <span class="pre">integer</span><a class="headerlink" href="#nodevar-value-statusEffects" title="永久链接至目标">¶</a></dt>
-<dd><p>Defines how much the attribute should be numerically affected, either
-positively or negatively.</p>
+<dd><p>定义该属性会在数值上发生多少改变，可正可负。</p>
 </dd></dl>
 
 <div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;attributeModifiers&gt;</span>
@@ -184,13 +179,10 @@ positively or negatively.</p>
 </section>
 <section id="combatmoves">
 <h2><span class="section-number">5.12. </span>combatMoves<a class="headerlink" href="#combatmoves" title="此标题的永久链接">¶</a></h2>
-<p>The <code class="docutils literal notranslate"><span class="pre">CombatMoves</span></code> which should be unlocked for the character affected by this
-status effect. <code class="docutils literal notranslate"><span class="pre">CombatMoves</span></code> identifiers are defined in their constructors.
-When modding support for combat moves is added, the identifier will be described
-in the modding file there.</p>
+<p>拥有该状态效果的角色会解锁的 <code class="docutils literal notranslate"><span class="pre">CombatMoves</span></code> （战斗动作）。 <code class="docutils literal notranslate"><span class="pre">CombatMoves</span></code> 标识符在构造函数中定义。当支持战斗动作的mod后，其标识符应当在mod文件中描述。(现在已经有了)</p>
 <div class="admonition seealso">
 <p class="admonition-title">参见</p>
-<p>list of <code class="docutils literal notranslate"><span class="pre">CombatMoves</span></code>: <a class="reference external" href="https://github.com/Innoxia/liliths-throne-public/tree/dev/src/com/lilithsthrone/game/combat/moves">src/com/lilithsthrone/game/combat/moves</a></p>
+<p><code class="docutils literal notranslate"><span class="pre">CombatMoves</span></code> 的列表： <a class="reference external" href="https://github.com/Innoxia/liliths-throne-public/tree/dev/src/com/lilithsthrone/game/combat/moves">src/com/lilithsthrone/game/combat/moves</a></p>
 </div>
 <dl>
 <dt>示例：</dt><dd><div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;combatMoves&gt;</span>
@@ -198,7 +190,7 @@ in the modding file there.</p>
 <span class="nt">&lt;/combatMoves&gt;</span>
 </pre></div>
 </div>
-<p>If combat moves are unecessary, insert an empty tag:</p>
+<p>若不需要战斗动作，请插入空标签</p>
 <div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;combatMoves/&gt;</span>
 </pre></div>
 </div>
@@ -240,13 +232,13 @@ described, but if you need to use this section, use the following format:</p>
 <span class="nt">&lt;/extraEffects&gt;</span>
 </pre></div>
 </div>
-<p>An empty <code class="docutils literal notranslate"><span class="pre">extraEffects</span></code> list:</p>
+<p>一个空 <code class="docutils literal notranslate"><span class="pre">extraEffects</span></code> 列表</p>
 <div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;extraEffects/&gt;</span>
 </pre></div>
 </div>
 </section>
 <section id="effect-logic">
-<h2><span class="section-number">5.15. </span>Effect Logic<a class="headerlink" href="#effect-logic" title="此标题的永久链接">¶</a></h2>
+<h2><span class="section-number">5.15. </span>效果逻辑<a class="headerlink" href="#effect-logic" title="此标题的永久链接">¶</a></h2>
 <p>The condition for a status effect to be applied is by default <code class="docutils literal notranslate"><span class="pre">false</span></code>, which
 means that it can only be applied by a direct method call elsewhere for
 <code class="docutils literal notranslate"><span class="pre">GameCharacter.addStatusEffect(AbstractStatusEffect</span> <span class="pre">statusEffect,</span> <span class="pre">int</span>
@@ -436,7 +428,7 @@ character is no longer under the effects of this status effect.</p>
 <li class="toctree-l2"><a class="reference internal" href="#combatmoves">5.12. combatMoves</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#spells">5.13. spells</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#extraeffects">5.14. extraEffects</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#effect-logic">5.15. Effect Logic</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#effect-logic">5.15. 效果逻辑</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#applicationcondition">5.15.1. applicationCondition</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#applyeffect">5.15.2. applyEffect</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#applyremovaleffect">5.15.3. applyRemovalEffect</a></li>
