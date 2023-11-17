@@ -84,18 +84,8 @@
 </section>
 <section id="blockedslotscountingtowardsfullset">
 <h2><span class="section-number">4.5. </span>blockedSlotsCountingTowardsFullSet<a class="headerlink" href="#blockedslotscountingtowardsfullset" title="此标题的永久链接">¶</a></h2>
-<p>If any of the slots defined in this section are blocked (due to the character’s
-body not supporting clothing in these slots), then the slot is counted as being
-equipped with an item of clothing from this set. For example, as the leg slot is
-defined in this section, a character with a taur’s body (which is therefore
-blocked from wearing leg clothing) would have the
-<code class="docutils literal notranslate"><span class="pre">numberRequiredForCompleteSet</span></code> reduced by 1. It’s usually best to fill out
-this section with each slot that can be fitted with an item of this set’s
-clothing. As this set only has 1 item in it, this section does nothing (as an
-item set can only ever be activated with at least 1 item of clothing/weapon
-equipped), and is just for demonstrative purposes.</p>
-<p>Possible slots are found here:
-<a class="reference external" href="https://github.com/Innoxia/liliths-throne-public/tree/dev/src/com/lilithsthrone/game/inventory/InventorySlot.java">src/com/lilithsthrone/game/inventory/InventorySlot.java</a></p>
+<p>如果在这一部分中定义的栏位被禁用(由于角色的身体不支持在这些栏位中装备衣物)，那么栏位会被视作已经装备了该套装所需的衣物。例如，腿部栏位在该部分中定义，那么当角色拥有四足下肢时(会导致无法穿着腿部衣物)，所需的 <code class="docutils literal notranslate"><span class="pre">numberRequiredForCompleteSet</span></code> 就会减少1。通常最好在该部分中定义所有该套装加成可能会用到的栏位。如果该套装只由一件物品组成，那么这一部分将不会生效(因为物品套装必须至少装备一件衣物/武器)，仅用于演示目的。</p>
+<p>可用的栏位可以在此处查阅： <a class="reference external" href="https://github.com/Innoxia/liliths-throne-public/tree/dev/src/com/lilithsthrone/game/inventory/InventorySlot.java">src/com/lilithsthrone/game/inventory/InventorySlot.java</a></p>
 <div class="highlight-xml notranslate" id="id3"><div class="highlight"><pre><span></span><span class="nt">&lt;blockedSlotsCountingTowardsFullSet&gt;</span>
 <span class="w">    </span><span class="nt">&lt;slot&gt;</span>SOCK<span class="nt">&lt;/slot&gt;</span>
 <span class="nt">&lt;/blockedSlotsCountingTowardsFullSet&gt;</span>

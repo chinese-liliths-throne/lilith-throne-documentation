@@ -256,18 +256,15 @@
 </pre></div>
 </div>
 <p>changeOnReforge变量决定当玩家改变伤害类型时，该武器是否应该变换法术。(例如，如果他们将``FIRE``匕首锻造为``ICE``匕首，如果changeOnReforge为true，那么授予的法术``FIREBALL``将自动切换为``ICE_SHARD``)。</p>
-<p>The damageType variable corresponds to the damageType which causes the spell to
-be unlocked when this weapon is spawned in. You can have multiple entries of the
-same damageType, like so:</p>
+<p>damageType变量与解锁衍生武器法术的damageType保持一致。可以拥有多种同种damageType，比如：</p>
 <div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;spell</span><span class="w"> </span><span class="na">damageType=</span><span class="s">&quot;FIRE&quot;</span><span class="nt">&gt;</span>FIREBALL<span class="nt">&lt;/spell&gt;</span>
 <span class="nt">&lt;spell</span><span class="w"> </span><span class="na">damageType=</span><span class="s">&quot;FIRE&quot;</span><span class="nt">&gt;</span>FLASH<span class="nt">&lt;/spell&gt;</span>
 <span class="nt">&lt;spell</span><span class="w"> </span><span class="na">damageType=</span><span class="s">&quot;FIRE&quot;</span><span class="nt">&gt;</span>ICE_SHARD<span class="nt">&lt;/spell&gt;</span>
 <span class="nt">&lt;spell</span><span class="w"> </span><span class="na">damageType=</span><span class="s">&quot;FIRE&quot;</span><span class="nt">&gt;</span>STEAL<span class="nt">&lt;/spell&gt;</span>
 </pre></div>
 </div>
-<p>Note that the <code class="docutils literal notranslate"><span class="pre">damageType</span></code> does not have to correspond to the spell’s school (so
-<code class="docutils literal notranslate"><span class="pre">FIRE</span></code> can unlock <code class="docutils literal notranslate"><span class="pre">ICE_SHARD</span></code>, etc.).</p>
-<p>Values for spells can be found here: <a class="reference external" href="https://github.com/Innoxia/liliths-throne-public/blob/master/src/com/lilithsthrone/game/combat/Spell.java">https://github.com/Innoxia/liliths-throne-public/blob/master/src/com/lilithsthrone/game/combat/Spell.java</a></p>
+<p>需要注意 <code class="docutils literal notranslate"><span class="pre">damageType</span></code> 不需要与法术的学派保持一致（所以 <code class="docutils literal notranslate"><span class="pre">FIRE</span></code> 能够解锁 <code class="docutils literal notranslate"><span class="pre">ICE_SHARD</span></code> ，等等）</p>
+<p>法术值可以在这里找： <a class="reference external" href="https://github.com/Innoxia/liliths-throne-public/blob/master/src/com/lilithsthrone/game/combat/Spell.java">https://github.com/Innoxia/liliths-throne-public/blob/master/src/com/lilithsthrone/game/combat/Spell.java</a></p>
 <p>For an empty spell list, use an empty element:</p>
 <div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;spells/&gt;</span>
 </pre></div>
@@ -287,9 +284,7 @@ combat moves whenever the player changes the damage type. Using the example
 above, if they reforge a <code class="docutils literal notranslate"><span class="pre">PHYSICAL</span></code> dagger to an <code class="docutils literal notranslate"><span class="pre">ICE</span></code> dagger and
 changeOnReforge is true, then the granted combat move <code class="docutils literal notranslate"><span class="pre">ASSAULT_RIFLE_MAG_DUMP</span></code>
 will be lost.</p>
-<p>The damageType variable corresponds to the damageType which causes the move to
-be unlocked when this weapon is spawned in. You can have multiple entries of the
-same damageType, like so:</p>
+<p>damageType变量与解锁衍生武器动作的damageType保持一致。可以拥有多种同种damageType，比如：</p>
 <div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;move</span><span class="w"> </span><span class="na">damageType=</span><span class="s">&quot;FIRE&quot;</span><span class="nt">&gt;</span>EXAMPLE_MOVE_1<span class="nt">&lt;/move&gt;</span>
 <span class="nt">&lt;move</span><span class="w"> </span><span class="na">damageType=</span><span class="s">&quot;FIRE&quot;</span><span class="nt">&gt;</span>EXAMPLE_MOVE_2<span class="nt">&lt;/move&gt;</span>
 <span class="nt">&lt;move</span><span class="w"> </span><span class="na">damageType=</span><span class="s">&quot;FIRE&quot;</span><span class="nt">&gt;</span>EXAMPLE_MOVE_3<span class="nt">&lt;/move&gt;</span>
@@ -305,7 +300,7 @@ combat moves soon!</p>
 </div>
 </section>
 <section id="enchantmentlimit">
-<h3><span class="section-number">2.4.1.24. </span>1.24 附魔限制(enchantmentLimit)<a class="headerlink" href="#enchantmentlimit" title="此标题的永久链接">¶</a></h3>
+<h3><span class="section-number">2.4.1.24. </span>1.24 enchantmentLimit(附魔限制)<a class="headerlink" href="#enchantmentlimit" title="此标题的永久链接">¶</a></h3>
 <p>How many effects this weapon can be enchanted with. Weapons standard is 5, for
 balance purpose.</p>
 <div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;enchantmentLimit&gt;</span>5<span class="nt">&lt;/enchantmentLimit&gt;</span>
@@ -313,7 +308,7 @@ balance purpose.</p>
 </div>
 </section>
 <section id="effects">
-<h3><span class="section-number">2.4.1.25. </span>1.25 效果<a class="headerlink" href="#effects" title="此标题的永久链接">¶</a></h3>
+<h3><span class="section-number">2.4.1.25. </span>1.25 effects(效果)<a class="headerlink" href="#effects" title="此标题的永久链接">¶</a></h3>
 <p>The effects that this weapon spawns in with. Remember that the player can
 remove, change or add effects. To know what to put in here, it would probably be
 easiest to enchant clothing in your game, save the game, then copy over that
@@ -399,7 +394,7 @@ format as <a class="reference internal" href="#on-hit-effect">on-hit-effect</a>.
 <li><p>#ffd5d5</p></li>
 </ul>
 </li>
-<li><p>橘色是游戏中更改图形颜色``PRIMARY``的基本颜色，游戏只能识别和更改以下颜色：</p>
+<li><p>橘色是游戏中更改图形颜色 <code class="docutils literal notranslate"><span class="pre">PRIMARY</span></code> 的基本颜色，游戏只能识别和更改以下颜色：</p>
 <ul>
 <li><p>#ff7f2a</p></li>
 <li><p>#ff9955</p></li>
@@ -441,7 +436,7 @@ format as <a class="reference internal" href="#on-hit-effect">on-hit-effect</a>.
 </section>
 <section id="customcolours">
 <h3><span class="section-number">2.4.1.30. </span>1.30 customColours<a class="headerlink" href="#customcolours" title="此标题的永久链接">¶</a></h3>
-<p>你可以定义任意数量的自定义颜色，以替换为 svg 上色的可使用颜色。 如果你使用了上面的 primary/secondary/tertiary 元素，则不要使用它们的相关颜色十六进制代码。  (例如，如果你定义了一个 primaryColours 元素，就不要在 customColour 属性中使用 #ff7f2a、#ff9955、#ffb380、#ffccaa 或 #ffe6d5。)</p>
+<p>你可以定义任意数量的自定义颜色，以替换为 svg 上色的可使用颜色。 如果你使用了上面的 primary/secondary/tertiary 元素，则不要使用它们关联颜色的十六进制值  (例如，如果你定义了一个 primaryColours 元素，就不要在 customColour 属性中使用 #ff7f2a、#ff9955、#ffb380、#ffccaa 或 #ffe6d5。)</p>
 <p>千万不要使用这几种色调，因为它们是留给伤害类型的颜色： #ff2a2a, #ff5555, #ff8080, #ffaaaa, or #ffd5d5</p>
 <div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;customColours&gt;</span>
 <span class="w">    </span><span class="cm">&lt;!-- The &#39;copyColourIndex&#39; attribute defines which colour index should be copied into this colour slot on weapon generation. This particular colour, having an index of 0, will always be coloured the same as the primary colour when generated. Indexes go from 0-&gt;X, where X is the number of defined colours. i.e. If you only define primary and secondary, the first custom colour (i.e. this one) will have an index of 2. --&gt;</span>
