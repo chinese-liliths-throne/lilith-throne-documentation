@@ -199,20 +199,18 @@
 </section>
 <section id="spells">
 <h2><span class="section-number">5.13. </span>spells<a class="headerlink" href="#spells" title="此标题的永久链接">¶</a></h2>
-<p>The Spells which should be unlocked for the character affected by this status
-effect.</p>
+<p>受到该状态效果影响的角色将会解锁这些法术。</p>
 <div class="admonition seealso">
 <p class="admonition-title">参见</p>
-<p>Current Spells can be found in the files in this folder:
-<a class="reference external" href="https://github.com/Innoxia/liliths-throne-public/tree/dev/src/com/lilithsthrone/game/combat/spells/Spell.java">src/com/lilithsthrone/game/combat/spells/Spell.java</a></p>
+<p>目前可用的法术可以在该文件夹下的文件中找到： <a class="reference external" href="https://github.com/Innoxia/liliths-throne-public/tree/dev/src/com/lilithsthrone/game/combat/spells/Spell.java">src/com/lilithsthrone/game/combat/spells/Spell.java</a></p>
 </div>
 <dl>
-<dt>Acceptable format:</dt><dd><div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;spells&gt;</span>
+<dt>支持的格式：</dt><dd><div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;spells&gt;</span>
 <span class="w">    </span><span class="nt">&lt;spell&gt;</span>ARCANE_AROUSAL<span class="nt">&lt;/spell&gt;</span>
 <span class="nt">&lt;/spells&gt;</span>
 </pre></div>
 </div>
-<p>For an empty spell list:</p>
+<p>若法术列表为空:</p>
 <div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;spells/&gt;</span>
 </pre></div>
 </div>
@@ -221,46 +219,28 @@ effect.</p>
 </section>
 <section id="extraeffects">
 <h2><span class="section-number">5.14. </span>extraEffects<a class="headerlink" href="#extraeffects" title="此标题的永久链接">¶</a></h2>
-<p>You can use this section to describe any extra effects that this status effect
-might apply. These effects are shown in the tooltip when the player hovers over
-the status effect icon. The character under the effect is passed in as the
-<code class="docutils literal notranslate"><span class="pre">npc</span></code> parsing argument, so if you want to, you can include parsing elements
-such as <code class="docutils literal notranslate"><span class="pre">[npc.name]</span></code>. For this status effect, no extra effects need to be
-described, but if you need to use this section, use the following format:</p>
+<p>你可以使用该部分来描述状态效果可能附带的额外效果。当玩家将鼠标悬浮在状态效果的图标山，这些效果将会显示在提示中。处于该效果下的角色会以 <code class="docutils literal notranslate"><span class="pre">npc</span></code> 作为解析变量传入。所以如果你想要引用，可以使用 <code class="docutils literal notranslate"><span class="pre">[npc.name]</span></code> 等类似形式。对于该状态效果，没有需要描述的额外效果，但如果想要使用该部分，请遵循以下格式：</p>
 <div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;extraEffects&gt;</span>
 <span class="w">    </span><span class="nt">&lt;effect&gt;</span><span class="cp">&lt;![CDATA[You&#39;re a playful kitty!]]&gt;</span><span class="nt">&lt;/effect&gt;</span>
 <span class="nt">&lt;/extraEffects&gt;</span>
 </pre></div>
 </div>
-<p>一个空 <code class="docutils literal notranslate"><span class="pre">extraEffects</span></code> 列表</p>
+<p>一个空的 <code class="docutils literal notranslate"><span class="pre">extraEffects</span></code> 列表</p>
 <div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;extraEffects/&gt;</span>
 </pre></div>
 </div>
 </section>
 <section id="effect-logic">
 <h2><span class="section-number">5.15. </span>效果逻辑<a class="headerlink" href="#effect-logic" title="此标题的永久链接">¶</a></h2>
-<p>The condition for a status effect to be applied is by default <code class="docutils literal notranslate"><span class="pre">false</span></code>, which
-means that it can only be applied by a direct method call elsewhere for
-<code class="docutils literal notranslate"><span class="pre">GameCharacter.addStatusEffect(AbstractStatusEffect</span> <span class="pre">statusEffect,</span> <span class="pre">int</span>
-<span class="pre">seconds)</span></code>. If you would like your status effect to similarly only be applied
-when called upon, then define this element as:</p>
+<p>状态效果被施加的条件默认设置为 <code class="docutils literal notranslate"><span class="pre">false</span></code> ，这也就意味着只有在其他位置直接调用 <code class="docutils literal notranslate"><span class="pre">GameCharacter.addStatusEffect(AbstractStatusEffect</span> <span class="pre">statusEffect,</span> <span class="pre">int</span> <span class="pre">seconds)</span></code> 时才能够施加该效果。如果你想要该效果同样只有在被调用时才会施加，那请将该元素定义为:</p>
 <div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;applicationCondition&gt;</span><span class="cp">&lt;![CDATA[false]]&gt;</span><span class="nt">&lt;/applicationCondition&gt;</span>
 </pre></div>
 </div>
-<p>If, however, you would like this status effect to be automatically activated
-once certain conditions are met, then make sure that this element returns a
-conditional that would result in <code class="docutils literal notranslate"><span class="pre">true</span></code>, as in the example below.</p>
-<p>You must use the game’s parsing engine to get what you want. <code class="docutils literal notranslate"><span class="pre">npc</span></code> is the
-parser target for the character affected by this status effect. To parse
-something and return a String, use a <code class="docutils literal notranslate"><span class="pre">#</span></code> character at the start of a command,
-such as: <code class="docutils literal notranslate"><span class="pre">[#npc.isFeminine()]</span></code>. To parse something without returning a
-<code class="docutils literal notranslate"><span class="pre">String</span></code> (which would most likely not be used in this element), use two <code class="docutils literal notranslate"><span class="pre">#</span></code>
-characters, such as: <code class="docutils literal notranslate"><span class="pre">[##npc.isFeminine()]</span></code>. As a final note, all whitespace
-is stripped from the returned String before it is parsed into a Boolean.</p>
+<p>然而如果你想让该效果每当达成特定效果时，就自动启用，那请保证该元素的返回值是一个可能为 <code class="docutils literal notranslate"><span class="pre">true</span></code> 的条件语句，如下方示例所示。</p>
+<p>你必须使用游戏的解析引擎来达成你想要的效果。 <code class="docutils literal notranslate"><span class="pre">npc</span></code> 是代表受到该状态效果影响角色的解析目标。如果想要进行解析，并返回字符串(String，可以视作文本)，请在指令一开始就使用 <code class="docutils literal notranslate"><span class="pre">#</span></code> 字符， 例如： <code class="docutils literal notranslate"><span class="pre">[#npc.isFeminine()]</span></code> 。如果想要进行解析，但不返回 <code class="docutils literal notranslate"><span class="pre">String</span></code> (通常不会在这一部分使用)，请使用两个 <code class="docutils literal notranslate"><span class="pre">#</span></code> 字符，例如： <code class="docutils literal notranslate"><span class="pre">[##npc.isFeminine()]</span></code> 。最后提醒一句，在解析为布尔值(Boolean)之前，所有返回的字符串开头和结尾的空白符都会被去除。</p>
 <section id="applicationcondition">
 <h3><span class="section-number">5.15.1. </span>applicationCondition<a class="headerlink" href="#applicationcondition" title="此标题的永久链接">¶</a></h3>
-<p>This example is meant to show that you can use the parser to create more
-<em>complex</em> conditionals.</p>
+<p>该示例意在展示，你可以使用解析器创造十分 <em>复杂</em> 的条件语句。</p>
 <dl>
 <dt><strong>示例：</strong></dt><dd><div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;applicationCondition&gt;</span><span class="cp">&lt;![CDATA[</span>
 <span class="cp">    #IF(SET_BONUS_innoxia_template.isCharacterWearingCompleteSet(npc))</span>
