@@ -100,9 +100,9 @@
 </section>
 <section id="name">
 <h3><span class="section-number">2.1.2.4. </span>name<a class="headerlink" href="#name" title="此标题的永久链接">¶</a></h3>
-<p>The <strong>singular</strong> name of this clothing.</p>
+<p>该衣物名称的 <strong>单数</strong> 。(中文无需在意单数)</p>
 <dl class="simple">
-<dt>示例</dt><dd><p>我把它命名为 &quot;模板袜子&quot;，因为 &quot;模板袜子（有s）&quot;的单数当然是 &quot;袜子&quot;...</p>
+<dt>示例</dt><dd><p>我把它命名为“模板袜子”，因为“模板袜子（有s）”的单数当然是“袜子”……</p>
 </dd>
 </dl>
 <div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;name</span><span class="w"> </span><span class="na">appendColourName=</span><span class="s">&quot;true&quot;</span><span class="nt">&gt;</span><span class="cp">&lt;![CDATA[template sock]]&gt;</span><span class="nt">&lt;/name&gt;</span>
@@ -189,7 +189,7 @@
 </div>
 <p>导航到：ltgithub:<cite>res/setBonuses</cite> 查看现有套装。</p>
 <ul class="simple">
-<li><p>Example: Just use the name of the set.</p></li>
+<li><p>示例: 使用套装名即可。</p></li>
 </ul>
 <div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;clothingSet&gt;</span>innoxia_template<span class="nt">&lt;/clothingSet&gt;</span>
 </pre></div>
@@ -197,8 +197,7 @@
 </section>
 <section id="imagename">
 <h3><span class="section-number">2.1.2.12. </span>imageName<a class="headerlink" href="#imagename" title="此标题的永久链接">¶</a></h3>
-<p>The file paths for this clothing’s image. Please refer to the
-<a class="reference internal" href="overview.html#items-image"><span class="std std-ref">documentation about images</span></a>.</p>
+<p>该衣物图像文件的路径。请参照 <a class="reference internal" href="overview.html#items-image"><span class="std std-ref">documentation about images</span></a> 。</p>
 <dl class="simple">
 <dt>示例</dt><dd><p>我将其定义为“sock.svg”，它应该与xml文件放在同一个文件夹中。</p>
 </dd>
@@ -209,13 +208,9 @@
 </section>
 <section id="imageequippedname">
 <h3><span class="section-number">2.1.2.13. </span>imageEquippedName<a class="headerlink" href="#imageequippedname" title="此标题的永久链接">¶</a></h3>
-<p>The file paths for this clothing’s image while equipped. The “slot” attribute
-determines the InventorySlot in which the defined file will be used.</p>
+<p>该衣物被装备后的图像文件的路径。其中“slot”(栏位)属性决定了对应文件会被使用在哪个物品栏栏位上。</p>
 <dl class="simple">
-<dt>示例</dt><dd><p>When equipped to the <code class="docutils literal notranslate"><span class="pre">SOCK</span></code> slot, the sock will be displayed using the
-<code class="docutils literal notranslate"><span class="pre">sock.svg</span></code> file. When equipped to the “HAND” slot, it will instead use the
-<code class="docutils literal notranslate"><span class="pre">sock_hand.svg</span></code> file. Again, this file must be placed in the same folder
-location alongside this xml file.</p>
+<dt>示例</dt><dd><p>被装备在 <code class="docutils literal notranslate"><span class="pre">SOCK</span></code> (袜子)栏位上时，这双袜子使用 <code class="docutils literal notranslate"><span class="pre">sock.svg</span></code> 文件。而装备在 <code class="docutils literal notranslate"><span class="pre">HAND</span></code> 栏位上是，则使用 <code class="docutils literal notranslate"><span class="pre">sock_hand.svg</span></code> 文件。再次声明，文件必须放置在xml文件的同一文件夹下。</p>
 </dd>
 </dl>
 <div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;imageEquippedName</span><span class="w"> </span><span class="na">slot=</span><span class="s">&quot;SOCK&quot;</span><span class="nt">&gt;</span>socks.svg<span class="nt">&lt;/imageEquippedName&gt;</span>
@@ -225,22 +220,14 @@ location alongside this xml file.</p>
 </section>
 <section id="stickers">
 <h3><span class="section-number">2.1.2.14. </span>stickers<a class="headerlink" href="#stickers" title="此标题的永久链接">¶</a></h3>
-<p><code class="docutils literal notranslate"><span class="pre">Stickers</span></code> are additional svgs which can be overlaid on top of (or beneath
-the) base svg image. Definitions are all within the <code class="docutils literal notranslate"><span class="pre">stickers</span></code> element.</p>
+<p><code class="docutils literal notranslate"><span class="pre">Stickers</span></code> 是可以覆盖在基础svg图像上方的svg部件(或者是下方)。其定义全部位于 <code class="docutils literal notranslate"><span class="pre">stickers</span></code> 元素内部。</p>
 <section id="category">
 <h4><span class="section-number">2.1.2.14.1. </span>category<a class="headerlink" href="#category" title="此标题的永久链接">¶</a></h4>
-<p>All stickers defined within this category are <strong>mutually exclusive</strong> with one
-another, but not with stickers defined in other <code class="docutils literal notranslate"><span class="pre">category</span></code> elements. The
-<code class="docutils literal notranslate"><span class="pre">id</span></code> should be unique to each category, and can be defined as whatever you
-want, but for formatting purposes, it would be preferable for it to just contain
-basic alpha-numerical values and underscores. The <code class="docutils literal notranslate"><span class="pre">priority</span></code> variable
-determines the position of this category in UI rendering order (in the
-inventory’s clothing dye screen), with lower values being rendered nearer to the
-top of the category list.</p>
+<p>同一分类(category)下定义的所有标签(sticker)都是 <strong>互斥</strong> 的，但与 <code class="docutils literal notranslate"><span class="pre">category</span></code> 中其他类型元素下的标签可以共存。其中 <code class="docutils literal notranslate"><span class="pre">id</span></code> 属性不允许多个类型重复，内容可以随意，但考虑到格式要求，最好由字母、数字和下划线构成。 <code class="docutils literal notranslate"><span class="pre">priority</span></code> 属性决定了该分类在UI渲染时的顺序(即物品栏的衣物染色界面)，数值越低渲染时则位于分类列表的越上方。</p>
 <dl>
-<dt>多样性(Variables)</dt><dd><ul class="simple">
-<li><p>id (string)</p></li>
-<li><p>priority (integer)</p></li>
+<dt>属性</dt><dd><ul class="simple">
+<li><p>id (字符串)</p></li>
+<li><p>priority (整数)</p></li>
 </ul>
 </dd>
 <dt>示例</dt><dd><div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;category</span><span class="w"> </span><span class="na">id=</span><span class="s">&quot;top_txt&quot;</span><span class="w"> </span><span class="na">priority=</span><span class="s">&quot;1&quot;</span><span class="nt">&gt;</span>
@@ -252,8 +239,7 @@ top of the category list.</p>
 </dl>
 <section id="categoryname">
 <h5><span class="section-number">2.1.2.14.1.1. </span>categoryName<a class="headerlink" href="#categoryname" title="此标题的永久链接">¶</a></h5>
-<p>This is used in-game as the title for this sticker category in the sticker
-application menu UI. As such, please try to make this human-readable.</p>
+<p>该元素将用于游戏内标签修改界面UI中，显示这类标签的标题。因而请保证其可读性。</p>
 <dl>
 <dt>示例</dt><dd><div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;categoryName&gt;</span><span class="cp">&lt;![CDATA[Top Text]]&gt;</span><span class="nt">&lt;/categoryName&gt;</span>
 </pre></div>
@@ -263,49 +249,27 @@ application menu UI. As such, please try to make this human-readable.</p>
 </section>
 <section id="sticker">
 <span id="id1"></span><h5><span class="section-number">2.1.2.14.1.2. </span>sticker<a class="headerlink" href="#sticker" title="此标题的永久链接">¶</a></h5>
-<p>A sticker element. Each sticker are exclusive with other stickers present in the
-same category. Stickers of different cagetories can be combined.</p>
-<p>The <code class="docutils literal notranslate"><span class="pre">id</span></code> element should be unique to stickers within this category element.
-Define this variable to <code class="docutils literal notranslate"><span class="pre">none</span></code> (lit.) to give to the player the ability to
-leave the selection blank.</p>
-<p>The <code class="docutils literal notranslate"><span class="pre">priority</span></code> variable determines the position of this sticker in UI
-rendering order (in the inventory’s clothing dye screen), with lower values
-being rendered nearer to the left of the buttons list. A <code class="docutils literal notranslate"><span class="pre">priority</span></code> of <code class="docutils literal notranslate"><span class="pre">0</span></code>
-will set the sticker at the top of the list, regardless of it’s position in your
-xml file.</p>
-<p><code class="docutils literal notranslate"><span class="pre">defaultSticker</span></code> defines whether this sticker is applied to this clothing item
-by default when spawned in.</p>
-<p><code class="docutils literal notranslate"><span class="pre">zLayer</span></code> defines the rendering z-layer priority. These <code class="docutils literal notranslate"><span class="pre">zLayer</span></code> values are
-compared against one another when rendering, with higher values being drawn on
-top of stickers with lower values. <strong>The base svg has a zLayer value of 0</strong>,
-meaning that negative values will be drawn beneath the base svg. Defining
-<code class="docutils literal notranslate"><span class="pre">zLayer</span></code> as 0 is not advised (although it is handled by always being drawn on
-top of the base layer).</p>
-<p><code class="docutils literal notranslate"><span class="pre">colourDisabled</span></code> and <code class="docutils literal notranslate"><span class="pre">colourSelected</span></code> are optional variables which you can
-use to define the colour of the text within the button used to select this
-sticker in the clothing dye UI. You can leave these blank or delete them
-entirely to use default button colours. The default values, if you were to
-define them using these variables, would look like: <code class="docutils literal notranslate"><span class="pre">colourDisabled=&quot;TEXT_GREY&quot;</span>
-<span class="pre">colourSelected=&quot;GENERIC_GOOD&quot;</span></code></p>
+<p>一个标签元素。每个标签都与同一分类下的其他标签互斥。不同分类下的标签可以共存。</p>
+<p><code class="docutils literal notranslate"><span class="pre">id</span></code> 属性应当在同分类下的标签中保持唯一。该属性设置为 <code class="docutils literal notranslate"><span class="pre">none</span></code> 代表玩家可以将该分类置空。</p>
+<p><code class="docutils literal notranslate"><span class="pre">priority</span></code> 属性决定了该标签在UI渲染时的顺序(即物品栏的衣物染色界面)，数值越低渲染时则位于按钮列表的越靠左。 <code class="docutils literal notranslate"><span class="pre">priority</span></code> 设置为 <code class="docutils literal notranslate"><span class="pre">0</span></code> 则会使该标签位于列表顶端，无论其在xml文件中的位置。</p>
+<p><code class="docutils literal notranslate"><span class="pre">defaultSticker</span></code> 定义了衣物生成时默认是否要将该标签默认应用。</p>
+<p><code class="docutils literal notranslate"><span class="pre">zLayer</span></code> 定义了渲染的z轴优先度。 <code class="docutils literal notranslate"><span class="pre">zLayer</span></code> 的数值将会在渲染时相互比较，数值高的标签会覆盖在数值低的标签上方。 <strong>基础svg的zLayer值为0</strong>，也就意味着负数值会被绘制在基础svg的下方。不建议将 <code class="docutils literal notranslate"><span class="pre">zLayer</span></code> 设置为0(尽管处理时总会将其绘制在基层的上方)。</p>
+<p><code class="docutils literal notranslate"><span class="pre">colourDisabled</span></code> 和 <code class="docutils literal notranslate"><span class="pre">colourSelected</span></code> 是两个可选属性，你可以用来定义衣物染色UI中按钮内文字的颜色，分别对应着未选中和选中的按钮。可以选择留空或直接删除，使用默认的按钮颜色。如果你想要用属性来定义默认的颜色，应当是这样的: <code class="docutils literal notranslate"><span class="pre">colourDisabled=&quot;TEXT_GREY&quot;</span> <span class="pre">colourSelected=&quot;GENERIC_GOOD&quot;</span></code></p>
 <div class="admonition note">
 <p class="admonition-title">备注</p>
-<p>If you do not define an <a class="reference external" href="sticker-imageName">imageName</a> sub-element, or if
-you leave it blank, the default selected colour will be <code class="docutils literal notranslate"><span class="pre">TEXT_GREY</span></code> instead
-of <code class="docutils literal notranslate"><span class="pre">GENERIC_GOOD</span></code>.</p>
+<p>如果你没有定义 <a class="reference external" href="sticker-imageName">imageName</a> 子元素，或者留空，那默认的选择颜色将会是 <code class="docutils literal notranslate"><span class="pre">TEXT_GREY</span></code> 而非 <code class="docutils literal notranslate"><span class="pre">GENERIC_GOOD</span></code> 。</p>
 </div>
-<p>Available colours can be found here:
-<a class="reference external" href="https://github.com/Innoxia/liliths-throne-public/tree/dev/src/com/lilithsthrone/utils/colours/PresetColour.java">src/com/lilithsthrone/utils/colours/PresetColour.java</a></p>
-<p>You can also define custom colours instead of a PresetColour id, in which case
-you <strong>must</strong> use a standard RGB hex code as the value.</p>
-<p>e.g. <code class="docutils literal notranslate"><span class="pre">colourDisabled=&quot;777777&quot;</span> <span class="pre">colourSelected=&quot;57DB7E&quot;</span></code></p>
+<p>可选颜色请参照此处: <a class="reference external" href="https://github.com/Innoxia/liliths-throne-public/tree/dev/src/com/lilithsthrone/utils/colours/PresetColour.java">src/com/lilithsthrone/utils/colours/PresetColour.java</a></p>
+<p>你同样可以自定义颜色，而不是使用PresetColour的id，这时你**必须**使用标准RGB十六位码作为数值。</p>
+<p>例如: <code class="docutils literal notranslate"><span class="pre">colourDisabled=&quot;777777&quot;</span> <span class="pre">colourSelected=&quot;57DB7E&quot;</span></code></p>
 <dl>
-<dt>多样性(Variables)</dt><dd><ul class="simple">
-<li><p>id (string)</p></li>
-<li><p>priority (integer)</p></li>
-<li><p>defaultSticker (boolean)</p></li>
-<li><p>zlayer (integer)</p></li>
-<li><p>colourDisabled (constant)</p></li>
-<li><p>colourSelected (constant)</p></li>
+<dt>属性</dt><dd><ul class="simple">
+<li><p>id (字符串)</p></li>
+<li><p>priority (整数)</p></li>
+<li><p>defaultSticker (布尔)</p></li>
+<li><p>zlayer (整数)</p></li>
+<li><p>colourDisabled (预先定义值)</p></li>
+<li><p>colourSelected (预先定义值)</p></li>
 </ul>
 </dd>
 <dt>示例</dt><dd><div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;sticker</span><span class="w"> </span><span class="na">id=</span><span class="s">&quot;rental&quot;</span><span class="w"> </span><span class="na">priority=</span><span class="s">&quot;1&quot;</span><span class="w"> </span><span class="na">defaultSticker=</span><span class="s">&quot;true&quot;</span><span class="w"> </span><span class="na">zLayer=</span><span class="s">&quot;1&quot;</span><span class="w"> </span><span class="na">colourDisabled=</span><span class="s">&quot;&quot;</span><span class="w"> </span><span class="na">colourSelected=</span><span class="s">&quot;&quot;</span><span class="nt">&gt;</span>
@@ -320,8 +284,7 @@ you <strong>must</strong> use a standard RGB hex code as the value.</p>
 </dl>
 <section id="stickername">
 <h6><span class="section-number">2.1.2.14.1.2.1. </span>stickerName<a class="headerlink" href="#stickername" title="此标题的永久链接">¶</a></h6>
-<p>This is used in-game as the title for this sticker’s button in the sticker
-application menu UI. As such, please try to make this human-readable.</p>
+<p>该元素将用于游戏内标签修改界面UI中，显示该标签按钮的标题。因而请保证其可读性。</p>
 <dl>
 <dt>示例</dt><dd><div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;stickerName&gt;</span><span class="cp">&lt;![CDATA[Rental]]&gt;</span><span class="nt">&lt;/stickerName&gt;</span>
 </pre></div>
@@ -331,14 +294,11 @@ application menu UI. As such, please try to make this human-readable.</p>
 </section>
 <section id="nameprefix">
 <h6><span class="section-number">2.1.2.14.1.2.2. </span>namePrefix<a class="headerlink" href="#nameprefix" title="此标题的永久链接">¶</a></h6>
-<p>Define a <code class="docutils literal notranslate"><span class="pre">namePrefix</span></code> to add a prefix to the base clothing’s name when this
-sticker is applied.</p>
-<p>The <code class="docutils literal notranslate"><span class="pre">priority</span></code> variable defines the order in which multiple sticker
-<code class="docutils literal notranslate"><span class="pre">namePrefix</span></code> are displayed. A <strong>lower value</strong> means they will be <strong>displayed
-first</strong>. This can be left undefined.</p>
+<p>定义 <code class="docutils literal notranslate"><span class="pre">namePrefix</span></code> 可以在在使用该标签后，为基础的衣物名称前添加前缀。</p>
+<p><code class="docutils literal notranslate"><span class="pre">priority</span></code> 元素定义了多个标签的 <code class="docutils literal notranslate"><span class="pre">namePrefix</span></code> 显示时的顺序。<strong>越低的数值</strong> 代表该前缀会 <strong>越先显示</strong>。可以不显式声明。</p>
 <dl>
-<dt>多样性(Variables)</dt><dd><ul class="simple">
-<li><p>priority (integer)</p></li>
+<dt>属性</dt><dd><ul class="simple">
+<li><p>priority (整数)</p></li>
 </ul>
 </dd>
 <dt>示例</dt><dd><div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;namePrefix</span><span class="w"> </span><span class="na">priority=</span><span class="s">&quot;1&quot;</span><span class="nt">&gt;</span><span class="cp">&lt;![CDATA[Rental]]&gt;</span><span class="nt">&lt;/namePrefix&gt;</span>
@@ -349,24 +309,17 @@ first</strong>. This can be left undefined.</p>
 </section>
 <section id="namepostfix">
 <h6><span class="section-number">2.1.2.14.1.2.3. </span>namePostfix<a class="headerlink" href="#namepostfix" title="此标题的永久链接">¶</a></h6>
-<p>Exactly the same as <a class="reference internal" href="#nameprefix">namePrefix</a>, but the text is appended after the base
-clothing name.</p>
+<p>与 <a class="reference internal" href="#nameprefix">namePrefix</a> 几乎完全相同，但是文本将会添加在基础衣物名称的后方。</p>
 </section>
 <section id="descriptionmodification">
-<h6><span class="section-number">2.1.2.14.1.2.4. </span>descriptionmodification<a class="headerlink" href="#descriptionmodification" title="此标题的永久链接">¶</a></h6>
-<p>You can set whether this sticker should define a new description for the
-clothing.</p>
-<p>If <code class="docutils literal notranslate"><span class="pre">fullReplacement</span></code> is true, then the clothing’s description is completely
-replaced with <code class="docutils literal notranslate"><span class="pre">descriptionModification</span></code> while this sticker is applied. If
-<code class="docutils literal notranslate"><span class="pre">fullReplacement</span></code> is false, then it is appended to the base clothing
-description (so long as another sticker has not applied a <code class="docutils literal notranslate"><span class="pre">fullReplacement</span></code>).</p>
-<p>The <code class="docutils literal notranslate"><span class="pre">priority</span></code> element defines in what order the description appending is
-performed, or, if <code class="docutils literal notranslate"><span class="pre">fullReplacement</span></code> is true for multiple active stickers,
-which sticker’s description has priority.</p>
+<h6><span class="section-number">2.1.2.14.1.2.4. </span>descriptionModification<a class="headerlink" href="#descriptionmodification" title="此标题的永久链接">¶</a></h6>
+<p>通过这个元素设置该标签是否会为衣物生成新描述。</p>
+<p>如果 <code class="docutils literal notranslate"><span class="pre">fullReplacement</span></code> 属性为true，那么衣物的描述将会完全被 <code class="docutils literal notranslate"><span class="pre">descriptionModification</span></code> 替代。如果 <code class="docutils literal notranslate"><span class="pre">fullReplacement</span></code> 为false，那么这段描述将只会添加在原描述的后方(前提是其他标签没有设置 <code class="docutils literal notranslate"><span class="pre">fullReplacement</span></code>) 。</p>
+<p><code class="docutils literal notranslate"><span class="pre">priority</span></code> 属性定义了描述被添加的顺序，或者如果多个标签都将 <code class="docutils literal notranslate"><span class="pre">fullReplacement</span></code> 设置为true，那么哪个标签的描述优先级更高。</p>
 <dl>
-<dt>多样性(Variables)</dt><dd><ul class="simple">
-<li><p>fullReplacement (boolean)</p></li>
-<li><p>priority (integer)</p></li>
+<dt>属性</dt><dd><ul class="simple">
+<li><p>fullReplacement (布尔)</p></li>
+<li><p>priority (整数)</p></li>
 </ul>
 </dd>
 <dt>示例</dt><dd><div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;descriptionModification</span><span class="w"> </span><span class="na">fullReplacement=</span><span class="s">&quot;false&quot;</span><span class="w"> </span><span class="na">priority=</span><span class="s">&quot;1&quot;</span><span class="nt">&gt;</span><span class="cp">&lt;![CDATA[&lt;i&gt;Rental &lt;/i&gt;]]&gt;</span><span class="nt">&lt;/descriptionModification&gt;</span>
@@ -377,27 +330,18 @@ which sticker’s description has priority.</p>
 </section>
 <section id="id3">
 <h6><span class="section-number">2.1.2.14.1.2.5. </span>imageName<a class="headerlink" href="#id3" title="此标题的永久链接">¶</a></h6>
-<p>The path name for this sticker, which should be in the same folder location as
-this xml file.</p>
-<p>The <code class="docutils literal notranslate"><span class="pre">slot</span></code> variable can be omitted, in which case the default slot for the
-clothing item is used.</p>
-<p>If the clothing can be equipped into multiple slots, you don’t <strong>need</strong> to
-define an <code class="docutils literal notranslate"><span class="pre">imageName</span></code> element for every slot, but if you don’t, the game will
-end up using any of your defined <code class="docutils literal notranslate"><span class="pre">imageName</span></code> at random (which is not a problem
-if you only define one <code class="docutils literal notranslate"><span class="pre">imageName</span></code> that’s suitable for any of the clothing’s
-base <code class="docutils literal notranslate"><span class="pre">imageName</span></code>).</p>
-<p>The <code class="docutils literal notranslate"><span class="pre">zLayer</span></code> attribute defines the rendering order for this svg image. You do
-not need to define this attribute, as if it is missing, this svg will use the
-sticker’s <code class="docutils literal notranslate"><span class="pre">zLayer</span></code> attribute which you’ve already defined up above in the root
-<code class="docutils literal notranslate"><span class="pre">sticker</span></code> element. I have included it here just as an example.</p>
+<p>该标签图像的路径名，应当与xml文件处于同一文件夹下。</p>
+<p><code class="docutils literal notranslate"><span class="pre">slot</span></code> 属性可以忽略，此时将会使用衣物的默认栏位。</p>
+<p>如果该衣物可以装备在多个栏位上，你**没有必要**为每个栏位都设置一个 <code class="docutils literal notranslate"><span class="pre">imageName</span></code> ，但如果你没有设置，那么游戏将会随机选择一个 <code class="docutils literal notranslate"><span class="pre">imageName</span></code> 使用(如果你只定义了一个 <code class="docutils literal notranslate"><span class="pre">imageName</span></code> ，并且对于该衣物的所有基础 <code class="docutils literal notranslate"><span class="pre">imageName</span></code> 都很合适，那么就不是大问题)。</p>
+<p><code class="docutils literal notranslate"><span class="pre">zLayer</span></code> 属性定义了该svg图像的渲染顺序。你没有必要定义该属性，如果该属性缺失，那么这个svg将会使用标签中定义的 <code class="docutils literal notranslate"><span class="pre">zLayer</span></code> 属性，前提是你已经在 <code class="docutils literal notranslate"><span class="pre">sticker</span></code> 根节点中定义。示例中填写仅供演示。</p>
 <div class="admonition note">
 <p class="admonition-title">备注</p>
-<p>You can add as many <code class="docutils literal notranslate"><span class="pre">imageName</span></code> elements as you like.</p>
+<p>你可以添加任意数量的 <code class="docutils literal notranslate"><span class="pre">imageName</span></code> 元素。</p>
 </div>
 <dl>
-<dt>多样性(Variables)</dt><dd><ul class="simple">
-<li><p>zLayer (interger)</p></li>
-<li><p>栏位(永久)</p></li>
+<dt>属性</dt><dd><ul class="simple">
+<li><p>zLayer (整数)</p></li>
+<li><p>slot (预先定义值)</p></li>
 </ul>
 </dd>
 <dt>示例</dt><dd><div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;imageName</span><span class="w"> </span><span class="na">zLayer=</span><span class="s">&quot;1&quot;</span><span class="w"> </span><span class="na">slot=</span><span class="s">&quot;TORSO_UNDER&quot;</span><span class="nt">&gt;</span>text_rental.svg<span class="nt">&lt;/imageName&gt;</span>
@@ -448,7 +392,7 @@ to the player when disabled.</p>
 <p>Please note that no <code class="docutils literal notranslate"><span class="pre">npc</span></code> tag can be used, as this clothing might not belong
 to anyone.</p>
 <dl class="simple">
-<dt>多样性(Variables)</dt><dd><ul class="simple">
+<dt>属性</dt><dd><ul class="simple">
 <li><p>showDisabledButton (boolean)</p></li>
 </ul>
 </dd>

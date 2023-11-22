@@ -251,8 +251,7 @@
 <span class="cp">]]&gt;</span><span class="nt">&lt;/applicationCondition&gt;</span>
 </pre></div>
 </div>
-<p>An alternate, simpler example to achieve the same effect would be to just
-do:</p>
+<p>另一个更简单的示例，能够达到相同效果:</p>
 <div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;applicationCondition&gt;</span><span class="cp">&lt;![CDATA[</span>
 <span class="cp">    SET_BONUS_innoxia_kitty.isCharacterWearingCompleteSet(npc)</span>
 <span class="cp">]]&gt;</span><span class="nt">&lt;/applicationCondition&gt;</span>
@@ -263,49 +262,28 @@ do:</p>
 </section>
 <section id="applyeffect">
 <h3><span class="section-number">5.15.2. </span>applyEffect<a class="headerlink" href="#applyeffect" title="此标题的永久链接">¶</a></h3>
-<p>Status effects execute an <code class="docutils literal notranslate"><span class="pre">applyEffect(GameCharacter</span> <span class="pre">target,</span> <span class="pre">int</span>
-<span class="pre">secondsPassed)</span></code> method every time the game ends a turn. The <code class="docutils literal notranslate"><span class="pre">target</span></code> argument
-is the character who is under the effect of this particular status effect, while
-the <code class="docutils literal notranslate"><span class="pre">secondsPassed</span></code> argument is how much time, in seconds, has passed on this
-turn. During combat, the <code class="docutils literal notranslate"><span class="pre">secondsPassed</span></code> argument is always 1 (to represent 1
-turn ending). If the method returns a String, then the game’s flow is
-interrupted to display the <strong>Important status effects</strong> screen to the player,
-along with whatever <code class="docutils literal notranslate"><span class="pre">String</span></code> was returned by this <code class="docutils literal notranslate"><span class="pre">applyEffect()</span></code> method.
-You can define your own effects to be parsed here, just like hard-coded status
-effects. While your options are a little limited by what the parser can access,
-you should be able to apply a good range of effects.</p>
-<p><strong>Node Variables:</strong></p>
+<p>每当游戏回合结束时，状态效果便会执行 <code class="docutils literal notranslate"><span class="pre">applyEffect(GameCharacter</span> <span class="pre">target,</span> <span class="pre">int</span> <span class="pre">secondsPassed)</span></code> 方法。其中 <code class="docutils literal notranslate"><span class="pre">target</span></code> 参数时受到该状态效果影响的角色，而 <code class="docutils literal notranslate"><span class="pre">secondsPassed</span></code> 参数则是该回合经过了多少“秒”。而在战斗中， <code class="docutils literal notranslate"><span class="pre">secondsPassed</span></code> 恒定为1(代表着1个回合结束)。如果该方法返回一个字符串，那么游戏控制流将会被终端，并在 <strong>重要状态效果</strong> 屏幕中显示结果，无论 <code class="docutils literal notranslate"><span class="pre">applyEffect()</span></code> 方法返回的 <code class="docutils literal notranslate"><span class="pre">String</span></code> 是何内容。你可以自行定义效果在此处解析，与其他硬编码的状态效果一样。不过你可选的部分限制在解析器能够接触的部分，但应该足以制作出很多种类的效果了。</p>
+<p><strong>节点变量:</strong></p>
 <dl class="std nodevar">
 <dt class="sig sig-object std" id="nodevar-interval-statusEffects">
 <span class="sig-name descname"><span class="pre">interval</span></span> <span class="pre">Type:</span> <span class="pre">integer</span><a class="headerlink" href="#nodevar-interval-statusEffects" title="永久链接至目标">¶</a></dt>
-<dd><p>The <code class="docutils literal notranslate"><span class="pre">interval</span></code> attribute is an integer representing how often this effect
-should be applied (measured in seconds). For example, an interval of 3600
-would make this effect be applied only once per hour <span class="math notranslate nohighlight">\((60 \times 60 =
-3600)\)</span>. Use an interval of 0 to make this effect be applied on every turn.</p>
+<dd><p><code class="docutils literal notranslate"><span class="pre">interval</span></code> 属性是一个整数值，代表了该效果被施加的间隔(以秒数衡量)。例如间隔设置为3600就该标着改效果每个小时 <span class="math notranslate nohighlight">\((60 \times 60 = 3600)\)</span> 才会被施加一次。间隔设置为0会使该效果每回合都施加。</p>
 </dd></dl>
 
-<p><strong>Content tags:</strong></p>
+<p><strong>内容标签:</strong></p>
 <dl>
-<dt><code class="docutils literal notranslate"><span class="pre">npc</span></code></dt><dd><p>is the parser target for the character affected by this status effect.</p>
+<dt><code class="docutils literal notranslate"><span class="pre">npc</span></code></dt><dd><p>为解析对象，即受到该状态效果的角色。</p>
 </dd>
-<dt><code class="docutils literal notranslate"><span class="pre">SECONDS_PASSED</span></code></dt><dd><p>is a special tag which is converted into an integer value of the time that
-passed during the last turn’s end (in seconds).</p>
+<dt><code class="docutils literal notranslate"><span class="pre">SECONDS_PASSED</span></code></dt><dd><p>为特殊标签，将会被转化为一个整数值，代表上一个回合结束后经过了多长时间(以秒数衡量)。</p>
 </dd>
-<dt><code class="docutils literal notranslate"><span class="pre">TOTAL_SECONDS_PASSED</span></code></dt><dd><p>is a special tag which is converted into a long value of the total time
-that’s passed while under the effect of this status effect (in seconds).
-This can be used with a <code class="docutils literal notranslate"><span class="pre">TOTAL_SECONDS_PASSED</span> <span class="pre">==</span> <span class="pre">0</span></code> check to, for example,
-only apply an effect when this status effect is initially added.</p>
+<dt><code class="docutils literal notranslate"><span class="pre">TOTAL_SECONDS_PASSED</span></code></dt><dd><p>为特殊标签，将会被转化为一个长整数值，代表该角色总共受到该状态效果影响多长时间(以秒数衡量)。例如，通常使用 <code class="docutils literal notranslate"><span class="pre">TOTAL_SECONDS_PASSED</span> <span class="pre">==</span> <span class="pre">0</span></code> ，来保证效果只有在该状态效果最初添加时才生效。</p>
 <div class="admonition important">
 <p class="admonition-title">重要</p>
-<p>In combat, “seconds passed” is actually represented by the number of
-combat turns passed. So, for example, <code class="docutils literal notranslate"><span class="pre">TOTAL_SECONDS_PASSED</span></code> would be
-converted into 2 if the character had been under the status effect’s
-influence for two turns in combat.</p>
+<p>在战斗中，“经过的秒数”实际上代表着经过的战斗回合。所以，例如某角色已经在该状态效果的影响下经过了两个战斗回合，那么 <code class="docutils literal notranslate"><span class="pre">TOTAL_SECONDS_PASSED</span></code> 将会被转化为2.</p>
 </div>
 </dd>
 </dl>
-<p>About tabs and spaces: all tabs are stripped from the returned <code class="docutils literal notranslate"><span class="pre">String</span></code> after
-it is parsed, so it’s safe to use tabs and <strong>not spaces</strong> for formatting.</p>
+<p>有关制表符(tab)和空格(space): 被解析过后，返回的 <code class="docutils literal notranslate"><span class="pre">String</span></code> 前后所有的制表符将被移除，所以使用制表符排版是安全的，而 <strong>空格则不是</strong>。</p>
 <div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;applyEffect</span><span class="w"> </span><span class="na">interval=</span><span class="s">&quot;3600&quot;</span><span class="nt">&gt;</span><span class="cp">&lt;![CDATA[</span>
 <span class="cp">    #IF(SECONDS_PASSED&gt;0)</span>
 <span class="cp">            An hour passed!</span>
@@ -316,27 +294,23 @@ it is parsed, so it’s safe to use tabs and <strong>not spaces</strong> for for
 <span class="cp">]]&gt;</span><span class="nt">&lt;/applyEffect&gt;</span>
 </pre></div>
 </div>
-<p>An empty effect list:</p>
+<p>一个空的效果列表:</p>
 <div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;applyEffect/&gt;</span>
 </pre></div>
 </div>
 </section>
 <section id="applyremovaleffect">
 <h3><span class="section-number">5.15.3. </span>applyRemovalEffect<a class="headerlink" href="#applyremovaleffect" title="此标题的永久链接">¶</a></h3>
-<p>In a similar manner to the <a class="reference internal" href="#applyeffect">applyEffect</a> element above, the game processes
-logic when a status effect is removed.</p>
-<p>This logic is performed while the character is still under the effects of this
-status effect.</p>
+<p>与上方的 <a class="reference internal" href="#applyeffect">applyEffect</a> 元素行为相似，游戏本体会在该状态效果被移除前执行逻辑。</p>
+<p>逻辑执行时，角色实际上依然还处于该状态效果的影响下。</p>
 <div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;applyRemovalEffect/&gt;</span>
 </pre></div>
 </div>
 </section>
 <section id="applypostremovaleffect">
 <h3><span class="section-number">5.15.4. </span>applyPostRemovalEffect<a class="headerlink" href="#applypostremovaleffect" title="此标题的永久链接">¶</a></h3>
-<p>In a similar manner to the <a class="reference internal" href="#applyeffect">applyEffect</a> element above, the game processes
-logic after a status effect has been removed.</p>
-<p>This logic is performed immediately after the effect is removed, so the
-character is no longer under the effects of this status effect.</p>
+<p>与上方的 <a class="reference internal" href="#applyeffect">applyEffect</a> 元素行为相似，游戏本体会在该状态效果被移除后执行逻辑。</p>
+<p>逻辑执行时，角色实际上已经不再处于该状态效果的影响。</p>
 <div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;applyPostRemovalEffect/&gt;</span>
 </pre></div>
 </div>
