@@ -15,7 +15,7 @@
     <link rel="canonical" href="https://bicobus.github.io/lilith-throne-documentation/tattoos.html" />
     <link rel="index" title="索引" href="genindex.html" />
     <link rel="search" title="搜索" href="search.html" />
-    <link rel="next" title="2.4. Items Weapons" href="weapons.html" />
+    <link rel="next" title="2.4. 武器物品" href="weapons.html" />
     <link rel="prev" title="2.2. Miscanelaous Items" href="items_items.html" />
    
   <link rel="stylesheet" href="_static/custom.css" type="text/css" />
@@ -38,7 +38,7 @@
           <a href="items_items.html" title="Previous document"><span class="section-number">2.2. </span>Miscanelaous Items</a>
         </li>
         <li>
-          <a href="weapons.html" title="Next document"><span class="section-number">2.4. </span>Items Weapons</a>
+          <a href="weapons.html" title="Next document"><span class="section-number">2.4. </span>武器物品</a>
           &rarr;
         </li>
     </ul>
@@ -57,38 +57,35 @@
 </dd>
 </dl>
 </div></blockquote>
-<p>For a version without all of the comments, see
-<a class="reference external" href="https://github.com/Innoxia/liliths-throne-public/tree/dev/res/mods/innoxia/items/tattoos/heartWomb/heart_womb.xml">res/mods/innoxia/items/tattoos/heartWomb/heart_womb.xml</a>.</p>
+<p>对于没有注释的版本，参见 <a class="reference external" href="https://github.com/Innoxia/liliths-throne-public/tree/dev/res/mods/innoxia/items/tattoos/heartWomb/heart_womb.xml">res/mods/innoxia/items/tattoos/heartWomb/heart_womb.xml</a>。</p>
 <section id="coreattributes">
 <h2><span class="section-number">2.3.1. </span>coreAttributes<a class="headerlink" href="#coreattributes" title="此标题的永久链接">¶</a></h2>
 <section id="value">
 <h3><span class="section-number">2.3.1.1. </span>value<a class="headerlink" href="#value" title="此标题的永久链接">¶</a></h3>
-<p>The base value of this tattoo. All of the standard tattoos are 500 flames. I
-roughly base things on 1 flame = 10p, so 10 flames = £1.</p>
+<p>纹身的基础价值。所有常规纹身都价值500火币。1火币大概是1人民币。</p>
 <div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;value&gt;</span>2000<span class="nt">&lt;/value&gt;</span>
 </pre></div>
 </div>
 </section>
 <section id="name">
 <h3><span class="section-number">2.3.1.2. </span>name<a class="headerlink" href="#name" title="此标题的永久链接">¶</a></h3>
-<p>The name of this tattoo.</p>
+<p>该纹身的名称。</p>
 <div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;name&gt;</span><span class="cp">&lt;![CDATA[heart womb]]&gt;</span><span class="nt">&lt;/name&gt;</span>
 </pre></div>
 </div>
 </section>
 <section id="description">
 <h3><span class="section-number">2.3.1.3. </span>description<a class="headerlink" href="#description" title="此标题的永久链接">¶</a></h3>
-<p>The description that’s shown in tooltips and on the item’s inspection page.</p>
+<p>显示在悬浮提示栏和物品检查页面中的描述。</p>
 <div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;description&gt;</span><span class="cp">&lt;![CDATA[A stylised heart tattoo, which roughly resembles the shape of a female&#39;s reproductive system.]]&gt;</span><span class="nt">&lt;/description&gt;</span>
 </pre></div>
 </div>
 </section>
 <section id="availabilityrequirements">
 <h3><span class="section-number">2.3.1.4. </span>availabilityRequirements<a class="headerlink" href="#availabilityrequirements" title="此标题的永久链接">¶</a></h3>
-<p>Availability requirements for this tattoo. Use ’npc’ for the character receiving
-the tattoo. Can be left blank.</p>
+<p>可用该纹身的要求。使用“npc”代表将要接受纹身的角色。可留空。</p>
 <dl>
-<dt>示例</dt><dd><p>tattoo available only to the player or feminine NPCs</p>
+<dt>示例</dt><dd><p>纹身仅对于玩家和女性化NPC可用。</p>
 <div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;availabilityRequirements&gt;</span><span class="cp">&lt;![CDATA[npc.isPlayer() || npc.isFeminine()]]&gt;</span><span class="nt">&lt;/availabilityRequirements&gt;</span>
 </pre></div>
 </div>
@@ -101,27 +98,24 @@ the tattoo. Can be left blank.</p>
 <p class="admonition-title">参见</p>
 <p><a class="reference internal" href="overview.html#items-image"><span class="std std-ref">物品的图像</span></a></p>
 </div>
-<p>The file path for this clothing’s image.</p>
+<p>该纹身图像的文件路径。</p>
 <div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;imageName&gt;</span>heart_womb.svg<span class="nt">&lt;/imageName&gt;</span>
 </pre></div>
 </div>
 </section>
 <section id="enchantmentlimit">
 <h3><span class="section-number">2.3.1.6. </span>enchantmentLimit<a class="headerlink" href="#enchantmentlimit" title="此标题的永久链接">¶</a></h3>
-<p>How many enchantments can be fit into this item. I feel like 5 is a good number
-for this.</p>
+<p>可以在该物品上施加多少种附魔。5大概是比较好的数字。</p>
 <div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;enchantmentLimit&gt;</span>10<span class="nt">&lt;/enchantmentLimit&gt;</span>
 </pre></div>
 </div>
 </section>
 <section id="slotavailability">
 <h3><span class="section-number">2.3.1.7. </span>slotAvailability<a class="headerlink" href="#slotavailability" title="此标题的永久链接">¶</a></h3>
-<p>Inventory slots that this tattoo can be assigned to. Leave blank to allow all
-slots to be used.</p>
+<p>该纹身可以被分配的装备栏位。留空则所有栏位均可用。</p>
 <div class="admonition seealso">
 <p class="admonition-title">参见</p>
-<p>List of <a class="reference external" href="https://github.com/Innoxia/liliths-throne-public/tree/dev//src/com/lilithsthrone/game/inventory/InventorySlot.java">possible
-slots</a>.</p>
+<p><a class="reference external" href="https://github.com/Innoxia/liliths-throne-public/tree/dev//src/com/lilithsthrone/game/inventory/InventorySlot.java">可用栏位</a> 的列表。</p>
 </div>
 <div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;slotAvailability&gt;</span>
 <span class="w">    </span><span class="nt">&lt;slot&gt;</span>GROIN<span class="nt">&lt;/slot&gt;</span>
@@ -131,17 +125,14 @@ slots</a>.</p>
 </section>
 <section id="colours">
 <h3><span class="section-number">2.3.1.8. </span>colours<a class="headerlink" href="#colours" title="此标题的永久链接">¶</a></h3>
-<p>Please consult the relevant <a class="reference internal" href="overview.html#colours"><span class="std std-ref">documentation about colours</span></a>.</p>
-<p>Use this section to define available colours for your tattoo. The game detects
-specific colour values, and recolours them to the value chosen by the player.</p>
+<p>请参阅相关条目 <a class="reference internal" href="overview.html#colours"><span class="std std-ref">documentation about colours</span></a>。</p>
+<p>使用该部分来定义纹身的可用颜色。游戏将检测特定的颜色数值，并基于玩家选择的数值为其重新染色。</p>
 <div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;primaryColours</span><span class="w"> </span><span class="na">values=</span><span class="s">&quot;ALL&quot;</span><span class="nt">/&gt;</span>
 <span class="nt">&lt;secondaryColours</span><span class="w"> </span><span class="na">values=</span><span class="s">&quot;ALL&quot;</span><span class="nt">/&gt;</span>
 <span class="nt">&lt;tertiaryColours</span><span class="w"> </span><span class="na">values=</span><span class="s">&quot;ALL&quot;</span><span class="nt">/&gt;</span>
 </pre></div>
 </div>
-<p>You can also make your own, custom list of colours to be used. If you want to
-include custom colours, do not define a ’values’ attribute, and instead, list
-each Colour, like in the example below.</p>
+<p>你可以自制颜色列表使用。如果想要将自制颜色包括其中，不要定义“values”属性，而是将每个Colour列出，如下方示例所示。</p>
 <div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;tertiaryColours&gt;</span>
 <span class="w">    </span><span class="nt">&lt;colour&gt;</span>CLOTHING_PINK<span class="nt">&lt;/colour&gt;</span>
 <span class="w">    </span><span class="nt">&lt;colour&gt;</span>CLOTHING_PINK_LIGHT<span class="nt">&lt;/colour&gt;</span>
@@ -163,7 +154,7 @@ each Colour, like in the example below.</p>
           <a href="items_items.html" title="Previous document"><span class="section-number">2.2. </span>Miscanelaous Items</a>
         </li>
         <li>
-          <a href="weapons.html" title="Next document"><span class="section-number">2.4. </span>Items Weapons</a>
+          <a href="weapons.html" title="Next document"><span class="section-number">2.4. </span>武器物品</a>
           &rarr;
         </li>
     </ul>
@@ -200,10 +191,10 @@ each Colour, like in the example below.</p>
 <li class="toctree-l3"><a class="reference internal" href="#coreattributes">2.3.1. coreAttributes</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="weapons.html">2.4. Items Weapons</a></li>
+<li class="toctree-l2"><a class="reference internal" href="weapons.html">2.4. 武器物品</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="outfits.html">3. Outfits</a></li>
+<li class="toctree-l1"><a class="reference internal" href="outfits.html">3. 预设套装</a></li>
 <li class="toctree-l1"><a class="reference internal" href="setBonuses.html">4. 物品套装</a></li>
 <li class="toctree-l1"><a class="reference internal" href="statusEffects.html">5. statusEffects</a></li>
 <li class="toctree-l1"><a class="reference internal" href="authors.html">6. 作者</a></li>
@@ -215,7 +206,7 @@ each Colour, like in the example below.</p>
   <li><a href="index.html">Documentation overview</a><ul>
   <li><a href="items.html"><span class="section-number">2. </span>“Items”文件夹</a><ul>
       <li>Previous: <a href="items_items.html" title="上一章"><span class="section-number">2.2. </span>Miscanelaous Items</a></li>
-      <li>Next: <a href="weapons.html" title="下一章"><span class="section-number">2.4. </span>Items Weapons</a></li>
+      <li>Next: <a href="weapons.html" title="下一章"><span class="section-number">2.4. </span>武器物品</a></li>
   </ul></li>
   </ul></li>
 </ul>

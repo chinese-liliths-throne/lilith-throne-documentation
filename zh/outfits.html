@@ -5,7 +5,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    <title>3. Outfits &#8212; Lilith&#39;s Throne Mod Documentation  文档</title>
+    <title>3. 预设套装 &#8212; Lilith&#39;s Throne Mod Documentation  文档</title>
     <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=4f649999" />
     <link rel="stylesheet" type="text/css" href="_static/alabaster.css?v=4a90727b" />
     <link rel="stylesheet" type="text/css" href="_static/graphviz.css?v=eafc0fe6" />
@@ -16,7 +16,7 @@
     <link rel="index" title="索引" href="genindex.html" />
     <link rel="search" title="搜索" href="search.html" />
     <link rel="next" title="4. 物品套装" href="setBonuses.html" />
-    <link rel="prev" title="2.4. Items Weapons" href="weapons.html" />
+    <link rel="prev" title="2.4. 武器物品" href="weapons.html" />
    
   <link rel="stylesheet" href="_static/custom.css" type="text/css" />
   
@@ -35,7 +35,7 @@
     <ul>
         <li>
           &larr;
-          <a href="weapons.html" title="Previous document"><span class="section-number">2.4. </span>Items Weapons</a>
+          <a href="weapons.html" title="Previous document"><span class="section-number">2.4. </span>武器物品</a>
         </li>
         <li>
           <a href="setBonuses.html" title="Next document"><span class="section-number">4. </span>物品套装</a>
@@ -49,7 +49,7 @@
           <div class="body" role="main">
             
   <section id="outfits">
-<h1><span class="section-number">3. </span>Outfits<a class="headerlink" href="#outfits" title="此标题的永久链接">¶</a></h1>
+<h1><span class="section-number">3. </span>预设套装<a class="headerlink" href="#outfits" title="此标题的永久链接">¶</a></h1>
 <blockquote>
 <div><dl class="field-list simple">
 <dt class="field-odd">作者<span class="colon">:</span></dt>
@@ -57,38 +57,32 @@
 </dd>
 </dl>
 </div></blockquote>
-<p>Outfits are a way to make randomly generated NPCs’ outfit generation less
-chaotic.</p>
-<p>As a final note, I will add support for allowing the automatic generation of
-piercings in the next update.</p>
-<p>An annotated example lives at
-<a class="reference external" href="https://github.com/Innoxia/liliths-throne-public/tree/dev/res/mods/innoxia/outfits/casualDates/dress_toys.xml">res/mods/innoxia/outfits/casualDates/dress_toys.xml</a></p>
+<p>预设套装的目的是让随机NPC的衣物生成时不那么混乱。</p>
+<p>最后提醒一句，下次更新我将允许自动生成穿孔。</p>
+<p>此处是一个有注解的例子 <a class="reference external" href="https://github.com/Innoxia/liliths-throne-public/tree/dev/res/mods/innoxia/outfits/casualDates/dress_toys.xml">res/mods/innoxia/outfits/casualDates/dress_toys.xml</a></p>
 <section id="coreattributes">
 <h2><span class="section-number">3.1. </span>coreAttributes<a class="headerlink" href="#coreattributes" title="此标题的永久链接">¶</a></h2>
 <section id="name">
-<h3><span class="section-number">3.1.1. </span>名字<a class="headerlink" href="#name" title="此标题的永久链接">¶</a></h3>
-<p>Names are only used for debugging purposes. Still, in case the name is used
-elsewhere later on, it’s best to give your outfit a suitable (lowercase) name.</p>
+<h3><span class="section-number">3.1.1. </span>name<a class="headerlink" href="#name" title="此标题的永久链接">¶</a></h3>
+<p>名称只会用于debug。然而该名称后续可能会使用在其他位置，最好给预设套装一个合适的(小写)名称。</p>
 <div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;name&gt;</span><span class="cp">&lt;![CDATA[casual dress with toys]]&gt;</span><span class="nt">&lt;/name&gt;</span>
 </pre></div>
 </div>
 </section>
 <section id="description">
-<h3><span class="section-number">3.1.2. </span>描述<a class="headerlink" href="#description" title="此标题的永久链接">¶</a></h3>
-<p>Again, descriptions are only used for debugging purposes. Still, in case the
-name is used elsewhere later on, it’s best to give your outfit a suitable
-description.</p>
+<h3><span class="section-number">3.1.2. </span>description<a class="headerlink" href="#description" title="此标题的永久链接">¶</a></h3>
+<p>同样，描述只会用于debug。然而该描述后续可能会使用在其他位置，最好给预设套装一个合适的描述。</p>
 <div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;description&gt;</span><span class="cp">&lt;![CDATA[A dress hides the fact that the wearer has a toy or two inserted into their orifices...]]&gt;</span><span class="nt">&lt;/description&gt;</span>
 </pre></div>
 </div>
 </section>
 <section id="femininity">
 <h3><span class="section-number">3.1.3. </span>femininity<a class="headerlink" href="#femininity" title="此标题的永久链接">¶</a></h3>
-<p>The femininity needed for someone to generate this outfit.</p>
-<p>The three acceptables values are respectively:</p>
+<p>生成这套预设套装所需的女性化程度。</p>
+<p>接受三种数值，分别为:</p>
 <ol class="arabic simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">MASCULINE</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">ANDROGYNOUS</span></code> (anyone can use this outfit)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ANDROGYNOUS</span></code> (所有人均可使用)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">FEMININE</span></code></p></li>
 </ol>
 <div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;femininity&gt;</span>FEMININE<span class="nt">&lt;/femininity&gt;</span>
@@ -97,13 +91,10 @@ description.</p>
 </section>
 <section id="worldtypes">
 <h3><span class="section-number">3.1.4. </span>worldTypes<a class="headerlink" href="#worldtypes" title="此标题的永久链接">¶</a></h3>
-<p>The worlds in which this outfit may be used for randomly generated characters.
-You can leave this empty, or delete the element entirely, if you do not want
-this outfit to be restricted based on <code class="docutils literal notranslate"><span class="pre">WorldType</span></code> (so it can be used
-anywhere).</p>
+<p>该预设套装会在那种世界类型中应用在随机生成角色身上。你可以将其留空，或者直接删除该元素，这样该书社套装就不会受到 <code class="docutils literal notranslate"><span class="pre">WorldType</span></code> 的限制(也就时随处可用)。</p>
 <div class="admonition seealso">
 <p class="admonition-title">参见</p>
-<p><a class="reference external" href="https://github.com/Innoxia/liliths-throne-public/tree/dev/src/com/lilithsthrone/world/WorldType.java">src/com/lilithsthrone/world/WorldType.java</a>.</p>
+<p><a class="reference external" href="https://github.com/Innoxia/liliths-throne-public/tree/dev/src/com/lilithsthrone/world/WorldType.java">src/com/lilithsthrone/world/WorldType.java</a>。</p>
 </div>
 <div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;worldTypes&gt;</span>
 <span class="w">    </span><span class="nt">&lt;world&gt;</span>DOMINION<span class="nt">&lt;/world&gt;</span>
@@ -114,15 +105,14 @@ anywhere).</p>
 </section>
 <section id="outfittypes">
 <h3><span class="section-number">3.1.5. </span>outfitTypes<a class="headerlink" href="#outfittypes" title="此标题的永久链接">¶</a></h3>
-<p>Outfit types that this outfit can be used in.</p>
+<p>该预设套装可以用于的预设套装类型。</p>
 <div class="admonition seealso">
 <p class="admonition-title">参见</p>
-<p>A list of <a class="reference external" href="https://github.com/Innoxia/liliths-throne-public/tree/dev/src/com/lilithsthrone/game/inventory/clothing/OutfitType.java">outfitTypes</a>.</p>
+<p>预设套装列表 <a class="reference external" href="https://github.com/Innoxia/liliths-throne-public/tree/dev/src/com/lilithsthrone/game/inventory/clothing/OutfitType.java">outfitTypes</a>。</p>
 </div>
 <div class="admonition caution">
 <p class="admonition-title">小心</p>
-<p>At the time of creation (<em>v0.3.0.6</em>), only the <code class="docutils literal notranslate"><span class="pre">MUGGER</span></code> outfitType is used
-in the game. All outfit types will be added eventually.</p>
+<p>截至目前(<em>v0.3.0.6</em>)，游戏中只有 <code class="docutils literal notranslate"><span class="pre">MUGGER</span></code> 预设套装类型正在使用。但最终将会补齐预设套装类型。</p>
 </div>
 <div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;outfitTypes&gt;</span>
 <span class="w">    </span><span class="nt">&lt;type&gt;</span>CASUAL_DATE<span class="nt">&lt;/type&gt;</span>
@@ -132,10 +122,10 @@ in the game. All outfit types will be added eventually.</p>
 </section>
 <section id="acceptablelegconfigurations">
 <h3><span class="section-number">3.1.6. </span>acceptableLegConfigurations<a class="headerlink" href="#acceptablelegconfigurations" title="此标题的永久链接">¶</a></h3>
-<p>Define which leg configurations can equip this outfit.</p>
+<p>定义那些腿部配置可以装备该预设套装。</p>
 <div class="admonition seealso">
 <p class="admonition-title">参见</p>
-<p>A list of <a class="reference external" href="https://github.com/Innoxia/liliths-throne-public/tree/dev/src/com/lilithsthrone/game/character/body/valueEnums/LegConfiguration.java">legConfiguration</a>.</p>
+<p>腿部配置列表  <a class="reference external" href="https://github.com/Innoxia/liliths-throne-public/tree/dev/src/com/lilithsthrone/game/character/body/valueEnums/LegConfiguration.java">legConfiguration</a>。</p>
 </div>
 <div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;acceptableLegConfigurations&gt;</span>
 <span class="w">    </span><span class="nt">&lt;legConfiguration&gt;</span>BIPEDAL<span class="nt">&lt;/legConfiguration&gt;</span>
@@ -145,24 +135,16 @@ in the game. All outfit types will be added eventually.</p>
 </section>
 <section id="conditional">
 <h3><span class="section-number">3.1.7. </span>conditional<a class="headerlink" href="#conditional" title="此标题的永久链接">¶</a></h3>
-<p>The condition that needs to be satisfied for someone to generate this outfit.
-<code class="docutils literal notranslate"><span class="pre">npc.hasFetish(FETISH_EXHIBITIONIST)</span></code> should probably always be taken into
-account. This conditional instance does <strong>not</strong> support the
-<code class="docutils literal notranslate"><span class="pre">clothingConditionalX</span></code> elements.</p>
+<p>对于某角色，需要满足这些条件才能生成该预设套装。 <code class="docutils literal notranslate"><span class="pre">npc.hasFetish(FETISH_EXHIBITIONIST)``总应当纳入考虑。该条件**不支持**</span> <span class="pre">``clothingConditionalX</span></code> 元素。</p>
 <div class="admonition seealso">
 <p class="admonition-title">参见</p>
 <ul class="simple">
-<li><p>List of accepted
-<a class="reference external" href="https://github.com/Innoxia/liliths-throne-public/tree/dev/src/com/lilithsthrone/game/character/GameCharacter.java">method calls</a>
-for the “npc” (using the <code class="docutils literal notranslate"><span class="pre">npc</span></code> tag).</p></li>
-<li><p>List of accepted <a class="reference external" href="https://github.com/Innoxia/liliths-throne-public/tree/dev/src/com/lilithsthrone/game/Game.java">method calls</a>
-for the main game (using the <code class="docutils literal notranslate"><span class="pre">game</span></code> tag).</p></li>
-<li><p>Generic method calls can be found in:
-<a class="reference external" href="https://github.com/Innoxia/liliths-throne-public/tree/dev/src/com/lilithsthrone/game/dialogue/utils/UtilText.java">src/com/lilithsthrone/game/dialogue/utils/UtilText.java</a></p></li>
+<li><p>对于“npc”(使用 <code class="docutils literal notranslate"><span class="pre">npc</span></code> 即可)可用的 <a class="reference external" href="https://github.com/Innoxia/liliths-throne-public/tree/dev/src/com/lilithsthrone/game/character/GameCharacter.java">方法调用</a>。</p></li>
+<li><p>对于主游戏(使用 <code class="docutils literal notranslate"><span class="pre">game</span></code> )可用 <a class="reference external" href="https://github.com/Innoxia/liliths-throne-public/tree/dev/src/com/lilithsthrone/game/Game.java">方法调用</a>。</p></li>
+<li><p>通用方法调用参见: <a class="reference external" href="https://github.com/Innoxia/liliths-throne-public/tree/dev/src/com/lilithsthrone/game/dialogue/utils/UtilText.java">src/com/lilithsthrone/game/dialogue/utils/UtilText.java</a></p></li>
 </ul>
 </div>
-<p>The method <code class="docutils literal notranslate"><span class="pre">initScriptEngine()</span></code> in <code class="docutils literal notranslate"><span class="pre">UtilText.java</span></code> shows you what you can get a
-handle on.</p>
+<p><code class="docutils literal notranslate"><span class="pre">UtilText.java</span></code> 中的 <code class="docutils literal notranslate"><span class="pre">initScriptEngine()</span></code> 方法展示了可以使用的内容。</p>
 <div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;conditional&gt;</span><span class="cp">&lt;![CDATA[!npc.hasFetish(FETISH_EXHIBITIONIST) &amp;&amp; npc.hasFetish(FETISH_MASTURBATION) &amp;&amp; npc.getFetishDesire(FETISH_SUBMISSIVE).isPositive()]**&gt;</span><span class="nt">&lt;/conditional&gt;</span>
 </pre></div>
 </div>
@@ -641,7 +623,7 @@ used as a pre-set colour list instead of defining individual colours.</p>
     <ul>
         <li>
           &larr;
-          <a href="weapons.html" title="Previous document"><span class="section-number">2.4. </span>Items Weapons</a>
+          <a href="weapons.html" title="Previous document"><span class="section-number">2.4. </span>武器物品</a>
         </li>
         <li>
           <a href="setBonuses.html" title="Next document"><span class="section-number">4. </span>物品套装</a>
@@ -675,10 +657,10 @@ used as a pre-set colour list instead of defining individual colours.</p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="overview.html">1. 概览</a></li>
 <li class="toctree-l1"><a class="reference internal" href="items.html">2. “Items”文件夹</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">3. Outfits</a><ul>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">3. 预设套装</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#coreattributes">3.1. coreAttributes</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#name">3.1.1. 名字</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#description">3.1.2. 描述</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#name">3.1.1. name</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#description">3.1.2. description</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#femininity">3.1.3. femininity</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#worldtypes">3.1.4. worldTypes</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#outfittypes">3.1.5. outfitTypes</a></li>
@@ -707,7 +689,7 @@ used as a pre-set colour list instead of defining individual colours.</p>
 <h3>Related Topics</h3>
 <ul>
   <li><a href="index.html">Documentation overview</a><ul>
-      <li>Previous: <a href="weapons.html" title="上一章"><span class="section-number">2.4. </span>Items Weapons</a></li>
+      <li>Previous: <a href="weapons.html" title="上一章"><span class="section-number">2.4. </span>武器物品</a></li>
       <li>Next: <a href="setBonuses.html" title="下一章"><span class="section-number">4. </span>物品套装</a></li>
   </ul></li>
 </ul>

@@ -5,7 +5,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    <title>2.4. Items Weapons &#8212; Lilith&#39;s Throne Mod Documentation  文档</title>
+    <title>2.4. 武器物品 &#8212; Lilith&#39;s Throne Mod Documentation  文档</title>
     <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=4f649999" />
     <link rel="stylesheet" type="text/css" href="_static/alabaster.css?v=4a90727b" />
     <link rel="stylesheet" type="text/css" href="_static/graphviz.css?v=eafc0fe6" />
@@ -15,7 +15,7 @@
     <link rel="canonical" href="https://bicobus.github.io/lilith-throne-documentation/weapons.html" />
     <link rel="index" title="索引" href="genindex.html" />
     <link rel="search" title="搜索" href="search.html" />
-    <link rel="next" title="3. Outfits" href="outfits.html" />
+    <link rel="next" title="3. 预设套装" href="outfits.html" />
     <link rel="prev" title="2.3. 纹身" href="tattoos.html" />
    
   <link rel="stylesheet" href="_static/custom.css" type="text/css" />
@@ -38,7 +38,7 @@
           <a href="tattoos.html" title="Previous document"><span class="section-number">2.3. </span>纹身</a>
         </li>
         <li>
-          <a href="outfits.html" title="Next document"><span class="section-number">3. </span>Outfits</a>
+          <a href="outfits.html" title="Next document"><span class="section-number">3. </span>预设套装</a>
           &rarr;
         </li>
     </ul>
@@ -49,7 +49,7 @@
           <div class="body" role="main">
             
   <section id="items-weapons">
-<h1><span class="section-number">2.4. </span>Items Weapons<a class="headerlink" href="#items-weapons" title="此标题的永久链接">¶</a></h1>
+<h1><span class="section-number">2.4. </span>武器物品<a class="headerlink" href="#items-weapons" title="此标题的永久链接">¶</a></h1>
 <blockquote>
 <div><dl class="field-list simple">
 <dt class="field-odd">作者<span class="colon">:</span></dt>
@@ -265,25 +265,20 @@
 </div>
 <p>需要注意 <code class="docutils literal notranslate"><span class="pre">damageType</span></code> 不需要与法术的学派保持一致（所以 <code class="docutils literal notranslate"><span class="pre">FIRE</span></code> 能够解锁 <code class="docutils literal notranslate"><span class="pre">ICE_SHARD</span></code> ，等等）</p>
 <p>法术值可以在这里找： <a class="reference external" href="https://github.com/Innoxia/liliths-throne-public/blob/master/src/com/lilithsthrone/game/combat/Spell.java">https://github.com/Innoxia/liliths-throne-public/blob/master/src/com/lilithsthrone/game/combat/Spell.java</a></p>
-<p>For an empty spell list, use an empty element:</p>
+<p>对于空的法术列表，请使用空元素:</p>
 <div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;spells/&gt;</span>
 </pre></div>
 </div>
 </section>
 <section id="combatmoves">
 <span id="combat-moves"></span><h3><span class="section-number">2.4.1.23. </span>1.23 combatMoves<a class="headerlink" href="#combatmoves" title="此标题的永久链接">¶</a></h3>
-<p>The combat moves that are unlocked when equipping this weapon. The <code class="docutils literal notranslate"><span class="pre">combatMoves</span></code>
-element is similar to the <a class="reference internal" href="#spells">spells</a> element.</p>
+<p>装备该武器时解锁的战斗动作。 <code class="docutils literal notranslate"><span class="pre">combatMoves</span></code> 元素与 <a class="reference internal" href="#spells">spells</a> 元素相似。</p>
 <div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;combatMoves</span><span class="w"> </span><span class="na">changeOnReforge=</span><span class="s">&quot;true&quot;</span><span class="nt">&gt;</span>
 <span class="w">    </span><span class="nt">&lt;move</span><span class="w"> </span><span class="na">damageType=</span><span class="s">&quot;PHYSICAL&quot;</span><span class="nt">&gt;</span>ASSAULT_RIFLE_MAG_DUMP<span class="nt">&lt;/move&gt;</span>
 <span class="nt">&lt;/combatMoves&gt;</span>
 </pre></div>
 </div>
-<p>The changeOnReforge variable determines whether this weapon should regenerate
-combat moves whenever the player changes the damage type. Using the example
-above, if they reforge a <code class="docutils literal notranslate"><span class="pre">PHYSICAL</span></code> dagger to an <code class="docutils literal notranslate"><span class="pre">ICE</span></code> dagger and
-changeOnReforge is true, then the granted combat move <code class="docutils literal notranslate"><span class="pre">ASSAULT_RIFLE_MAG_DUMP</span></code>
-will be lost.</p>
+<p>changeOnReforge属性决定了该武器是否会在玩家修改伤害类型时，重新生成战斗动作。以上方的示例为例，如果将一个 <code class="docutils literal notranslate"><span class="pre">PHYSICAL</span></code> 伤害的匕首重铸成 <code class="docutils literal notranslate"><span class="pre">ICE</span></code> 伤害的匕首，且changeOnReforge值为true，那么原本获得的战斗动作 <code class="docutils literal notranslate"><span class="pre">ASSAULT_RIFLE_MAG_DUMP</span></code> 就会消失。</p>
 <p>damageType变量与解锁衍生武器动作的damageType保持一致。可以拥有多种同种damageType，比如：</p>
 <div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;move</span><span class="w"> </span><span class="na">damageType=</span><span class="s">&quot;FIRE&quot;</span><span class="nt">&gt;</span>EXAMPLE_MOVE_1<span class="nt">&lt;/move&gt;</span>
 <span class="nt">&lt;move</span><span class="w"> </span><span class="na">damageType=</span><span class="s">&quot;FIRE&quot;</span><span class="nt">&gt;</span>EXAMPLE_MOVE_2<span class="nt">&lt;/move&gt;</span>
@@ -291,39 +286,31 @@ will be lost.</p>
 <span class="nt">&lt;move</span><span class="w"> </span><span class="na">damageType=</span><span class="s">&quot;FIRE&quot;</span><span class="nt">&gt;</span>EXAMPLE_MOVE_4<span class="nt">&lt;/move&gt;</span>
 </pre></div>
 </div>
-<p>Values for combat moves can be found here: <a class="reference external" href="https://github.com/Innoxia/liliths-throne-public/blob/master/src/com/lilithsthrone/game/combat/CMWeaponSpecials.java">https://github.com/Innoxia/liliths-throne-public/blob/master/src/com/lilithsthrone/game/combat/CMWeaponSpecials.java</a></p>
-<p><strong>Note:</strong> combat moves are not yet moddable. There will be a way to add modded
-combat moves soon!</p>
-<p>For an item with no combat move, simply write an empty element:</p>
+<p>战斗动作的可用值请参见: <a class="reference external" href="https://github.com/Innoxia/liliths-throne-public/blob/master/src/com/lilithsthrone/game/combat/CMWeaponSpecials.java">https://github.com/Innoxia/liliths-throne-public/blob/master/src/com/lilithsthrone/game/combat/CMWeaponSpecials.java</a></p>
+<p><strong>注意:</strong> 战斗动作暂时无法mod。很快就会有添加mod战斗动作的功能！</p>
+<p>对于没有战斗动作的物品，留作空元素即可:</p>
 <div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;combatMoves/&gt;</span>
 </pre></div>
 </div>
 </section>
 <section id="enchantmentlimit">
 <h3><span class="section-number">2.4.1.24. </span>1.24 enchantmentLimit(附魔限制)<a class="headerlink" href="#enchantmentlimit" title="此标题的永久链接">¶</a></h3>
-<p>How many effects this weapon can be enchanted with. Weapons standard is 5, for
-balance purpose.</p>
+<p>该武器可以被施加的附魔的数量。考虑到平衡，标准武器为5。</p>
 <div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;enchantmentLimit&gt;</span>5<span class="nt">&lt;/enchantmentLimit&gt;</span>
 </pre></div>
 </div>
 </section>
 <section id="effects">
 <h3><span class="section-number">2.4.1.25. </span>1.25 effects(效果)<a class="headerlink" href="#effects" title="此标题的永久链接">¶</a></h3>
-<p>The effects that this weapon spawns in with. Remember that the player can
-remove, change or add effects. To know what to put in here, it would probably be
-easiest to enchant clothing in your game, save the game, then copy over that
-clothing’s ’effects’ in your save file.</p>
-<p>There are two special values for secondaryModifier, which are:</p>
+<p>该武器生成时附带的效果。请记住玩家可以移除、修改或添加效果。如果想知道该元素内应该填入什么，最简单的方式就是在游戏中附魔，保存游戏，然后复制对应物品的“effects”到此处。</p>
+<p>对于secondaryModifier有两个特殊值，分别是:</p>
 <dl class="simple">
-<dt><code class="docutils literal notranslate"><span class="pre">RESISTANCE_WEAPON</span></code></dt><dd><p>applies the related resistance of this weapon’s damage
-type.</p>
+<dt><code class="docutils literal notranslate"><span class="pre">RESISTANCE_WEAPON</span></code></dt><dd><p>添加与该武器伤害类型相关的护盾。</p>
 </dd>
-<dt><code class="docutils literal notranslate"><span class="pre">DAMAGE_WEAPON</span></code></dt><dd><p>applies the related damage type.</p>
+<dt><code class="docutils literal notranslate"><span class="pre">DAMAGE_WEAPON</span></code></dt><dd><p>添加与该武器伤害类型相关的伤害。</p>
 </dd>
 </dl>
-<p>For example, if this dagger spawned in as type <code class="docutils literal notranslate"><span class="pre">POISON</span></code>, and I’d replaced both
-instances of <code class="docutils literal notranslate"><span class="pre">CRITICAL_CHANCE</span></code> with <code class="docutils literal notranslate"><span class="pre">DAMAGE_WEAPON</span></code>, then this dagger would
-spawn with two +5 Poison Damage effects.</p>
+<p>例如，若该匕首生成时类型为 <code class="docutils literal notranslate"><span class="pre">POISON</span></code>， 然后我将两个 <code class="docutils literal notranslate"><span class="pre">CRITICAL_CHANCE``都替换为了</span> <span class="pre">``DAMAGE_WEAPON</span></code>，那么该匕首生成时将带有两个+5毒素伤害的效果。</p>
 <div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;effects&gt;</span>
 <span class="w">    </span><span class="nt">&lt;effect</span><span class="w"> </span><span class="na">itemEffectType=</span><span class="s">&quot;CLOTHING&quot;</span><span class="w"> </span><span class="na">limit=</span><span class="s">&quot;0&quot;</span><span class="w"> </span><span class="na">potency=</span><span class="s">&quot;MAJOR_BOOST&quot;</span><span class="w"> </span><span class="na">primaryModifier=</span><span class="s">&quot;CLOTHING_ATTRIBUTE&quot;</span><span class="w"> </span><span class="na">secondaryModifier=</span><span class="s">&quot;CRITICAL_CHANCE&quot;</span><span class="w"> </span><span class="na">timer=</span><span class="s">&quot;0&quot;</span><span class="nt">/&gt;</span>
 <span class="w">    </span><span class="nt">&lt;effect</span><span class="w"> </span><span class="na">itemEffectType=</span><span class="s">&quot;CLOTHING&quot;</span><span class="w"> </span><span class="na">limit=</span><span class="s">&quot;0&quot;</span><span class="w"> </span><span class="na">potency=</span><span class="s">&quot;MAJOR_BOOST&quot;</span><span class="w"> </span><span class="na">primaryModifier=</span><span class="s">&quot;CLOTHING_ATTRIBUTE&quot;</span><span class="w"> </span><span class="na">secondaryModifier=</span><span class="s">&quot;CRITICAL_CHANCE&quot;</span><span class="w"> </span><span class="na">timer=</span><span class="s">&quot;0&quot;</span><span class="nt">/&gt;</span>
@@ -333,56 +320,42 @@ spawn with two +5 Poison Damage effects.</p>
 </section>
 <section id="extraeffects">
 <h3><span class="section-number">2.4.1.26. </span>1.26 extraEffects<a class="headerlink" href="#extraeffects" title="此标题的永久链接">¶</a></h3>
-<p>You can use this section to describe any extra features of this weapon. These
-effects are shown in the tooltip when the player hovers over the weapon icon, so
-try and keep them short (as they should fit on one line). It should probably
-only be used to describe what happens in the <a class="reference internal" href="#onhiteffect">1.27 onHitEffect</a> element. No characters
-are passed in as parsing arguments, so you should <strong>not</strong> use any
-character-specific parsing elements (such as <code class="docutils literal notranslate"><span class="pre">[npc.name]</span></code>). For this weapon, no
-extra effects need to be described, but if you need to use this section, use the
-following format:</p>
+<p>你可以使用这一部分来描述该武器可能附带的额外效果。当玩家将鼠标悬浮在武器图标上，这些效果将会显示在提示中所以尽量保持简短(应当保持在一行内)。应当仅用于描述 <cite>1.27 onHitEffect</cite> 元素中发生的结果。没有角色会当作解析参数传入，所以你**不应**使用任何与角色相关的解析元素(例如 <code class="docutils literal notranslate"><span class="pre">[npc.name]</span></code>)。对于该武器，没有特殊效果需要描述，但如果你想要使用这一部分，请遵循以下格式：</p>
 <div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;extraEffects&gt;</span>
 <span class="w">    </span><span class="nt">&lt;effect&gt;</span><span class="cp">&lt;![CDATA[Stab time!]]&gt;</span><span class="nt">&lt;/effect&gt;</span>
 <span class="nt">&lt;/extraEffects&gt;</span>
 </pre></div>
 </div>
-<p>Empty extra effect:</p>
+<p>空额外效果:</p>
 <div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;extraEffects/&gt;</span>
 </pre></div>
 </div>
 </section>
 <section id="onhiteffect">
 <span id="on-hit-effect"></span><h3><span class="section-number">2.4.1.27. </span>1.27 onHitEffect<a class="headerlink" href="#onhiteffect" title="此标题的永久链接">¶</a></h3>
-<p>This is applied every time this weapon hits a target. It does <strong>not</strong> apply when
-the weapon critically hits. The returned text is appended to the hit
-description. <code class="docutils literal notranslate"><span class="pre">npc</span></code> corresponds to the attacker, and <code class="docutils literal notranslate"><span class="pre">npc2</span></code> to the target, for
-use in effects/parsing. For this weapon, no hit effects need to be added, but if
-you need to use this section, use the following format:</p>
+<p>此处的效果将会在每次武器击中目标时应用。但并 <strong>不会</strong> 在武器重击时应用。返回的文本将会被添加到击中描述的后方。 <code class="docutils literal notranslate"><span class="pre">npc</span></code> 代表着攻击者，而 <code class="docutils literal notranslate"><span class="pre">npc2</span></code> 代表着目标，用于效果或解析。对于该武器，没有击中效果需要添加，但如果你想要使用这一部分，请遵循以下格式：</p>
 <div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;onHitEffect&gt;</span><span class="cp">&lt;![CDATA[</span>
 <span class="cp">[##npc2.setHealth(0)]</span>
 <span class="cp">[npc2.Name] is instantly defeated!</span>
 <span class="cp">]]&gt;</span><span class="nt">&lt;/onHitEffect&gt;</span>
 </pre></div>
 </div>
-<p>An empty effect</p>
+<p>空效果</p>
 <div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;onHitEffect/&gt;</span>
 </pre></div>
 </div>
 </section>
 <section id="oncriticalhiteffect">
 <h3><span class="section-number">2.4.1.28. </span>1.28 onCriticalHitEffect<a class="headerlink" href="#oncriticalhiteffect" title="此标题的永久链接">¶</a></h3>
-<p>This is applied every time this weapon critically hits a target. It does <strong>not</strong>
-apply when the weapon does a non-critical hit.</p>
-<p>The returned text is appended to the hit description. <code class="docutils literal notranslate"><span class="pre">npc</span></code> corresponds to the
-attacker, and <code class="docutils literal notranslate"><span class="pre">npc2</span></code> to the target, for use in effects/parsing. Use the same
-format as <a class="reference internal" href="#on-hit-effect">on-hit-effect</a>.</p>
+<p>此处的效果将会在每次武器重击目标时应用。但并 <strong>不会</strong> 在武器非重击时应用。</p>
+<p>返回的文本将会被添加到击中描述的后方。 <code class="docutils literal notranslate"><span class="pre">npc</span></code> 代表着攻击者，而 <code class="docutils literal notranslate"><span class="pre">npc2</span></code> 代表着目标，用于效果或解析。请与 <a class="reference internal" href="#on-hit-effect">on-hit-effect</a> 使用同样格式。</p>
 <div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;onCriticalHitEffect/&gt;</span>
 </pre></div>
 </div>
 </section>
 <section id="colours">
 <h3><span class="section-number">2.4.1.29. </span>1.29 colours<a class="headerlink" href="#colours" title="此标题的永久链接">¶</a></h3>
-<p>Please consult the relevant <a class="reference external" href="index.rst">documentation</a> about colours.</p>
+<p>请参见与颜色有关的相关 <a class="reference external" href="index.rst">文档</a> 。</p>
 <p>衣服可以按喜欢的方式着色，但如果你希望玩家可以给衣服染色，你可以在这里指定可用的颜色。 <code class="docutils literal notranslate"><span class="pre">primaryColours</span></code> 和  <code class="docutils literal notranslate"><span class="pre">secondaryColours</span></code> 都是以默认颜色生成的，而它们的 <code class="docutils literal notranslate"><span class="pre">Dye</span></code> 只有在玩家选择将衣服染成该颜色时才可用。 游戏会检测特定的颜色值，并根据玩家选择的值重新染色。值如下：</p>
 <ul class="simple">
 <li><p>红色是游戏中 <code class="docutils literal notranslate"><span class="pre">DAMAGE</span> <span class="pre">TYPE</span></code> 图形颜色时使用的基本颜色，游戏中武器只能识别和更改以下颜色：</p>
@@ -519,7 +492,7 @@ format as <a class="reference internal" href="#on-hit-effect">on-hit-effect</a>.
           <a href="tattoos.html" title="Previous document"><span class="section-number">2.3. </span>纹身</a>
         </li>
         <li>
-          <a href="outfits.html" title="Next document"><span class="section-number">3. </span>Outfits</a>
+          <a href="outfits.html" title="Next document"><span class="section-number">3. </span>预设套装</a>
           &rarr;
         </li>
     </ul>
@@ -553,7 +526,7 @@ format as <a class="reference internal" href="#on-hit-effect">on-hit-effect</a>.
 <li class="toctree-l2"><a class="reference internal" href="clothing.html">2.1. 衣物类物品</a></li>
 <li class="toctree-l2"><a class="reference internal" href="items_items.html">2.2. Miscanelaous Items</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tattoos.html">2.3. 纹身</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">2.4. Items Weapons</a><ul>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">2.4. 武器物品</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#coreattributes">2.4.1. coreAttributes</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#hitdescription">2.4.2. 2 hitDescription</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#missdescription">2.4.3. 3 missDescription</a></li>
@@ -561,7 +534,7 @@ format as <a class="reference internal" href="#on-hit-effect">on-hit-effect</a>.
 </li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="outfits.html">3. Outfits</a></li>
+<li class="toctree-l1"><a class="reference internal" href="outfits.html">3. 预设套装</a></li>
 <li class="toctree-l1"><a class="reference internal" href="setBonuses.html">4. 物品套装</a></li>
 <li class="toctree-l1"><a class="reference internal" href="statusEffects.html">5. statusEffects</a></li>
 <li class="toctree-l1"><a class="reference internal" href="authors.html">6. 作者</a></li>
@@ -573,7 +546,7 @@ format as <a class="reference internal" href="#on-hit-effect">on-hit-effect</a>.
   <li><a href="index.html">Documentation overview</a><ul>
   <li><a href="items.html"><span class="section-number">2. </span>“Items”文件夹</a><ul>
       <li>Previous: <a href="tattoos.html" title="上一章"><span class="section-number">2.3. </span>纹身</a></li>
-      <li>Next: <a href="outfits.html" title="下一章"><span class="section-number">3. </span>Outfits</a></li>
+      <li>Next: <a href="outfits.html" title="下一章"><span class="section-number">3. </span>预设套装</a></li>
   </ul></li>
   </ul></li>
 </ul>

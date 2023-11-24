@@ -295,7 +295,7 @@
 <section id="nameprefix">
 <h6><span class="section-number">2.1.2.14.1.2.2. </span>namePrefix<a class="headerlink" href="#nameprefix" title="此标题的永久链接">¶</a></h6>
 <p>定义 <code class="docutils literal notranslate"><span class="pre">namePrefix</span></code> 可以在在使用该标签后，为基础的衣物名称前添加前缀。</p>
-<p><code class="docutils literal notranslate"><span class="pre">priority</span></code> 元素定义了多个标签的 <code class="docutils literal notranslate"><span class="pre">namePrefix</span></code> 显示时的顺序。<strong>越低的数值</strong> 代表该前缀会 <strong>越先显示</strong>。可以不显式声明。</p>
+<p><code class="docutils literal notranslate"><span class="pre">priority</span></code> 元素定义了多个标签的 <code class="docutils literal notranslate"><span class="pre">namePrefix</span></code> 显示时的顺序。 <strong>越低的数值</strong> 代表该前缀会 <strong>越先显示</strong> 。可以不显式声明。</p>
 <dl>
 <dt>属性</dt><dd><ul class="simple">
 <li><p>priority (整数)</p></li>
@@ -393,12 +393,11 @@ to the player when disabled.</p>
 to anyone.</p>
 <dl class="simple">
 <dt>属性</dt><dd><ul class="simple">
-<li><p>showDisabledButton (boolean)</p></li>
+<li><p>showDisabledButton (boolean) 显示不可用按钮（布尔值）</p></li>
 </ul>
 </dd>
 </dl>
-<p>An example where the player could only use the sticker while being feminine
-would be:</p>
+<p>这里的例子是，玩家只使用标签来变得女性化的情况：</p>
 <div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;unavailabilityText</span><span class="w"> </span><span class="na">showDisabledButton=</span><span class="s">&quot;true&quot;</span><span class="nt">&gt;</span><span class="cp">&lt;![CDATA[</span>
 <span class="cp">    #IF(!pc.isFeminine())</span>
 <span class="cp">    Only feminine characters can apply this sticker!</span>
@@ -406,8 +405,7 @@ would be:</p>
 <span class="cp">]]&gt;</span><span class="nt">&lt;/unavailabilityText&gt;</span>
 </pre></div>
 </div>
-<p>And for this example, the disabled button is not shown to the player, so there’s
-no need for an elaborate description, as the player will never see it:</p>
+<p>在这个例子里，不可用按钮并不会显示给玩家，所以没必要写太过详尽的描述，因为玩家看不见：</p>
 <div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;unavailabilityText</span><span class="w"> </span><span class="na">showDisabledButton=</span><span class="s">&quot;false&quot;</span><span class="nt">&gt;</span><span class="cp">&lt;![CDATA[</span>
 <span class="cp">    #IF(pc.getSubspeciesOverrideRace()!=RACE_DEMON &amp;&amp; !pc.isFeminine())</span>
 <span class="cp">            unavailable</span>
@@ -944,10 +942,10 @@ your descriptions are applied to. For standard equipping and unequipping, use
 </li>
 <li class="toctree-l2"><a class="reference internal" href="items_items.html">2.2. Miscanelaous Items</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tattoos.html">2.3. 纹身</a></li>
-<li class="toctree-l2"><a class="reference internal" href="weapons.html">2.4. Items Weapons</a></li>
+<li class="toctree-l2"><a class="reference internal" href="weapons.html">2.4. 武器物品</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="outfits.html">3. Outfits</a></li>
+<li class="toctree-l1"><a class="reference internal" href="outfits.html">3. 预设套装</a></li>
 <li class="toctree-l1"><a class="reference internal" href="setBonuses.html">4. 物品套装</a></li>
 <li class="toctree-l1"><a class="reference internal" href="statusEffects.html">5. statusEffects</a></li>
 <li class="toctree-l1"><a class="reference internal" href="authors.html">6. 作者</a></li>
