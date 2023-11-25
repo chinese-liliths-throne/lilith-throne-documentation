@@ -5,7 +5,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    <title>2.2. Miscanelaous Items &#8212; Lilith&#39;s Throne Mod Documentation  文档</title>
+    <title>2.2. 杂项物品 &#8212; Lilith&#39;s Throne Mod Documentation  文档</title>
     <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=4f649999" />
     <link rel="stylesheet" type="text/css" href="_static/alabaster.css?v=4a90727b" />
     <link rel="stylesheet" type="text/css" href="_static/graphviz.css?v=eafc0fe6" />
@@ -49,7 +49,7 @@
           <div class="body" role="main">
             
   <section id="miscanelaous-items">
-<h1><span class="section-number">2.2. </span>Miscanelaous Items<a class="headerlink" href="#miscanelaous-items" title="此标题的永久链接">¶</a></h1>
+<h1><span class="section-number">2.2. </span>杂项物品<a class="headerlink" href="#miscanelaous-items" title="此标题的永久链接">¶</a></h1>
 <blockquote>
 <div><dl class="field-list simple">
 <dt class="field-odd">作者<span class="colon">:</span></dt>
@@ -74,7 +74,7 @@
 <h2><span class="section-number">2.2.2. </span>coreAttributes<a class="headerlink" href="#coreattributes" title="此标题的永久链接">¶</a></h2>
 <section id="authortag">
 <h3><span class="section-number">2.2.2.1. </span>authorTag<a class="headerlink" href="#authortag" title="此标题的永久链接">¶</a></h3>
-<p>在项目中显示模组作者（你）的名字 如果留空或没有该标签，将使用基于文件夹名称作为默认标签。</p>
+<p>在项目中显示模组作者（你）的名字。如果留空或没有该标签，将使用基于文件夹名称作为默认标签。</p>
 <p>这个标签是可选项。</p>
 <div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;authorTag&gt;</span><span class="cp">&lt;![CDATA[A small name stamped on one side of the pill reads &#39;Inno-Industries&#39;.]]&gt;</span><span class="nt">&lt;/authorTag&gt;</span>
 </pre></div>
@@ -89,7 +89,7 @@
 </section>
 <section id="determiner">
 <h3><span class="section-number">2.2.2.3. </span>determiner<a class="headerlink" href="#determiner" title="此标题的永久链接">¶</a></h3>
-<p>在“Innoxia拥有X生殖剂”这个例子中，这个X就是就是量词，这通常填入“一个”或者“一支”，但是对于其他物品来说这个量词可能是不同的。</p>
+<p>在“Innoxia拥有X繁育药”这个例子中，这个X就是就是量词，这通常填入“一个”或者“一支”，但是对于其他物品来说这个量词可能是不同的。</p>
 <p>像“Innoxia拿着X剪刀”这个例子中, 这里X(这个量词)就应该写作“一把”。</p>
 <div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;determiner&gt;</span><span class="cp">&lt;![CDATA[a]]&gt;</span><span class="nt">&lt;/determiner&gt;</span>
 </pre></div>
@@ -135,7 +135,7 @@
 <section id="sexuse">
 <h3><span class="section-number">2.2.2.8. </span>sexUse<a class="headerlink" href="#sexuse" title="此标题的永久链接">¶</a></h3>
 <p>定义该物品是否可以在性爱动作中使用，比如假阳具或药丸。</p>
-<p>这里的元素要使用`布尔值`_。</p>
+<p>这里的元素要使用 <a class="reference internal" href="#boolean-values">布尔值</a> 。</p>
 <div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;sexUse&gt;</span>true<span class="nt">&lt;/sexUse&gt;</span>
 </pre></div>
 </div>
@@ -143,7 +143,7 @@
 <section id="combatuseallies">
 <h3><span class="section-number">2.2.2.9. </span>combatUseAllies<a class="headerlink" href="#combatuseallies" title="此标题的永久链接">¶</a></h3>
 <p>定义该物品是否可以在战斗中用于你自己或你的盟友。</p>
-<p>这里的元素要使用`布尔值`_。</p>
+<p>这里的元素要使用 <a class="reference internal" href="#boolean-values">布尔值</a> 。</p>
 <div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;combatUseAllies&gt;</span>true<span class="nt">&lt;/combatUseAllies&gt;</span>
 </pre></div>
 </div>
@@ -151,7 +151,7 @@
 <section id="combatuseenemies">
 <h3><span class="section-number">2.2.2.10. </span>combatUseEnemies<a class="headerlink" href="#combatuseenemies" title="此标题的永久链接">¶</a></h3>
 <p>定义该物品是否可以在战斗中用于敌人。</p>
-<p>这里的元素要使用`布尔值`_。</p>
+<p>这里的元素要使用 <a class="reference internal" href="#boolean-values">布尔值</a> 。</p>
 <div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;combatUseEnemies&gt;</span>false<span class="nt">&lt;/combatUseEnemies&gt;</span>
 </pre></div>
 </div>
@@ -159,7 +159,7 @@
 <section id="consumedonuse">
 <h3><span class="section-number">2.2.2.11. </span>consumedOnUse<a class="headerlink" href="#consumedonuse" title="此标题的永久链接">¶</a></h3>
 <p>定义该物品是否在使用时被消耗掉。<em>(编辑注:它是消耗品吗?)</em></p>
-<p>这里的元素要使用`布尔值`_。</p>
+<p>这里的元素要使用 <a class="reference internal" href="#boolean-values">布尔值</a> 。</p>
 <div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;consumedOnUse&gt;</span>true<span class="nt">&lt;/consumedOnUse&gt;</span>
 </pre></div>
 </div>
@@ -318,7 +318,7 @@
 <li class="toctree-l1"><a class="reference internal" href="overview.html">1. 概览</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="items.html">2. “Items”文件夹</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="clothing.html">2.1. 衣物类物品</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">2.2. Miscanelaous Items</a><ul>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">2.2. 杂项物品</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#boolean-values">2.2.1. Boolean Values</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#coreattributes">2.2.2. coreAttributes</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#usedescription">2.2.3. useDescription</a></li>

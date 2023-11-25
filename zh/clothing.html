@@ -15,7 +15,7 @@
     <link rel="canonical" href="https://bicobus.github.io/lilith-throne-documentation/clothing.html" />
     <link rel="index" title="索引" href="genindex.html" />
     <link rel="search" title="搜索" href="search.html" />
-    <link rel="next" title="2.2. Miscanelaous Items" href="items_items.html" />
+    <link rel="next" title="2.2. 杂项物品" href="items_items.html" />
     <link rel="prev" title="2. “Items”文件夹" href="items.html" />
    
   <link rel="stylesheet" href="_static/custom.css" type="text/css" />
@@ -38,7 +38,7 @@
           <a href="items.html" title="Previous document"><span class="section-number">2. </span>“Items”文件夹</a>
         </li>
         <li>
-          <a href="items_items.html" title="Next document"><span class="section-number">2.2. </span>Miscanelaous Items</a>
+          <a href="items_items.html" title="Next document"><span class="section-number">2.2. </span>杂项物品</a>
           &rarr;
         </li>
     </ul>
@@ -352,10 +352,7 @@
 </section>
 <section id="itemtagsadded">
 <h6><span class="section-number">2.1.2.14.1.2.6. </span>itemTagsAdded<a class="headerlink" href="#itemtagsadded" title="此标题的永久链接">¶</a></h6>
-<p>If this sticker should add any ItemTags to the clothing, then you can define
-them in here. Use <code class="docutils literal notranslate"><span class="pre">&lt;tag&gt;</span></code> elements within the <code class="docutils literal notranslate"><span class="pre">itemTagsAdded</span></code> element (e.g.
-<code class="docutils literal notranslate"><span class="pre">&lt;tag&gt;SOLD_BY_NYAN&lt;/tag&gt;</span></code>) using <code class="docutils literal notranslate"><span class="pre">ItemTag</span></code> names as defined here:
-<a class="reference external" href="https://github.com/Innoxia/liliths-throne-public/tree/dev/src/com/lilithsthrone/game/inventory/ItemTag.java">src/com/lilithsthrone/game/inventory/ItemTag.java</a></p>
+<p>如果该标签会给衣物添加 <code class="docutils literal notranslate"><span class="pre">ItemTags</span></code> ，那应当在此处定义。使用在``itemTagsAdded`` 内部使用 <code class="docutils literal notranslate"><span class="pre">&lt;tag&gt;</span></code> 元素(例如 <code class="docutils literal notranslate"><span class="pre">&lt;tag&gt;SOLD_BY_NYAN&lt;/tag&gt;</span></code>)，可使用的 <code class="docutils literal notranslate"><span class="pre">ItemTag</span></code> 定义在此: <a class="reference external" href="https://github.com/Innoxia/liliths-throne-public/tree/dev/src/com/lilithsthrone/game/inventory/ItemTag.java">src/com/lilithsthrone/game/inventory/ItemTag.java</a></p>
 <dl>
 <dt>示例</dt><dd><div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;itemTagsAdded&gt;</span>
 <span class="w">  </span><span class="nt">&lt;tag&gt;</span>SOLD_BY_NYAN<span class="nt">&lt;/tag&gt;</span>
@@ -367,37 +364,24 @@ them in here. Use <code class="docutils literal notranslate"><span class="pre">&
 </section>
 <section id="itemtagsremoved">
 <h6><span class="section-number">2.1.2.14.1.2.7. </span>itemTagsRemoved<a class="headerlink" href="#itemtagsremoved" title="此标题的永久链接">¶</a></h6>
-<p>If this sticker should remove any <code class="docutils literal notranslate"><span class="pre">ItemTags</span></code> to the clothing, then you can
-define them in here. Use <code class="docutils literal notranslate"><span class="pre">&lt;tag&gt;</span></code> elements in the same manner as
-<a class="reference internal" href="#itemtagsadded">itemTagsAdded</a>.</p>
+<p>如果该标签会给衣物去除 <code class="docutils literal notranslate"><span class="pre">ItemTags</span></code> ，那应当在此处定义。使用 <code class="docutils literal notranslate"><span class="pre">&lt;tag&gt;</span></code> 元素的方法与 <a class="reference internal" href="#itemtagsadded">itemTagsAdded</a> 相同。</p>
 <div class="admonition warning">
 <p class="admonition-title">警告</p>
-<p>If you define either a single sticker or multiple stickers to have
-conflicting tag behaviour -- i.e. both adding and removing identical tags --,
-then behaviour is undefined and you will end up with the <code class="docutils literal notranslate"><span class="pre">ItemTag</span></code> applied
-or removed at random.</p>
+<p>如果定义了相互冲突的tag行为(例如对同一种tag又添加又移除)，那么这就是一种未定义行为， <code class="docutils literal notranslate"><span class="pre">ItemTag</span></code> 添加还是移除都是随机的。</p>
 </div>
 </section>
 <section id="unavailabilitytext">
 <h6><span class="section-number">2.1.2.14.1.2.8. </span>unavailabilityText<a class="headerlink" href="#unavailabilitytext" title="此标题的永久链接">¶</a></h6>
-<p>Sticker are available to be used by the player by default, but if you want there
-to be requirements for using this sticker, then define this element as a
-<code class="docutils literal notranslate"><span class="pre">CDATA</span></code> text element, with any non-whitespace text returned signalling to the
-game that this sticker is unavailable. The returned text will be displayed to
-the player in the button’s tooltip, so it should describe why this sticker is
-unavailable.</p>
-<p>You can define a <code class="docutils literal notranslate"><span class="pre">showDisabledButton</span></code> attribute, which by default is set to
-true, and which defines whether or not this sticker’s selection button is shown
-to the player when disabled.</p>
-<p>Please note that no <code class="docutils literal notranslate"><span class="pre">npc</span></code> tag can be used, as this clothing might not belong
-to anyone.</p>
+<p>标签对于玩家默认可用，但如果想要为标签的使用设定一些要求，那就请在该元素中以 <code class="docutils literal notranslate"><span class="pre">CDATA</span></code> 文本定义，一旦返回了任何非纯空格的文本，都会使游戏认定该标签不可用。返回文本将会显示在按钮的悬浮提示栏中，所以其中应当包含不可用的原因。</p>
+<p>你可以通过定义 <code class="docutils literal notranslate"><span class="pre">showDisabledButton</span></code> 属性(默认为true)，这个属性决定了该标签不可用时，对应按钮是否显示。</p>
+<p>请注意无法使用 <code class="docutils literal notranslate"><span class="pre">npc</span></code> ，因为该衣物可能不属于任何角色。</p>
 <dl class="simple">
 <dt>属性</dt><dd><ul class="simple">
-<li><p>showDisabledButton (boolean) 显示不可用按钮（布尔值）</p></li>
+<li><p>showDisabledButton (布尔)</p></li>
 </ul>
 </dd>
 </dl>
-<p>这里的例子是，玩家只使用标签来变得女性化的情况：</p>
+<p>这里的例子是，玩家只有在偏女性化时才能使用该标签:</p>
 <div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;unavailabilityText</span><span class="w"> </span><span class="na">showDisabledButton=</span><span class="s">&quot;true&quot;</span><span class="nt">&gt;</span><span class="cp">&lt;![CDATA[</span>
 <span class="cp">    #IF(!pc.isFeminine())</span>
 <span class="cp">    Only feminine characters can apply this sticker!</span>
@@ -405,7 +389,7 @@ to anyone.</p>
 <span class="cp">]]&gt;</span><span class="nt">&lt;/unavailabilityText&gt;</span>
 </pre></div>
 </div>
-<p>在这个例子里，不可用按钮并不会显示给玩家，所以没必要写太过详尽的描述，因为玩家看不见：</p>
+<p>在这个例子里，不可用的按钮并不会显示给玩家，所以没必要写太过详尽的描述，因为玩家看不见：</p>
 <div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;unavailabilityText</span><span class="w"> </span><span class="na">showDisabledButton=</span><span class="s">&quot;false&quot;</span><span class="nt">&gt;</span><span class="cp">&lt;![CDATA[</span>
 <span class="cp">    #IF(pc.getSubspeciesOverrideRace()!=RACE_DEMON &amp;&amp; !pc.isFeminine())</span>
 <span class="cp">            unavailable</span>
@@ -416,10 +400,8 @@ to anyone.</p>
 </section>
 <section id="availabilitytext">
 <h6><span class="section-number">2.1.2.14.1.2.9. </span>availabilityText<a class="headerlink" href="#availabilitytext" title="此标题的永久链接">¶</a></h6>
-<p>The counterpart to <a class="reference internal" href="#unavailabilitytext">unavailabilityText</a>, this text is shown when
-<a class="reference internal" href="#unavailabilitytext">unavailabilityText</a> is returning an empty String, and therefore this sticker
-is available. Use a <code class="docutils literal notranslate"><span class="pre">CDATA</span></code> text element.</p>
-<p>Counterpart examples to the two above:</p>
+<p><cite>unavailabilityText`_的对应版本，当 `unavailabilityText`_返回空字符串时，则代表该标签可用，就会显示该文本。请使用 ``CDATA`</cite> 文本。</p>
+<p>上述两个实例的对应部分:</p>
 <div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;availabilityText&gt;</span><span class="cp">&lt;![CDATA[</span>
 <span class="cp">    You have unlocked this sticker due to being feminine!</span>
 <span class="cp">]]&gt;</span><span class="nt">&lt;/availabilityText&gt;</span>
@@ -438,32 +420,27 @@ is available. Use a <code class="docutils literal notranslate"><span class="pre"
 </section>
 </section>
 <section id="echantmentlimit">
-<h3><span class="section-number">2.1.2.15. </span>echantmentLimit<a class="headerlink" href="#echantmentlimit" title="此标题的永久链接">¶</a></h3>
-<p>How many enchantments can be fit into this item. It’s typically best to let the
-game handle the default number of enchantments, which typically results in 100.</p>
+<h3><span class="section-number">2.1.2.15. </span>enchantmentLimit<a class="headerlink" href="#echantmentlimit" title="此标题的永久链接">¶</a></h3>
+<p>可以在该物品上施加多少附魔上限的附魔。最好让游戏来决定附魔的默认值，一般为100。</p>
 <p>示例</p>
 <blockquote>
-<div><p>I have not defined this, as I’ll let the game keep the 100
-enchantments default value.</p>
+<div><p>我并没有定义这个元素，所以就让游戏保持100附魔上限的默认值。</p>
 </div></blockquote>
 <p>使用默认值</p>
 <div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;enchantmentLimit/&gt;</span>
 </pre></div>
 </div>
-<p>Using custom value</p>
+<p>使用自定义值</p>
 <div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;enchantmentLimit&gt;</span>100<span class="nt">&lt;/enchantmentLimit&gt;</span>
 </pre></div>
 </div>
 </section>
 <section id="effects">
-<h3><span class="section-number">2.1.2.16. </span>效果<a class="headerlink" href="#effects" title="此标题的永久链接">¶</a></h3>
-<p>The default effects that this clothing spawns in with. To know what to put in
-here, it would probably be easiest to enchant clothing in your game, save the
-game, then copy over that clothing’s ’effects’ in your save file.</p>
+<h3><span class="section-number">2.1.2.16. </span>effects<a class="headerlink" href="#effects" title="此标题的永久链接">¶</a></h3>
+<p>衣物生成时默认自带的效果。如果想知道该元素内应该填入什么，最简单的方式就是在游戏中附魔，保存游戏，然后复制对应物品的“effects”到此处。</p>
 <p>示例</p>
 <blockquote>
-<div><p>The first defined effect will give +3 to physical damage, while the
-second will give the wearer the masturbation fetish while worn.</p>
+<div><p>定义的第一个效果是增加3物理伤害，而第二个效果则是穿着时给穿戴者增加自慰性癖。</p>
 </div></blockquote>
 <div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;effects&gt;</span>
 <span class="w">    </span><span class="nt">&lt;effect</span><span class="w"> </span><span class="na">itemEffectType=</span><span class="s">&quot;CLOTHING&quot;</span><span class="w"> </span><span class="na">limit=</span><span class="s">&quot;0&quot;</span><span class="w"> </span><span class="na">potency=</span><span class="s">&quot;MAJOR_BOOST&quot;</span><span class="w"> </span><span class="na">primaryModifier=</span><span class="s">&quot;CLOTHING_ATTRIBUTE&quot;</span><span class="w"> </span><span class="na">secondaryModifier=</span><span class="s">&quot;DAMAGE_PHYSICAL&quot;</span><span class="w"> </span><span class="na">timer=</span><span class="s">&quot;0&quot;</span><span class="nt">/&gt;</span>
@@ -474,12 +451,10 @@ second will give the wearer the masturbation fetish while worn.</p>
 </section>
 <section id="blockedpartslist">
 <h3><span class="section-number">2.1.2.17. </span>blockedPartsList<a class="headerlink" href="#blockedpartslist" title="此标题的永久链接">¶</a></h3>
-<p>This section determines how the clothing interacts with other clothing and the
-wearer’s body.</p>
+<p>这一部分决定了该衣物是如何跟其他衣物以及穿戴者的身体互动的。</p>
 <p>示例</p>
 <blockquote>
-<div><p>I’ve defined this section as being the one to be used when equipped
-to the “SOCK” slot.</p>
+<div><p>我将这一部分设定为，装备在 <code class="docutils literal notranslate"><span class="pre">SOCK</span></code> 栏位后才会生效。</p>
 <div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;blockedPartsList</span><span class="w"> </span><span class="na">slot=</span><span class="s">&quot;SOCK&quot;</span><span class="nt">&gt;</span>
 <span class="w">        </span><span class="nt">&lt;blockedParts&gt;</span>
 <span class="w">                </span><span class="nt">&lt;displacementType&gt;</span>REMOVE_OR_EQUIP<span class="nt">&lt;/displacementType&gt;</span>
@@ -496,12 +471,10 @@ to the “SOCK” slot.</p>
 </pre></div>
 </div>
 </div></blockquote>
-<p>This is another section to determines how the clothing interacts with other
-clothing and the wearer’s body.</p>
+<p>这是另一部分决定了该衣物是如何跟其他衣物以及穿戴者的身体互动的。</p>
 <p>示例</p>
 <blockquote>
-<div><p>I’ve defined this section as being the one to be used when equipped
-to the <code class="docutils literal notranslate"><span class="pre">HAND</span></code> slot.</p>
+<div><p>我将这一部分设定为，装备在 <code class="docutils literal notranslate"><span class="pre">HAND</span></code> 栏位后才会生效。</p>
 <div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;blockedPartsList</span><span class="w"> </span><span class="na">slot=</span><span class="s">&quot;HAND&quot;</span><span class="nt">&gt;</span>
 <span class="w">        </span><span class="nt">&lt;blockedParts&gt;</span>
 <span class="w">                </span><span class="nt">&lt;displacementType&gt;</span>REMOVE_OR_EQUIP<span class="nt">&lt;/displacementType&gt;</span>
@@ -518,42 +491,27 @@ to the <code class="docutils literal notranslate"><span class="pre">HAND</span><
 </div></blockquote>
 <section id="blockedparts">
 <h4><span class="section-number">2.1.2.17.1. </span>blockedParts<a class="headerlink" href="#blockedparts" title="此标题的永久链接">¶</a></h4>
-<p>You can add as many <code class="docutils literal notranslate"><span class="pre">blockedParts</span></code> elements as you like, but they should each
-have a different <a class="reference internal" href="#displacementtype">displacementType</a>, and <strong>there should be at least one, of
-type</strong> <code class="docutils literal notranslate"><span class="pre">REMOVE_OR_EQUIP</span></code>.</p>
+<p>你可以随意添加多个 <code class="docutils literal notranslate"><span class="pre">blockedParts</span></code> 元素，但每一个都应该有不同的 <a class="reference internal" href="#displacementtype">displacementType</a>， 并且**至少要有一个**类型为 <code class="docutils literal notranslate"><span class="pre">REMOVE_OR_EQUIP</span></code>。</p>
 </section>
 <section id="displacementtype">
 <h4><span class="section-number">2.1.2.17.2. </span>displacementType<a class="headerlink" href="#displacementtype" title="此标题的永久链接">¶</a></h4>
-<p>If this clothing is displaced in the following way (in this case, by being
-removed), then the <a class="reference internal" href="#blockedbodyparts">blockedBodyParts</a>, <a class="reference internal" href="#clothingaccessblocked">clothingAccessBlocked</a>, and
-<a class="reference internal" href="#concealedslots">concealedSlots</a> will all be revealed. If multiple <a class="reference internal" href="#blockedparts">blockedParts</a> block or
-conceal the same slot, only one <a class="reference internal" href="#blockedparts">blockedParts</a> needs to be displaced to reveal
-it. (e.g. If a pair of trousers has <code class="docutils literal notranslate"><span class="pre">UNZIPS</span></code> and <code class="docutils literal notranslate"><span class="pre">PULLS_DOWN</span></code>
-displacementTypes, and both of these contain the <code class="docutils literal notranslate"><span class="pre">concealedSlots</span></code> <code class="docutils literal notranslate"><span class="pre">slot</span></code>
-<code class="docutils literal notranslate"><span class="pre">PENIS</span></code>, then the penis will be revealed if either <code class="docutils literal notranslate"><span class="pre">UNZIPS</span></code> or
-<code class="docutils literal notranslate"><span class="pre">PULLS_DOWN</span></code> is activated.)</p>
-<p>A full list of displacementTypes can be found here:
-<a class="reference external" href="https://github.com/Innoxia/liliths-throne-public/tree/dev/src/com/lilithsthrone/game/inventory/clothing/DisplacementType.java">src/com/lilithsthrone/game/inventory/clothing/DisplacementType.java</a></p>
+<p>如果该衣物以对应方式被移开(此处就是被移除)，那么 <a class="reference internal" href="#blockedbodyparts">blockedBodyParts</a>， <cite>clothingAccessBlocked`_和 `concealedSlots`_的部分都会展露出来。如果多个 `blockedParts`_都阻挡或者隐藏了同一个栏位，那只需要移开一处 `blockedParts`_就能展露。(例如，一条裤子的 ``displacementTypes`</cite> 既有 <code class="docutils literal notranslate"><span class="pre">UNZIPS</span></code> 又有 <code class="docutils literal notranslate"><span class="pre">PULLS_DOWN</span></code> 并且两个的 <code class="docutils literal notranslate"><span class="pre">concealedSlots</span></code> 都包括了 <code class="docutils literal notranslate"><span class="pre">PENIS</span></code>，那么只要使用 <code class="docutils literal notranslate"><span class="pre">UNZIPS</span></code> 或者 <code class="docutils literal notranslate"><span class="pre">PULLS_DOWN</span></code> 就能够使该部位展露。)</p>
+<p>完整的 <code class="docutils literal notranslate"><span class="pre">displacementTypes</span></code> 列表可以参见此处: <a class="reference external" href="https://github.com/Innoxia/liliths-throne-public/tree/dev/src/com/lilithsthrone/game/inventory/clothing/DisplacementType.java">src/com/lilithsthrone/game/inventory/clothing/DisplacementType.java</a></p>
 </section>
 <section id="clothingaccessrequired">
 <h4><span class="section-number">2.1.2.17.3. </span>clothingAccessRequired<a class="headerlink" href="#clothingaccessrequired" title="此标题的永久链接">¶</a></h4>
-<p>The access required to perform this <a class="reference internal" href="#displacementtype">displacementType</a>.</p>
-<p><code class="docutils literal notranslate"><span class="pre">clothingAccess</span></code> values can be found here:
-<a class="reference external" href="https://github.com/Innoxia/liliths-throne-public/tree/dev/src/com/lilithsthrone/game/inventory/clothing/ClothingAccess.java">src/com/lilithsthrone/game/inventory/clothing/ClothingAccess.java</a></p>
+<p>执行该 <a class="reference internal" href="#displacementtype">displacementType</a> 需要的接触方式(Access)。</p>
+<p><a href="#id1"><span class="problematic" id="id2">``</span></a>clothingAccess``的值可以参见此处: <a class="reference external" href="https://github.com/Innoxia/liliths-throne-public/tree/dev/src/com/lilithsthrone/game/inventory/clothing/ClothingAccess.java">src/com/lilithsthrone/game/inventory/clothing/ClothingAccess.java</a></p>
 </section>
 <section id="blockedbodyparts">
 <h4><span class="section-number">2.1.2.17.4. </span>blockedBodyParts<a class="headerlink" href="#blockedbodyparts" title="此标题的永久链接">¶</a></h4>
-<p>The body parts that are blocked by this <a class="reference internal" href="#displacementtype">displacementType</a>.</p>
-<p><code class="docutils literal notranslate"><span class="pre">bodyPart</span></code> values can be found here:
-<a class="reference external" href="https://github.com/Innoxia/liliths-throne-public/tree/dev/src/com/lilithsthrone/game/character/body/CoverableArea.java">src/com/lilithsthrone/game/character/body/CoverableArea.java</a></p>
+<p>该 <a class="reference internal" href="#displacementtype">displacementType</a> 阻挡的身体部位。</p>
+<p><a href="#id1"><span class="problematic" id="id2">``</span></a>bodyPart``的值可以参见此处: <a class="reference external" href="https://github.com/Innoxia/liliths-throne-public/tree/dev/src/com/lilithsthrone/game/character/body/CoverableArea.java">src/com/lilithsthrone/game/character/body/CoverableArea.java</a></p>
 </section>
 <section id="clothingaccessblocked">
 <h4><span class="section-number">2.1.2.17.5. </span>clothingAccessBlocked<a class="headerlink" href="#clothingaccessblocked" title="此标题的永久链接">¶</a></h4>
-<p>The access that this <a class="reference internal" href="#displacementtype">displacementType</a> blocks. Again, clothingAccess values
-can be found here:
-<a class="reference external" href="https://github.com/Innoxia/liliths-throne-public/tree/dev/src/com/lilithsthrone/game/inventory/clothing/ClothingAccess.java">src/com/lilithsthrone/game/inventory/clothing/ClothingAccess.java</a></p>
-<p>This element must contain a list of tag <code class="docutils literal notranslate"><span class="pre">clothingAccess</span></code> for values inserted
-here.</p>
+<p>该 <a class="reference internal" href="#displacementtype">displacementType</a> 阻碍的接触方式(Access)。同样完整的 <a href="#id1"><span class="problematic" id="id2">``</span></a>clothingAccess``的值可以参见此处: <a class="reference external" href="https://github.com/Innoxia/liliths-throne-public/tree/dev/src/com/lilithsthrone/game/inventory/clothing/ClothingAccess.java">src/com/lilithsthrone/game/inventory/clothing/ClothingAccess.java</a></p>
+<p>该元素必须包含一个 <code class="docutils literal notranslate"><span class="pre">clothingAccess</span></code> 的标签，用以插入对应值。</p>
 <dl>
 <dt>示例</dt><dd><div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;clothingAccess&gt;</span>MOUTH<span class="nt">&lt;/clothingAccess&gt;</span>
 </pre></div>
@@ -563,8 +521,7 @@ here.</p>
 </section>
 <section id="concealedslots">
 <h4><span class="section-number">2.1.2.17.6. </span>concealedSlots<a class="headerlink" href="#concealedslots" title="此标题的永久链接">¶</a></h4>
-<p>The slots that this <a class="reference internal" href="#displacementtype">displacementType</a> conceals. Possible slots are found
-here: <a class="reference external" href="https://github.com/Innoxia/liliths-throne-public/tree/dev/src/com/lilithsthrone/game/inventory/InventorySlot.java">src/com/lilithsthrone/game/inventory/InventorySlot.java</a></p>
+<p>该 <cite>displacementType`_隐藏的栏位。可用的栏位请参见此处:  :ltgithub:`src/com/lilithsthrone/game/inventory/InventorySlot.java</cite></p>
 <p>You can also use a preset list by adding an attribute named “values” to this
 element (an example -- “CS Example” -- is in the <a class="reference internal" href="#blockedparts">blockedParts</a> section below
 this one). The preset lists that you can use are found here:
@@ -753,7 +710,7 @@ used for insertable dildos.)</p>
 <section id="penetration">
 <h3><span class="section-number">2.1.3.1. </span>penetration<a class="headerlink" href="#penetration" title="此标题的永久链接">¶</a></h3>
 <dl class="simple">
-<dt>length</dt><dd><p>value in cm</p>
+<dt>length</dt><dd><p>数值单位为厘米(cm)</p>
 </dd>
 <dt>grith</dt><dd><p>0-6 corresponding to <code class="docutils literal notranslate"><span class="pre">PenetrationGirth</span> <span class="pre">Enum</span></code> values</p>
 </dd>
@@ -768,7 +725,7 @@ used for insertable dildos.)</p>
 <p><span class="versionmodified changed">在 0.3.7 版本发生变更: </span>orifice sex toy support is not fully implemented into the game!</p>
 </div>
 <dl class="simple">
-<dt>深度</dt><dd><p>value in cm</p>
+<dt>depth</dt><dd><p>数值单位为厘米(cm)</p>
 </dd>
 <dt>capacity</dt><dd><p>value in cm, corresponding to the diameter of the orifice</p>
 </dd>
@@ -900,7 +857,7 @@ your descriptions are applied to. For standard equipping and unequipping, use
           <a href="items.html" title="Previous document"><span class="section-number">2. </span>“Items”文件夹</a>
         </li>
         <li>
-          <a href="items_items.html" title="Next document"><span class="section-number">2.2. </span>Miscanelaous Items</a>
+          <a href="items_items.html" title="Next document"><span class="section-number">2.2. </span>杂项物品</a>
           &rarr;
         </li>
     </ul>
@@ -940,7 +897,7 @@ your descriptions are applied to. For standard equipping and unequipping, use
 <li class="toctree-l3"><a class="reference internal" href="#displacementtext">2.1.6. displacementText</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="items_items.html">2.2. Miscanelaous Items</a></li>
+<li class="toctree-l2"><a class="reference internal" href="items_items.html">2.2. 杂项物品</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tattoos.html">2.3. 纹身</a></li>
 <li class="toctree-l2"><a class="reference internal" href="weapons.html">2.4. 武器物品</a></li>
 </ul>
@@ -957,7 +914,7 @@ your descriptions are applied to. For standard equipping and unequipping, use
   <li><a href="index.html">Documentation overview</a><ul>
   <li><a href="items.html"><span class="section-number">2. </span>“Items”文件夹</a><ul>
       <li>Previous: <a href="items.html" title="上一章"><span class="section-number">2. </span>“Items”文件夹</a></li>
-      <li>Next: <a href="items_items.html" title="下一章"><span class="section-number">2.2. </span>Miscanelaous Items</a></li>
+      <li>Next: <a href="items_items.html" title="下一章"><span class="section-number">2.2. </span>杂项物品</a></li>
   </ul></li>
   </ul></li>
 </ul>

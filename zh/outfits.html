@@ -91,7 +91,7 @@
 </section>
 <section id="worldtypes">
 <h3><span class="section-number">3.1.4. </span>worldTypes<a class="headerlink" href="#worldtypes" title="此标题的永久链接">¶</a></h3>
-<p>该预设套装会在那种世界类型中应用在随机生成角色身上。你可以将其留空，或者直接删除该元素，这样该书社套装就不会受到 <code class="docutils literal notranslate"><span class="pre">WorldType</span></code> 的限制(也就时随处可用)。</p>
+<p>该预设套装会在那种世界类型中应用在随机生成角色身上。你可以将其留空，或者直接删除该元素，这样该书社套装就不会受到 <code class="docutils literal notranslate"><span class="pre">WorldType</span></code> 的限制(也就是随处可用)。</p>
 <div class="admonition seealso">
 <p class="admonition-title">参见</p>
 <p><a class="reference external" href="https://github.com/Innoxia/liliths-throne-public/tree/dev/src/com/lilithsthrone/world/WorldType.java">src/com/lilithsthrone/world/WorldType.java</a>。</p>
@@ -150,12 +150,9 @@
 </div>
 </section>
 <section id="weight">
-<h3><span class="section-number">3.1.8. </span>宽度<a class="headerlink" href="#weight" title="此标题的永久链接">¶</a></h3>
-<p>How likely this outfit is to be randomly chosen out of all available ones.
-Default outfits have a weight of 100. As there could be several outfits added to
-the weighting method, the chance of this outfit being selected is not able to be
-precisely determined.</p>
-<p>A bigger number makes the outfits more common. There is no upper limit.</p>
+<h3><span class="section-number">3.1.8. </span>weight<a class="headerlink" href="#weight" title="此标题的永久链接">¶</a></h3>
+<p>该预设套装从所有可用套装中选中的权重。默认预设套装的权重为100。由于可能的套装数量不定，所以被选中的概率也不能确定。</p>
+<p>数字越大，这种预设套装月常见。没有上限。(非要说的话是32位有符号整数的最大值)</p>
 <div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;weight&gt;</span>100<span class="nt">&lt;/weight&gt;</span>
 </pre></div>
 </div>
@@ -164,22 +161,17 @@ precisely determined.</p>
 <section id="generationattributes">
 <h2><span class="section-number">3.2. </span>generationAttributes<a class="headerlink" href="#generationattributes" title="此标题的永久链接">¶</a></h2>
 <section id="conditional-statements">
-<h3><span class="section-number">3.2.1. </span>Conditional statements<a class="headerlink" href="#conditional-statements" title="此标题的永久链接">¶</a></h3>
+<h3><span class="section-number">3.2.1. </span>条件语句<a class="headerlink" href="#conditional-statements" title="此标题的永久链接">¶</a></h3>
 <dl>
-<dt><strong>Node Variables:</strong></dt><dd><dl class="std nodevar">
+<dt><strong>节点属性:</strong></dt><dd><dl class="std nodevar">
 <dt class="sig sig-object std" id="nodevar-constant-outfits">
 <span class="sig-name descname"><span class="pre">constant</span></span> <span class="pre">Type:</span> <span class="pre">boolean</span><span class="pre">,</span> <em class="property"><span class="pre">Default:</span> <span class="pre">True</span></em><a class="headerlink" href="#nodevar-constant-outfits" title="永久链接至目标">¶</a></dt>
-<dd><p>Conditional statements are evaluated only one time, at the start of
-clothing generation, unless this variable is set to <code class="docutils literal notranslate"><span class="pre">False</span></code>.</p>
+<dd><p>条件语句只会运算一次，仅在衣物生成的一开始，除非该元素被设置为 <code class="docutils literal notranslate"><span class="pre">False</span></code>。</p>
 </dd></dl>
 
 </dd>
 </dl>
-<p>You can define any number of conditional statements to use elsewhere in this
-file. They must be enclosed in <code class="docutils literal notranslate"><span class="pre">CDATA</span></code> tags, and must use a format of
-<code class="docutils literal notranslate"><span class="pre">clothingConditionalX</span></code> or <code class="docutils literal notranslate"><span class="pre">condX</span></code>, where <code class="docutils literal notranslate"><span class="pre">X</span></code> is a unique <code class="docutils literal notranslate"><span class="pre">String</span></code> (e.g.
-<code class="docutils literal notranslate"><span class="pre">cond1</span></code>, <code class="docutils literal notranslate"><span class="pre">condUnderwear</span></code>, <code class="docutils literal notranslate"><span class="pre">clothingConditionalMeleeWeapons</span></code> are all valid
-tags).</p>
+<p>你可以定义任意数量的条件语句，并在该文件的其他位置使用。条件语句必须使用 <code class="docutils literal notranslate"><span class="pre">CDATA</span></code> 标签包裹，并且必须使用 <code class="docutils literal notranslate"><span class="pre">clothingConditionalX</span></code> 或 <code class="docutils literal notranslate"><span class="pre">condX``的格式，其中</span> <span class="pre">``X</span></code> 是一个不重复的字符串(例如 <code class="docutils literal notranslate"><span class="pre">cond1</span></code>、 <code class="docutils literal notranslate"><span class="pre">condUnderwear</span></code>、 <a href="#id1"><span class="problematic" id="id2">``</span></a>clothingConditionalMeleeWeapons``等都是有效的标签)。</p>
 <dl>
 <dt>示例</dt><dd><div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;cond1</span><span class="w"> </span><span class="na">constant=</span><span class="s">&quot;true&quot;</span><span class="nt">&gt;</span><span class="cp">&lt;![CDATA[RND.nextInt(100)&lt;=50]]&gt;</span><span class="nt">&lt;/cond1&gt;</span>
 <span class="nt">&lt;cond2</span><span class="w"> </span><span class="na">constant=</span><span class="s">&quot;true&quot;</span><span class="nt">&gt;</span><span class="cp">&lt;![CDATA[RND.nextInt(100)&lt;=75]**&gt;</span><span class="nt">&lt;/cond2&gt;</span>
@@ -191,24 +183,16 @@ tags).</p>
 <section id="presetcolourgroups">
 <h3><span class="section-number">3.2.2. </span>presetColourGroups<a class="headerlink" href="#presetcolourgroups" title="此标题的永久链接">¶</a></h3>
 <dl>
-<dt><strong>Node Variables:</strong></dt><dd><dl class="std nodevar">
+<dt><strong>节点属性:</strong></dt><dd><dl class="std nodevar">
 <dt class="sig sig-object std" id="nodevar-singleColour-outfits">
 <span class="sig-name descname"><span class="pre">singleColour</span></span> <span class="pre">Type:</span> <span class="pre">boolean</span><span class="pre">,</span> <em class="property"><span class="pre">Default:</span> <span class="pre">False</span></em><span class="pre">,</span> <em class="property"><span class="pre">Optional</span></em><a class="headerlink" href="#nodevar-singleColour-outfits" title="永久链接至目标">¶</a></dt>
-<dd><p>The optional <code class="xref std std-nodevar docutils literal notranslate"><span class="pre">singleColour</span></code> attribute, when set to <code class="docutils literal notranslate"><span class="pre">True</span></code>,
-means that this group will always return the same, randomly chosen
-colour from its list.</p>
+<dd><p><code class="xref std std-nodevar docutils literal notranslate"><span class="pre">singleColour</span></code> 属性为可选项，设置为 <a href="#id1"><span class="problematic" id="id2">``</span></a>True``时，意味着该组颜色总会从列表中返回随机选择后的同一个颜色。</p>
 </dd></dl>
 
 </dd>
 </dl>
-<p>Preset colour groups have one of their defined <code class="docutils literal notranslate"><span class="pre">randomColour</span></code> randomly chosen
-for further use in this XML file. You can have up to 20 <code class="docutils literal notranslate"><span class="pre">presetColourGroupX</span></code>,
-however the numbers must be consecutive. (i.e. You can have
-<code class="docutils literal notranslate"><span class="pre">presetColourGroup1</span></code>, <code class="docutils literal notranslate"><span class="pre">presetColourGroup2</span></code>, and <code class="docutils literal notranslate"><span class="pre">presetColourGroup3</span></code>, but
-<strong>not</strong> <code class="docutils literal notranslate"><span class="pre">presetColourGroup1</span></code>, <code class="docutils literal notranslate"><span class="pre">presetColourGroup2</span></code>, and
-<code class="docutils literal notranslate"><span class="pre">presetColourGroup4</span></code>, as that skips out a “3”.)</p>
-<p>Accepted values can be found in the files present in the
-<a class="reference external" href="https://github.com/Innoxia/liliths-throne-public/tree/dev/src/com/lilithsthrone/utils/colours">src/com/lilithsthrone/utils/colours</a> diretory.</p>
+<p>预设颜色组会从其中定义的 <code class="docutils literal notranslate"><span class="pre">randomColour</span></code> 中随机选取一个，在该XML文件中做后续使用。你最多可以设置20个 <code class="docutils literal notranslate"><span class="pre">presetColourGroupX</span></code>，但是数字必须时连续的。(例如你可以定义 <code class="docutils literal notranslate"><span class="pre">presetColourGroup1</span></code>、 <code class="docutils literal notranslate"><span class="pre">presetColourGroup2</span></code>、 <code class="docutils literal notranslate"><span class="pre">presetColourGroup3</span></code>，但**不能是** <code class="docutils literal notranslate"><span class="pre">presetColourGroup1</span></code>、 <code class="docutils literal notranslate"><span class="pre">presetColourGroup2</span></code>、 <code class="docutils literal notranslate"><span class="pre">presetColourGroup4</span></code>，因为跳过了“3”)</p>
+<p>可用的数值能够在 :ltgithub:<a href="#id1"><span class="problematic" id="id2">`</span></a>src/com/lilithsthrone/utils/colours`目录下找到。</p>
 <p>Preceding <code class="docutils literal notranslate"><span class="pre">presetColourGroups</span></code> can be used, but not succeeding ones. (i.e.
 <code class="docutils literal notranslate"><span class="pre">presetColourGroup3</span></code> could not be used in <code class="docutils literal notranslate"><span class="pre">presetColourGroup2</span></code>.)</p>
 <div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;presetColourGroup1</span><span class="w"> </span><span class="na">singleColour=</span><span class="s">&quot;true&quot;</span><span class="nt">&gt;</span>
@@ -363,7 +347,7 @@ player, or if the item remains unidentified.</p>
 <dl class="std nodevar">
 <dt class="sig sig-object std" id="nodevar-id-outfits">
 <span class="sig-name descname"><span class="pre">id</span></span> <span class="pre">Type:</span> <span class="pre">string</span><a class="headerlink" href="#nodevar-id-outfits" title="永久链接至目标">¶</a></dt>
-<dd><p>The clothing ID</p>
+<dd><p>衣物ID</p>
 <div class="admonition seealso">
 <p class="admonition-title">参见</p>
 <p><a class="reference internal" href="overview.html#items-identifier"><span class="std std-ref">物品标识符(Item’s identifier)</span></a></p>
@@ -666,11 +650,11 @@ used as a pre-set colour list instead of defining individual colours.</p>
 <li class="toctree-l3"><a class="reference internal" href="#outfittypes">3.1.5. outfitTypes</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#acceptablelegconfigurations">3.1.6. acceptableLegConfigurations</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#conditional">3.1.7. conditional</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#weight">3.1.8. 宽度</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#weight">3.1.8. weight</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#generationattributes">3.2. generationAttributes</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#conditional-statements">3.2.1. Conditional statements</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#conditional-statements">3.2.1. 条件语句</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#presetcolourgroups">3.2.2. presetColourGroups</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#mainweapons-and-offhandweapons">3.2.3. mainWeapons and offhandWeapons</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#guaranteedclothingequips">3.2.4. guaranteedClothingEquips</a></li>
