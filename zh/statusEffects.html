@@ -98,7 +98,7 @@
 </section>
 <section id="combateffect">
 <h2><span class="section-number">5.5. </span>combatEffect<a class="headerlink" href="#combateffect" title="此标题的永久链接">¶</a></h2>
-<p>如果你想要该状态效果仅在战斗中渲染，并且在战斗中每一回合都将 <a class="reference internal" href="#applyeffect">applyEffect</a> 元素的内容施加给受影响角色，请设置为 <code class="docutils literal notranslate"><span class="pre">true</span></code>。只有该状态效果**仅**在战斗中施加并使用时，才需要设置为“true”。被标记为战斗状态效果的，战斗外则不会施加效果。</p>
+<p>如果你想要该状态效果仅在战斗中渲染，并且在战斗中每一回合都将 <a class="reference internal" href="#applyeffect">applyEffect</a> 元素的内容施加给受影响角色，请设置为 <code class="docutils literal notranslate"><span class="pre">true</span></code> 。只有该状态效果 <strong>仅</strong> 在战斗中施加并使用时，才需要设置为“true”。被标记为战斗状态效果的，战斗外则不会施加效果。</p>
 <div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;combatEffect&gt;</span>false<span class="nt">&lt;/combatEffect&gt;</span>
 </pre></div>
 </div>
@@ -279,11 +279,11 @@
 <dt><code class="docutils literal notranslate"><span class="pre">TOTAL_SECONDS_PASSED</span></code></dt><dd><p>为特殊标签，将会被转化为一个长整数值，代表该角色总共受到该状态效果影响多长时间(以秒数衡量)。例如，通常使用 <code class="docutils literal notranslate"><span class="pre">TOTAL_SECONDS_PASSED</span> <span class="pre">==</span> <span class="pre">0</span></code> ，来保证效果只有在该状态效果最初添加时才生效。</p>
 <div class="admonition important">
 <p class="admonition-title">重要</p>
-<p>在战斗中，“经过的秒数”实际上代表着经过的战斗回合。所以，例如某角色已经在该状态效果的影响下经过了两个战斗回合，那么 <code class="docutils literal notranslate"><span class="pre">TOTAL_SECONDS_PASSED</span></code> 将会被转化为2.</p>
+<p>在战斗中，“经过的秒数”实际上代表着经过的战斗回合。所以，例如某角色已经在该状态效果的影响下经过了两个战斗回合，那么 <code class="docutils literal notranslate"><span class="pre">TOTAL_SECONDS_PASSED</span></code> 将会被转化为2。</p>
 </div>
 </dd>
 </dl>
-<p>有关制表符(tab)和空格(space): 被解析过后，返回的 <code class="docutils literal notranslate"><span class="pre">String</span></code> 前后所有的制表符将被移除，所以使用制表符排版是安全的，而 <strong>空格则不是</strong>。</p>
+<p>有关制表符(tab)和空格(space): 被解析过后，返回的 <code class="docutils literal notranslate"><span class="pre">String</span></code> 前后所有的制表符将被移除，所以使用制表符排版是安全的，而 <strong>空格则不是</strong> 。</p>
 <div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;applyEffect</span><span class="w"> </span><span class="na">interval=</span><span class="s">&quot;3600&quot;</span><span class="nt">&gt;</span><span class="cp">&lt;![CDATA[</span>
 <span class="cp">    #IF(SECONDS_PASSED&gt;0)</span>
 <span class="cp">            An hour passed!</span>

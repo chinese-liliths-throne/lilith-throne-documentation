@@ -90,7 +90,7 @@
 </section>
 <section id="determiner">
 <h3><span class="section-number">2.4.1.5. </span>determiner<a class="headerlink" href="#determiner" title="此标题的永久链接">¶</a></h3>
-<p>在 “Innoxia 手持 X 恶魔匕首” 这个例子中，这个X就是就是量词，这通常填入“一把”或者“一支”，但是对于其他武器来说这个量词可能是不同的。</p>
+<p>在“Innoxia 手持 X 恶魔匕首”这个例子中，这个X就是就是量词，这通常填入“一把”或者“一支”，但是对于其他武器来说这个量词可能是不同的。</p>
 <p>像“Innoxia拿着X剪刀”这个例子中, 这里X(这个量词)就应该写作“一把”。</p>
 <div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;determiner&gt;</span><span class="cp">&lt;![CDATA[a]]&gt;</span><span class="nt">&lt;/determiner&gt;</span>
 </pre></div>
@@ -190,7 +190,7 @@
 </section>
 <section id="imageequippedname">
 <h3><span class="section-number">2.4.1.16. </span>1.16 imageEquippedname<a class="headerlink" href="#imageequippedname" title="此标题的永久链接">¶</a></h3>
-<p>装备时该武器图像的文件名。可以（通常也是）与图像名称相同（在本例中为 <code class="docutils literal notranslate"><span class="pre">dagger_sheathed.svg</span></code>）。</p>
+<p>装备时该武器图像的文件名。可以（通常也是）与图像名称相同（在本例中为 <code class="docutils literal notranslate"><span class="pre">dagger_sheathed.svg</span></code> ）。</p>
 <div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;imageEquippedName&gt;</span>dagger.svg<span class="nt">&lt;/imageEquippedName&gt;</span>
 </pre></div>
 </div>
@@ -255,7 +255,7 @@
 <span class="nt">&lt;/spells&gt;</span>
 </pre></div>
 </div>
-<p>changeOnReforge变量决定当玩家改变伤害类型时，该武器是否应该变换法术。(例如，如果他们将``FIRE``匕首锻造为``ICE``匕首，如果changeOnReforge为true，那么授予的法术``FIREBALL``将自动切换为``ICE_SHARD``)。</p>
+<p>changeOnReforge变量决定当玩家改变伤害类型时，该武器是否应该变换法术。(例如，如果他们将 <code class="docutils literal notranslate"><span class="pre">FIRE</span></code> 匕首锻造为 <code class="docutils literal notranslate"><span class="pre">ICE</span></code> 匕首，如果changeOnReforge为true，那么授予的法术 <code class="docutils literal notranslate"><span class="pre">FIREBALL</span></code> 将自动切换为 <code class="docutils literal notranslate"><span class="pre">ICE_SHARD</span></code> )。</p>
 <p>damageType变量与解锁衍生武器法术的damageType保持一致。可以拥有多种同种damageType，比如：</p>
 <div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;spell</span><span class="w"> </span><span class="na">damageType=</span><span class="s">&quot;FIRE&quot;</span><span class="nt">&gt;</span>FIREBALL<span class="nt">&lt;/spell&gt;</span>
 <span class="nt">&lt;spell</span><span class="w"> </span><span class="na">damageType=</span><span class="s">&quot;FIRE&quot;</span><span class="nt">&gt;</span>FLASH<span class="nt">&lt;/spell&gt;</span>
@@ -320,7 +320,7 @@
 </section>
 <section id="extraeffects">
 <h3><span class="section-number">2.4.1.26. </span>1.26 extraEffects<a class="headerlink" href="#extraeffects" title="此标题的永久链接">¶</a></h3>
-<p>你可以使用这一部分来描述该武器可能附带的额外效果。当玩家将鼠标悬浮在武器图标上，这些效果将会显示在提示中所以尽量保持简短(应当保持在一行内)。应当仅用于描述 <cite>1.27 onHitEffect</cite> 元素中发生的结果。没有角色会当作解析参数传入，所以你**不应**使用任何与角色相关的解析元素(例如 <code class="docutils literal notranslate"><span class="pre">[npc.name]</span></code>)。对于该武器，没有特殊效果需要描述，但如果你想要使用这一部分，请遵循以下格式：</p>
+<p>你可以使用这一部分来描述该武器可能附带的额外效果。当玩家将鼠标悬浮在武器图标上，这些效果将会显示在提示中所以尽量保持简短(应当保持在一行内)。应当仅用于描述 <cite>1.27 onHitEffect</cite> 元素中发生的结果。没有角色会当作解析参数传入，所以你 <strong>不应</strong> 使用任何与角色相关的解析元素(例如 <code class="docutils literal notranslate"><span class="pre">[npc.name]</span></code> )。对于该武器，没有特殊效果需要描述，但如果你想要使用这一部分，请遵循以下格式：</p>
 <div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;extraEffects&gt;</span>
 <span class="w">    </span><span class="nt">&lt;effect&gt;</span><span class="cp">&lt;![CDATA[Stab time!]]&gt;</span><span class="nt">&lt;/effect&gt;</span>
 <span class="nt">&lt;/extraEffects&gt;</span>
@@ -443,8 +443,8 @@
 </section>
 <section id="hitdescription">
 <h2><span class="section-number">2.4.2. </span>2 hitDescription<a class="headerlink" href="#hitdescription" title="此标题的永久链接">¶</a></h2>
-<p>击中敌人时使用的描述。攻击者每次攻击目标时都会随机选择一个``hitText``值。遵循与`` equitext <a href="#id1"><span class="problematic" id="id2">``</span></a>相同的原则。</p>
-<p>你可以使用 <code class="docutils literal notranslate"><span class="pre">criticalHitText</span></code> 元素添加命中描述，这些描述只会在暴击命中时显示。  这是可选的属性，你可以不需要定义任何暴击命中描述。  如果没有定义，并且发生了暴击，则将使用常规的 <a href="#id1"><span class="problematic" id="id2">``</span></a>hitText``代替。</p>
+<p>击中敌人时使用的描述。攻击者每次攻击目标时都会随机选择一个 <code class="docutils literal notranslate"><span class="pre">hitText</span></code> 值。遵循与 `` equitext `` 相同的原则。</p>
+<p>你可以使用 <code class="docutils literal notranslate"><span class="pre">criticalHitText</span></code> 元素添加命中描述，这些描述只会在暴击命中时显示。  这是可选的属性，你可以不需要定义任何暴击命中描述。  如果没有定义，并且发生了暴击，则将使用常规的 <code class="docutils literal notranslate"><span class="pre">hitText</span></code> 代替。</p>
 <div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;hitDescriptions&gt;</span>
 <span class="w">    </span><span class="nt">&lt;hitText&gt;</span><span class="cp">&lt;![CDATA[</span>
 <span class="cp">    Thrusting out with [npc.her] Demon&#39;s Dagger, [npc.name] [npc.verb(manage)] to stab [npc2.name] in the chest; the ethereal arcane blade passing through [npc2.her] torso to drain [npc2.her] energy!</span>

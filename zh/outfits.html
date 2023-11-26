@@ -112,7 +112,7 @@
 </div>
 <div class="admonition caution">
 <p class="admonition-title">小心</p>
-<p>截至目前(<em>v0.3.0.6</em>)，游戏中只有 <code class="docutils literal notranslate"><span class="pre">MUGGER</span></code> 预设套装类型正在使用。但最终将会补齐预设套装类型。</p>
+<p>截至目前( <em>v0.3.0.6</em> )，游戏中只有 <code class="docutils literal notranslate"><span class="pre">MUGGER</span></code> 预设套装类型正在使用。但最终将会补齐预设套装类型。</p>
 </div>
 <div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;outfitTypes&gt;</span>
 <span class="w">    </span><span class="nt">&lt;type&gt;</span>CASUAL_DATE<span class="nt">&lt;/type&gt;</span>
@@ -135,7 +135,7 @@
 </section>
 <section id="conditional">
 <h3><span class="section-number">3.1.7. </span>conditional<a class="headerlink" href="#conditional" title="此标题的永久链接">¶</a></h3>
-<p>对于某角色，需要满足这些条件才能生成该预设套装。 <code class="docutils literal notranslate"><span class="pre">npc.hasFetish(FETISH_EXHIBITIONIST)``总应当纳入考虑。该条件**不支持**</span> <span class="pre">``clothingConditionalX</span></code> 元素。</p>
+<p>对于某角色，需要满足这些条件才能生成该预设套装。 <code class="docutils literal notranslate"><span class="pre">npc.hasFetish(FETISH_EXHIBITIONIST)</span></code> 总应当纳入考虑。该条件 <strong>不支持</strong> <code class="docutils literal notranslate"><span class="pre">clothingConditionalX</span></code> 元素。</p>
 <div class="admonition seealso">
 <p class="admonition-title">参见</p>
 <ul class="simple">
@@ -171,7 +171,7 @@
 
 </dd>
 </dl>
-<p>你可以定义任意数量的条件语句，并在该文件的其他位置使用。条件语句必须使用 <code class="docutils literal notranslate"><span class="pre">CDATA</span></code> 标签包裹，并且必须使用 <code class="docutils literal notranslate"><span class="pre">clothingConditionalX</span></code> 或 <code class="docutils literal notranslate"><span class="pre">condX``的格式，其中</span> <span class="pre">``X</span></code> 是一个不重复的字符串(例如 <code class="docutils literal notranslate"><span class="pre">cond1</span></code>、 <code class="docutils literal notranslate"><span class="pre">condUnderwear</span></code>、 <a href="#id1"><span class="problematic" id="id2">``</span></a>clothingConditionalMeleeWeapons``等都是有效的标签)。</p>
+<p>你可以定义任意数量的条件语句，并在该文件的其他位置使用。条件语句必须使用 <code class="docutils literal notranslate"><span class="pre">CDATA</span></code> 标签包裹，并且必须使用 <code class="docutils literal notranslate"><span class="pre">clothingConditionalX</span></code> 或 <code class="docutils literal notranslate"><span class="pre">condX</span></code> 的格式，其中 <code class="docutils literal notranslate"><span class="pre">X</span></code> 是一个不重复的字符串(例如 <code class="docutils literal notranslate"><span class="pre">cond1</span></code> 、 <code class="docutils literal notranslate"><span class="pre">condUnderwear</span></code> 、 <code class="docutils literal notranslate"><span class="pre">clothingConditionalMeleeWeapons</span></code> 等都是有效的标签)。</p>
 <dl>
 <dt>示例</dt><dd><div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;cond1</span><span class="w"> </span><span class="na">constant=</span><span class="s">&quot;true&quot;</span><span class="nt">&gt;</span><span class="cp">&lt;![CDATA[RND.nextInt(100)&lt;=50]]&gt;</span><span class="nt">&lt;/cond1&gt;</span>
 <span class="nt">&lt;cond2</span><span class="w"> </span><span class="na">constant=</span><span class="s">&quot;true&quot;</span><span class="nt">&gt;</span><span class="cp">&lt;![CDATA[RND.nextInt(100)&lt;=75]**&gt;</span><span class="nt">&lt;/cond2&gt;</span>
@@ -186,13 +186,13 @@
 <dt><strong>节点属性:</strong></dt><dd><dl class="std nodevar">
 <dt class="sig sig-object std" id="nodevar-singleColour-outfits">
 <span class="sig-name descname"><span class="pre">singleColour</span></span> <span class="pre">Type:</span> <span class="pre">boolean</span><span class="pre">,</span> <em class="property"><span class="pre">Default:</span> <span class="pre">False</span></em><span class="pre">,</span> <em class="property"><span class="pre">Optional</span></em><a class="headerlink" href="#nodevar-singleColour-outfits" title="永久链接至目标">¶</a></dt>
-<dd><p><code class="xref std std-nodevar docutils literal notranslate"><span class="pre">singleColour</span></code> 属性为可选项，设置为 <a href="#id1"><span class="problematic" id="id2">``</span></a>True``时，意味着该组颜色总会从列表中返回随机选择后的同一个颜色。</p>
+<dd><p><code class="xref std std-nodevar docutils literal notranslate"><span class="pre">singleColour</span></code> 属性为可选项，设置为 <code class="docutils literal notranslate"><span class="pre">True</span></code> 时，意味着该组颜色总会从列表中返回随机选择后的同一个颜色。</p>
 </dd></dl>
 
 </dd>
 </dl>
-<p>预设颜色组会从其中定义的 <code class="docutils literal notranslate"><span class="pre">randomColour</span></code> 中随机选取一个，在该XML文件中做后续使用。你最多可以设置20个 <code class="docutils literal notranslate"><span class="pre">presetColourGroupX</span></code>，但是数字必须时连续的。(例如你可以定义 <code class="docutils literal notranslate"><span class="pre">presetColourGroup1</span></code>、 <code class="docutils literal notranslate"><span class="pre">presetColourGroup2</span></code>、 <code class="docutils literal notranslate"><span class="pre">presetColourGroup3</span></code>，但**不能是** <code class="docutils literal notranslate"><span class="pre">presetColourGroup1</span></code>、 <code class="docutils literal notranslate"><span class="pre">presetColourGroup2</span></code>、 <code class="docutils literal notranslate"><span class="pre">presetColourGroup4</span></code>，因为跳过了“3”)</p>
-<p>可用的数值能够在 :ltgithub:<a href="#id1"><span class="problematic" id="id2">`</span></a>src/com/lilithsthrone/utils/colours`目录下找到。</p>
+<p>预设颜色组会从其中定义的 <code class="docutils literal notranslate"><span class="pre">randomColour</span></code> 中随机选取一个，在该XML文件中做后续使用。你最多可以设置20个 <code class="docutils literal notranslate"><span class="pre">presetColourGroupX</span></code>，但是数字必须时连续的。(例如你可以定义 <code class="docutils literal notranslate"><span class="pre">presetColourGroup1</span></code> 、 <code class="docutils literal notranslate"><span class="pre">presetColourGroup2</span></code> 、 <code class="docutils literal notranslate"><span class="pre">presetColourGroup3</span></code> ，但 <strong>不能是</strong> <code class="docutils literal notranslate"><span class="pre">presetColourGroup1</span></code> 、 <code class="docutils literal notranslate"><span class="pre">presetColourGroup2</span></code> 、 <code class="docutils literal notranslate"><span class="pre">presetColourGroup4</span></code> ，因为跳过了“3”)</p>
+<p>可用的数值能够在 <a class="reference external" href="https://github.com/Innoxia/liliths-throne-public/tree/dev/src/com/lilithsthrone/utils/colours">src/com/lilithsthrone/utils/colours</a> 目录下找到。</p>
 <p>Preceding <code class="docutils literal notranslate"><span class="pre">presetColourGroups</span></code> can be used, but not succeeding ones. (i.e.
 <code class="docutils literal notranslate"><span class="pre">presetColourGroup3</span></code> could not be used in <code class="docutils literal notranslate"><span class="pre">presetColourGroup2</span></code>.)</p>
 <div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;presetColourGroup1</span><span class="w"> </span><span class="na">singleColour=</span><span class="s">&quot;true&quot;</span><span class="nt">&gt;</span>
