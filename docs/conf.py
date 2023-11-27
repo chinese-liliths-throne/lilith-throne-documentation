@@ -79,8 +79,8 @@ html_sidebars = {
         "about.html",
         "navigation.html",
         "relations.html",
+        "multi-language.html",
         "searchbox.html",
-		"multi-language.html",
         "donate.html",
     ]
 }
