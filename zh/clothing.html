@@ -522,11 +522,8 @@
 <section id="concealedslots">
 <h4><span class="section-number">2.1.2.17.6. </span>concealedSlots<a class="headerlink" href="#concealedslots" title="此标题的永久链接">¶</a></h4>
 <p>该 <a class="reference internal" href="#displacementtype">displacementType</a> 遮挡的栏位。可用的栏位请参见此处:  <a class="reference external" href="https://github.com/Innoxia/liliths-throne-public/tree/dev/src/com/lilithsthrone/game/inventory/InventorySlot.java">src/com/lilithsthrone/game/inventory/InventorySlot.java</a></p>
-<p>You can also use a preset list by adding an attribute named “values” to this
-element (an example -- “CS Example” -- is in the <a class="reference internal" href="#blockedparts">blockedParts</a> section below
-this one). The preset lists that you can use are found here:
-<a class="reference external" href="https://github.com/Innoxia/liliths-throne-public/tree/dev/src/com/lilithsthrone/game/inventory/clothing/PresetConcealmentLists.java">src/com/lilithsthrone/game/inventory/clothing/PresetConcealmentLists.java</a></p>
-<p>Use the tag <code class="docutils literal notranslate"><span class="pre">slot</span></code> for values inserted here.</p>
+<p>你同样可以为该元素添加一个名为 <code class="docutils literal notranslate"><span class="pre">values</span></code> 的属性，来应用预设值，(例如位于 <a class="reference internal" href="#blockedparts">blockedParts</a> 部分的“CS Example”)。可用的预设列表参见此处: <a class="reference external" href="https://github.com/Innoxia/liliths-throne-public/tree/dev/src/com/lilithsthrone/game/inventory/clothing/PresetConcealmentLists.java">src/com/lilithsthrone/game/inventory/clothing/PresetConcealmentLists.java</a></p>
+<p>使用 <code class="docutils literal notranslate"><span class="pre">slot</span></code> 标签来向其中插入值。</p>
 <dl>
 <dt>示例</dt><dd><div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;slot&gt;</span>HEAD<span class="nt">&lt;/slot&gt;</span>
 </pre></div>
@@ -537,15 +534,10 @@ this one). The preset lists that you can use are found here:
 </section>
 <section id="incompatibleslots">
 <h3><span class="section-number">2.1.2.18. </span>incompatibleSlots<a class="headerlink" href="#incompatibleslots" title="此标题的永久链接">¶</a></h3>
-<p>Inventory slots that are incompatible with this clothing. The game’s swimsuit
-makes use of this, and, while fitting into the <code class="docutils literal notranslate"><span class="pre">CHEST</span></code> slot, also blocks
-<code class="docutils literal notranslate"><span class="pre">GROIN</span></code> and <code class="docutils literal notranslate"><span class="pre">STOMACH</span></code>. Possible slots are found here:
-<a class="reference external" href="https://github.com/Innoxia/liliths-throne-public/tree/dev/src/com/lilithsthrone/game/inventory/InventorySlot.java">src/com/lilithsthrone/game/inventory/InventorySlot.java</a></p>
+<p>该衣物不兼容的装备栏位。游戏里的泳装就使用了这个功能，虽然穿着在 <code class="docutils literal notranslate"><span class="pre">CHEST</span></code> 栏位，但同时也会阻挡 <code class="docutils literal notranslate"><span class="pre">GROIN</span></code> 和 <code class="docutils literal notranslate"><span class="pre">STOMACH</span></code> 。可用的栏位青春那件此处: <a class="reference external" href="https://github.com/Innoxia/liliths-throne-public/tree/dev/src/com/lilithsthrone/game/inventory/InventorySlot.java">src/com/lilithsthrone/game/inventory/InventorySlot.java</a></p>
 <p>示例</p>
 <blockquote>
-<div><p>You need to define an <code class="docutils literal notranslate"><span class="pre">incompatibleSlots</span></code> element for each slot that the
-clothing can be equipped into, so here, I’ve defined an empty one for
-<code class="docutils literal notranslate"><span class="pre">SOCK</span></code>, and another empty one for <code class="docutils literal notranslate"><span class="pre">HAND</span></code>.</p>
+<div><p>你需要为该衣物能够装备的每个栏位都分别定义一个 <code class="docutils literal notranslate"><span class="pre">incompatibleSlots</span></code> 元素，所以我为 <code class="docutils literal notranslate"><span class="pre">SOCK</span></code> 和 <code class="docutils literal notranslate"><span class="pre">HAND</span></code> 栏位都定义了空元素。</p>
 </div></blockquote>
 <dl class="simple">
 <dt>示例2</dt><dd><p>如果你想添加栏位，那么要像这样运用元素(下面的例子，装备到 <code class="docutils literal notranslate"><span class="pre">WRIST</span></code> 栏位时将锁定 <code class="docutils literal notranslate"><span class="pre">FINGER</span></code> 栏位):</p>
@@ -562,18 +554,11 @@ clothing can be equipped into, so here, I’ve defined an empty one for
 <section id="colours">
 <h3><span class="section-number">2.1.2.19. </span>颜色<a class="headerlink" href="#colours" title="此标题的永久链接">¶</a></h3>
 <p>请参阅相关条目 <a class="reference internal" href="overview.html#colours"><span class="std std-ref">documentation</span></a>.</p>
-<p>Your clothing can be coloured any way you like, but if you’d like the player to
-be able to dye your clothing, you can specify available colours here.
-<code class="docutils literal notranslate"><span class="pre">primaryColours</span></code>, <code class="docutils literal notranslate"><span class="pre">secondaryColours</span></code>, and <code class="docutils literal notranslate"><span class="pre">tertiaryColours</span></code> can all spawn
-in as a default colour, while their ’Dye’ counterparts are only available if the
-player chooses to dye the clothing in that colour. The game detects specific
-colour values, and recolours them to the value chosen by the player. These
-values are as follows:</p>
-<p>Colour types can be found in the files present in the following folder:
-<a class="reference external" href="https://github.com/Innoxia/liliths-throne-public/tree/dev/src/com/lilithsthrone/utils/colours">src/com/lilithsthrone/utils/colours</a></p>
+<p>衣物可以随意上色，但如果想要玩家能够染色衣物，需要在此处显式指定可用的颜色。 <code class="docutils literal notranslate"><span class="pre">primaryColours</span></code> 、 <code class="docutils literal notranslate"><span class="pre">secondaryColours</span></code> 和 <code class="docutils literal notranslate"><span class="pre">tertiaryColours</span></code> 代表着衣物生成时可选的颜色，而后带“Dye”的对应元素则只有在玩家选择染色衣物时才能使用。游戏将会检测特定颜色值，并且将其修改为玩家选择的值。这些数值如下所示:</p>
+<p>颜色类型可以在如下文件夹中的文件里获取: <a class="reference external" href="https://github.com/Innoxia/liliths-throne-public/tree/dev/src/com/lilithsthrone/utils/colours">src/com/lilithsthrone/utils/colours</a></p>
 <div class="admonition important">
 <p class="admonition-title">重要</p>
-<p>please use the <code class="docutils literal notranslate"><span class="pre">Colour</span></code> values that start with <code class="docutils literal notranslate"><span class="pre">CLOTHING_</span></code>.</p>
+<p>请使用以 <code class="docutils literal notranslate"><span class="pre">CLOTHING_</span></code> 开头的 <code class="docutils literal notranslate"><span class="pre">Colour</span></code> 数值。</p>
 </div>
 <div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;primaryColours</span><span class="w"> </span><span class="na">recolouringAllowed=</span><span class="s">&quot;true&quot;</span><span class="w"> </span><span class="na">values=</span><span class="s">&quot;JUST_WHITE&quot;</span><span class="nt">/&gt;</span>
 <span class="nt">&lt;primaryColoursDye</span><span class="w"> </span><span class="na">values=</span><span class="s">&quot;ALL&quot;</span><span class="nt">/&gt;</span>
@@ -606,30 +591,24 @@ values are as follows:</p>
 </section>
 </section>
 <section id="patterns">
-<h3><span class="section-number">2.1.2.20. </span>样式(patterns)<a class="headerlink" href="#patterns" title="此标题的永久链接">¶</a></h3>
-<p>This section details how to define patterns. If your svg file does not have a
-<code class="docutils literal notranslate"><span class="pre">patternLayer</span></code> defined, you can safely delete this whole section:</p>
+<h3><span class="section-number">2.1.2.20. </span>图案<a class="headerlink" href="#patterns" title="此标题的永久链接">¶</a></h3>
+<p>这一部分详细描述了如何定义图案。如果你的svg文件没有定义 <code class="docutils literal notranslate"><span class="pre">patternLayer</span></code> 那么就可以安全地删除这一整部分:</p>
 <dl>
-<dt><code class="docutils literal notranslate"><span class="pre">defaultPatterns</span></code></dt><dd><p>lists the patterns that this clothing can spawn with.</p>
+<dt><code class="docutils literal notranslate"><span class="pre">defaultPatterns</span></code></dt><dd><p>列出了该衣物生成时可以附加的图案。</p>
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">patternChance</span></code></p>
 <blockquote>
-<div><p>is the chance that this clothing will spawn with a pattern. Values are
-from 0 to 1, and should end with an “f”. i.e. 0.5f is a 50% chance,
-0.75f is 75%, 0.1275 is 12.75%, etc.</p>
+<div><p>是该衣物生成时带有图案的概率。数值从0到1，并且需要以“f”结尾。例如，0.5f意味着50%概率，0.75f意味着75%概率，0.1275f意味着12.75%概率等等。</p>
 </div></blockquote>
 </li>
 <li><p><code class="docutils literal notranslate"><span class="pre">colourNameDerivedFromPattern</span></code></p>
 <blockquote>
-<div><p>sets whether the pattern’s primary colour should be used for the
-clothing’s name, instead of the “colour” value. i.e. If set to <code class="docutils literal notranslate"><span class="pre">true</span></code>,
-then a green+black tiger-striped item of clothing would be called
-“green”, even if the base colour was something else.</p>
+<div><p>设置该图案的主要颜色是否应该用于衣物的名称，而非使用 <code class="docutils literal notranslate"><span class="pre">color</span></code> 数值。例如，如果设置为 <code class="docutils literal notranslate"><span class="pre">true</span></code> ，那么一个绿色+黑色的虎纹衣物就会被冠以“绿色”的前缀，无论基色如何。</p>
 </div></blockquote>
 </li>
 </ul>
 </dd>
-<dt><code class="docutils literal notranslate"><span class="pre">pattern</span></code></dt><dd><p>Pattern values can be found as svg file names in the folder <code class="docutils literal notranslate"><span class="pre">res/patterns</span></code></p>
+<dt><code class="docutils literal notranslate"><span class="pre">pattern</span></code></dt><dd><p>图案的可用值即文件夹 <code class="docutils literal notranslate"><span class="pre">res/patterns</span></code> 内svg文件的名称。</p>
 </dd>
 </dl>
 <div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;defaultPatterns</span><span class="w"> </span><span class="na">patternChance=</span><span class="s">&quot;0&quot;</span><span class="w"> </span><span class="na">colourNameDerivedFromPattern=</span><span class="s">&quot;false&quot;</span><span class="nt">&gt;</span>
@@ -638,8 +617,8 @@ then a green+black tiger-striped item of clothing would be called
 </pre></div>
 </div>
 <section id="patternprimarycolours-patternsecondarycolours-and-patterntertiarycolours">
-<h4><span class="section-number">2.1.2.20.1. </span>patternPrimaryColours, patternSecondaryColours, and patternTertiaryColours<a class="headerlink" href="#patternprimarycolours-patternsecondarycolours-and-patterntertiarycolours" title="此标题的永久链接">¶</a></h4>
-<p>Colours work the same as explained in the <a class="reference internal" href="#colours">colours</a> section.</p>
+<h4><span class="section-number">2.1.2.20.1. </span>patternPrimaryColours、patternSecondaryColours、patternTertiaryColours<a class="headerlink" href="#patternprimarycolours-patternsecondarycolours-and-patterntertiarycolours" title="此标题的永久链接">¶</a></h4>
+<p>与上述 <a class="reference internal" href="#colours">colours</a> 部分描述的颜色作用方式相同。</p>
 <div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;patternPrimaryColours&gt;</span>
 <span class="w">    </span><span class="nt">&lt;colour&gt;</span>CLOTHING_GREEN<span class="nt">&lt;/colour&gt;</span>
 <span class="nt">&lt;/patternPrimaryColours&gt;</span>
@@ -650,7 +629,7 @@ then a green+black tiger-striped item of clothing would be called
 </section>
 <section id="custompatterncolours">
 <h4><span class="section-number">2.1.2.20.2. </span>customPatternColours<a class="headerlink" href="#custompatterncolours" title="此标题的永久链接">¶</a></h4>
-<p>Custom pattern colours can be defined just like the customColours up above.</p>
+<p>自定义图案颜色与上述 <a class="reference internal" href="#customcolours">customColours</a> 定义方法相同。</p>
 <div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;customPatternColours/&gt;</span>
 </pre></div>
 </div>
@@ -658,16 +637,9 @@ then a green+black tiger-striped item of clothing would be called
 </section>
 <section id="itemtags">
 <h3><span class="section-number">2.1.2.21. </span>itemTags<a class="headerlink" href="#itemtags" title="此标题的永久链接">¶</a></h3>
-<p>These tags determine where in the world your clothing can be found, and what
-special attributes your clothing should have. Possible tags are defined in
-<a class="reference external" href="https://github.com/Innoxia/liliths-throne-public/tree/dev/src/com/lilithsthrone/game/inventory/ItemTag.java">src/com/lilithsthrone/game/inventory/ItemTag.java</a></p>
-<p><code class="docutils literal notranslate"><span class="pre">itemTags</span></code> without a <code class="docutils literal notranslate"><span class="pre">slot</span></code> defined will have these tags added to every
-equippable slot. Should only be used for generic tags like those related to
-which vendors sell it.</p>
-<p><code class="docutils literal notranslate"><span class="pre">itemTags</span></code> with a <code class="docutils literal notranslate"><span class="pre">slot</span></code> defined will have these tags applied ONLY when the
-clothing is equipped into that slot. In this example, equipping the socks onto
-your hands hinders arm movement. This is not entirely logical, and I added this
-just for demonstration purposes.</p>
+<p>这些标签决定了你能够在什么地方发现这件衣物，或者该衣物拥有什么特殊属性。可用的标签定义于: <a class="reference external" href="https://github.com/Innoxia/liliths-throne-public/tree/dev/src/com/lilithsthrone/game/inventory/ItemTag.java">src/com/lilithsthrone/game/inventory/ItemTag.java</a></p>
+<p>没有单独定义 <code class="docutils literal notranslate"><span class="pre">slot</span></code> 的 <code class="docutils literal notranslate"><span class="pre">itemTags</span></code> 将会将标签添加到所有可装备的栏位上。应当只在通用标签(如会在何处贩卖等)上使用。</p>
+<p>单独定义了 <code class="docutils literal notranslate"><span class="pre">slot</span></code> 的 <code class="docutils literal notranslate"><span class="pre">itemTags</span></code> 将会 <strong>只有</strong> 在衣物装备到相应栏位上后才会应用这些标签。在该示例中，将袜子装备到手部会阻碍手臂运动。虽然逻辑并不完全通顺，但这只是做演示用。</p>
 <div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;itemTags&gt;</span>
 <span class="w">    </span><span class="nt">&lt;tag&gt;</span>NOT_FOR_SALE<span class="nt">&lt;/tag&gt;</span>
 <span class="nt">&lt;/itemTags&gt;</span>
@@ -680,11 +652,8 @@ just for demonstration purposes.</p>
 </section>
 <section id="sexattributesself">
 <h2><span class="section-number">2.1.3. </span>sexAttributesSelf<a class="headerlink" href="#sexattributesself" title="此标题的永久链接">¶</a></h2>
-<p>See the <a class="reference external" href="https://github.com/Innoxia/liliths-throne-public/tree/dev/res/clothing/innoxia/buttPlugs/butt_plug.xml">res/clothing/innoxia/buttPlugs/butt_plug.xml</a> file for a
-working example of this element.</p>
-<p>These are the sex attributes applicable to the wearer (i.e. when inserted in the
-wearer’s orifices or when the wearer is penetrating this clothing type. Mainly
-used for insertable dildos.)</p>
+<p>参见 <a class="reference external" href="https://github.com/Innoxia/liliths-throne-public/tree/dev/res/clothing/innoxia/buttPlugs/butt_plug.xml">res/clothing/innoxia/buttPlugs/butt_plug.xml</a> 文件，其中就有在游戏中实际运作的例子，包括了该元素。</p>
+<p>这些是可以应用在穿戴者身上的性交属性(例如，插入穿戴者腔穴或者穿戴者插入了该衣物。主要用于可插入的假阴茎。)</p>
 <div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;sexAttributesSelf&gt;</span>
 <span class="w">    </span><span class="nt">&lt;penetration&gt;</span>
 <span class="w">            </span><span class="nt">&lt;length&gt;</span>15<span class="nt">&lt;/length&gt;</span>
@@ -711,47 +680,41 @@ used for insertable dildos.)</p>
 <dl class="simple">
 <dt>length</dt><dd><p>数值单位为厘米(cm)</p>
 </dd>
-<dt>grith</dt><dd><p>0-6 corresponding to <code class="docutils literal notranslate"><span class="pre">PenetrationGirth</span> <span class="pre">Enum</span></code> values</p>
+<dt>grith</dt><dd><p>0-6代表着 <code class="docutils literal notranslate"><span class="pre">PenetrationGirth</span> <span class="pre">Enum</span></code> 的数值</p>
 </dd>
-<dt>modifiers</dt><dd><p>For adding modifiers, add <code class="docutils literal notranslate"><span class="pre">mod</span></code> tags containing
-<code class="docutils literal notranslate"><span class="pre">PenetrationModifier</span> <span class="pre">Enum</span></code> values</p>
+<dt>modifiers</dt><dd><p>若要添加修饰词，请添加 <code class="docutils literal notranslate"><span class="pre">mod</span></code> 标签，内有 <code class="docutils literal notranslate"><span class="pre">PenetrationModifier</span> <span class="pre">Enum</span></code> 的数值</p>
 </dd>
 </dl>
 </section>
 <section id="orifice">
 <h3><span class="section-number">2.1.3.2. </span>orifice<a class="headerlink" href="#orifice" title="此标题的永久链接">¶</a></h3>
 <div class="versionchanged">
-<p><span class="versionmodified changed">在 0.3.7 版本发生变更: </span>orifice sex toy support is not fully implemented into the game!</p>
+<p><span class="versionmodified changed">在 0.3.7 版本发生变更: </span>飞机杯玩具的支持在游戏中还不完善！</p>
 </div>
 <dl class="simple">
 <dt>depth</dt><dd><p>数值单位为厘米(cm)</p>
 </dd>
-<dt>capacity</dt><dd><p>value in cm, corresponding to the diameter of the orifice</p>
+<dt>capacity</dt><dd><p>数值单位为厘米(cm)，对应着腔穴的直径</p>
 </dd>
-<dt>elasticity</dt><dd><p>0-7 corresponding to <code class="docutils literal notranslate"><span class="pre">OrificeElasticity</span> <span class="pre">Enum</span></code> values</p>
+<dt>elasticity(弹性)</dt><dd><p>0-7代表着 <code class="docutils literal notranslate"><span class="pre">OrificeElasticity</span> <span class="pre">Enum</span></code> 的数值</p>
 </dd>
-<dt>plasticity</dt><dd><p>0-7 corresponding to <code class="docutils literal notranslate"><span class="pre">OrificePlasticity</span> <span class="pre">Enum</span></code> values</p>
+<dt>plasticity(可塑性)</dt><dd><p>0-7代表着 <code class="docutils literal notranslate"><span class="pre">OrificePlasticity</span> <span class="pre">Enum</span></code> 的数值</p>
 </dd>
-<dt>wetness</dt><dd><p>0-7 corresponding to <code class="docutils literal notranslate"><span class="pre">Wetness</span> <span class="pre">Enum</span></code> values</p>
+<dt>wetness</dt><dd><p>0-7代表着 <code class="docutils literal notranslate"><span class="pre">Wetness</span> <span class="pre">Enum</span></code> 的数值</p>
 </dd>
-<dt>modifiers</dt><dd><p>list of <code class="docutils literal notranslate"><span class="pre">mod</span></code> tags, each containing <code class="docutils literal notranslate"><span class="pre">OrificeModifier</span> <span class="pre">Enum</span></code> values</p>
+<dt>modifiers</dt><dd><p><code class="docutils literal notranslate"><span class="pre">mod</span></code> 标签的列表，每个都内有 <code class="docutils literal notranslate"><span class="pre">OrificeModifier</span> <span class="pre">Enum</span></code> 的数值</p>
 </dd>
 </dl>
 </section>
 </section>
 <section id="sexattributesother">
 <h2><span class="section-number">2.1.4. </span>sexAttributesOther<a class="headerlink" href="#sexattributesother" title="此标题的永久链接">¶</a></h2>
-<p>These are the sex attributes applicable to someone who is interacting with the
-wearer (i.e. the penetration/orifice which is available for people other than
-the wearer. Mainly used for strap-on dildos.)</p>
+<p>这些是应用在与穿戴者交互的角色身上的性交属性(例如，除穿戴者以外可用的插入或者腔穴。主要用于穿戴式假阴茎。)</p>
 <div class="admonition seealso">
 <p class="admonition-title">参见</p>
-<p>Consult the file
-<a class="reference external" href="https://github.com/Innoxia/liliths-throne-public/tree/dev/res/clothing/norin/strapless_dildo/strapless_dildo.xml">res/clothing/norin/strapless_dildo/strapless_dildo.xml</a> for a
-working example of the following excerpt.</p>
+<p>参见文件 <a class="reference external" href="https://github.com/Innoxia/liliths-throne-public/tree/dev/res/clothing/norin/strapless_dildo/strapless_dildo.xml">res/clothing/norin/strapless_dildo/strapless_dildo.xml</a> 其中就有在游戏中实际运作的例子。</p>
 </div>
-<p>For an explanation of the effects of the different sub elements, please refer to
-<a class="reference internal" href="#sexattributesself">sexattributesself</a>.</p>
+<p>对于不同子元素效果的介使，请参见 <a class="reference internal" href="#sexattributesself">sexattributesself</a> 。</p>
 <div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;sexAttributesOther&gt;</span>
 <span class="w">    </span><span class="nt">&lt;penetration&gt;</span>
 <span class="w">            </span><span class="nt">&lt;length&gt;</span>25<span class="nt">&lt;/length&gt;</span>
@@ -765,17 +728,13 @@ working example of the following excerpt.</p>
 </section>
 <section id="replacementtext">
 <h2><span class="section-number">2.1.5. </span>replacementText<a class="headerlink" href="#replacementtext" title="此标题的永久链接">¶</a></h2>
-<p>The following sections are for defining the descriptions of displacing or
-replacing your clothing. The attribute <code class="docutils literal notranslate"><span class="pre">type</span></code> defines which <code class="docutils literal notranslate"><span class="pre">DisplacementType</span></code>
-your descriptions are applied to. For standard equipping and unequipping, use
-<code class="docutils literal notranslate"><span class="pre">REMOVE_OR_EQUIP</span></code>.</p>
+<p>接下来的部分用于定义移开或整理衣物时的描述。其中的 <code class="docutils literal notranslate"><span class="pre">type</span></code> 属性定义了这段描述会用于哪个 <code class="docutils literal notranslate"><span class="pre">DisplacementType</span></code> 。对于常规的装备和解除装备，请使用 <code class="docutils literal notranslate"><span class="pre">REMOVE_OR_EQUIP</span></code> 。</p>
 <div class="admonition seealso">
 <p class="admonition-title">参见</p>
-<p>List of type contant:
-<a class="reference external" href="https://github.com/Innoxia/liliths-throne-public/tree/dev/src/com/lilithsthrone/game/inventory/clothing/DisplacementType.java">src/com/lilithsthrone/game/inventory/clothing/DisplacementType.java</a>.</p>
+<p>完整的类型列表:  <a class="reference external" href="https://github.com/Innoxia/liliths-throne-public/tree/dev/src/com/lilithsthrone/game/inventory/clothing/DisplacementType.java">src/com/lilithsthrone/game/inventory/clothing/DisplacementType.java</a></p>
 </div>
 <dl>
-<dt>示例</dt><dd><p>This is the equip text for when socks are equipped to the <code class="docutils literal notranslate"><span class="pre">SOCK</span></code> slot:</p>
+<dt>示例</dt><dd><p>这是袜子装备在 <code class="docutils literal notranslate"><span class="pre">SOCK</span></code> 栏位上时的装备文本:</p>
 <div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;replacementText</span><span class="w"> </span><span class="na">slot=</span><span class="s">&quot;SOCK&quot;</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;REMOVE_OR_EQUIP&quot;</span><span class="nt">&gt;</span>
 <span class="w">        </span><span class="nt">&lt;self&gt;</span>
 <span class="w">                </span><span class="cp">&lt;![CDATA[[npc.Name] [npc.verb(pull)] the socks on to cover [npc.her] [npc.feet].]]&gt;</span>
@@ -790,7 +749,7 @@ your descriptions are applied to. For standard equipping and unequipping, use
 </pre></div>
 </div>
 </dd>
-<dt>示例</dt><dd><p>This is the equip text for when socks are equipped to the <code class="docutils literal notranslate"><span class="pre">HAND</span></code> slot:</p>
+<dt>示例</dt><dd><p>这是袜子装备在 <code class="docutils literal notranslate"><span class="pre">HAND</span></code> 栏位上时的装备文本:</p>
 <div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;replacementText</span><span class="w"> </span><span class="na">slot=</span><span class="s">&quot;HAND&quot;</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;REMOVE_OR_EQUIP&quot;</span><span class="nt">&gt;</span>
 <span class="w">        </span><span class="nt">&lt;self&gt;</span>
 <span class="w">                </span><span class="cp">&lt;![CDATA[[npc.Name] [npc.verb(pull)] the socks on to cover [npc.her] [npc.hands].]]&gt;</span>
@@ -809,9 +768,9 @@ your descriptions are applied to. For standard equipping and unequipping, use
 </section>
 <section id="displacementtext">
 <h2><span class="section-number">2.1.6. </span>displacementText<a class="headerlink" href="#displacementtext" title="此标题的永久链接">¶</a></h2>
-<p>This section is used for removal and displacement.</p>
+<p>这一部分用于移除或移开。</p>
 <dl>
-<dt>示例</dt><dd><p>This is the unequip text for when socks are removed from the <code class="docutils literal notranslate"><span class="pre">SOCK</span></code> slot:</p>
+<dt>示例</dt><dd><p>这是袜子从 <code class="docutils literal notranslate"><span class="pre">SOCK</span></code> 栏位上移除时的解除装备文本:</p>
 <div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;displacementText</span><span class="w"> </span><span class="na">slot=</span><span class="s">&quot;SOCK&quot;</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;REMOVE_OR_EQUIP&quot;</span><span class="nt">&gt;</span>
 <span class="w">        </span><span class="nt">&lt;self&gt;</span>
 <span class="w">                </span><span class="cp">&lt;![CDATA[[npc.Name] [npc.verb(pull)] off [npc.her] socks.]]&gt;</span>
@@ -826,7 +785,7 @@ your descriptions are applied to. For standard equipping and unequipping, use
 </pre></div>
 </div>
 </dd>
-<dt>示例</dt><dd><p>This is the unequip text for when socks are removed from the <code class="docutils literal notranslate"><span class="pre">HAND</span></code> slot:</p>
+<dt>示例</dt><dd><p>这是袜子从 <code class="docutils literal notranslate"><span class="pre">HAND</span></code> 栏位上移除时的解除装备文本:</p>
 <div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;displacementText</span><span class="w"> </span><span class="na">slot=</span><span class="s">&quot;HAND&quot;</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;REMOVE_OR_EQUIP&quot;</span><span class="nt">&gt;</span>
 <span class="w">        </span><span class="nt">&lt;self&gt;</span>
 <span class="w">                </span><span class="cp">&lt;![CDATA[[npc.Name] [npc.verb(pull)] the socks from off of [npc.her] [npc.hands].]]&gt;</span>
@@ -918,16 +877,6 @@ your descriptions are applied to. For standard equipping and unequipping, use
   </ul></li>
 </ul>
 </div>
-<div id="searchbox" style="display: none" role="search">
-  <h3 id="searchlabel">快速搜索</h3>
-    <div class="searchformwrapper">
-    <form class="search" action="search.html" method="get">
-      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
-      <input type="submit" value="提交" />
-    </form>
-    </div>
-</div>
-<script>document.getElementById('searchbox').style.display = "block"</script>
 <script>
 	document.write("<h3>Languages</h3><p>")
 	if (window.location.href.indexOf("zh/") >= 0)
@@ -942,6 +891,16 @@ your descriptions are applied to. For standard equipping and unequipping, use
 	}
 	document.write("</p>")
 </script>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">快速搜索</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="提交" />
+    </form>
+    </div>
+</div>
+<script>document.getElementById('searchbox').style.display = "block"</script>
 
 
 
