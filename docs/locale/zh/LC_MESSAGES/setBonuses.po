@@ -1,0 +1,98 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2020, Innoxia and contributors
+# This file is distributed under the same license as the Lilith's Throne Mod
+# Documentation package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Lilith's Throne Mod Documentation \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-11-13 13:10+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: zh\n"
+"Language-Team: zh <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.13.1\n"
+
+#: ../../setBonuses.rst:6
+msgid "Item Sets"
+msgstr "物品套装"
+
+#: ../../setBonuses.rst
+msgid "Author"
+msgstr "作者"
+
+#: ../../setBonuses.rst:8
+msgid "innoxia, bicobus"
+msgstr "innoxia, bicobus"
+
+#: ../../setBonuses.rst:11
+msgid "GENERAL INFORMATION"
+msgstr "通用信息"
+
+#: ../../setBonuses.rst:13
+msgid ""
+"If you are unsure of anything, please join the `Lilith's Throne Discord`_"
+" and ask for help! You can see another annotated example in the file "
+":ltgithub:`res/setBonuses/innoxia/enforcer.xml`."
+msgstr "如果有任何不确定的地方，请加入 `Lilith's Throne Discord`_ 寻求帮助！你可以在该文件 :ltgithub:`res/setBonuses/innoxia/enforcer.xml` 中获得另一个有注解的示例。"
+
+#: ../../setBonuses.rst:18
+msgid ":index:`name`"
+msgstr ":index:`name`"
+
+#: ../../setBonuses.rst:20
+msgid "The name of this set bonus."
+msgstr "套装加成的名称。"
+
+#: ../../setBonuses.rst:27
+msgid "statusEffect"
+msgstr "statusEffect"
+
+#: ../../setBonuses.rst:29
+msgid ""
+"The id of the status effect which should be applied when a character is "
+"under the effect of this set bonus."
+msgstr "当角色处于该套装加成之下时，对其应用的状态效果的id。"
+
+#: ../../setBonuses.rst:38
+msgid "numberRequiredForCompleteSet"
+msgstr "numberRequiredForCompleteSet"
+
+#: ../../setBonuses.rst:40
+msgid ""
+"The number of items of clothing or weapons which a character needs to "
+"equip to gain this set bonus."
+msgstr "欲获得该套装加成，角色需要装备的衣物或武器的数量。"
+
+#: ../../setBonuses.rst:49
+msgid "blockedSlotsCountingTowardsFullSet"
+msgstr "blockedSlotsCountingTowardsFullSet"
+
+#: ../../setBonuses.rst:51
+msgid ""
+"If any of the slots defined in this section are blocked (due to the "
+"character’s body not supporting clothing in these slots), then the slot "
+"is counted as being equipped with an item of clothing from this set. For "
+"example, as the leg slot is defined in this section, a character with a "
+"taur’s body (which is therefore blocked from wearing leg clothing) would "
+"have the ``numberRequiredForCompleteSet`` reduced by 1. It’s usually best"
+" to fill out this section with each slot that can be fitted with an item "
+"of this set’s clothing. As this set only has 1 item in it, this section "
+"does nothing (as an item set can only ever be activated with at least 1 "
+"item of clothing/weapon equipped), and is just for demonstrative "
+"purposes."
+msgstr "如果在这一部分中定义的栏位被禁用(由于角色的身体不支持在这些栏位中装备衣物)，那么栏位会被视作已经装备了该套装所需的衣物。例如，腿部栏位在该部分中定义，那么当角色拥有四足下肢时(会导致无法穿着腿部衣物)，所需的 ``numberRequiredForCompleteSet`` 就会减少1。通常最好在该部分中定义所有该套装加成可能会用到的栏位。如果该套装只由一件物品组成，那么这一部分将不会生效(因为物品套装必须至少装备一件衣物/武器)，仅用于演示目的。"
+
+#: ../../setBonuses.rst:62
+msgid ""
+"Possible slots are found here: "
+":ltgithub:`src/com/lilithsthrone/game/inventory/InventorySlot.java`"
+msgstr "可用的栏位可以在此处查阅： :ltgithub:`src/com/lilithsthrone/game/inventory/InventorySlot.java`"
+

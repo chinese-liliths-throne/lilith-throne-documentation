@@ -1,0 +1,150 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2020, Innoxia and contributors
+# This file is distributed under the same license as the Lilith's Throne Mod
+# Documentation package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Lilith's Throne Mod Documentation \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-11-13 13:10+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: zh\n"
+"Language-Team: zh <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.13.1\n"
+
+#: ../../tattoos.rst:5
+msgid "Tattoos"
+msgstr "纹身"
+
+#: ../../tattoos.rst
+msgid "Author"
+msgstr "作者"
+
+#: ../../tattoos.rst:7
+msgid "innoxia, bicobus"
+msgstr "innoxia, bicobus"
+
+#: ../../tattoos.rst:9
+msgid ""
+"For a version without all of the comments, see "
+":ltgithub:`res/mods/innoxia/items/tattoos/heartWomb/heart_womb.xml`."
+msgstr "对于带有注释的版本，参见 :ltgithub:`res/mods/innoxia/items/tattoos/heartWomb/heart_womb.xml`。"
+
+#: ../../tattoos.rst:13
+msgid "coreAttributes"
+msgstr "coreAttributes"
+
+#: ../../tattoos.rst:16
+msgid "value"
+msgstr "value"
+
+#: ../../tattoos.rst:18
+msgid ""
+"The base value of this tattoo. All of the standard tattoos are 500 "
+"flames. I roughly base things on 1 flame = 10p, so 10 flames = £1."
+msgstr "纹身的基础价值。所有常规纹身都价值500火币。1火币大概是1人民币。"
+
+#: ../../tattoos.rst:26
+msgid "name"
+msgstr "name"
+
+#: ../../tattoos.rst:28
+msgid "The name of this tattoo."
+msgstr "该纹身的名称。"
+
+#: ../../tattoos.rst:35
+msgid "description"
+msgstr "description"
+
+#: ../../tattoos.rst:37
+msgid ""
+"The description that’s shown in tooltips and on the item’s inspection "
+"page."
+msgstr "显示在悬浮提示栏和物品检查页面中的描述。"
+
+#: ../../tattoos.rst:44
+msgid "availabilityRequirements"
+msgstr "availabilityRequirements"
+
+#: ../../tattoos.rst:46
+msgid ""
+"Availability requirements for this tattoo. Use ’npc’ for the character "
+"receiving the tattoo. Can be left blank."
+msgstr "可用该纹身的要求。使用“npc”代表将要接受纹身的角色。可留空。"
+
+#: ../../tattoos.rst:54
+msgid "Example"
+msgstr "示例"
+
+#: ../../tattoos.rst:50
+msgid "tattoo available only to the player or feminine NPCs"
+msgstr "纹身仅对于玩家和女性化NPC可用。"
+
+#: ../../tattoos.rst:57
+msgid "imageName"
+msgstr "imageName"
+
+#: ../../tattoos.rst:61
+msgid ":ref:`items-image`"
+msgstr ":ref:`items-image`"
+
+#: ../../tattoos.rst:63
+msgid "The file path for this clothing’s image."
+msgstr "该纹身图像的文件路径。"
+
+#: ../../tattoos.rst:70
+msgid "enchantmentLimit"
+msgstr "enchantmentLimit"
+
+#: ../../tattoos.rst:72
+msgid ""
+"How many enchantments can be fit into this item. I feel like 5 is a good "
+"number for this."
+msgstr "可以在该物品上施加多少种附魔。5大概是比较好的数字。"
+
+#: ../../tattoos.rst:80
+msgid "slotAvailability"
+msgstr "slotAvailability"
+
+#: ../../tattoos.rst:82
+msgid ""
+"Inventory slots that this tattoo can be assigned to. Leave blank to allow"
+" all slots to be used."
+msgstr "该纹身可以被分配的装备栏位。留空则所有栏位均可用。"
+
+#: ../../tattoos.rst:87
+msgid ""
+"List of :ltgithub:`possible "
+"slots</src/com/lilithsthrone/game/inventory/InventorySlot.java>`."
+msgstr ":ltgithub:`可用栏位</src/com/lilithsthrone/game/inventory/InventorySlot.java>` 的列表。"
+
+#: ../../tattoos.rst:97
+msgid "colours"
+msgstr "colours"
+
+#: ../../tattoos.rst:99
+msgid "Please consult the relevant :ref:`documentation about colours<colours>`."
+msgstr "请参阅相关条目 :ref:`与颜色相关的文档<colours>`。"
+
+#: ../../tattoos.rst:101
+msgid ""
+"Use this section to define available colours for your tattoo. The game "
+"detects specific colour values, and recolours them to the value chosen by"
+" the player."
+msgstr "使用该部分来定义纹身的可用颜色。游戏将检测特定的颜色数值，并基于玩家选择的数值为其重新染色。"
+
+#: ../../tattoos.rst:110
+msgid ""
+"You can also make your own, custom list of colours to be used. If you "
+"want to include custom colours, do not define a ’values’ attribute, and "
+"instead, list each Colour, like in the example below."
+msgstr "你可以自制颜色列表使用。如果想要将自制颜色包括其中，不要定义“values”属性，而是将每个Colour列出，如下方示例所示。"
+
