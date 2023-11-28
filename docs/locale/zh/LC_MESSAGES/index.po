@@ -1,0 +1,42 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2020, Innoxia and contributors
+# This file is distributed under the same license as the Lilith's Throne Mod
+# Documentation package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Lilith's Throne Mod Documentation \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-11-13 13:10+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: zh\n"
+"Language-Team: zh <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.13.1\n"
+
+#: ../../index.rst:2
+msgid "Welcome to Lilith's Throne Mod Documentation's documentation!"
+msgstr "欢迎使用莉莉丝的王座模组工作指导指南！"
+
+#: ../../index.rst:18
+msgid "Indices and tables"
+msgstr "索引和表格"
+
+#: ../../index.rst:20
+msgid ":ref:`genindex`"
+msgstr ":ref:`genindex`"
+
+#: ../../index.rst:21
+msgid ":ref:`modindex`"
+msgstr ":ref:`modindex`"
+
+#: ../../index.rst:22
+msgid ":ref:`search`"
+msgstr ":ref:`search`"
+

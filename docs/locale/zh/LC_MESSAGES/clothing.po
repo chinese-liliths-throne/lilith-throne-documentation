@@ -1,0 +1,1160 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2020, Innoxia and contributors
+# This file is distributed under the same license as the Lilith's Throne Mod
+# Documentation package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Lilith's Throne Mod Documentation \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-11-13 13:10+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: zh\n"
+"Language-Team: zh <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.13.1\n"
+
+#: ../../clothing.rst:5
+msgid "Item Clothing"
+msgstr "衣物类物品"
+
+#: ../../clothing.rst
+msgid "Author"
+msgstr "作者"
+
+#: ../../clothing.rst:7
+msgid "innoxia, bicobus"
+msgstr "innoxia, bicobus"
+
+#: ../../clothing.rst:9
+msgid "Clothing and anything that is wearable, even inside."
+msgstr "衣物和其他任何可穿戴物品，即使位于体内。"
+
+#: ../../clothing.rst:11
+msgid ""
+"You can find working examples of clothing in the "
+":ltgithub:`res/mods/innoxia/items/clothing` folder."
+msgstr "你可以在 :ltgithub:`res/mods/innoxia/items/clothing` 文件夹内找到衣物范例。"
+
+#: ../../clothing.rst:15
+msgid "General Information"
+msgstr "通用信息"
+
+#: ../../clothing.rst:17
+msgid ""
+"Any clothing item whose rarity is set to LEGENDARY or above will not show"
+" up in the game, as no shopkeepers have been being defined as selling "
+"items of that quality. You can spawn it from the debug menu if you wish. "
+"The debug menu is accessed by typing ``buggy`` at any point in the game. "
+"It is best to enter the debug menu when not in the middle of combat, sex,"
+" or movement-locked dialogue, as it will break you out of it."
+msgstr "任何稀有度被设置为“LEGENDARY”及以上的衣物类物品在游戏中都不会出现，因为定义中没有商人会售卖这种品质的物品。如果想要的话，你可以通过debug菜单生成。debug菜单可以通过在游戏任何状态下输入 ``buggy`` （不使用中文输入法）进入。最好不要在战斗、性爱或无法移动的对话中进入debug菜单，因为会导致你结束当前的状态。"
+
+#: ../../clothing.rst:25
+msgid "coreAttributes"
+msgstr "coreAttributes"
+
+#: ../../clothing.rst:28
+msgid "authorTag"
+msgstr "authorTag"
+
+#: ../../clothing.rst:31
+msgid "Author attribution, if you want one."
+msgstr "作者署名，如果你想要的话。"
+
+#: ../../clothing.rst:35
+msgid ":ref:`author-tags`"
+msgstr ":ref:`author-tags`"
+
+#: ../../clothing.rst:42
+msgid "value"
+msgstr "value"
+
+#: ../../clothing.rst:45
+msgid ""
+"Please refer to the general information about :ref:`item value<item-"
+"value>`."
+msgstr "请参见通用信息中的 :ref:`item value<item-value>`。"
+
+#: ../../clothing.rst:49 ../../clothing.rst:65 ../../clothing.rst:78
+#: ../../clothing.rst:99 ../../clothing.rst:114 ../../clothing.rst:131
+#: ../../clothing.rst:146 ../../clothing.rst:167 ../../clothing.rst:185
+#: ../../clothing.rst:216 ../../clothing.rst:232 ../../clothing.rst:267
+#: ../../clothing.rst:278 ../../clothing.rst:351 ../../clothing.rst:362
+#: ../../clothing.rst:380 ../../clothing.rst:411 ../../clothing.rst:445
+#: ../../clothing.rst:460 ../../clothing.rst:548 ../../clothing.rst:572
+#: ../../clothing.rst:590 ../../clothing.rst:614 ../../clothing.rst:684
+#: ../../clothing.rst:703 ../../clothing.rst:713 ../../clothing.rst:987
+#: ../../clothing.rst:1004 ../../clothing.rst:1026 ../../clothing.rst:1042
+msgid "Example"
+msgstr "示例"
+
+#: ../../clothing.rst:48
+msgid ""
+"I’ve defined this as 60, which is about the price for a basic pair of "
+"socks or something similar."
+msgstr "将其设置为60，与一双普通的袜子的价格相似。"
+
+#: ../../clothing.rst:56
+msgid "determiner"
+msgstr "determiner"
+
+#: ../../clothing.rst:58
+msgid ""
+"The determiner which is displayed before this item’s name. While usually "
+"“a” or “an”, for things like socks or gloves, you’ll want to use “a pair "
+"of”. I use the ``CDATA`` tag for all text values, as it allows html "
+"markup to be embedded without causing issues."
+msgstr "冠词将会在物品名前出现。通常为“a”或者“an”（中文一般根据物品不同修改量词），而对于袜子或者手套之类，或许应该使用“一双”。所有文本值都应使用 ``CDATA`` 标签包裹，保证html标记确保无误地嵌入到游戏中。"
+
+#: ../../clothing.rst:64
+msgid ""
+"I’ve defined this as “a pair of”, so in-game, this item will be referred "
+"to as “a pair of socks”."
+msgstr "我将其定义为“一双”，所以在游戏中，这件物品会被称作“一双袜子”。"
+
+#: ../../clothing.rst:72
+msgid "name"
+msgstr "name"
+
+#: ../../clothing.rst:74
+msgid "The **singular** name of this clothing."
+msgstr "该衣物名称的 **单数** 。(中文无需在意单数)"
+
+#: ../../clothing.rst:77
+msgid ""
+"I’ve named this “template sock”, as the singular for “template socks” is "
+"of course “sock”..."
+msgstr "我把它命名为“模板袜子”，因为“模板袜子（有s）”的单数当然是“袜子”……"
+
+#: ../../clothing.rst:84
+msgid ""
+"You can leave out the ``appendColourName`` attribute, but if you never "
+"want this clothing to be described by its colour, then set it as false. "
+"(i.e. If set to false, this clothing would always be called “template "
+"socks” instead of, for example, “white template socks”.)"
+msgstr "你可以不使用 ``appendColourName`` 属性，但如果你不想用颜色来描述这件衣服，则可将其设置为 false。(例如，如果设置为 false，这件衣服将始终被称为 "模板袜子"，而不是 "白色模板袜子"）。"
+
+#: ../../clothing.rst:90
+msgid "namePlural"
+msgstr "namePlural"
+
+#: ../../clothing.rst:92
+msgid ""
+"The plural form of the name. The attribute ``pluralByDefault`` determines"
+" whether this item is naturally referred to as a plural (use true for "
+"things like socks or gloves)."
+msgstr "名称的复数形式。属性 ``pluralByDefault`` 决定了该项目是否被称为复数（如袜子或手套)。"
+
+#: ../../clothing.rst:97
+msgid ""
+"I’ve named the plural as “template socks”, and defined "
+"``pluralByDefault`` as true, so that this item will be referred to by "
+"this plural name in all but extremely exceptional circumstances."
+msgstr "我将复数命名为 "模板袜子（有s）"，并将 ``pluralByDefault`` 定义为 true，这样，除非在极其特殊的情况下，该物品都将以这个复数名称被引用。"
+
+#: ../../clothing.rst:106
+msgid "description"
+msgstr "description"
+
+#: ../../clothing.rst:108
+msgid ""
+"This is the description which is shown in tooltips and on the item’s "
+"inspection page."
+msgstr "这是显示在工具提示和物品检查页面上的描述。在检查页面上显示。"
+
+#: ../../clothing.rst:112
+msgid ""
+"The description for ordinary, “boring” items of clothing might be a "
+"little dry, but as they won’t be read by the player much, it doesn’t "
+"really matter."
+msgstr "对于普通、"无聊 "的衣物，描述可能会有些枯燥，但由于玩家不会经常阅读，所以这并不重要。"
+
+#: ../../clothing.rst:121
+msgid "physicalResistance"
+msgstr "physicalResistance"
+
+#: ../../clothing.rst:123
+msgid ""
+"The default physical resistance for this piece of clothing. Usually use "
+"0, but if it’s armour, then values of 1 up to 5 would be fitting (any "
+"more than that might be very OP). Physical resistance is a very powerful "
+"stat, so please keep within the range of 0-5. For all normal clothing, "
+"the value should be 0. This accepts decimal values, so for things like "
+"leather jackets (which aren’t really armour, but are still protective), "
+"you can use 0.5 or so."
+msgstr "这件衣服的默认物理抗性。通常使用 0，但如果是护甲，那么 1 到 5 的数值会比较合适（超过这个数值可能会太过强力）。物理抗性是一个非常强大的属性，因此请保持在 0-5 的范围内。对于所有普通衣物，数值应为 0。该值接受十进制，因此对于皮夹克之类的衣物（虽然不是真正的护甲，但仍具有保护作用），可以使用 0.5 左右。"
+
+#: ../../clothing.rst:131
+msgid "Left as 0, as it’s nomral, unarmoured clothing."
+msgstr "留为 0，意为这是普通的非装甲保护的衣物。"
+
+#: ../../clothing.rst:138
+msgid "femininity"
+msgstr "femininity"
+
+#: ../../clothing.rst:140
+msgid ""
+"Use ``FEMININE`` for if this clothing is intended for feminine "
+"characters, ``MASCULINE`` for masculine, and ``ANDROGYNOUS`` if it’s able"
+" to be worn by anyone without penalties."
+msgstr "如果衣服是为女性角色设计的，请使用 ``FEMININE`` 表示。男性角色，则使用 ``MASCULINE`` ；如果任何人都可以穿着而不受惩罚，则使用 ``ANDROGYNOUS`` 。"
+
+#: ../../clothing.rst:145
+msgid ""
+"Normal socks could be worn by both males and females without issue, so I "
+"set this to ``ANDROGYNOUS``."
+msgstr "男性和女性都可以穿普通袜子，不会有问题，所以我设置为 ``ANDROGYNOUS`` 。"
+
+#: ../../clothing.rst:153
+msgid "equipSlots"
+msgstr "equipSlots"
+
+#: ../../clothing.rst:155
+msgid ""
+"The slots that this clothing is able to be fit into. The game only "
+"supports up to 4 unique slots, so if you define more than 4, the rest of "
+"them won’t show up in-game. These definitions preserve ordering, so use "
+"the top one for the most common slot to be fitted into. This is "
+"especially important for NPCs, as they will use the top slot for "
+"determining which slot this clothing should fit into."
+msgstr "这款服装能够装入的栏位。游戏只最多支持 4 个独特的栏位，所以如果您定义的插槽超过 4 个，其余的 将不会显示在游戏中。这些定义保留了顺序，因此最上面的一个是最常用的栏位。这一点对 NPC 尤为重要，因为他们会使用最上面的栏位来 决定这件衣服应该放入哪个栏位。"
+
+#: ../../clothing.rst:161
+msgid ""
+"Possible slots are found here: "
+":ltgithub:`src/com/lilithsthrone/game/inventory/InventorySlot.java`"
+msgstr "可用栏位在此： :ltgithub:`src/com/lilithsthrone/game/inventory/InventorySlot.java`"
+
+#: ../../clothing.rst:165
+msgid ""
+"I defined ``SOCK`` as the top slot, as this is the intended slot for "
+"socks. As I also want the player to be able to equip socks onto their "
+"hands, I defined ``HAND`` as a secondary slot."
+msgstr "我将 ``SOCK`` 定义为最上面的栏位，因为这是为袜子设计的栏位。由于我还希望玩家能把袜子穿在手上，所以我把 ``HAND`` 定义为第二栏位。"
+
+#: ../../clothing.rst:177
+msgid "rarity"
+msgstr "rarity"
+
+#: ../../clothing.rst:179
+msgid ""
+"The rarity of this item. Anything less than ``EPIC`` may end up being "
+"modified in the code. Possible rarities are found here: "
+":ltgithub:`src/com/lilithsthrone/game/inventory/Rarity.java`"
+msgstr "此物品的稀有性。任何少于 ``EPIC`` 的内容都可能在代码中被修改。在此可找到稀有度： :ltgithub:`src/com/lilithsthrone/game/inventory/Rarity.java`"
+
+#: ../../clothing.rst:184
+msgid ""
+"Socks are most definitely ``COMMON``, but I’ve defined these as "
+"``LEGENDARY`` so as to prevent them from naturally spawning in the game."
+msgstr "袜子绝对是 ``COMMON`` 的，但我已将其定义为 ``LEGENDARY`` ，以防它们在游戏中自然生成。"
+
+#: ../../clothing.rst:192
+msgid "clothingSet"
+msgstr "clothingSet"
+
+#: ../../clothing.rst:194
+msgid "The set that this clothing belongs to."
+msgstr "这件衣服所属的套装。"
+
+#: ../../clothing.rst:198
+msgid ":doc:`/setBonuses`"
+msgstr ":doc:`/setBonuses`"
+
+#: ../../clothing.rst:200
+msgid "Navigate to :ltgithub:`res/setBonuses` to see existing sets."
+msgstr "导航到 :ltgithub:`res/setBonuses` 查看现有套装。"
+
+#: ../../clothing.rst:202
+msgid "Example: Just use the name of the set."
+msgstr "示例: 使用套装名即可。"
+
+#: ../../clothing.rst:209 ../../clothing.rst:414
+msgid "imageName"
+msgstr "imageName"
+
+#: ../../clothing.rst:211
+msgid ""
+"The file paths for this clothing’s image. Please refer to the "
+":ref:`documentation about images<items-image>`."
+msgstr "该衣物图像文件的路径。请参照 :ref:`与图像相关的文档<items-image>` 。"
+
+#: ../../clothing.rst:215
+msgid ""
+"I’ve defined this as “sock.svg”, which should be placed in the same "
+"folder location alongside this xml file."
+msgstr "我将其定义为“sock.svg”，它应该与xml文件放在同一个文件夹中。"
+
+#: ../../clothing.rst:223
+msgid "imageEquippedName"
+msgstr "imageEquippedName"
+
+#: ../../clothing.rst:225
+msgid ""
+"The file paths for this clothing’s image while equipped. The “slot” "
+"attribute determines the InventorySlot in which the defined file will be "
+"used."
+msgstr "该衣物被装备后的图像文件的路径。其中“slot”(栏位)属性决定了对应文件会被使用在哪个物品栏栏位上。"
+
+#: ../../clothing.rst:229
+msgid ""
+"When equipped to the ``SOCK`` slot, the sock will be displayed using the "
+"``sock.svg`` file. When equipped to the “HAND” slot, it will instead use "
+"the ``sock_hand.svg`` file. Again, this file must be placed in the same "
+"folder location alongside this xml file."
+msgstr "被装备在 ``SOCK`` (袜子)栏位上时，这双袜子使用 ``sock.svg`` 文件。而装备在 ``HAND`` 栏位上是，则使用 ``sock_hand.svg`` 文件。再次声明，文件必须放置在xml文件的同一文件夹下。"
+
+#: ../../clothing.rst:240
+msgid "stickers"
+msgstr "stickers"
+
+#: ../../clothing.rst:242
+msgid ""
+"``Stickers`` are additional svgs which can be overlaid on top of (or "
+"beneath the) base svg image. Definitions are all within the ``stickers`` "
+"element."
+msgstr "``Stickers`` 是可以覆盖在基础svg图像上方的svg部件(或者是下方)。其定义全部位于 ``stickers`` 元素内部。"
+
+#: ../../clothing.rst:246
+msgid "category"
+msgstr "category"
+
+#: ../../clothing.rst:248
+msgid ""
+"All stickers defined within this category are **mutually exclusive** with"
+" one another, but not with stickers defined in other ``category`` "
+"elements. The ``id`` should be unique to each category, and can be "
+"defined as whatever you want, but for formatting purposes, it would be "
+"preferable for it to just contain basic alpha-numerical values and "
+"underscores. The ``priority`` variable determines the position of this "
+"category in UI rendering order (in the inventory’s clothing dye screen), "
+"with lower values being rendered nearer to the top of the category list."
+msgstr "同一分类(category)下定义的所有标签(sticker)都是 **互斥** 的，但与 ``category`` 中其他类型元素下的标签可以共存。其中 ``id`` 属性不允许多个类型重复，内容可以随意，但考虑到格式要求，最好由字母、数字和下划线构成。 ``priority`` 属性决定了该分类在UI渲染时的顺序(即物品栏的衣物染色界面)，数值越低渲染时则位于分类列表的越上方。"
+
+#: ../../clothing.rst:260 ../../clothing.rst:341 ../../clothing.rst:375
+#: ../../clothing.rst:406 ../../clothing.rst:440 ../../clothing.rst:495
+msgid "Variables"
+msgstr "属性"
+
+#: ../../clothing.rst:258 ../../clothing.rst:331
+msgid "id (string)"
+msgstr "id (字符串)"
+
+#: ../../clothing.rst:260 ../../clothing.rst:333 ../../clothing.rst:375
+#: ../../clothing.rst:406
+msgid "priority (integer)"
+msgstr "priority (整数)"
+
+#: ../../clothing.rst:270
+msgid "categoryName"
+msgstr "categoryName"
+
+#: ../../clothing.rst:272
+msgid ""
+"This is used in-game as the title for this sticker category in the "
+"sticker application menu UI. As such, please try to make this human-"
+"readable."
+msgstr "该元素将用于游戏内标签修改界面UI中，显示这类标签的标题。因而请保证其可读性。"
+
+#: ../../clothing.rst:284
+msgid "sticker"
+msgstr "sticker"
+
+#: ../../clothing.rst:286
+msgid ""
+"A sticker element. Each sticker are exclusive with other stickers present"
+" in the same category. Stickers of different cagetories can be combined."
+msgstr "一个标签元素。每个标签都与同一分类下的其他标签互斥。不同分类下的标签可以共存。"
+
+#: ../../clothing.rst:289
+msgid ""
+"The ``id`` element should be unique to stickers within this category "
+"element. Define this variable to ``none`` (lit.) to give to the player "
+"the ability to leave the selection blank."
+msgstr "``id`` 属性应当在同分类下的标签中保持唯一。该属性设置为 ``none`` 代表玩家可以将该分类置空。"
+
+#: ../../clothing.rst:293
+msgid ""
+"The ``priority`` variable determines the position of this sticker in UI "
+"rendering order (in the inventory’s clothing dye screen), with lower "
+"values being rendered nearer to the left of the buttons list. A "
+"``priority`` of ``0`` will set the sticker at the top of the list, "
+"regardless of it’s position in your xml file."
+msgstr "``priority`` 属性决定了该标签在UI渲染时的顺序(即物品栏的衣物染色界面)，数值越低渲染时则位于按钮列表的越靠左。 ``priority`` 设置为 ``0`` 则会使该标签位于列表顶端，无论其在xml文件中的位置。"
+
+#: ../../clothing.rst:299
+msgid ""
+"``defaultSticker`` defines whether this sticker is applied to this "
+"clothing item by default when spawned in."
+msgstr "``defaultSticker`` 定义了衣物生成时默认是否要将该标签默认应用。"
+
+#: ../../clothing.rst:302
+msgid ""
+"``zLayer`` defines the rendering z-layer priority. These ``zLayer`` "
+"values are compared against one another when rendering, with higher "
+"values being drawn on top of stickers with lower values. **The base svg "
+"has a zLayer value of 0**, meaning that negative values will be drawn "
+"beneath the base svg. Defining ``zLayer`` as 0 is not advised (although "
+"it is handled by always being drawn on top of the base layer)."
+msgstr "``zLayer`` 定义了渲染的z轴优先度。 ``zLayer`` 的数值将会在渲染时相互比较，数值高的标签会覆盖在数值低的标签上方。 **基础svg的zLayer值为0**，也就意味着负数值会被绘制在基础svg的下方。不建议将 ``zLayer`` 设置为0(尽管处理时总会将其绘制在基层的上方)。"
+
+#: ../../clothing.rst:309
+msgid ""
+"``colourDisabled`` and ``colourSelected`` are optional variables which "
+"you can use to define the colour of the text within the button used to "
+"select this sticker in the clothing dye UI. You can leave these blank or "
+"delete them entirely to use default button colours. The default values, "
+"if you were to define them using these variables, would look like: "
+"``colourDisabled=\"TEXT_GREY\" colourSelected=\"GENERIC_GOOD\"``"
+msgstr "``colourDisabled`` 和 ``colourSelected`` 是两个可选属性，你可以用来定义衣物染色UI中按钮内文字的颜色，分别对应着未选中和选中的按钮。可以选择留空或直接删除，使用默认的按钮颜色。如果你想要用属性来定义默认的颜色，应当是这样的: ``colourDisabled=\"TEXT_GREY\" colourSelected=\"GENERIC_GOOD\"``"
+
+#: ../../clothing.rst:318
+msgid ""
+"If you do not define an `imageName <sticker-imageName>`_ sub-element, or "
+"if you leave it blank, the default selected colour will be ``TEXT_GREY`` "
+"instead of ``GENERIC_GOOD``."
+msgstr "如果你没有定义 `imageName <sticker-imageName>`_ 子元素，或者留空，那默认的选择颜色将会是 ``TEXT_GREY`` 而非 ``GENERIC_GOOD`` 。"
+
+#: ../../clothing.rst:322
+msgid ""
+"Available colours can be found here: "
+":ltgithub:`src/com/lilithsthrone/utils/colours/PresetColour.java`"
+msgstr "可选颜色请参照此处: :ltgithub:`src/com/lilithsthrone/utils/colours/PresetColour.java`"
+
+#: ../../clothing.rst:325
+msgid ""
+"You can also define custom colours instead of a PresetColour id, in which"
+" case you **must** use a standard RGB hex code as the value."
+msgstr "你同样可以自定义颜色，而不是使用PresetColour的id，这时你 **必须** 使用标准RGB十六位码作为数值。"
+
+#: ../../clothing.rst:328
+msgid "e.g. ``colourDisabled=\"777777\" colourSelected=\"57DB7E\"``"
+msgstr "例如: ``colourDisabled=\"777777\" colourSelected=\"57DB7E\"``"
+
+#: ../../clothing.rst:335
+msgid "defaultSticker (boolean)"
+msgstr "defaultSticker (布尔)"
+
+#: ../../clothing.rst:337
+msgid "zlayer (integer)"
+msgstr "zlayer (整数)"
+
+#: ../../clothing.rst:339
+msgid "colourDisabled (constant)"
+msgstr "colourDisabled (预先定义值)"
+
+#: ../../clothing.rst:341
+msgid "colourSelected (constant)"
+msgstr "colourSelected (预先定义值)"
+
+#: ../../clothing.rst:354
+msgid "stickerName"
+msgstr "stickerName"
+
+#: ../../clothing.rst:356
+msgid ""
+"This is used in-game as the title for this sticker’s button in the "
+"sticker application menu UI. As such, please try to make this human-"
+"readable."
+msgstr "该元素将用于游戏内标签修改界面UI中，显示该标签按钮的标题。因而请保证其可读性。"
+
+#: ../../clothing.rst:365
+msgid "namePrefix"
+msgstr "namePrefix"
+
+#: ../../clothing.rst:367
+msgid ""
+"Define a ``namePrefix`` to add a prefix to the base clothing’s name when "
+"this sticker is applied."
+msgstr "定义 ``namePrefix`` 可以在在使用该标签后，为基础的衣物名称前添加前缀。"
+
+#: ../../clothing.rst:370
+msgid ""
+"The ``priority`` variable defines the order in which multiple sticker "
+"``namePrefix`` are displayed. A **lower value** means they will be "
+"**displayed first**. This can be left undefined."
+msgstr "``priority`` 元素定义了多个标签的 ``namePrefix`` 显示时的顺序。 **越低的数值** 代表该前缀会 **越先显示** 。可以不显式声明。"
+
+#: ../../clothing.rst:383
+msgid "namePostfix"
+msgstr "namePostfix"
+
+#: ../../clothing.rst:385
+msgid ""
+"Exactly the same as `namePrefix`_, but the text is appended after the "
+"base clothing name."
+msgstr "与 `namePrefix`_ 几乎完全相同，但是文本将会添加在基础衣物名称的后方。"
+
+#: ../../clothing.rst:389
+msgid "descriptionmodification"
+msgstr "descriptionModification"
+
+#: ../../clothing.rst:391
+msgid ""
+"You can set whether this sticker should define a new description for the "
+"clothing."
+msgstr "通过这个元素设置该标签是否会为衣物生成新描述。"
+
+#: ../../clothing.rst:394
+msgid ""
+"If ``fullReplacement`` is true, then the clothing’s description is "
+"completely replaced with ``descriptionModification`` while this sticker "
+"is applied. If ``fullReplacement`` is false, then it is appended to the "
+"base clothing description (so long as another sticker has not applied a "
+"``fullReplacement``)."
+msgstr "如果 ``fullReplacement`` 属性为true，那么衣物的描述将会完全被 ``descriptionModification`` 替代。如果 ``fullReplacement`` 为false，那么这段描述将只会添加在原描述的后方(前提是其他标签没有设置 ``fullReplacement`` ) 。"
+
+#: ../../clothing.rst:399
+msgid ""
+"The ``priority`` element defines in what order the description appending "
+"is performed, or, if ``fullReplacement`` is true for multiple active "
+"stickers, which sticker’s description has priority."
+msgstr "``priority`` 属性定义了描述被添加的顺序，或者如果多个标签都将 ``fullReplacement`` 设置为true，那么哪个标签的描述优先级更高。"
+
+#: ../../clothing.rst:404
+msgid "fullReplacement (boolean)"
+msgstr "fullReplacement (布尔)"
+
+#: ../../clothing.rst:416
+msgid ""
+"The path name for this sticker, which should be in the same folder "
+"location as this xml file."
+msgstr "该标签图像的路径名，应当与xml文件处于同一文件夹下。"
+
+#: ../../clothing.rst:419
+msgid ""
+"The ``slot`` variable can be omitted, in which case the default slot for "
+"the clothing item is used."
+msgstr "``slot`` 属性可以忽略，此时将会使用衣物的默认栏位。"
+
+#: ../../clothing.rst:422
+msgid ""
+"If the clothing can be equipped into multiple slots, you don’t **need** "
+"to define an ``imageName`` element for every slot, but if you don’t, the "
+"game will end up using any of your defined ``imageName`` at random (which"
+" is not a problem if you only define one ``imageName`` that’s suitable "
+"for any of the clothing’s base ``imageName``)."
+msgstr "如果该衣物可以装备在多个栏位上，你 **没有必要** 为每个栏位都设置一个 ``imageName`` ，但如果你没有设置，那么游戏将会随机选择一个 ``imageName`` 使用(如果你只定义了一个 ``imageName`` ，并且对于该衣物的所有基础 ``imageName`` 都很合适，那么就不是大问题)。"
+
+#: ../../clothing.rst:428
+msgid ""
+"The ``zLayer`` attribute defines the rendering order for this svg image. "
+"You do not need to define this attribute, as if it is missing, this svg "
+"will use the sticker’s ``zLayer`` attribute which you’ve already defined "
+"up above in the root ``sticker`` element. I have included it here just as"
+" an example."
+msgstr "``zLayer`` 属性定义了该svg图像的渲染顺序。你没有必要定义该属性，如果该属性缺失，那么这个svg将会使用标签中定义的 ``zLayer`` 属性，前提是你已经在 ``sticker`` 根节点中定义。示例中填写仅供演示。"
+
+#: ../../clothing.rst:435
+msgid "You can add as many ``imageName`` elements as you like."
+msgstr "你可以添加任意数量的 ``imageName`` 元素。"
+
+#: ../../clothing.rst:438
+msgid "zLayer (interger)"
+msgstr "zLayer (整数)"
+
+#: ../../clothing.rst:440
+msgid "slot (constant)"
+msgstr "slot (预先定义值)"
+
+#: ../../clothing.rst:448
+msgid "itemTagsAdded"
+msgstr "itemTagsAdded"
+
+#: ../../clothing.rst:450
+msgid ""
+"If this sticker should add any ItemTags to the clothing, then you can "
+"define them in here. Use ``<tag>`` elements within the ``itemTagsAdded`` "
+"element (e.g. ``<tag>SOLD_BY_NYAN</tag>``) using ``ItemTag`` names as "
+"defined here: "
+":ltgithub:`src/com/lilithsthrone/game/inventory/ItemTag.java`"
+msgstr "如果该标签会给衣物添加 ``ItemTags`` ，那应当在此处定义。使用在 ``itemTagsAdded`` 内部使用 ``<tag>`` 元素(例如 ``<tag>SOLD_BY_NYAN</tag>`` )，可使用的 ``ItemTag`` 定义在此: :ltgithub:`src/com/lilithsthrone/game/inventory/ItemTag.java`"
+
+#: ../../clothing.rst:463
+msgid "itemTagsRemoved"
+msgstr "itemTagsRemoved"
+
+#: ../../clothing.rst:465
+msgid ""
+"If this sticker should remove any ``ItemTags`` to the clothing, then you "
+"can define them in here. Use ``<tag>`` elements in the same manner as "
+"`itemTagsAdded`_."
+msgstr "如果该标签会给衣物去除 ``ItemTags`` ，那应当在此处定义。使用 ``<tag>`` 元素的方法与 `itemTagsAdded`_ 相同。"
+
+#: ../../clothing.rst:471
+msgid ""
+"If you define either a single sticker or multiple stickers to have "
+"conflicting tag behaviour -- i.e. both adding and removing identical tags"
+" --, then behaviour is undefined and you will end up with the ``ItemTag``"
+" applied or removed at random."
+msgstr "如果定义了相互冲突的tag行为(例如对同一种tag又添加又移除)，那么这就是一种未定义行为， ``ItemTag`` 添加还是移除都是随机的。"
+
+#: ../../clothing.rst:477
+msgid "unavailabilityText"
+msgstr "unavailabilityText"
+
+#: ../../clothing.rst:479
+msgid ""
+"Sticker are available to be used by the player by default, but if you "
+"want there to be requirements for using this sticker, then define this "
+"element as a ``CDATA`` text element, with any non-whitespace text "
+"returned signalling to the game that this sticker is unavailable. The "
+"returned text will be displayed to the player in the button’s tooltip, so"
+" it should describe why this sticker is unavailable."
+msgstr "标签对于玩家默认可用，但如果想要为标签的使用设定一些要求，那就请在该元素中以 ``CDATA`` 文本定义，一旦返回了任何非纯空格的文本，都会使游戏认定该标签不可用。返回文本将会显示在按钮的悬浮提示栏中，所以其中应当包含不可用的原因。"
+
+#: ../../clothing.rst:486
+msgid ""
+"You can define a ``showDisabledButton`` attribute, which by default is "
+"set to true, and which defines whether or not this sticker’s selection "
+"button is shown to the player when disabled."
+msgstr "你可以通过定义 ``showDisabledButton`` 属性(默认为true)，这个属性决定了该标签不可用时，对应按钮是否显示。"
+
+#: ../../clothing.rst:490
+msgid ""
+"Please note that no ``npc`` tag can be used, as this clothing might not "
+"belong to anyone."
+msgstr "请注意无法使用 ``npc`` ，因为该衣物可能不属于任何角色。"
+
+#: ../../clothing.rst:494
+msgid "showDisabledButton (boolean)"
+msgstr "showDisabledButton (布尔)"
+
+#: ../../clothing.rst:497
+msgid ""
+"An example where the player could only use the sticker while being "
+"feminine would be:"
+msgstr "这里的例子是，玩家只有在偏女性化时才能使用该标签: "
+
+#: ../../clothing.rst:508
+msgid ""
+"And for this example, the disabled button is not shown to the player, so "
+"there’s no need for an elaborate description, as the player will never "
+"see it:"
+msgstr "在这个例子里，不可用的按钮并不会显示给玩家，所以没必要写太过详尽的描述，因为玩家看不见："
+
+#: ../../clothing.rst:520
+msgid "availabilityText"
+msgstr "availabilityText"
+
+#: ../../clothing.rst:522
+msgid ""
+"The counterpart to `unavailabilityText`_, this text is shown when "
+"`unavailabilityText`_ is returning an empty String, and therefore this "
+"sticker is available. Use a ``CDATA`` text element."
+msgstr "`unavailabilityText`_ 的对应版本，当 `unavailabilityText`_ 返回空字符串时，则代表该标签可用，就会显示该文本。请使用 ``CDATA`` 文本。"
+
+#: ../../clothing.rst:526
+msgid "Counterpart examples to the two above:"
+msgstr "上述两个实例的对应部分: "
+
+#: ../../clothing.rst:543
+msgid "echantmentLimit"
+msgstr "enchantmentLimit"
+
+#: ../../clothing.rst:545
+msgid ""
+"How many enchantments can be fit into this item. It’s typically best to "
+"let the game handle the default number of enchantments, which typically "
+"results in 100."
+msgstr "可以在该物品上施加多少附魔上限的附魔。最好让游戏来决定附魔的默认值，一般为100。"
+
+#: ../../clothing.rst:550
+msgid ""
+"I have not defined this, as I’ll let the game keep the 100 enchantments "
+"default value."
+msgstr "我并没有定义这个元素，所以就让游戏保持100附魔上限的默认值。"
+
+#: ../../clothing.rst:553
+msgid "Using default value"
+msgstr "使用默认值"
+
+#: ../../clothing.rst:559
+msgid "Using custom value"
+msgstr "使用自定义值"
+
+#: ../../clothing.rst:566
+msgid "effects"
+msgstr "effects"
+
+#: ../../clothing.rst:568
+msgid ""
+"The default effects that this clothing spawns in with. To know what to "
+"put in here, it would probably be easiest to enchant clothing in your "
+"game, save the game, then copy over that clothing’s ’effects’ in your "
+"save file."
+msgstr "衣物生成时默认自带的效果。如果想知道该元素内应该填入什么，最简单的方式就是在游戏中附魔，保存游戏，然后复制对应物品的“effects”到此处。 "
+
+#: ../../clothing.rst:574
+msgid ""
+"The first defined effect will give +3 to physical damage, while the "
+"second will give the wearer the masturbation fetish while worn."
+msgstr "定义的第一个效果是增加3物理伤害，而第二个效果则是穿着时给穿戴者增加自慰性癖。"
+
+#: ../../clothing.rst:585
+msgid "blockedPartsList"
+msgstr "blockedPartsList"
+
+#: ../../clothing.rst:587
+msgid ""
+"This section determines how the clothing interacts with other clothing "
+"and the wearer’s body."
+msgstr "这一部分决定了该衣物是如何跟其他衣物以及穿戴者的身体互动的。"
+
+#: ../../clothing.rst:592
+msgid ""
+"I’ve defined this section as being the one to be used when equipped to "
+"the “SOCK” slot."
+msgstr "我将这一部分设定为，装备在 ``SOCK`` 栏位后才会生效。"
+
+#: ../../clothing.rst:611
+msgid ""
+"This is another section to determines how the clothing interacts with "
+"other clothing and the wearer’s body."
+msgstr "这是另一部分决定了该衣物是如何跟其他衣物以及穿戴者的身体互动的。"
+
+#: ../../clothing.rst:616
+msgid ""
+"I’ve defined this section as being the one to be used when equipped to "
+"the ``HAND`` slot."
+msgstr "我将这一部分设定为，装备在 ``HAND`` 栏位后才会生效。"
+
+#: ../../clothing.rst:634
+msgid "blockedParts"
+msgstr "blockedParts"
+
+#: ../../clothing.rst:636
+msgid ""
+"You can add as many ``blockedParts`` elements as you like, but they "
+"should each have a different `displacementType`_, and **there should be "
+"at least one, of type** ``REMOVE_OR_EQUIP``."
+msgstr "你可以随意添加多个 ``blockedParts`` 元素，但每一个都应该有不同的 `displacementType`_， 并且 **至少要有一个** 类型为 ``REMOVE_OR_EQUIP`` 。"
+
+#: ../../clothing.rst:641
+msgid "displacementType"
+msgstr "displacementType"
+
+#: ../../clothing.rst:643
+msgid ""
+"If this clothing is displaced in the following way (in this case, by "
+"being removed), then the `blockedBodyParts`_, `clothingAccessBlocked`_, "
+"and `concealedSlots`_ will all be revealed. If multiple `blockedParts`_ "
+"block or conceal the same slot, only one `blockedParts`_ needs to be "
+"displaced to reveal it. (e.g. If a pair of trousers has ``UNZIPS`` and "
+"``PULLS_DOWN`` displacementTypes, and both of these contain the "
+"``concealedSlots`` ``slot`` ``PENIS``, then the penis will be revealed if"
+" either ``UNZIPS`` or ``PULLS_DOWN`` is activated.)"
+msgstr "如果该衣物以对应方式被移开(此处就是被移除)，那么 `blockedBodyParts`_ ， `clothingAccessBlocked`_ 和 `concealedSlots`_ 的部分都会展露出来。如果多个 `blockedParts`_ 都阻挡或者遮挡了同一个栏位，那只需要移开一处 `blockedParts`_ 就能展露。(例如，一条裤子的 ``displacementTypes`` 既有 ``UNZIPS`` 又有 ``PULLS_DOWN`` 并且两个的 ``concealedSlots`` 都包括了 ``PENIS``，那么只要使用 ``UNZIPS`` 或者 ``PULLS_DOWN`` 就能够使该部位展露。)"
+
+#: ../../clothing.rst:652
+msgid ""
+"A full list of displacementTypes can be found here: "
+":ltgithub:`src/com/lilithsthrone/game/inventory/clothing/DisplacementType.java`"
+msgstr "完整的 ``displacementTypes`` 列表可以参见此处: :ltgithub:`src/com/lilithsthrone/game/inventory/clothing/DisplacementType.java`"
+
+#: ../../clothing.rst:656
+msgid "clothingAccessRequired"
+msgstr "clothingAccessRequired"
+
+#: ../../clothing.rst:658
+msgid "The access required to perform this `displacementType`_."
+msgstr "执行该 `displacementType`_ 需要的接触方式(Access)。"
+
+#: ../../clothing.rst:660
+msgid ""
+"``clothingAccess`` values can be found here: "
+":ltgithub:`src/com/lilithsthrone/game/inventory/clothing/ClothingAccess.java`"
+msgstr "``clothingAccess`` 的值可以参见此处: :ltgithub:`src/com/lilithsthrone/game/inventory/clothing/ClothingAccess.java`"
+
+#: ../../clothing.rst:664
+msgid "blockedBodyParts"
+msgstr "blockedBodyParts"
+
+#: ../../clothing.rst:666
+msgid "The body parts that are blocked by this `displacementType`_."
+msgstr "该 `displacementType`_ 阻挡的身体部位。"
+
+#: ../../clothing.rst:668
+msgid ""
+"``bodyPart`` values can be found here: "
+":ltgithub:`src/com/lilithsthrone/game/character/body/CoverableArea.java`"
+msgstr "``bodyPart`` 的值可以参见此处: :ltgithub:`src/com/lilithsthrone/game/character/body/CoverableArea.java`"
+
+#: ../../clothing.rst:672
+msgid "clothingAccessBlocked"
+msgstr "clothingAccessBlocked"
+
+#: ../../clothing.rst:674
+msgid ""
+"The access that this `displacementType`_ blocks. Again, clothingAccess "
+"values can be found here: "
+":ltgithub:`src/com/lilithsthrone/game/inventory/clothing/ClothingAccess.java`"
+msgstr "该 `displacementType`_ 阻碍的接触方式(Access)。同样完整的 ``clothingAccess`` 的值可以参见此处: :ltgithub:`src/com/lilithsthrone/game/inventory/clothing/ClothingAccess.java`"
+
+#: ../../clothing.rst:678
+msgid ""
+"This element must contain a list of tag ``clothingAccess`` for values "
+"inserted here."
+msgstr "该元素必须包含一个 ``clothingAccess`` 的标签，用以插入对应值。"
+
+#: ../../clothing.rst:687
+msgid "concealedSlots"
+msgstr "concealedSlots"
+
+#: ../../clothing.rst:689
+msgid ""
+"The slots that this `displacementType`_ conceals. Possible slots are "
+"found here: "
+":ltgithub:`src/com/lilithsthrone/game/inventory/InventorySlot.java`"
+msgstr "该 `displacementType`_ 遮挡的栏位。可用的栏位请参见此处:  :ltgithub:`src/com/lilithsthrone/game/inventory/InventorySlot.java`"
+
+#: ../../clothing.rst:693
+msgid ""
+"You can also use a preset list by adding an attribute named “values” to "
+"this element (an example -- “CS Example” -- is in the `blockedParts`_ "
+"section below this one). The preset lists that you can use are found "
+"here: "
+":ltgithub:`src/com/lilithsthrone/game/inventory/clothing/PresetConcealmentLists.java`"
+msgstr "你同样可以为该元素添加一个名为 ``values`` 的属性，来应用预设值，(例如位于 `blockedParts`_ 部分的“CS Example”)。可用的预设列表参见此处: :ltgithub:`src/com/lilithsthrone/game/inventory/clothing/PresetConcealmentLists.java`"
+
+#: ../../clothing.rst:698
+msgid "Use the tag ``slot`` for values inserted here."
+msgstr "使用 ``slot`` 标签来向其中插入值。"
+
+#: ../../clothing.rst:706
+msgid "incompatibleSlots"
+msgstr "incompatibleSlots"
+
+#: ../../clothing.rst:708
+msgid ""
+"Inventory slots that are incompatible with this clothing. The game’s "
+"swimsuit makes use of this, and, while fitting into the ``CHEST`` slot, "
+"also blocks ``GROIN`` and ``STOMACH``. Possible slots are found here: "
+":ltgithub:`src/com/lilithsthrone/game/inventory/InventorySlot.java`"
+msgstr "该衣物不兼容的装备栏位。游戏里的泳装就使用了这个功能，虽然穿着在 ``CHEST`` 栏位，但同时也会阻挡 ``GROIN`` 和 ``STOMACH`` 。可用的栏位青春那件此处: :ltgithub:`src/com/lilithsthrone/game/inventory/InventorySlot.java`"
+
+#: ../../clothing.rst:715
+msgid ""
+"You need to define an ``incompatibleSlots`` element for each slot that "
+"the clothing can be equipped into, so here, I’ve defined an empty one for"
+" ``SOCK``, and another empty one for ``HAND``."
+msgstr "你需要为该衣物能够装备的每个栏位都分别定义一个 ``incompatibleSlots`` 元素，所以我为 ``SOCK`` 和 ``HAND`` 栏位都定义了空元素。"
+
+#: ../../clothing.rst:721
+msgid "Example 2"
+msgstr "示例2"
+
+#: ../../clothing.rst:720
+msgid ""
+"If you want to add slots, then use the element like so (which would block"
+" the ``FINGER`` slot when equipped into the ``WRIST`` slot):"
+msgstr "如果你想添加栏位，那么要像这样运用元素(下面的例子，装备到 ``WRIST`` 栏位时将锁定 ``FINGER`` 栏位):"
+
+#: ../../clothing.rst:732
+msgid "colours"
+msgstr "颜色"
+
+#: ../../clothing.rst:734
+msgid "Please consult the relevant :ref:`documentation<colours>`."
+msgstr "请参阅相关条目 :ref:`documentation<colours>`."
+
+#: ../../clothing.rst:736
+msgid ""
+"Your clothing can be coloured any way you like, but if you’d like the "
+"player to be able to dye your clothing, you can specify available colours"
+" here. ``primaryColours``, ``secondaryColours``, and ``tertiaryColours`` "
+"can all spawn in as a default colour, while their ’Dye’ counterparts are "
+"only available if the player chooses to dye the clothing in that colour. "
+"The game detects specific colour values, and recolours them to the value "
+"chosen by the player. These values are as follows:"
+msgstr "衣物可以随意上色，但如果想要玩家能够染色衣物，需要在此处显式指定可用的颜色。 ``primaryColours`` 、 ``secondaryColours`` 和 ``tertiaryColours`` 代表着衣物生成时可选的颜色，而后带“Dye”的对应元素则只有在玩家选择染色衣物时才能使用。游戏将会检测特定颜色值，并且将其修改为玩家选择的值。这些数值如下所示: "
+
+#: ../../clothing.rst:744
+msgid ""
+"Colour types can be found in the files present in the following folder: "
+":ltgithub:`src/com/lilithsthrone/utils/colours`"
+msgstr "颜色类型可以在如下文件夹中的文件里获取: :ltgithub:`src/com/lilithsthrone/utils/colours`"
+
+#: ../../clothing.rst:749
+msgid "please use the ``Colour`` values that start with ``CLOTHING_``."
+msgstr "请使用以 ``CLOTHING_`` 开头的 ``Colour`` 数值。"
+
+#: ../../clothing.rst:768
+msgid "customColours"
+msgstr "customColours"
+
+#: ../../clothing.rst:770
+msgid ""
+"You can define any number of custom colours to replace the shades you’ve "
+"coloured your svg with."
+msgstr "你可以定义任意数量的自定义颜色，以替换为 svg 上色的可使用颜色。"
+
+#: ../../clothing.rst:785
+msgid "patterns"
+msgstr "图案"
+
+#: ../../clothing.rst:787
+msgid ""
+"This section details how to define patterns. If your svg file does not "
+"have a ``patternLayer`` defined, you can safely delete this whole "
+"section:"
+msgstr "这一部分详细描述了如何定义图案。如果你的svg文件没有定义 ``patternLayer`` 那么就可以安全地删除这一整部分: "
+
+#: ../../clothing.rst:804
+msgid "``defaultPatterns``"
+msgstr "``defaultPatterns``"
+
+#: ../../clothing.rst:791
+msgid "lists the patterns that this clothing can spawn with."
+msgstr "列出了该衣物生成时可以附加的图案。"
+
+#: ../../clothing.rst:793
+msgid "``patternChance``"
+msgstr "``patternChance``"
+
+#: ../../clothing.rst:795
+#, python-format
+msgid ""
+"is the chance that this clothing will spawn with a pattern. Values are "
+"from 0 to 1, and should end with an “f”. i.e. 0.5f is a 50% chance, 0.75f"
+" is 75%, 0.1275 is 12.75%, etc."
+msgstr "是该衣物生成时带有图案的概率。数值从0到1，并且需要以“f”结尾。例如，0.5f意味着50%概率，0.75f意味着75%概率，0.1275f意味着12.75%概率等等。"
+
+#: ../../clothing.rst:799
+msgid "``colourNameDerivedFromPattern``"
+msgstr "``colourNameDerivedFromPattern``"
+
+#: ../../clothing.rst:801
+msgid ""
+"sets whether the pattern’s primary colour should be used for the "
+"clothing’s name, instead of the “colour” value. i.e. If set to ``true``, "
+"then a green+black tiger-striped item of clothing would be called "
+"“green”, even if the base colour was something else."
+msgstr "设置该图案的主要颜色是否应该用于衣物的名称，而非使用 ``color`` 数值。例如，如果设置为 ``true`` ，那么一个绿色+黑色的虎纹衣物就会被冠以“绿色”的前缀，无论基色如何。"
+
+#: ../../clothing.rst:807
+msgid "``pattern``"
+msgstr "``pattern``"
+
+#: ../../clothing.rst:807
+msgid ""
+"Pattern values can be found as svg file names in the folder "
+"``res/patterns``"
+msgstr "图案的可用值即文件夹 ``res/patterns`` 内svg文件的名称。"
+
+#: ../../clothing.rst:816
+msgid "patternPrimaryColours, patternSecondaryColours, and patternTertiaryColours"
+msgstr "patternPrimaryColours、patternSecondaryColours、patternTertiaryColours"
+
+#: ../../clothing.rst:818
+msgid "Colours work the same as explained in the `colours`_ section."
+msgstr "与上述 `colours`_ 部分描述的颜色作用方式相同。"
+
+#: ../../clothing.rst:829
+msgid "customPatternColours"
+msgstr "customPatternColours"
+
+#: ../../clothing.rst:831
+msgid ""
+"Custom pattern colours can be defined just like the customColours up "
+"above."
+msgstr "自定义图案颜色与上述customColours定义方法相同。"
+
+#: ../../clothing.rst:838
+msgid "itemTags"
+msgstr "itemTags"
+
+#: ../../clothing.rst:840
+msgid ""
+"These tags determine where in the world your clothing can be found, and "
+"what special attributes your clothing should have. Possible tags are "
+"defined in :ltgithub:`src/com/lilithsthrone/game/inventory/ItemTag.java`"
+msgstr "这些标签决定了你能够在什么地方发现这件衣物，或者该衣物拥有什么特殊属性。可用的标签定义于: :ltgithub:`src/com/lilithsthrone/game/inventory/ItemTag.java`"
+
+#: ../../clothing.rst:844
+msgid ""
+"``itemTags`` without a ``slot`` defined will have these tags added to "
+"every equippable slot. Should only be used for generic tags like those "
+"related to which vendors sell it."
+msgstr "没有单独定义 ``slot`` 的 ``itemTags`` 将会将标签添加到所有可装备的栏位上。应当只在通用标签(如会在何处贩卖等)上使用。"
+
+#: ../../clothing.rst:848
+msgid ""
+"``itemTags`` with a ``slot`` defined will have these tags applied ONLY "
+"when the clothing is equipped into that slot. In this example, equipping "
+"the socks onto your hands hinders arm movement. This is not entirely "
+"logical, and I added this just for demonstration purposes."
+msgstr "单独定义了 ``slot`` 的 ``itemTags`` 将会 **只有** 在衣物装备到相应栏位上后才会应用这些标签。在该示例中，将袜子装备到手部会阻碍手臂运动。虽然逻辑并不完全通顺，但这只是做演示用。"
+
+#: ../../clothing.rst:863
+msgid "sexAttributesSelf"
+msgstr "sexAttributesSelf"
+
+#: ../../clothing.rst:865
+msgid ""
+"See the :ltgithub:`res/clothing/innoxia/buttPlugs/butt_plug.xml` file for"
+" a working example of this element."
+msgstr "参见 :ltgithub:`res/clothing/innoxia/buttPlugs/butt_plug.xml` 文件，其中就有在游戏中实际运作的例子，包括了该元素。"
+
+#: ../../clothing.rst:868
+msgid ""
+"These are the sex attributes applicable to the wearer (i.e. when inserted"
+" in the wearer’s orifices or when the wearer is penetrating this clothing"
+" type. Mainly used for insertable dildos.)"
+msgstr "这些是可以应用在穿戴者身上的性交属性(例如，插入穿戴者腔穴或者穿戴者插入了该衣物。主要用于可插入的假阴茎。)"
+
+#: ../../clothing.rst:895
+msgid "penetration"
+msgstr "penetration"
+
+#: ../../clothing.rst:898
+msgid "length"
+msgstr "length"
+
+#: ../../clothing.rst:898 ../../clothing.rst:915
+msgid "value in cm"
+msgstr "数值单位为厘米(cm)"
+
+#: ../../clothing.rst:901
+msgid "grith"
+msgstr "grith"
+
+#: ../../clothing.rst:901
+msgid "0-6 corresponding to ``PenetrationGirth Enum`` values"
+msgstr "0-6代表着 ``PenetrationGirth Enum`` 的数值"
+
+#: ../../clothing.rst:905 ../../clothing.rst:930
+msgid "modifiers"
+msgstr "modifiers"
+
+#: ../../clothing.rst:904
+msgid ""
+"For adding modifiers, add ``mod`` tags containing ``PenetrationModifier "
+"Enum`` values"
+msgstr "若要添加修饰词，请添加 ``mod`` 标签，内有 ``PenetrationModifier Enum`` 的数值"
+
+#: ../../clothing.rst:908
+msgid "orifice"
+msgstr "orifice"
+
+#: ../../clothing.rst:912
+msgid "orifice sex toy support is not fully implemented into the game!"
+msgstr "飞机杯玩具的支持在游戏中还不完善！"
+
+#: ../../clothing.rst:915
+msgid "depth"
+msgstr "depth"
+
+#: ../../clothing.rst:918
+msgid "capacity"
+msgstr "capacity"
+
+#: ../../clothing.rst:918
+msgid "value in cm, corresponding to the diameter of the orifice"
+msgstr "数值单位为厘米(cm)，对应着腔穴的直径"
+
+#: ../../clothing.rst:921
+msgid "elasticity"
+msgstr "elasticity(弹性)"
+
+#: ../../clothing.rst:921
+msgid "0-7 corresponding to ``OrificeElasticity Enum`` values"
+msgstr "0-7代表着 ``OrificeElasticity Enum`` 的数值"
+
+#: ../../clothing.rst:924
+msgid "plasticity"
+msgstr "plasticity(可塑性)"
+
+#: ../../clothing.rst:924
+msgid "0-7 corresponding to ``OrificePlasticity Enum`` values"
+msgstr "0-7代表着 ``OrificePlasticity Enum`` 的数值"
+
+#: ../../clothing.rst:927
+msgid "wetness"
+msgstr "wetness"
+
+#: ../../clothing.rst:927
+msgid "0-7 corresponding to ``Wetness Enum`` values"
+msgstr "0-7代表着 ``Wetness Enum`` 的数值"
+
+#: ../../clothing.rst:930
+msgid "list of ``mod`` tags, each containing ``OrificeModifier Enum`` values"
+msgstr "``mod`` 标签的列表，每个都内有 ``OrificeModifier Enum`` 的数值"
+
+#: ../../clothing.rst:933
+msgid "sexAttributesOther"
+msgstr "sexAttributesOther"
+
+#: ../../clothing.rst:935
+msgid ""
+"These are the sex attributes applicable to someone who is interacting "
+"with the wearer (i.e. the penetration/orifice which is available for "
+"people other than the wearer. Mainly used for strap-on dildos.)"
+msgstr "这些是应用在与穿戴者交互的角色身上的性交属性(例如，除穿戴者以外可用的插入或者腔穴。主要用于穿戴式假阴茎。)"
+
+#: ../../clothing.rst:941
+msgid ""
+"Consult the file "
+":ltgithub:`res/clothing/norin/strapless_dildo/strapless_dildo.xml` for a "
+"working example of the following excerpt."
+msgstr "参见文件 :ltgithub:`res/clothing/norin/strapless_dildo/strapless_dildo.xml` 其中就有在游戏中实际运作的例子。"
+
+#: ../../clothing.rst:945
+msgid ""
+"For an explanation of the effects of the different sub elements, please "
+"refer to `sexattributesself`_."
+msgstr "对于不同子元素效果的解释，请参见 `sexAttributesSelf`_ 。"
+
+#: ../../clothing.rst:960
+msgid "replacementText"
+msgstr "replacementText"
+
+#: ../../clothing.rst:962
+msgid ""
+"The following sections are for defining the descriptions of displacing or"
+" replacing your clothing. The attribute ``type`` defines which "
+"``DisplacementType`` your descriptions are applied to. For standard "
+"equipping and unequipping, use ``REMOVE_OR_EQUIP``."
+msgstr "接下来的部分用于定义移开或整理衣物时的描述。其中的 ``type`` 属性定义了这段描述会用于哪个 ``DisplacementType`` 。对于常规的装备和解除装备，请使用 ``REMOVE_OR_EQUIP`` 。"
+
+#: ../../clothing.rst:969
+msgid ""
+"List of type contant: "
+":ltgithub:`src/com/lilithsthrone/game/inventory/clothing/DisplacementType.java`."
+msgstr "完整的类型列表:  :ltgithub:`src/com/lilithsthrone/game/inventory/clothing/DisplacementType.java`"
+
+#: ../../clothing.rst:973
+msgid "This is the equip text for when socks are equipped to the ``SOCK`` slot:"
+msgstr "这是袜子装备在 ``SOCK`` 栏位上时的装备文本: "
+
+#: ../../clothing.rst:990
+msgid "This is the equip text for when socks are equipped to the ``HAND`` slot:"
+msgstr "这是袜子装备在 ``HAND`` 栏位上时的装备文本: "
+
+#: ../../clothing.rst:1007
+msgid "displacementText"
+msgstr "displacementText"
+
+#: ../../clothing.rst:1009
+msgid "This section is used for removal and displacement."
+msgstr "这一部分用于移除或移开。"
+
+#: ../../clothing.rst:1012
+msgid ""
+"This is the unequip text for when socks are removed from the ``SOCK`` "
+"slot:"
+msgstr "这是袜子从 ``SOCK`` 栏位上移除时的解除装备文本: "
+
+#: ../../clothing.rst:1029
+msgid ""
+"This is the unequip text for when socks are removed from the ``HAND`` "
+"slot:"
+msgstr "这是袜子从 ``HAND`` 栏位上移除时的解除装备文本: "
+
