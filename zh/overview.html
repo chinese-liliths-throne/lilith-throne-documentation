@@ -3,7 +3,7 @@
 <html lang="zh">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <title>1. 概览 &#8212; Lilith&#39;s Throne Mod Documentation  文档</title>
     <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=4f649999" />
@@ -59,7 +59,7 @@
 <li><p><a class="reference internal" href="#preface" id="id8">绪论</a></p></li>
 <li><p><a class="reference internal" href="#note-on-status-effects-and-how-to-use-them" id="id9">状态效果(status effects)及使用方法</a></p></li>
 <li><p><a class="reference internal" href="#some-elements-expect-boolean-values" id="id10">部分元素要求填入布尔值</a></p></li>
-<li><p><a class="reference internal" href="#shared-tags-and-information" id="id11">共享标签(shared tags)及信息</a></p></li>
+<li><p><a class="reference internal" href="#shared-tags-and-information" id="id11">共用标签及信息</a></p></li>
 <li><p><a class="reference internal" href="#items-identifier" id="id12">物品标识符(Item’s identifier)</a></p></li>
 <li><p><a class="reference internal" href="#author-tags" id="id13">作者标签(author tags)</a></p></li>
 <li><p><a class="reference internal" href="#value" id="id14">价值(value)</a></p></li>
@@ -111,8 +111,8 @@
 </ul>
 </section>
 <section id="shared-tags-and-information">
-<h2><a class="toc-backref" href="#id11" role="doc-backlink"><span class="section-number">1.4. </span>共享标签(shared tags)及信息</a><a class="headerlink" href="#shared-tags-and-information" title="此标题的永久链接">¶</a></h2>
-<p>不同类型的物品存在共享概念。其中一些概念可能会根据每个类别进行扩展。例如武器需要比其他类型的物品更多的颜色，因此会扩展可用列表。</p>
+<h2><a class="toc-backref" href="#id11" role="doc-backlink"><span class="section-number">1.4. </span>共用标签及信息</a><a class="headerlink" href="#shared-tags-and-information" title="此标题的永久链接">¶</a></h2>
+<p>不同类型的物品存在通用概念。其中一些概念可能会根据类别不同进行扩展。例如武器需要比其他类型的物品更多的颜色，因此需要扩展可用列表。</p>
 </section>
 <section id="items-identifier">
 <span id="id1"></span><h2><a class="toc-backref" href="#id12" role="doc-backlink"><span class="section-number">1.5. </span>物品标识符(Item’s identifier)</a><a class="headerlink" href="#items-identifier" title="此标题的永久链接">¶</a></h2>
@@ -122,7 +122,7 @@
 <span class="w">    </span><span class="o">+</span><span class="w"> </span><span class="n">innerChild</span><span class="p">.</span><span class="na">getName</span><span class="p">().</span><span class="na">split</span><span class="p">(</span><span class="s">&quot;\\.&quot;</span><span class="p">)</span><span class="o">[</span><span class="mi">0</span><span class="o">]</span>
 </pre></div>
 </div>
-<p>这将解析为 <code class="docutils literal notranslate"><span class="pre">innoxia_template_socks</span></code> 对应位于 <code class="docutils literal notranslate"><span class="pre">res/mods/innoxia/clothing/template/socks.xml</span></code> 中的对象。</p>
+<p>对于 <code class="docutils literal notranslate"><span class="pre">res/mods/innoxia/clothing/template/socks.xml</span></code> 中的对象将会解析为 <code class="docutils literal notranslate"><span class="pre">innoxia_template_socks</span></code> 。</p>
 <p>你的模组文件夹结构中的每个相关文件都会自动生成一个标识符。需要牢记在心，标识符是由系统生成的，而非用户定义的。如果重命名了任何文件夹或 <code class="docutils literal notranslate"><span class="pre">xml</span></code> 文件，标识符将发生变化，从而使存在于玩家存档文件中的所有引用失效。</p>
 </section>
 <section id="author-tags">
@@ -154,7 +154,7 @@
 <p>该元素未定义时，游戏将基于物品名称，自动选择“a”或“an”。如果该元素传入的值就是“a”或“an”，游戏也会将其无视。</p>
 <p>文本示例</p>
 <blockquote>
-<div><p>Innoxia正拿着*一把*剪刀。</p>
+<div><p>Innoxia正拿着 <em>一把</em> 剪刀。</p>
 </div></blockquote>
 <p>代码示例</p>
 <blockquote>
@@ -174,7 +174,7 @@
 </section>
 <section id="rarity">
 <span id="id5"></span><h2><a class="toc-backref" href="#id20" role="doc-backlink"><span class="section-number">1.12. </span>稀有度(rarity)</a><a class="headerlink" href="#rarity" title="此标题的永久链接">¶</a></h2>
-<p>可以使用文件： ltgithub:<cite>src/com/lilithsthrone/game/inventory/Rarity.java</cite> 中的常量列表定义多个物品的稀有度。</p>
+<p>可以使用文件： <a class="reference external" href="https://github.com/Innoxia/liliths-throne-public/tree/dev/src/com/lilithsthrone/game/inventory/Rarity.java">src/com/lilithsthrone/game/inventory/Rarity.java</a> 中的常量列表定义多个物品的稀有度。</p>
 <p>请注意，任何设置为传说（LEGENDARY）稀有度的物品都不会在游戏中自然出现，无论是商店还是随机事件。</p>
 </section>
 <section id="colours">
@@ -191,7 +191,7 @@
 <li><p><code class="docutils literal notranslate"><span class="pre">#ffd5d5</span></code></p></li>
 </ol>
 </li>
-<li><p><em>Orange</em> 是游戏中更改图形辅助颜色的基本颜色，游戏只能识别和更改以下颜色：</p>
+<li><p><em>Orange</em> 是游戏中更改图形次要颜色的基本颜色，游戏只能识别和更改以下颜色：</p>
 <ol class="arabic simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">#ff7f2a</span></code></p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">#ff9955</span></code></p></li>
@@ -200,7 +200,7 @@
 <li><p><code class="docutils literal notranslate"><span class="pre">#ffe6d5</span></code></p></li>
 </ol>
 </li>
-<li><p><em>Yellow</em> 是游戏中更改图形辅助颜色的基本颜色，游戏只能识别和更改以下颜色：</p>
+<li><p><em>Yellow</em> 是游戏中更改图形三级颜色的基本颜色，游戏只能识别和更改以下颜色：</p>
 <ol class="arabic simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">#ffd42a</span></code></p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">#ffdd55</span></code></p></li>
@@ -212,7 +212,7 @@
 </ul>
 <div class="admonition important">
 <p class="admonition-title">重要</p>
-<p>你使用的渐变色应命名为： <code class="docutils literal notranslate"><span class="pre">innoGrad1</span></code> ， <code class="docutils literal notranslate"><span class="pre">innoGrad2</span></code> 诸如此类。</p>
+<p>使用的渐变色应命名为： <code class="docutils literal notranslate"><span class="pre">innoGrad1</span></code> ， <code class="docutils literal notranslate"><span class="pre">innoGrad2</span></code> 诸如此类。</p>
 </div>
 <p>这些颜色的直观表示可以在这里查看 <a class="reference external" href="https://www.lilithsthrone.com/wiki/doku.php?id=modding_wiki:modding:creating_clothes">wiki</a> 。</p>
 <p>可使用颜色列表在这里：<a class="reference external" href="https://github.com/Innoxia/liliths-throne-public/tree/dev/src/com/lilithsthrone/utils/colours">src/com/lilithsthrone/utils/colours</a> 。</p>
@@ -350,7 +350,7 @@
 <li class="toctree-l2"><a class="reference internal" href="#preface">1.1. 绪论</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#note-on-status-effects-and-how-to-use-them">1.2. 状态效果(status effects)及使用方法</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#some-elements-expect-boolean-values">1.3. 部分元素要求填入布尔值</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#shared-tags-and-information">1.4. 共享标签(shared tags)及信息</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#shared-tags-and-information">1.4. 共用标签及信息</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#items-identifier">1.5. 物品标识符(Item’s identifier)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#author-tags">1.6. 作者标签(author tags)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#value">1.7. 价值(value)</a></li>

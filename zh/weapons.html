@@ -3,7 +3,7 @@
 <html lang="zh">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <title>2.4. 武器物品 &#8212; Lilith&#39;s Throne Mod Documentation  文档</title>
     <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=4f649999" />
@@ -69,7 +69,7 @@
 </section>
 <section id="value">
 <h3><span class="section-number">2.4.1.2. </span>value<a class="headerlink" href="#value" title="此标题的永久链接">¶</a></h3>
-<p>该物品价值多少？</p>
+<p>该物品价值多少。</p>
 <div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;value&gt;</span>3000<span class="nt">&lt;/value&gt;</span>
 </pre></div>
 </div>
@@ -111,7 +111,7 @@
 <h3><span class="section-number">2.4.1.7. </span>namePlural<a class="headerlink" href="#nameplural" title="此标题的永久链接">¶</a></h3>
 <p>这个武器的复数名称。</p>
 <dl class="simple">
-<dt><code class="docutils literal notranslate"><span class="pre">pluralByDefault</span></code></dt><dd><p>这个变量``pluralByDefault``定义了这个武器在调用时直接以复数名称调用(例如“a pair of pants”)，不太符合汉语习惯可无视。</p>
+<dt><code class="docutils literal notranslate"><span class="pre">pluralByDefault</span></code></dt><dd><p><code class="docutils literal notranslate"><span class="pre">pluralByDefault</span></code> 这个属性定义了这个武器在调用时直接以复数名称调用(例如“a pair of pants”)，不太符合汉语习惯可无视。</p>
 </dd>
 </dl>
 <div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;namePlural</span><span class="w"> </span><span class="na">pluralByDefault=</span><span class="s">&quot;false&quot;</span><span class="nt">&gt;</span><span class="cp">&lt;![CDATA[Demon&#39;s Daggers]]&gt;</span><span class="nt">&lt;/namePlural&gt;</span>
@@ -150,7 +150,7 @@
 </section>
 <section id="weaponset">
 <h3><span class="section-number">2.4.1.12. </span>weaponSet<a class="headerlink" href="#weaponset" title="此标题的永久链接">¶</a></h3>
-<p>这套武器属于哪一种套装里。</p>
+<p>这套武器属于哪一种套装。</p>
 <p>可以在这里找到这些值： <a class="reference external" href="https://github.com/Innoxia/liliths-throne-public/tree/dev//res/setBonuses/">/res/setBonuses/</a></p>
 <div class="admonition seealso">
 <p class="admonition-title">参见</p>
@@ -162,7 +162,7 @@
 </section>
 <section id="equiptext">
 <h3><span class="section-number">2.4.1.13. </span>1.13 equipText<a class="headerlink" href="#equiptext" title="此标题的永久链接">¶</a></h3>
-<p>装备该武器时使用的说明。描述应该是通用的，玩家和 NPC 都可以使用。只要确保在使用动词时使用标签 <code class="docutils literal notranslate"><span class="pre">[npc.verb()]</span></code> ，例如，解析如下：（不用看解析了，汉语不区分这个，也就是说默认一个动词就好）</p>
+<p>装备该武器时使用的说明。描述应该是通用的，玩家和 NPC 都可以使用。只要确保在使用动词时使用标签 <code class="docutils literal notranslate"><span class="pre">[npc.verb()]</span></code> ，例如，解析如下： <strong>（不用看解析了，汉语不区分，仅使用动词即可）</strong></p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">[npc.verb(run)]</span></code> 若果npc是玩家的话 = “run”（不用看解析了，汉语不区分这个，也就是说默认一个动词就好）</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">[npc.verb(run)]</span></code> 如果npc不是玩家角色 = “runs”（不用看解析了，汉语不区分这个，也就是说默认一个动词就好）</p></li>
@@ -208,8 +208,8 @@
 <div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;damage&gt;</span>20<span class="nt">&lt;/damage&gt;</span>
 </pre></div>
 </div>
-<p>如果你想定义额外的范围伤害，添加`` aoe <a href="#id1"><span class="problematic" id="id2">``</span></a>元素。</p>
-<p>一个AoE伤害的例子可以在 <a href="#id1"><span class="problematic" id="id2">``</span></a>res/weapons/innoxia/lightningGlobe/lightning_globe.xml``中找到。</p>
+<p>如果你想定义额外的范围伤害，添加 <code class="docutils literal notranslate"><span class="pre">aoe</span></code> 元素。</p>
+<p>一个AoE伤害的例子可以在 <code class="docutils literal notranslate"><span class="pre">res/weapons/innoxia/lightningGlobe/lightning_globe.xml</span></code> 中找到。</p>
 <div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;aoe</span><span class="w"> </span><span class="na">chance=</span><span class="s">&quot;50&quot;</span><span class="nt">&gt;</span>10<span class="nt">&lt;/aoe&gt;</span><span class="w"> </span>50%<span class="w"> </span>chance<span class="w"> </span>of<span class="w"> </span>hitting<span class="w"> </span>an<span class="w"> </span>additional<span class="w"> </span>enemy<span class="w"> </span>(who<span class="w"> </span>has<span class="w"> </span>not<span class="w"> </span>been<span class="w"> </span>hit<span class="w"> </span>yet)<span class="w"> </span>for<span class="w"> </span>10<span class="w"> </span>damage
 <span class="nt">&lt;aoe</span><span class="w"> </span><span class="na">chance=</span><span class="s">&quot;25&quot;</span><span class="nt">&gt;</span>5<span class="nt">&lt;/aoe&gt;</span><span class="w"> </span>25%<span class="w"> </span>chance<span class="w"> </span>of<span class="w"> </span>hitting<span class="w"> </span>an<span class="w"> </span>additional<span class="w"> </span>enemy<span class="w"> </span>(who<span class="w"> </span>has<span class="w"> </span>not<span class="w"> </span>been<span class="w"> </span>hit<span class="w"> </span>yet)<span class="w"> </span>for<span class="w"> </span>5<span class="w"> </span>damage
 </pre></div>
@@ -310,7 +310,7 @@
 <dt><code class="docutils literal notranslate"><span class="pre">DAMAGE_WEAPON</span></code></dt><dd><p>添加与该武器伤害类型相关的伤害。</p>
 </dd>
 </dl>
-<p>例如，若该匕首生成时类型为 <code class="docutils literal notranslate"><span class="pre">POISON</span></code>， 然后我将两个 <code class="docutils literal notranslate"><span class="pre">CRITICAL_CHANCE``都替换为了</span> <span class="pre">``DAMAGE_WEAPON</span></code>，那么该匕首生成时将带有两个+5毒素伤害的效果。</p>
+<p>例如，若该匕首生成时类型为 <code class="docutils literal notranslate"><span class="pre">POISON</span></code>， 然后我将两个 <code class="docutils literal notranslate"><span class="pre">CRITICAL_CHANCE</span></code> 都替换为了 <code class="docutils literal notranslate"><span class="pre">DAMAGE_WEAPON</span></code> ，那么该匕首生成时将带有两个+5毒素伤害的效果。</p>
 <div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;effects&gt;</span>
 <span class="w">    </span><span class="nt">&lt;effect</span><span class="w"> </span><span class="na">itemEffectType=</span><span class="s">&quot;CLOTHING&quot;</span><span class="w"> </span><span class="na">limit=</span><span class="s">&quot;0&quot;</span><span class="w"> </span><span class="na">potency=</span><span class="s">&quot;MAJOR_BOOST&quot;</span><span class="w"> </span><span class="na">primaryModifier=</span><span class="s">&quot;CLOTHING_ATTRIBUTE&quot;</span><span class="w"> </span><span class="na">secondaryModifier=</span><span class="s">&quot;CRITICAL_CHANCE&quot;</span><span class="w"> </span><span class="na">timer=</span><span class="s">&quot;0&quot;</span><span class="nt">/&gt;</span>
 <span class="w">    </span><span class="nt">&lt;effect</span><span class="w"> </span><span class="na">itemEffectType=</span><span class="s">&quot;CLOTHING&quot;</span><span class="w"> </span><span class="na">limit=</span><span class="s">&quot;0&quot;</span><span class="w"> </span><span class="na">potency=</span><span class="s">&quot;MAJOR_BOOST&quot;</span><span class="w"> </span><span class="na">primaryModifier=</span><span class="s">&quot;CLOTHING_ATTRIBUTE&quot;</span><span class="w"> </span><span class="na">secondaryModifier=</span><span class="s">&quot;CRITICAL_CHANCE&quot;</span><span class="w"> </span><span class="na">timer=</span><span class="s">&quot;0&quot;</span><span class="nt">/&gt;</span>
@@ -320,7 +320,7 @@
 </section>
 <section id="extraeffects">
 <h3><span class="section-number">2.4.1.26. </span>1.26 extraEffects<a class="headerlink" href="#extraeffects" title="此标题的永久链接">¶</a></h3>
-<p>你可以使用这一部分来描述该武器可能附带的额外效果。当玩家将鼠标悬浮在武器图标上，这些效果将会显示在提示中所以尽量保持简短(应当保持在一行内)。应当仅用于描述 <cite>1.27 onHitEffect</cite> 元素中发生的结果。没有角色会当作解析参数传入，所以你 <strong>不应</strong> 使用任何与角色相关的解析元素(例如 <code class="docutils literal notranslate"><span class="pre">[npc.name]</span></code> )。对于该武器，没有特殊效果需要描述，但如果你想要使用这一部分，请遵循以下格式：</p>
+<p>你可以使用这一部分来描述该武器可能附带的额外效果。当玩家将鼠标悬浮在武器图标上，这些效果将会显示在提示中所以尽量保持简短(应当保持在一行内)。应当仅用于描述 <a class="reference internal" href="#onhiteffect">1.27 onHitEffect</a> 元素中发生的结果。没有角色会当作解析参数传入，所以你 <strong>不应</strong> 使用任何与角色相关的解析元素(例如 <code class="docutils literal notranslate"><span class="pre">[npc.name]</span></code> )。对于该武器，没有特殊效果需要描述，但如果你想要使用这一部分，请遵循以下格式：</p>
 <div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;extraEffects&gt;</span>
 <span class="w">    </span><span class="nt">&lt;effect&gt;</span><span class="cp">&lt;![CDATA[Stab time!]]&gt;</span><span class="nt">&lt;/effect&gt;</span>
 <span class="nt">&lt;/extraEffects&gt;</span>
@@ -443,7 +443,7 @@
 </section>
 <section id="hitdescription">
 <h2><span class="section-number">2.4.2. </span>2 hitDescription<a class="headerlink" href="#hitdescription" title="此标题的永久链接">¶</a></h2>
-<p>击中敌人时使用的描述。攻击者每次攻击目标时都会随机选择一个 <code class="docutils literal notranslate"><span class="pre">hitText</span></code> 值。遵循与 `` equitext `` 相同的原则。</p>
+<p>击中敌人时使用的描述。攻击者每次攻击目标时都会随机选择一个 <code class="docutils literal notranslate"><span class="pre">hitText</span></code> 值。遵循与 <code class="docutils literal notranslate"><span class="pre">equitext</span></code> 相同的原则。</p>
 <p>你可以使用 <code class="docutils literal notranslate"><span class="pre">criticalHitText</span></code> 元素添加命中描述，这些描述只会在暴击命中时显示。  这是可选的属性，你可以不需要定义任何暴击命中描述。  如果没有定义，并且发生了暴击，则将使用常规的 <code class="docutils literal notranslate"><span class="pre">hitText</span></code> 代替。</p>
 <div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;hitDescriptions&gt;</span>
 <span class="w">    </span><span class="nt">&lt;hitText&gt;</span><span class="cp">&lt;![CDATA[</span>

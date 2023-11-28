@@ -3,7 +3,7 @@
 <html lang="zh">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <title>3. 预设套装 &#8212; Lilith&#39;s Throne Mod Documentation  文档</title>
     <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=4f649999" />
@@ -193,8 +193,7 @@
 </dl>
 <p>预设颜色组会从其中定义的 <code class="docutils literal notranslate"><span class="pre">randomColour</span></code> 中随机选取一个，在该XML文件中做后续使用。你最多可以设置20个 <code class="docutils literal notranslate"><span class="pre">presetColourGroupX</span></code>，但是数字必须时连续的。(例如你可以定义 <code class="docutils literal notranslate"><span class="pre">presetColourGroup1</span></code> 、 <code class="docutils literal notranslate"><span class="pre">presetColourGroup2</span></code> 、 <code class="docutils literal notranslate"><span class="pre">presetColourGroup3</span></code> ，但 <strong>不能是</strong> <code class="docutils literal notranslate"><span class="pre">presetColourGroup1</span></code> 、 <code class="docutils literal notranslate"><span class="pre">presetColourGroup2</span></code> 、 <code class="docutils literal notranslate"><span class="pre">presetColourGroup4</span></code> ，因为跳过了“3”)</p>
 <p>可用的数值能够在 <a class="reference external" href="https://github.com/Innoxia/liliths-throne-public/tree/dev/src/com/lilithsthrone/utils/colours">src/com/lilithsthrone/utils/colours</a> 目录下找到。</p>
-<p>Preceding <code class="docutils literal notranslate"><span class="pre">presetColourGroups</span></code> can be used, but not succeeding ones. (i.e.
-<code class="docutils literal notranslate"><span class="pre">presetColourGroup3</span></code> could not be used in <code class="docutils literal notranslate"><span class="pre">presetColourGroup2</span></code>.)</p>
+<p>可以使用前面定义过的 <code class="docutils literal notranslate"><span class="pre">presetColourGroups</span></code> ，但不能使用后面才定义的。(比如，不能在 <code class="docutils literal notranslate"><span class="pre">presetColourGroup2</span></code> 中使用 <code class="docutils literal notranslate"><span class="pre">presetColourGroup2</span></code> 。)</p>
 <div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;presetColourGroup1</span><span class="w"> </span><span class="na">singleColour=</span><span class="s">&quot;true&quot;</span><span class="nt">&gt;</span>
 <span class="w">    </span><span class="nt">&lt;randomColour&gt;</span>CLOTHING_PINK<span class="nt">&lt;/randomColour&gt;</span>
 <span class="w">    </span><span class="nt">&lt;randomColour&gt;</span>CLOTHING_PINK_LIGHT<span class="nt">&lt;/randomColour&gt;</span>
@@ -219,11 +218,8 @@
 </div>
 </section>
 <section id="mainweapons-and-offhandweapons">
-<h3><span class="section-number">3.2.3. </span>mainWeapons and offhandWeapons<a class="headerlink" href="#mainweapons-and-offhandweapons" title="此标题的永久链接">¶</a></h3>
-<p>Weapons can be added in a similar (although more limited) manner to clothing.
-This file doesn’t use any weapons. Look at
-<a class="reference external" href="https://github.com/Innoxia/liliths-throne-public/tree/dev/res/outfits/innoxia/genericMugger/dominion_masculine.xml">res/outfits/innoxia/genericMugger/dominion_masculine.xml</a> for a
-weapon example.</p>
+<h3><span class="section-number">3.2.3. </span>主手武器(mainWeapons)和副手武器(offhandWeapons)<a class="headerlink" href="#mainweapons-and-offhandweapons" title="此标题的永久链接">¶</a></h3>
+<p>武器的添加方法与衣物类似(尽管限制更多)。这个文件没有使用武器。在这里查看武器范例： <a class="reference external" href="https://github.com/Innoxia/liliths-throne-public/tree/dev/res/outfits/innoxia/genericMugger/dominion_masculine.xml">res/outfits/innoxia/genericMugger/dominion_masculine.xml</a></p>
 <p>The content present in <code class="docutils literal notranslate"><span class="pre">mainWeapons</span></code> and <code class="docutils literal notranslate"><span class="pre">offhandWeapons</span></code> follow the same
 rules. The main weapons block defines which item should be inserted into the
 character’s main attack slot, where ass the off hand block defines which item to
@@ -231,25 +227,20 @@ be inserted into the character’s off hand. Each block receive one or several
 <code class="docutils literal notranslate"><span class="pre">weapon</span></code> sub elements.</p>
 <p>The <code class="docutils literal notranslate"><span class="pre">weapon</span></code> block require the following elements to be present:</p>
 <dl class="simple">
-<dt><code class="docutils literal notranslate"><span class="pre">conditional</span></code></dt><dd><p>references to the conditional statement present in the document.</p>
+<dt><code class="docutils literal notranslate"><span class="pre">conditional</span></code></dt><dd><p>引用文件中的条件语句。</p>
 </dd>
-<dt><code class="docutils literal notranslate"><span class="pre">types</span></code></dt><dd><p>A list of valid item to be chosen from. It expects <a class="reference internal" href="overview.html#items-identifier"><span class="std std-ref">items
-identifiers</span></a>.</p>
+<dt><code class="docutils literal notranslate"><span class="pre">types</span></code></dt><dd><p>有效物品列表可以从这里选取 <a class="reference internal" href="overview.html#items-identifier"><span class="std std-ref">物品标识符</span></a> 。</p>
 </dd>
 <dt><code class="docutils literal notranslate"><span class="pre">damageTypes</span></code></dt><dd><p>可选的选择：ltgithub:<cite>src/com/lilithsthrone/game/combat/DamageType.java</cite></p>
 </dd>
-<dt><code class="docutils literal notranslate"><span class="pre">primaryColours</span></code></dt><dd><p>contains a list of <code class="docutils literal notranslate"><span class="pre">colour</span></code> elements, which makes references to the preset
-groups defined previously.</p>
+<dt><code class="docutils literal notranslate"><span class="pre">primaryColours</span></code></dt><dd><p>包含 <code class="docutils literal notranslate"><span class="pre">colour</span></code> 元素列表，其中引用了之前定义的预设组。</p>
 </dd>
-<dt><code class="docutils literal notranslate"><span class="pre">secondaryColours</span></code></dt><dd><p>contains a list of <code class="docutils literal notranslate"><span class="pre">colour</span></code> elements, which makes references to the preset
-groups defined previously.</p>
+<dt><code class="docutils literal notranslate"><span class="pre">secondaryColours</span></code></dt><dd><p>包含 <code class="docutils literal notranslate"><span class="pre">colour</span></code> 元素列表，其中引用了之前定义的预设组。</p>
 </dd>
-<dt><code class="docutils literal notranslate"><span class="pre">colours</span></code></dt><dd><p>element can be used in addition to, or as a replacement of, the
-primary/secondary/tertiary colours elements.</p>
+<dt><code class="docutils literal notranslate"><span class="pre">colours</span></code></dt><dd><p>元素可以用来补充或替代主要(primary)/次要(secondary)/第三(tertiary)颜色元素。</p>
 </dd>
 </dl>
-<p>Individual colours or <code class="docutils literal notranslate"><span class="pre">presetColourGroups</span></code> can be listed in each sub-element
-related to colours.</p>
+<p>可以在与颜色相关的每个子元素中列出单独的颜色或 <code class="docutils literal notranslate"><span class="pre">presetColourGroups</span></code> 。</p>
 <div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;mainWeapons&gt;</span>
 <span class="w">    </span><span class="nt">&lt;weapon&gt;</span>
 <span class="w">        </span><span class="nt">&lt;conditional&gt;</span><span class="cp">&lt;![CDATA[cond1 &amp;&amp; !cond2]]&gt;</span><span class="nt">&lt;/conditional&gt;</span>
@@ -279,12 +270,8 @@ related to colours.</p>
 </section>
 <section id="guaranteedclothingequips">
 <h3><span class="section-number">3.2.4. </span>guaranteedClothingEquips<a class="headerlink" href="#guaranteedclothingequips" title="此标题的永久链接">¶</a></h3>
-<p>For all of the “conditional” elements from this point onwards, you can use the
-tag “clothing” to access the clothing type being handled.</p>
-<p>All of the pre-set clothing that <em>is guaranteed</em> to be attempted to be equipped.
-The only time these items won’t be equipped is when multiple items of clothing
-are assigned to the same inventory slot (such as a pair of panties and a thong),
-in which case only the first item is used.</p>
+<p>从此处开始，在所有“conditional”元素中，你可以使用标签“clothing”来访问正在处理的服装类型。</p>
+<p>所有预设的服装都 <em>一定</em> 会尝试穿戴。物品未被穿戴的唯一情况是，多种装备被分配到了相同的物品栏栏位(比如一条内裤和一条丁字裤)，这种情况下只会装备第一件物品。</p>
 <div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;guaranteedClothingEquips&gt;</span>
 <span class="w">    </span><span class="nt">&lt;uniqueClothing&gt;</span>
 <span class="w">            </span><span class="nt">&lt;clothing</span><span class="w"> </span><span class="na">colour=</span><span class="s">&quot;CLOTHING_SILVER&quot;</span><span class="w"> </span><span class="na">colourSecondary=</span><span class="s">&quot;CLOTHING_PURPLE_LIGHT&quot;</span><span class="w"> </span><span class="na">colourTertiary=</span><span class="s">&quot;CLOTHING_BLACK&quot;</span><span class="w"> </span><span class="na">enchantmentKnown=</span><span class="s">&quot;true&quot;</span><span class="w"> </span><span class="na">id=</span><span class="s">&quot;innoxia_buttPlugs_butt_plug_jewel&quot;</span><span class="w"> </span><span class="na">isDirty=</span><span class="s">&quot;false&quot;</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;[npc.NamePos(true)] butt-plug&quot;</span><span class="w"> </span><span class="na">pattern=</span><span class="s">&quot;none&quot;</span><span class="w"> </span><span class="na">patternColour=</span><span class="s">&quot;CLOTHING_BLACK&quot;</span><span class="w"> </span><span class="na">patternColourSecondary=</span><span class="s">&quot;CLOTHING_BLACK&quot;</span><span class="w"> </span><span class="na">patternColourTertiary=</span><span class="s">&quot;CLOTHING_BLACK&quot;</span><span class="nt">&gt;</span>
@@ -306,7 +293,7 @@ in which case only the first item is used.</p>
 <section id="clothing">
 <h4><span class="section-number">3.2.4.1. </span>衣物<a class="headerlink" href="#clothing" title="此标题的永久链接">¶</a></h4>
 <dl>
-<dt><strong>Node Variables</strong>:</dt><dd><dl class="std nodevar">
+<dt><strong>Node Variables(结点属性)</strong>:</dt><dd><dl class="std nodevar">
 <dt class="sig sig-object std" id="nodevar-colour-outfits">
 <span class="sig-name descname"><span class="pre">colour</span></span> <span class="pre">Type:</span> <span class="pre">constant</span><a class="headerlink" href="#nodevar-colour-outfits" title="永久链接至目标">¶</a></dt>
 <dd></dd></dl>
@@ -334,14 +321,13 @@ in which case only the first item is used.</p>
 <dl class="std nodevar">
 <dt class="sig sig-object std" id="nodevar-patternColourTertiary-outfits">
 <span class="sig-name descname"><span class="pre">patternColourTertiary</span></span> <span class="pre">Type:</span> <span class="pre">constant</span><a class="headerlink" href="#nodevar-patternColourTertiary-outfits" title="永久链接至目标">¶</a></dt>
-<dd><p>All colours variables must contain a valid <code class="docutils literal notranslate"><span class="pre">CLOTHING_</span></code> colour.</p>
+<dd><p>所有颜色变量必须包含可用的 <code class="docutils literal notranslate"><span class="pre">CLOTHING_</span></code> 颜色。</p>
 </dd></dl>
 
 <dl class="std nodevar">
 <dt class="sig sig-object std" id="nodevar-enchantmentKnown-outfits">
 <span class="sig-name descname"><span class="pre">enchantmentKnown</span></span> <span class="pre">Type:</span> <span class="pre">boolean</span><a class="headerlink" href="#nodevar-enchantmentKnown-outfits" title="永久链接至目标">¶</a></dt>
-<dd><p>Determine if the effects on the item are known to the
-player, or if the item remains unidentified.</p>
+<dd><p>决定玩家会不会知道该物品的效果，或者玩家只能知道效果未确定。</p>
 </dd></dl>
 
 <dl class="std nodevar">
@@ -357,44 +343,41 @@ player, or if the item remains unidentified.</p>
 <dl class="std nodevar">
 <dt class="sig sig-object std" id="nodevar-isDirty-outfits">
 <span class="sig-name descname"><span class="pre">isDirty</span></span> <span class="pre">Type:</span> <span class="pre">boolean</span><a class="headerlink" href="#nodevar-isDirty-outfits" title="永久链接至目标">¶</a></dt>
-<dd><p>Whether the clothing item should spawn dirty, and in need of cleaning.</p>
+<dd><p>衣物是否脏污并需要清洗。</p>
 </dd></dl>
 
 <dl class="std nodevar">
 <dt class="sig sig-object std" id="nodevar-name-outfits">
 <span class="sig-name descname"><span class="pre">name</span></span> <span class="pre">Type:</span> <span class="pre">string</span><span class="pre">,</span> <em class="property"><span class="pre">Optional</span></em><a class="headerlink" href="#nodevar-name-outfits" title="永久链接至目标">¶</a></dt>
-<dd><p>How the item should be displayed. The following example will output to
-“Character’s butt-plug”: <code class="docutils literal notranslate"><span class="pre">name=&quot;[npc.NamePos(true)]</span> <span class="pre">butt-plug&quot;</span></code>. If
-not present, the name of the clothing is used instead.</p>
+<dd><p>物品应该如何显示。以下示例将输出为“角色的肛塞&quot;: <code class="docutils literal notranslate"><span class="pre">name=&quot;[npc.NamePos(true)]</span> <span class="pre">butt-plug&quot;</span></code> 。如果未填写此项，那么将直接使用服装的名称。</p>
 </dd></dl>
 
 <dl class="std nodevar">
 <dt class="sig sig-object std" id="nodevar-pattern-outfits">
 <span class="sig-name descname"><span class="pre">pattern</span></span> <span class="pre">Type:</span> <span class="pre">string</span><span class="pre">,</span> <em class="property"><span class="pre">Optional</span></em><a class="headerlink" href="#nodevar-pattern-outfits" title="永久链接至目标">¶</a></dt>
-<dd><p>The pattern to apply to the item.</p>
+<dd><p>应用于物品的图样。</p>
 </dd></dl>
 
 </dd>
 </dl>
-<p>The clothing tags has the following sub elements.</p>
+<p>衣物标签包含以下子元素：</p>
 <section id="effects">
 <h5><span class="section-number">3.2.4.1.1. </span>效果<a class="headerlink" href="#effects" title="此标题的永久链接">¶</a></h5>
-<p>List of enchantments.</p>
+<p>附魔列表。</p>
 </section>
 <section id="displacedlist">
 <h5><span class="section-number">3.2.4.1.2. </span>displacedList<a class="headerlink" href="#displacedlist" title="此标题的永久链接">¶</a></h5>
-<p>Define in which state a piece of clothing is being equipped.</p>
+<p>定义衣服的装备状态。</p>
 <div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;displacedList&gt;</span>
 <span class="w">     </span><span class="nt">&lt;displacementType</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;UNBUTTONS&quot;</span><span class="nt">/&gt;</span>
 <span class="w"> </span><span class="nt">&lt;/displacedList&gt;</span>
 </pre></div>
 </div>
 <dl>
-<dt><strong>displacementType Variables:</strong></dt><dd><dl class="std nodevar">
+<dt><strong>displacementType Variables(展示种类属性):</strong></dt><dd><dl class="std nodevar">
 <dt class="sig sig-object std" id="nodevar-value-outfits">
 <span class="sig-name descname"><span class="pre">value</span></span> <span class="pre">Type:</span> <span class="pre">constant</span><a class="headerlink" href="#nodevar-value-outfits" title="永久链接至目标">¶</a></dt>
-<dd><p>The list of constants is available at
-<a class="reference external" href="https://github.com/Innoxia/liliths-throne-public/tree/dev/src/com/lilithsthrone/game/inventory/clothing/DisplacementType.java">src/com/lilithsthrone/game/inventory/clothing/DisplacementType.java</a></p>
+<dd><p>常量列表见: <a class="reference external" href="https://github.com/Innoxia/liliths-throne-public/tree/dev/src/com/lilithsthrone/game/inventory/clothing/DisplacementType.java">src/com/lilithsthrone/game/inventory/clothing/DisplacementType.java</a></p>
 </dd></dl>
 
 </dd>
@@ -404,8 +387,7 @@ not present, the name of the clothing is used instead.</p>
 </section>
 <section id="genericclothingtype">
 <h3><span class="section-number">3.2.5. </span>genericClothingType<a class="headerlink" href="#genericclothingtype" title="此标题的永久链接">¶</a></h3>
-<p>Theses elements automatically populate the possible clothing lists with all
-clothing in the game that satisfies the conditionals.</p>
+<p>这些元素会自动使用游戏中所有满足条件的服装填充可能的服装列表。</p>
 <div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;genericClothingType&gt;</span>
 <span class="w">    </span><span class="nt">&lt;itemTags&gt;</span>
 <span class="w">      </span><span class="nt">&lt;tag&gt;</span>DRESS<span class="nt">&lt;/tag&gt;</span>
@@ -442,55 +424,42 @@ clothing in the game that satisfies the conditionals.</p>
 </div>
 <section id="itemtag">
 <h4><span class="section-number">3.2.5.1. </span>itemTag<a class="headerlink" href="#itemtag" title="此标题的永久链接">¶</a></h4>
-<p>If tags are defined, then only clothing with the provided tags will be included
-for random selection. May be left empty.</p>
-<p>Accepted values can be found in the following file:
-<a class="reference external" href="https://github.com/Innoxia/liliths-throne-public/blob/dev/src/com/lilithsthrone/game/inventory/ItemTag.java">src/com/lilithsthrone/game/inventory/ItemTag.java</a></p>
+<p>如果定义了标签(tags)，那么只有具有提供的标签的服装才会被包括在随机选择中。可以为空。</p>
+<p>在这里查看可接受的值: <a class="reference external" href="https://github.com/Innoxia/liliths-throne-public/blob/dev/src/com/lilithsthrone/game/inventory/ItemTag.java">src/com/lilithsthrone/game/inventory/ItemTag.java</a></p>
 <section id="tag">
 <h5><span class="section-number">3.2.5.1.1. </span>标签(tag)<a class="headerlink" href="#tag" title="此标题的永久链接">¶</a></h5>
-<p>If the tag contains the constant <code class="docutils literal notranslate"><span class="pre">DRESS</span></code>, then all items in the game marked as
-a <code class="docutils literal notranslate"><span class="pre">DRESS</span></code> will be included for random selection.</p>
+<p>如果标签包含常量 <code class="docutils literal notranslate"><span class="pre">DRESS</span></code> ，那么游戏中所有被标记为 <code class="docutils literal notranslate"><span class="pre">DRESS</span></code> 的物品都会被包含在随机选择的范围中。</p>
 </section>
 </section>
 <section id="acceptablefemininities">
 <h4><span class="section-number">3.2.5.2. </span>acceptableFemininities<a class="headerlink" href="#acceptablefemininities" title="此标题的永久链接">¶</a></h4>
-<p>If <a class="reference internal" href="#femininity">femininity</a> are defined, then only clothing suitable for this femininity
-will be included for random selection.</p>
+<p>如果定义了 <a class="reference internal" href="#femininity">femininity</a> ，那么随机选择中只会出现女性化装备。</p>
 </section>
 <section id="slot">
 <h4><span class="section-number">3.2.5.3. </span>栏位(slot)<a class="headerlink" href="#slot" title="此标题的永久链接">¶</a></h4>
-<p>If a slot (of type InventorySlot) is defined, then only clothing that fits into
-this slot will be included for random selection. Use the Enum values as defined
-in <a class="reference external" href="https://github.com/Innoxia/liliths-throne-public/tree/dev/src/com/lilithsthrone/game/inventory/InventorySlot.java">src/com/lilithsthrone/game/inventory/InventorySlot.java</a>.</p>
+<p>如果定义了一个栏位(类型为InventorySlot)，那么随机选择中只会出现适合该栏位的衣物。请使用以下页面中定义的枚举值: <a class="reference external" href="https://github.com/Innoxia/liliths-throne-public/tree/dev/src/com/lilithsthrone/game/inventory/InventorySlot.java">src/com/lilithsthrone/game/inventory/InventorySlot.java</a> 。</p>
 </section>
 <section id="rarity">
-<h4><span class="section-number">3.2.5.4. </span>rarity<a class="headerlink" href="#rarity" title="此标题的永久链接">¶</a></h4>
-<p>If a rarity is defined, then only clothing that has this rarity will be
-included for random selection. Accepted values can be found in the following
-file: <a class="reference external" href="https://github.com/Innoxia/liliths-throne-public/tree/dev/src/com/lilithsthrone/game/inventory/Rarity.java">src/com/lilithsthrone/game/inventory/Rarity.java</a>.</p>
+<h4><span class="section-number">3.2.5.4. </span>rarity(稀有度)<a class="headerlink" href="#rarity" title="此标题的永久链接">¶</a></h4>
+<p>如果定义了稀有度(rarity)，那么只有具有这种稀有度的服装才会被包括在随机选择中。可选值可以在以下文件中找到: <a class="reference external" href="https://github.com/Innoxia/liliths-throne-public/tree/dev/src/com/lilithsthrone/game/inventory/Rarity.java">src/com/lilithsthrone/game/inventory/Rarity.java</a> 。</p>
 </section>
 <section id="id1">
 <h4><span class="section-number">3.2.5.5. </span>conditional<a class="headerlink" href="#id1" title="此标题的永久链接">¶</a></h4>
-<p>If a condition is defined, then only clothing that satisfies this condition will
-be included for random selection. Wrap the conditional statement in <code class="docutils literal notranslate"><span class="pre">CDATA</span></code>
-tags if used.</p>
-<p>In the following logic, earrings have 100% chance to be equipped. All other
-jewellery have a 25% chance instead. These items are automatically skipped if
-the character doesn’t have the relevant slot accessible. In the case of
-jewellery, ears that are not pierced cannot received earrings.</p>
+<p>如果定义了条件，那么只有满足该条件的服装才会被包括在随机选择中。如果使用条件语句，请将其用 <cite>CDATA`</cite> 标签包裹。</p>
+<p>在以下逻辑中，耳环有100%的概率被装备。而其他首饰只有25%的概率。如果角色没有相关栏位，这些物品会被自动跳过。比如装备首饰时，没有穿孔的耳朵无法戴上耳环。</p>
 <div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">clothing</span><span class="p">.</span><span class="na">getSlot</span><span class="p">().</span><span class="na">isJewellery</span><span class="p">()</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="p">(</span><span class="n">RND</span><span class="p">.</span><span class="na">nextInt</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span><span class="o">&lt;=</span><span class="mi">25</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="n">clothing</span><span class="p">.</span><span class="na">getSlot</span><span class="p">()</span><span class="o">==</span><span class="n">IS_PIERCING_EAR</span><span class="p">)</span>
 </pre></div>
 </div>
 </section>
 <section id="primary-secondary-and-tertiary-colours">
-<h4><span class="section-number">3.2.5.6. </span>primary, secondary and tertiary colours<a class="headerlink" href="#primary-secondary-and-tertiary-colours" title="此标题的永久链接">¶</a></h4>
-<p>Three sub elements:</p>
+<h4><span class="section-number">3.2.5.6. </span>主要(primary)，次要(secondary)和第三(tertiary)颜色<a class="headerlink" href="#primary-secondary-and-tertiary-colours" title="此标题的永久链接">¶</a></h4>
+<p>三种子元素:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">primaryColours</span></code></p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">secondaryColours</span></code></p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">tertiaryColours</span></code></p></li>
 </ul>
-<p>Each accepts a preset color defined earlier in the document.</p>
+<p>每种都接受文件前面定义的预设颜色。</p>
 <div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;primaryColours&gt;</span>
 <span class="w">    </span><span class="nt">&lt;colour&gt;</span>presetColourGroup2<span class="nt">&lt;/colour&gt;</span>
 <span class="nt">&lt;/primaryColours&gt;</span>
@@ -499,10 +468,8 @@ jewellery, ears that are not pierced cannot received earrings.</p>
 </section>
 <section id="colours">
 <h4><span class="section-number">3.2.5.7. </span>颜色<a class="headerlink" href="#colours" title="此标题的永久链接">¶</a></h4>
-<p><code class="docutils literal notranslate"><span class="pre">colours</span></code> elements can be used in addition to, or as a replacement of, the
-primary/secondary/tertiary colours elements. Individual colours or
-presetColourGroups can be used.</p>
-<p>It is defined as follows:</p>
+<p><code class="docutils literal notranslate"><span class="pre">colours</span></code> 元素可以用来补充或替代主要(primary)/次要(secondary)/第三(tertiary)颜色元素。可以使用单独的颜色或presetColourGroups。</p>
+<p>定义如下：</p>
 <div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;colours&gt;</span>
 <span class="w">    </span><span class="nt">&lt;colour&gt;</span>presetColourGroup1<span class="nt">&lt;/colour&gt;</span>
 <span class="nt">&lt;/colours&gt;</span>
@@ -512,24 +479,15 @@ presetColourGroups can be used.</p>
 </section>
 <section id="clothingtype">
 <h3><span class="section-number">3.2.6. </span>clothingType<a class="headerlink" href="#clothingtype" title="此标题的永久链接">¶</a></h3>
-<p>Presumably this block filters items based on the list of types, then each
-character that satisfy the <code class="docutils literal notranslate"><span class="pre">conditional</span></code> sub-element is susceptible to be
-selected.</p>
-<p>The colour references serves as a list of preset colours for this outfit’s
-condional.</p>
-<p>The constants present in the <code class="docutils literal notranslate"><span class="pre">type</span></code> sub-elements are either hard coded
-constants or <a class="reference internal" href="overview.html#items-identifier"><span class="std std-ref">物品标识符(Item’s identifier)</span></a>.</p>
+<p>大概这个块会根据类型列表过滤物品，然后每个满足 <code class="docutils literal notranslate"><span class="pre">conditional</span></code> 子元素的角色都有可能被选中。</p>
+<p>颜色参考可作为该装备的预设颜色列表。</p>
+<p>子元素 <code class="docutils literal notranslate"><span class="pre">type</span></code> 类型中的常量是硬编码常量或 <a class="reference internal" href="overview.html#items-identifier"><span class="std std-ref">物品标识符(Item’s identifier)</span></a> 。</p>
 <div class="admonition caution">
 <p class="admonition-title">小心</p>
-<p>Some piece of clothing haven't been (yet) converted into a XML
-format, those have hard coded types available at
-<a class="reference external" href="https://github.com/Innoxia/liliths-throne-public/tree/dev/src/com/lilithsthrone/game/inventory/clothing/ClothingType.java">src/com/lilithsthrone/game/inventory/clothing/ClothingType.java</a></p>
+<p>有些衣物还没有转化未XML形式，可用的硬编码种类在: <a class="reference external" href="https://github.com/Innoxia/liliths-throne-public/tree/dev/src/com/lilithsthrone/game/inventory/clothing/ClothingType.java">src/com/lilithsthrone/game/inventory/clothing/ClothingType.java</a></p>
 </div>
-<p>Both <code class="docutils literal notranslate"><span class="pre">genericClothingType</span></code> and <code class="docutils literal notranslate"><span class="pre">clothingType</span></code> are shuffled together before
-being run through and worn. So if two items occupies the same slot, as for
-example several bra, then only one of them will be chosen at random.</p>
-<p><code class="docutils literal notranslate"><span class="pre">primaryColours</span></code> sub-element has an optional attribute <code class="docutils literal notranslate"><span class="pre">value</span></code>, which can be
-used as a pre-set colour list instead of defining individual colours.</p>
+<p><code class="docutils literal notranslate"><span class="pre">genericClothingType</span></code> 和 <code class="docutils literal notranslate"><span class="pre">clothingType</span></code> 会在装备前被混合在一起。因此，如果两个物品占据同一个栏位，比如说多个胸罩，那么只会随机选择其中一个。</p>
+<p><code class="docutils literal notranslate"><span class="pre">primaryColours</span></code> 子元素有可选属性 <code class="docutils literal notranslate"><span class="pre">value</span></code>，该属性可作为预设颜色列表使用，而不是作为单独的颜色使用。</p>
 <div class="admonition seealso">
 <p class="admonition-title">参见</p>
 <p><a class="reference external" href="https://github.com/Innoxia/liliths-throne-public/tree/dev/src/com/lilithsthrone/utils/colours/ColourListPresets.java">src/com/lilithsthrone/utils/colours/ColourListPresets.java</a></p>
@@ -656,7 +614,7 @@ used as a pre-set colour list instead of defining individual colours.</p>
 <li class="toctree-l2"><a class="reference internal" href="#generationattributes">3.2. generationAttributes</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#conditional-statements">3.2.1. 条件语句</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#presetcolourgroups">3.2.2. presetColourGroups</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#mainweapons-and-offhandweapons">3.2.3. mainWeapons and offhandWeapons</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#mainweapons-and-offhandweapons">3.2.3. 主手武器(mainWeapons)和副手武器(offhandWeapons)</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#guaranteedclothingequips">3.2.4. guaranteedClothingEquips</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#genericclothingtype">3.2.5. genericClothingType</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#clothingtype">3.2.6. clothingType</a></li>
