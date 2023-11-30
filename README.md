@@ -1,4 +1,6 @@
 ## Lilith's Throne Mod Documentation
+[简体中文](https://github.com/CKRainbow/lilith-throne-documentation/tree/chinese#readme)
+
 ### Contributing
 
 This site is build with [Sphinx](https://github.com/sphinx-doc/sphinx) and hosted by [Read the Docs](https://github.com/readthedocs/readthedocs.org). Site content is weitten in [ReStructuredText](https://docutils.sourceforge.io/rst.html) located in docs. For simple edits, you can directly edit the file on GitHub and generate a Pull Request.
