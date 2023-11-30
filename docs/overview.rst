@@ -363,3 +363,10 @@ Status effects also accept colours, but to a lesser degree. The colours for
 status effects are there to recolor the icon, as such at most three values are
 expected for ``primary``, ``secondary``, and ``tertiary`` colours.
 
+.. index:: ! parse
+   :name: parse
+   
+解析
+--------------
+
+“莉莉丝的王座”中，内置了简单的富文本解析功能，如果某项内容会被解析，那么就代表你可以使用以下写法。
