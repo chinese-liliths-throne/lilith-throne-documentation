@@ -5,4 +5,8 @@ __pycache__/
 dict/
 downloads/
 *.mo
-.vscode
+
+
+# vscode recomendation extension
+.vscode/*
+!.vscode/extensions.json
