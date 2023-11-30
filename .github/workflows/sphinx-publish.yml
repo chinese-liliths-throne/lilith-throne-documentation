@@ -1,14 +1,7 @@
 name: Sphinx Publish
 
 on:
-  push:
-    branches:
-      - master
-    paths:
-      - 'docs/**'
   workflow_dispatch:
-  schedule:
-     - cron: '40 12 * * *'
 
 jobs:
   deploy:
