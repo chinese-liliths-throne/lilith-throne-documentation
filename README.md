@@ -1,28 +1,28 @@
-## Lilith's Throne Mod Documentation
-### Contributing
+## 莉莉丝的王座Mod文档
+### 贡献
 
-This site is build with (Sphinx)[https://github.com/sphinx-doc/sphinx] and hosted by (Read the Docs)[https://github.com/readthedocs/readthedocs.org]. Site content is weitten in (ReStructuredText)[https://docutils.sourceforge.io/rst.html] located in docs. For simple edits, you can directly edit the file on GitHub and generate a Pull Request.
+该网站使用[Sphinx](https://github.com/sphinx-doc/sphinx)构建，并且依赖[Read the Docs](https://github.com/readthedocs/readthedocs.org)托管。网站内容由[ReStructuredText](https://docutils.sourceforge.io/rst.html)编写，位于`docs`文件夹中。对于简单的编辑，你可以直接在Github上编辑文件并生成拉取请求(Pull Request)。
 
-For local development, you need a (Python)[https://www.python.org/] and pip. And install dependency first.
+若要进行本地开发，需要安装[Python](https://www.python.org/)及`pip`，并且安装相关依赖。
 
 ``` shell
 	pip install -r requirements.txt
 ```
 
-To build the html, just use
+若要构建html网页，只需
 ``` shell
 	# Linux
 	make html 
 	# Wubdiws
 	./make.bat html
 
-	#  Build English
+	#  英语
 	sphinx-build -M html . _build
-	#  Build Chinese
+	#  中文(需要在对应分支branch)
 	sphinx-build -b html . _build/html/zh -D language=zh 
 ```
 
-### Working Tips
+### 提示
 
- - Vscode extension `reStructuredText` and `reStructuredText Syntax hightlighting`.
- - Use preview or build the html to make sure the changes are valid.
+ - Vscode扩展`reStructuredText`和`reStructuredText Syntax hightlighting`。
+ - 使用预览或者构建网页，保证修改有效且没有错误。
