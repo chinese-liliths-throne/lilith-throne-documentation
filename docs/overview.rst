@@ -43,7 +43,10 @@ intuitive, are acceptable. Non-wearable items have a direct access to an
       { "statusEffect" cui } -> appl;
    }
 
-Some elements expect Boolean values
+.. index:: ! boolean-values
+   :name: boolean-values
+
+布尔值(Boolean Values)
 -----------------------------------
 
 Some elements are boolean switches which are either true, or false. The name of
@@ -370,3 +373,18 @@ expected for ``primary``, ``secondary``, and ``tertiary`` colours.
 --------------
 
 “莉莉丝的王座”中，内置了简单的富文本解析功能，如果某项内容会被解析，那么就代表你可以使用以下写法。
+
+.. index:: ! optional
+   :name: optional
+
+可选项
+--------------
+如果一个元素为可选项，假设元素的标签名为 ``element``，那么你可以使用以下写法。
+
+.. code:: xml
+
+    <element/>
+
+或者直接省略该元素。
+
+如果一个属性为可选项，假设属性的名字为 ``attribute``，那么你可以直接省略该属性。

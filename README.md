@@ -1,4 +1,5 @@
 ## 莉莉丝的王座Mod文档
+[英文](https://github.com/chinese-liliths-throne/lilith-throne-documentation#readme)
 ### 贡献
 
 该网站使用[Sphinx](https://github.com/sphinx-doc/sphinx)构建，并且依赖[Read the Docs](https://github.com/readthedocs/readthedocs.org)托管。网站内容由[ReStructuredText](https://docutils.sourceforge.io/rst.html)编写，位于`docs`文件夹中。对于简单的编辑，你可以直接在Github上编辑文件并生成拉取请求(Pull Request)。

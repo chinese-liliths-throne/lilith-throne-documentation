@@ -12,6 +12,7 @@ Welcome to Lilith's Throne Mod Documentation's documentation!
    setBonuses
    statusEffects
    encounters
+   place_types
    authors
 
 
