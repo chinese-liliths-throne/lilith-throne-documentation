@@ -145,40 +145,7 @@ SCLERA_NATURAL			*自然* 产生的眼白颜色
 SCLERA_DYE				*非自然* 产生的眼白颜色
 ======================	=====
 
-附表2 Colour类粗分析
-~~~~~~~~~~~~~~~~~~~
-
-无public属性
-
-public方法:
-
-======================================================================	====
-boolean isMod															返回 ``boolean mod`` 属性,个人感觉是用来判断这是否是来自mod的颜色
-boolean isFromExternalFile												返回 ``boolean fromExternalFile`` 属性,个人感觉是用来判断这是否是从xml加载的颜色
-String toRGBA															返回 ``String rbga(r,g,b,a)`` r,g,b范围均为0-255(个人感觉a也是)
-String toWebHexString													返回自身的16进制颜色代码,ex: #RRGGBB
-String getCoveringIconColour											返回 ``boolean coveringIconColour`` 属性的16进制颜色代码,ex: #RRGGBB
-Color getColor															若当前是亮色主题,返回 ``Color lightColour`` 属性,否则返回 ``Color colour`` 属性
-boolean isMetallic														返回 ``boolean metallic`` 属性
-boolean isRainbow														返回是否是彩虹颜色
-List<String> getRainbowColours											非彩虹颜色返回 ``null`` ,彩色颜色涉及方法重写
-String getRainbowDiv(int rainbowPixels)									非彩虹颜色返回 ``""`` (彩虹颜色看的不太懂)
-String getName															返回 ``String name`` 属性
-String getId															返回自身ID
-String toString															不应该对 ``Colour`` 使用该方法,将用 *getId* 替代
-Colour setLinkedColourDarker(Colour)									将自身的 ``colourLinkDarker`` 属性设为指定的 ``Colour`` ,指定的 ``Colour`` 的 ``colourLinkLighter`` 属性设为自身,返回自身
-Colour getLinkedColourDarker											返回 ``colourLinkDarker`` 属性
-List<Colour> getDarkerLinkedColours										返回一个颜色逐渐加深的列表,最亮的颜色索引为0,返回值可能是空列表
-Colour setLinkedColourLighter(Colour)									将自身的 ``colourLinkLighter`` 属性设为指定的 ``Colour`` ,指定的 ``Colour`` 的 ``colourLinkDarker`` 属性设为自身,返回自身
-Colour getLinkedColourLighter											返回 ``colourLinkLighter`` 属性
-List<Colour> getLighterLinkedColours									返回一个颜色逐渐变亮的列表,最深的颜色索引为0,返回值可能是空列表
-String[] getShades(int shadesCount, boolean rgba, float opacity)		所有参数或者第二第三参数可以省略不填,第一个参数不用填时默认为5,剩下的目前不会
-String[] getShadesRgbaFormat											不会
-List<String> getFormattingNames											返回 ``List<ColourTag> tags`` 属性,若该属性为 ``null`` 返回空列表
-boolean isOneOf															判断自身是否在某一颜色列表中
-======================================================================	====
-
-附表3 Colour汉化过模板
+附表2 Colour汉化过模板
 ~~~~~~~~~~~~~~~~~~~~~
 
 .. code:: xml
