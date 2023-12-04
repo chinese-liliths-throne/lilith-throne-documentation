@@ -130,8 +130,8 @@ FEATHER_NATURAL			*自然* 羽毛
 FEATHER_DYE				*非自然* 染色
 FUR						福瑞
 SCALE					巩膜
-HORN
-ANTLER					
+HORN					角
+ANTLER					鹿角
 HAIR					头发
 GENERIC_COVERING		此标签将把颜色添加到"所有覆盖物"列表中
 MAKEUP					可以用作化妆染料
@@ -147,6 +147,8 @@ SCLERA_DYE				*非自然* 产生的眼白颜色
 
 附表2 Colour类粗分析
 ~~~~~~~~~~~~~~~~~~~
+
+无public属性
 
 public方法:
 
@@ -201,9 +203,7 @@ boolean isOneOf															判断自身是否在某一颜色列表中
 		你可以省略不写,那么值就是<colour>值 -->
 		<coveringIconColour>747474</coveringIconColour>
 		
-		<!-- 定义后可以这样些[style.colour名字1(文本)][style.colour名字2(文本)]等指令使用
-		这个东西会污染内置的指令说明(里面其实被污染的差不多了……1000+都是这种生成的指令)
-		经测试这东西不写还会导致内置的指令/指令列表不能使用…… -->
+		<!-- 定义后可以这样些[style.colour名字1(文本)][style.colour名字2(文本)]等指令使用 -->
 		<formattingNames>
 			<name><![CDATA[别名]]></name>
 			<name><![CDATA[别名]]></name>
@@ -220,8 +220,8 @@ boolean isOneOf															判断自身是否在某一颜色列表中
 		FEATHER_DYE				非自然染色
 		FUR						福瑞
 		SCALE					巩膜
-		HORN
-		ANTLER					
+		HORN					角
+		ANTLER					鹿角				
 		HAIR					头发
 		GENERIC_COVERING		此标签将把颜色添加到“所有覆盖物”列表中：
 		MAKEUP					可以用作化妆染料
