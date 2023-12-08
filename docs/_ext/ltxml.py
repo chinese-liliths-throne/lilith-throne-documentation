@@ -22,7 +22,7 @@ def parse_nodevar(env, sig, signode):
         signode += addnodes.desc_annotation(default, default)
     if optional:
         signode += nodes.Text(', ')
-        signode += addnodes.desc_annotation("Optional", "Optional")
+        signode += addnodes.desc_annotation("可选项", "可选项")
     return nodevar + '; ' + env.docname
 
 
