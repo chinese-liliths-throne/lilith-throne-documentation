@@ -13,6 +13,10 @@ Welcome to Lilith's Throne Mod Documentation's documentation!
    statusEffects
    encounters
    place_types
+   colour
+
+   constants
+
    authors
 
 
