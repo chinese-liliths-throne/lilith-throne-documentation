@@ -14,6 +14,9 @@ Welcome to Lilith's Throne Mod Documentation's documentation!
    encounters
    place_types
    colour
+
+   constants
+
    authors
 
 

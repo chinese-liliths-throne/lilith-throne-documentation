@@ -1,79 +1,69 @@
 .. include:: global.inc.rst
 =============
-colour文件夹
+颜色
 =============
 
-    :Authors: innoxia, Mr.Lee
+    :Authors: innoxia, Mr.Lee, CK_Rainbow
 
-此页主要由Mr.Lee编写,本人代指Mr.Lee
-本人能力有限,对莉莉丝还处于探索阶段,可能存在错误,请谅解
+颜色(Colours)在游戏中多处可以使用。
 
-本页是基于innoxia的mod模板( :ltgithub:`res/mods/innoxia/colours/fuchsia.xml` )写的
-本页中的 ``Color`` 为 ``javafx.scene.paint.Color``
+你可以在 :ltgithub:`res/colours/` 文件夹中找到正在使用的颜色。
 
 通用信息
----------
+-----------
 
 在xml文件中，根元素的标签需要设置为 ``colour``。
 
-在这里mod可以自定义颜色,得到一个Colour(源码: :ltgithub:`src/com/lilithsthrone/utils/colours/Colour.java` )实例
-
 metallic
----------
+------------
 
-这是不是金属色?
-如果是金属色,游戏会为该颜色的图标生成金属效果
+该元素是 :ref:`optional`，决定了这种颜色是否拥有金属质感。若是，游戏会为该颜色的图标生成金属效果。
 
-左图为true的效果,右图为false的效果:
+左图为 ``true`` 的效果，右图为 ``false`` 的效果:
 
-.. image:: \\img\\colour\\metallicTrue.png
-.. image:: \\img\\colour\\metallicFalse.png
-对应的 ``Colour`` 类的 ``boolean metallic`` 属性
+.. image:: /img/colour/metallicTrue.png
+.. image:: /img/colour/metallicFalse.png
 
 name
-------
+--------
 
-这个颜色的名称,会被显示到游戏的提示工具里
+该颜色的名称，会显示在游戏的悬浮提示栏中。
 
 .. code:: xml
 
     <name><![CDATA[黑夜般的深黑色]]></name>
 
-效果
-
-.. image:: \\img\\colour\\name.png
-
-对应 ``Colour`` 类的 ``String name`` 属性
-
 colour
--------
+---------
 
-深色主题时显示的颜色
+深色主题时显示的颜色。
 
-对应 ``Colour`` 类的 ``Color colour`` 属性
 
 lightColour
-------------
+--------------
 
-浅色主题是显示的颜色,一般情况下应和上述属性相同,但如果在亮色主题中表现不理想,应适当微调
-
-对应 ``Colour`` 类的 ``Color lightColour`` 属性
+浅色主题时显示的颜色，一般情况下应和上述属性相同， **但如果在亮色主题中表现不理想，应适当微调**。
 
 coveringIconColour
 ---------------------
 
-在变形界面里显示颜色的图标时用的颜色,留空的话将会使用 ``colour`` 属性的颜色
-
-对应lightColour属性对应 ``Colour`` 类的 ``Color coveringIconColour`` 属性
+该元素是 :ref:`optional`，定义了在转化界面中显示颜色图标时用的颜色，若留空将会使用 ``colour`` 属性的颜色。
 
 formattingNames
------------------
+--------------------------
 
-定义能在内置解释器识别为指令的别名,解释器内部会衍生出四个上色指令
-填写的内容应被 ``<name>`` 标签修饰
-必须要写,不能省略省略
+该元素是 :ref:`optional`，定义了一般用于 :ref:`parse` 的别名，并不会直接在游戏中显示，每个定义的别名(例如:Colour)都将在游戏中以 ``Colour``、 ``italicColour``、 ``blodColour``、 ``glowColour`` 四种形式出现。(建议使用首字母大写的英文单词)
 
-示例:
+若未定义，则无法在解析时使用该颜色。
+
+每一种别名都将在该元素内以 `format-name`_ 标签的形式出现。可以定义多个 ``name`` 标签。
+
+.. _format-name:
+
+name
+~~~~~~~~~
+
+定义了这个颜色的一个别名。
 
 .. code:: xml
 
@@ -82,21 +72,16 @@ formattingNames
 		<name><![CDATA[别名2]]></name>
 	</formattingNames>
 
-结果:
-
-.. image:: \\img\\colour\\formattingNames.png
-
-对应 ``Colour`` 类的 ``List<String> formattingNames`` 属性
-
-
 tags
-~~~~~
+--------
 
-决定这是那种类型的覆盖颜色(是否可泛用于皮毛、眼睛、皮肤……等部位的颜色选择)
-填写的内容应被 ``<tag>`` 标签修饰
-这个页可以省略不写
+该元素是 :ref:`optional`，决定了这个颜色属于何种类型(是否可泛用于皮毛、眼睛、皮肤等部位的颜色选择)。
+每一种类型都将在该元素内以 `tag`_ 标签的形式出现。可以定义多个 ``tag`` 标签。
 
-例:
+tag
+~~~~~~~~
+
+定义了这个颜色所属的一种类型。其中可填入的内容请参见 :ref:`constant-colour-tag`。(或源码 :ltgithub:`src/com/lilithsthrone/utils/colours/ColourTag.java`)
 
 .. code:: xml
 
@@ -105,104 +90,3 @@ tags
 		<tag>SLIME_NATURAL</tag>
 	</tags>
 
-
-\ `附表1 tag含义(总结日期:23.11.26)`_\
-
-对应 ``Colour`` 类的 ``List<ColourTag> tags`` 属性
-
-附表
------
-
-附表1 tag含义(总结日期:23.11.26)
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-**自然(_NATURAL)表示可以刷怪刷出来,*非自然(_DYE)* 表示只能通过转化获得**
-
-源码 :ltgithub:`src/com/lilithsthrone/utils/colours/ColourTag.java`
-
-(部分翻译的不太确定,请后人来更正吧)
-
-======================	=====
-SKIN					皮肤
-SLIME_NATURAL			*自然* 黏液
-SLIME_DYE				*非自然* 黏液
-FEATHER_NATURAL			*自然* 羽毛
-FEATHER_DYE				*非自然* 染色
-FUR						福瑞
-SCALE					巩膜
-HORN					角
-ANTLER					鹿角
-HAIR					头发
-GENERIC_COVERING		此标签将把颜色添加到"所有覆盖物"列表中
-MAKEUP					可以用作化妆染料
-IRIS_NATURAL			*自然* 产生的虹膜颜色,可用于非捕食性(non-predatory)种族
-IRIS_DYE				*非自然* 产生的虹膜颜色,可用于非捕食性(non-predatory)种族
-IRIS_PREDATOR_NATURAL	*自然* 产生的虹膜颜色,可用于捕食性(predatory)种族
-IRIS_PREDATOR_DYE		*非自然* 产生的虹膜颜色,可用于捕食性(predatory)种族
-PUPIL_NATURAL			*自然* 产生的瞳孔颜色
-PUPIL_DYE				*非自然* 产生的瞳孔颜色
-SCLERA_NATURAL			*自然* 产生的眼白颜色
-SCLERA_DYE				*非自然* 产生的眼白颜色
-======================	=====
-
-附表2 Colour汉化过模板
-~~~~~~~~~~~~~~~~~~~~~
-
-.. code:: xml
-
-	<?xml version='1.0' encoding='UTF-8' standalone='no'?>
-	<colour>
-		<!-- GENERAL INFORMATION: If you are unsure of anything, please use the LT Discord to ask for help! -->
-		
-		<!-- 这是不是金属色?
-		如果是金属色,游戏会为该颜色的图标生成金属效果 -->
-		<metallic>false</metallic>
-		
-		<!-- 名字. -->
-		<name><![CDATA[深黑色]]></name>
-		
-		<!-- 深色主题时显示的颜色 -->
-		<colour>747474</colour>
-		<!-- 浅色主题时显示的颜色
-		在用于物品或种族上色的情况下,和上面相同即可 -->
-		<lightColour>747474</lightColour>
-		<!-- 在变形界面对颜色标注时展示的颜色,应该和上面俩相同
-		你可以省略不写,那么值就是<colour>值 -->
-		<coveringIconColour>747474</coveringIconColour>
-		
-		<!-- 定义后可以这样些[style.colour名字1(文本)][style.colour名字2(文本)]等指令使用 -->
-		<formattingNames>
-			<name><![CDATA[别名]]></name>
-			<name><![CDATA[别名]]></name>
-		</formattingNames>
-		
-		<!-- 
-		决定该颜色是否添加到游戏的覆盖颜色(用于皮毛、眼睛、皮肤……)
-		(23.11.26)
-		自然表示可以刷出来,非自然表示只能通过转化获得
-		SKIN					皮肤
-		SLIME_NATURAL			自然黏液
-		SLIME_DYE				非自然黏液
-		FEATHER_NATURAL			自然羽毛
-		FEATHER_DYE				非自然染色
-		FUR						福瑞
-		SCALE					巩膜
-		HORN					角
-		ANTLER					鹿角				
-		HAIR					头发
-		GENERIC_COVERING		此标签将把颜色添加到“所有覆盖物”列表中：
-		MAKEUP					可以用作化妆染料
-		IRIS_NATURAL			自然产生的虹膜颜色,可用于非捕食性(non-predatory)种族
-		IRIS_DYE				非自然产生的虹膜颜色,可用于非捕食性(non-predatory)种族
-		IRIS_PREDATOR_NATURAL	自然产生的虹膜颜色,可用于捕食性(predatory)种族
-		IRIS_PREDATOR_DYE		非自然产生的虹膜颜色,可用于捕食性(predatory)种族
-		PUPIL_NATURAL			自然产生的瞳孔颜色
-		PUPIL_DYE				非自然产生的虹膜颜色
-		SCLERA_NATURAL			自然产生的眼白颜色
-		SCLERA_DYE				非自然产生的眼白颜色
-		可以在这里查询: https://github.com/Innoxia/liliths-throne-public/blob/dev/src/com/lilithsthrone/utils/colours/ColourTag.java -->
-		<tags>
-			<tag>SKIN</tag>
-		</tags>
-		
-	</colour>
